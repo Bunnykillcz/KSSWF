@@ -21,12 +21,14 @@
 //-------------------------------------------------------------------------------------------------- //
 
 
+
+
 //Change these settings:
 //----------------------
 $title   = "TITLE";
 $tags    = "tag, tag, tag";
-$favicon = "img/favicon.ico";
-$
+$favicon = "./img/favicon.ico";
+
 
 //----------------------
 
@@ -42,9 +44,9 @@ echo "<link rel='shortcut icon' href="$favicon" type='image/x-icon'/>";
 <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet" /> 
 
-
-<title><?php echo $title; ?></title>
-
+<?php 
+echo '<title>'.$title.'</title>'; 
+?>
 </head>
 <body>
 </body>
