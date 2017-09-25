@@ -12,4 +12,5 @@ This should be a very easy to use start for any of your websites. CSS knowledge 
 **Made by** Nikola Nejedlý, KyberSoft (c) 2017
 **url:** http://nejedniko.tk
 
-Enjoy !
+
+###Enjoy !
