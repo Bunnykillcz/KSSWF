@@ -17,17 +17,21 @@
 // Copy: Nikola Nejedlý
 // Purpose: KSSWF 
 // Web: http://nejedniko.tk
+// Commentary: none
 //-------------------------------------------------------------------------------------------------- //
 
 
-//Change these:
+//Change these settings:
+//----------------------
 $title   = "TITLE";
 $tags    = "tag, tag, tag";
 $favicon = "img/favicon.ico";
 $
 
+//----------------------
 
 
+echo "<link rel='shortcut icon' href="$favicon" type='image/x-icon'/>";
 ?>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"/> 
@@ -39,7 +43,7 @@ $
 <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet" /> 
 
 
-<title>TITLE</title>
+<title><?php echo $title; ?></title>
 
 </head>
 <body>
