@@ -33,12 +33,14 @@ $bg_color = "#5D5D5D";
 $template = "templates/default";  //used for styling web
 
 //----------------------
-
-
+$actual_link = 'http://'.$_SERVER['HTTP_HOST'];
+$after_link  = trim($_SERVER['PHP_SELF']);
+$root_link	 = getcwd();
 
 echo "<title>$title</title>"; 
 include("func/icons.php");
 include("func/links.php");
+include("func/rules.php");
 ?>
 <style>
 body{
@@ -54,13 +56,15 @@ icon("globe", 0);
 // TESTING END */
 
 
-#include("parts/header.php");
-#include("parts/body.php");
+include("func/gen_menu.php");
+
+//include("parts/header.php");
+//include("parts/body.php");
 
 ?>
 </body>
 <footer>
 <?php
-#include("parts/footer.php");
+include("parts/footer.php");
 ?>
 </footer>
