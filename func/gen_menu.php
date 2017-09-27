@@ -26,48 +26,60 @@ function search($folder, $i) //Brutal recurrent function building all the needed
 	global $list_target;
 	global $list_names;
 	global $list_level;
+	global $root;
 	
 	$files = scandir($folder);
 	$level = 0;
 	
-	$s = 0;
-	$type = "URL";
-	if(file_exists("this.kstr"))
+	$list_target_tmp[0] = "";
+	$list_names_tmp[0]  = "";
+	$list_level_tmp[0]  = 0;
+	
+	$s = 0; 
+	$line = 0;
+	$type = "unknown";
+	if(file_exists($folder."/this.kstr"))
 	{	
-		$file = fopen("this.kstr","r");
+		$file = fopen($folder."/this.kstr","r");
 		while(! feof($file))
 		  {
 			  $temp = fgets($file);
 			  
-			if($s == 0 && $temp == "MENU")
+			if($line == 0 && clean($temp) == "MENU")
 				$type = "MENU";
 			else 
-			if($s == 0 && $temp == "URL")
+			if($line == 0 && clean($temp) == "URL")
 				$type = "URL";
 
-			if($type == "MENU" && !empty($temp))
+			if($line >= 2)
 			{
-			$list_names[$i]  = $temp;
-			$list_target[$i] = $folder."/".$temp;
-			$list_level[$i]  = $getlevel($list_target[$i]);
-			$i++;
-			}else
-			if($type == "URL" && !empty($temp) && $temp!=" " && $temp!="")
-			{
-				$list_names[$i]  = basename($folder);
-				$list_target[$i] = $temp;
-				$list_level[$i]  = $getlevel($folder);
-				$i++;
-				break;
+				if($type == "MENU" && !empty($temp))
+				{
+					$list_names_tmp[$s]  = $temp;
+					$list_target_tmp[$s] = $folder."/".$temp;
+					$list_level_tmp[$s]  = getlevel($list_target[$i]);
+					$s++;
+				}
+				else
+				if($type == "URL" && !empty($temp))
+				{
+					$list_names_tmp[$s]  = basename($folder);
+					$list_target_tmp[$s]] = $temp;
+					$list_level_tmp[$s]  = $getlevel($folder);
+					$s++;
+					echo "URL";
+				}
 			}
-			$s++;
+			$line++;
 		  }
 		fclose($file);
 	}
 	
+	if($type != "URL")
 	foreach ($files as &$value) 
 	{
 		$ftype = substr($value, strlen($value)-4 , strlen($value) );
+		$add_this = true; //přidej kontrolu oproti KSTR!!!
 		
 		if($value!="." && $value!="..")
 		if($value == "this.kstr")
@@ -75,7 +87,10 @@ function search($folder, $i) //Brutal recurrent function building all the needed
 		else if($ftype == ".php")
 		{
 			$fname = substr($value, 0 , strlen($value)-4 );
-			$list_target[$i] = dirname($after_link)."/index.php?w=".substr(str_replace('/', '_', $folder),2,strlen($folder))."_".$fname;
+			$subtmp = substr(str_replace('/', '+', $folder),strlen($root),strlen($folder))."+".$fname;
+			if(substr($subtmp,0,1) == "+")
+				$subtmp = substr($subtmp,1,strlen($subtmp));
+			$list_target[$i] = dirname($after_link)."/index.php?w=".$subtmp;
 			$list_names[$i]  = $fname;
 			$list_level[$i]  = getlevel($list_target[$i]);
 			$i++;

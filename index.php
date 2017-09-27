@@ -55,11 +55,9 @@ body{
 icon("globe", 0);
 // TESTING END */
 
-
+include("parts/header.php");
 include("func/gen_menu.php");
-
-//include("parts/header.php");
-//include("parts/body.php");
+include("parts/body.php");
 
 ?>
 </body>

@@ -1,8 +1,10 @@
 <div class="text_area">
 
 <div id="txt"><br><?php 
+if(!empty($_GET['w']))
+	$content = $_GET['w'];
 
-if($content == "index")
+if($content == "index" )
 $content = "home";
 
 if(empty($content))
@@ -13,6 +15,7 @@ if(empty($content))
 }
 else
 {
+	$content = str_replace('+', '/', $content);
 	if(file_exists("./pages/$content.php"))
 	{
 			include("./pages/$content.php");
