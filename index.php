@@ -37,7 +37,7 @@ $actual_link = 'http://'.$_SERVER['HTTP_HOST'];
 $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 
-echo "<title>$title</title>"; 
+echo "<title>$title</title>";
 include("func/icons.php");
 include("func/links.php");
 include("func/rules.php");

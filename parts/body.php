@@ -15,10 +15,14 @@ if(empty($content))
 }
 else
 {
+	$content = str_replace(' ', '+', $content);
 	$content = str_replace('+', '/', $content);
-	if(file_exists("./pages/$content.php"))
+	if(file_exists("./pages/".$content.".php"))
 	{
-			include("./pages/$content.php");
+			include("./pages/".$content.".php");
+	}else
+	{
+		echo "file '"."./pages/".$content.".php"."' not found.";
 	}
 }
 ?></div>

@@ -3,120 +3,102 @@
 
 $root = "./pages";
 
-function getlevel($addr)
-{
-	$lvl[0] = "";
-	$lvl = explode("/",$addr);	
-	$amount = 0;
+$list_names[0]  = "";
+$list_target[0] = "";
 
-	foreach($lvl as &$x)
-	$amount++;
-
-	return $amount-2;
-}
-
-
-$list_target[0] = ""; // item targets (a href)
-$list_names[0] = "";  // item names (..>name</a>)
-$list_level[0] = 0;
-
-function search($folder, $i) //Brutal recurrent function building all the needed sctructure according to setup of folders and kstr files  (This builds the menu structure) 
+function search($folder) //Function that builds the menu according to "this.kstr" in $root folder
 {
 	global $after_link;
 	global $list_target;
 	global $list_names;
-	global $list_level;
 	global $root;
 	
 	$files = scandir($folder);
-	$level = 0;
 	
-	$list_target_tmp[0] = "";
-	$list_names_tmp[0]  = "";
-	$list_level_tmp[0]  = 0;
-	
-	$s = 0; 
 	$line = 0;
-	$type = "unknown";
+	$s = 0;
+	
 	if(file_exists($folder."/this.kstr"))
 	{	
 		$file = fopen($folder."/this.kstr","r");
 		while(! feof($file))
-		  {
-			  $temp = fgets($file);
+		{
+			$temp = fgets($file);
 			  
-			if($line == 0 && clean($temp) == "MENU")
-				$type = "MENU";
-			else 
-			if($line == 0 && clean($temp) == "URL")
-				$type = "URL";
-
-			if($line >= 2)
+			if($line >= 4)
 			{
-				if($type == "MENU" && !empty($temp))
+				if(!empty($temp))
 				{
-					$list_names_tmp[$s]  = $temp;
-					$list_target_tmp[$s] = $folder."/".$temp;
-					$list_level_tmp[$s]  = getlevel($list_target[$i]);
-					$s++;
-				}
-				else
-				if($type == "URL" && !empty($temp))
-				{
-					$list_names_tmp[$s]  = basename($folder);
-					$list_target_tmp[$s]] = $temp;
-					$list_level_tmp[$s]  = $getlevel($folder);
-					$s++;
-					echo "URL";
+					$skip = false;
+					$tmp_list_line = explode(";",$temp);
+					
+					//if(empty($tmp_list_line[0]) || empty(explode("|",$tmp_list_line[0])[0]) || empty(explode("|",$tmp_list_line[0])[count(explode("|",$tmp_list_line[0]))]) || empty($tmp_list_line[1]))
+					//	$skip = true;
+					
+					//echo "testpoint #0001 - skip01: ".$skip."</br>";
+					
+					if(!$skip)
+					{
+						$tmp_address   = str_replace("|","/",$tmp_list_line[0]);
+						$tmp_last_adr  = explode("|",$tmp_list_line[0])[count(explode("|",$tmp_list_line[0]))-1];
+						$tmp_name 	   = $tmp_list_line[1];
+						
+						//echo "testpoint #0002 - file exists: ".$tmp_address.".php"." || ".file_exists($tmp_address.".php");
+						
+						if(!file_exists($root."/".$tmp_address.".php") && $tmp_last_adr != "#")
+							$skip = true;
+						else
+						if(file_exists($root."/".$tmp_address.".php") && $tmp_last_adr != "#")
+						{
+							$tmp_address = "index.php?w=".str_replace("/","+",$tmp_address);
+							
+							$skip = false;
+						}
+						else
+						if(!file_exists($root."/".$tmp_address.".php") && file_exists(dirname($root."/".$tmp_address)."/this.kstr") && $tmp_last_adr == "#")
+						{
+							$readfrom = dirname($root."/".$tmp_address)."/this.kstr";
+							$file_2 = fopen($readfrom,"r");
+							while(! feof($file_2))
+							{
+								$tmp_address = fgets($file_2);
+							}
+							fclose($file_2);
+							
+							$skip = false;
+						}
+						
+						
+						if(!$skip)
+						{
+							$list_names[$s]  = $tmp_name;
+							$list_target[$s] = $tmp_address;
+							$s++;
+							//echo "<br>testpoint #0003 - final format: ".$tmp_name." || ".$list_target[$s-1];
+						}
+					}
 				}
 			}
 			$line++;
-		  }
+		}
 		fclose($file);
 	}
-	
-	if($type != "URL")
-	foreach ($files as &$value) 
-	{
-		$ftype = substr($value, strlen($value)-4 , strlen($value) );
-		$add_this = true; //přidej kontrolu oproti KSTR!!!
-		
-		if($value!="." && $value!="..")
-		if($value == "this.kstr")
-		{ /*do nothing here*/ }
-		else if($ftype == ".php")
-		{
-			$fname = substr($value, 0 , strlen($value)-4 );
-			$subtmp = substr(str_replace('/', '+', $folder),strlen($root),strlen($folder))."+".$fname;
-			if(substr($subtmp,0,1) == "+")
-				$subtmp = substr($subtmp,1,strlen($subtmp));
-			$list_target[$i] = dirname($after_link)."/index.php?w=".$subtmp;
-			$list_names[$i]  = $fname;
-			$list_level[$i]  = getlevel($list_target[$i]);
-			$i++;
-		}
-		else if(is_dir($value))// && getlevel($value) < 10)
-		{
-			echo $value."</br>";
-			$i = search($value,$i);
-		}
-	}
-	
-	return $i;
 }
 
-search($root,0);
+search($root);
 
-//Now we get to building the actual menu in html5 from the prepared lists from above
+//Now we get to the building the actual menu in html5 from the prepared lists from above
 $j = 0;
 
 $menu_export = "<div class='main_menu'><ul>";
 $current_lvl = 0;
+$lvl = 0;
 
 foreach($list_names as &$name)
 {
 	$href = $list_target[$j];
-	$lvl  = $list_level[$j];
+	$lvl = count(explode("/",$href));
+	/*
 	if($lvl > $current_lvl)
 	{
 		for($i = 0; $i< ($lvl - $current_lvl); $i++)
@@ -130,7 +112,7 @@ foreach($list_names as &$name)
 			$menu_export = $menu_export."</ul>";
 		
 		$current_lvl = $lvl;
-	}
+	}*/
 	
 	$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
 	
