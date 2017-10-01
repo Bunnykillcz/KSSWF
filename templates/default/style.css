@@ -351,7 +351,7 @@ ol li {list-style-type: none;}
 span {
   position: absolute;
 }
-
+/*
 .foot{
 display: block;	
 width: 		60%;  
@@ -373,7 +373,7 @@ position: relative;
 z-index: 1000;
 display: block;
 padding-top: 11px;
-}
+}*/
 
 blockquote{
 	left: Calc( 50% - 250px - 10px - 40px );	

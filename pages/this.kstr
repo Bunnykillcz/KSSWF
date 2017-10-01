@@ -5,4 +5,5 @@
 home;Home
 m_A|m_A;mAA
 m_A|m_B;mAB
+m_A|m_B|m_B;mAB_B
 m_B|#;mBo

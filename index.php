@@ -31,6 +31,7 @@ $logo	 = "img/logo.png";
 $bg_image = "img/bg.png";
 $bg_color = "#5D5D5D";
 $template = "templates/default";  //used for styling web
+$foot_copyright = "Nikola Nejedlý | KyberSoft © 2017";
 
 //----------------------
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'];
@@ -41,12 +42,48 @@ echo "<title>$title</title>";
 include("func/icons.php");
 include("func/links.php");
 include("func/rules.php");
+include("func/reload_cache.php");
+include("func/gen_menu.php");
 ?>
 <style>
 body{
+	margin: 0;
 <?php echo "background-color: $bg_color;";?>
 <?php if(file_exists($bg_image)) echo "background-image: url('$bg_image');"; ?>
 }
+footer{
+	display:block;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 18px;
+	color: white;
+	background: linear-gradient(rgba(255,0,0,0), black);
+	text-decoration: none;
+	padding: 3px 0 0 0;
+	margin: 0;
+	font-size: 10px;
+}
+.footing{
+	display: inline-block;
+	text-align: left;
+	width: Calc( 50% - 24px );
+	top: 0;
+	float: left;
+	padding-left: 12px;
+	padding-top: 3px;
+}
+.KSSWF{
+	display: inline-block;
+	text-align: right;
+	width: Calc( 50% - 24px );
+	top: 0;
+	padding-right: 12px;
+	padding-top: 3px;
+	float: right;
+}
+.KSSWF a{color: #84D3FF;}
 </style>
 </head>
 <body>
@@ -56,13 +93,12 @@ icon("globe", 0);
 // TESTING END */
 
 include("parts/header.php");
-include("func/gen_menu.php");
+if(file_exists("./cache/menu.html"))
+include("./cache/menu.html");
 include("parts/body.php");
 
 ?>
 </body>
-<footer>
 <?php
 include("parts/footer.php");
 ?>
-</footer>
