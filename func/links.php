@@ -7,6 +7,6 @@
 <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' /> 
 <?php
-echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon'/>";
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css'>";
+echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon'/>";
 ?>

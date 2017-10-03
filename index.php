@@ -30,7 +30,7 @@ $favicon = "img/favicon.ico";
 $logo	 = "img/logo.png";
 $bg_image = "img/bg.png";
 $bg_color = "#5D5D5D";
-$template = "templates/default";  //used for styling web
+$template = "templates/default";
 $foot_copyright = "Nikola Nejedlý | KyberSoft © 2017";
 
 //----------------------
@@ -43,7 +43,8 @@ include("func/icons.php");
 include("func/links.php");
 include("func/rules.php");
 include("func/reload_cache.php");
-include("func/gen_menu.php");
+if(!file_exists("./cache/menu.html"))
+	include("func/gen_menu.php");
 ?>
 <style>
 body{
@@ -94,7 +95,7 @@ icon("globe", 0);
 
 include("parts/header.php");
 if(file_exists("./cache/menu.html"))
-include("./cache/menu.html");
+	include("./cache/menu.html");
 include("parts/body.php");
 
 ?>

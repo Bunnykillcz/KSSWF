@@ -1,5 +1,5 @@
 <?php 
-//simple icon callers
+//simple icon callers -- returns the whole string with icon requested
 
 function icon($type, $size)
 {
@@ -14,8 +14,8 @@ function icon($type, $size)
 		case "wpforms":
 			$icon = "fa-wpforms";
 			break;
-		case "globe":
-			$icon = "fa-globe";
+		case "dropdown":
+			$icon = "fa-angle-down";
 			break;
 	}
 	$s = 0;
@@ -36,8 +36,8 @@ function icon($type, $size)
 	}
 	
 	
-	echo "<i class='fa $icon $s'></i>";
-	return;
+	
+	return "<i class='fa $icon $s'></i>";
 } 
 ?>
 

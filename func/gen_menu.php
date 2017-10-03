@@ -1,5 +1,5 @@
 <?php
-/* Menu generator; Nikola Nejedlý (c) 2017 */
+/* Menu generator (from a directory tree); Nikola Nejedlý (c) 2017 */
 
 $root = "./pages";
 
@@ -89,68 +89,88 @@ function search($folder) //Function that builds the menu according to "this.kstr
 	}
 }
 
-search($root);
+	search($root);
 
-//Now we get to the buildimg part of the actual menu in html/5 from the prepared lists from above
-$j = 0;
+	//Now we get to the buildimg part of the actual menu in html/5 from the prepared lists from above
+	$j = 0;
 
-$menu_export = "<div class='main_menu'><ul>";
+	$menu_export = "<nav id='nav_wrap'><div class='mainmenu'><ul>";
 
-foreach($list_names as &$name)
-{
-	$href = $list_target[$j];
-	$orig_parts = explode("/",$list_origin[$j]);
-	$lvl = 0;
-	
-	$ip = 0;
-	//echo "testpoint #0004 - origin: ".$list_origin[$j]."</br>";
-	foreach($orig_parts as &$part)
-		if(!empty($part) && $part!="." && $part!=".." && $lvl < count($orig_parts)-1)
-		{
-			$same = true;
-			
-			$ik = 0;
-			if($j > 0)
-			foreach(explode("/",$list_origin[$j-1]) as &$opart_prev)
-			{
-				if($ik == $ip)
-				{
-					if($opart_prev == $part)
-					{
-						echo "<br>testpoint #0005 - is it the same? : ".$same." --> ".$opart_prev." = ".$part;
-					}else
-					{
-						$same = false;
-						echo "<br>testpoint #0005 - is it the same? : ".$same." --> ".$opart_prev." != ".$part;
-					}
-				}
-				$ik++;
-			}	
-				
-			if(!$same)
-			{
-				$menu_export = $menu_export."<ul>$part";
-				$lvl++;
-			}
-			$ip++;
-		}
-	
-	$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
-	
-	for($i = 0; $i < $lvl; $i++)
-		$menu_export = $menu_export."</ul>";
+	foreach($list_names as &$name)
+	{
+		$href = $list_target[$j];
+		$orig_parts = explode("/",$list_origin[$j]);
+		$lvl = 0;
+		$lvl_current = 0;
+		$ip = 0;
+		//echo "testpoint #0004 - origin: ".$list_origin[$j]."</br>";
+		$ul_sign = 0;
+		$nextpart = false;
 		
-	$j++;
-}
-$menu_export = $menu_export."</ul></div>";
+		foreach($orig_parts as &$part)
+			if(!empty($part) && $part!="." && $part!=".." && $lvl < count($orig_parts)-1)
+			{
+				$same = false;
+				
+				if($j == 0)
+					$same = true;
+				
+				if(dirname($list_origin[$j-1]) == dirname($list_origin[$j]))
+					$same = true;
+				else
+				{
+					$same = true;
+				
+				$tmp = explode("/",dirname($list_origin[$j-1]));
+				$tmp2 = explode("/",dirname($list_origin[$j]));
+				$tmpmax = max(count($tmp)-1,count($tmp2)-1,$ip);
+				
+				for($i = 0; $i < $tmpmax; $i++)
+					if($i <= count($tmp)-1 && $i <= count($tmp2)-1)
+					{
+						if($tmp[$i] != $tmp2[$i])
+							$same = false;
+					}
+					else
+						if(count($tmp) < count($tmp2))
+							$same = false;
+				}
+				
+				$ul_sign = count(explode("/",dirname($list_origin[$j-1]))) - count(explode("/",dirname($list_origin[$j])));
+				
+				if($ul_sign > 0)
+				{
+					$same = true;
+					
+					for($i = 0; $i < $ul_sign; $i++)
+						$menu_export = $menu_export."</ul>";
+					
+					$lvl_current = $lvl-$ul_sign;
+				}
+				
+				if(!$same)
+				{
+					$menu_export = $menu_export."<li><a href='#'>$part ".icon("dropdown",0)."</a></li><ul>";
+					$lvl++;
+					$nextpart = false;
+				}
+				$ip++;
+			}
+		
+		$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
+		
+		for($i = 0; $i < $lvl_current; $i++)
+			$menu_export = $menu_export."</ul>";
+			
+		$j++;
+	}
+	$menu_export = $menu_export."</ul></div></nav>";
 
-//echo $menu_export;
 
-if (!file_exists('./cache/')) {
-    mkdir('./cache/', 0777, true);
-}
+	if (!file_exists('./cache/')) {
+		mkdir('./cache/', 0777, true);
+	}
 
-if(!file_exists("./cache/menu.html"))
-file_put_contents ( "./cache/menu.html" , $menu_export);
-
+	if(!file_exists("./cache/menu.html"))
+		file_put_contents ( "./cache/menu.html" , $menu_export);
 ?>
