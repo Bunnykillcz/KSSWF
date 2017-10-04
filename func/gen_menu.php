@@ -7,7 +7,7 @@ $list_names[0]  = "";
 $list_target[0] = "";
 $list_origin[0] = "";
 
-function search($folder) //Function that builds the menu according to "this.kstr" in $root folder
+function search($folder) //Function that builds the menu according to "this.kstr" in $root folder (also skips files listed that doesn't exist in directories)
 {
 	global $after_link;
 	global $list_target;
@@ -143,14 +143,14 @@ function search($folder) //Function that builds the menu according to "this.kstr
 					$same = true;
 					
 					for($i = 0; $i < $ul_sign; $i++)
-						$menu_export = $menu_export."</ul>";
+						$menu_export = $menu_export."</ul></li>";
 					
 					$lvl_current = $lvl-$ul_sign;
 				}
 				
 				if(!$same)
 				{
-					$menu_export = $menu_export."<li><a href='#'>$part ".icon("dropdown",0)."</a></li><ul>";
+					$menu_export = $menu_export."<li><a href='#'>$part ".icon("dropdown",0)."</a><ul>";
 					$lvl++;
 					$nextpart = false;
 				}

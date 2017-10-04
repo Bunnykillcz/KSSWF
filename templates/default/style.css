@@ -7,183 +7,22 @@ text-align:center;
 font-family: 'Fira Sans', sans-serif;
 background-color: #000;
 }
-::-moz-selection {
-	color: #999;
-	background: #222;
-}
-
-/* TOP PART */
 
 #toptitle{
 	width: 100%;
-	background-image: url("/image/BG_wide.png"); 
 	position: absolute; 
 	top: 0px; 
 	left: 0px; 
 	height:111px;
 	border: 0px;
 } 
-#toptitle::-moz-selection{background: transparent;}
-#toptitle td:first-child, #toptitle td:last-child{width: 100px;}
-#hill1{position: absolute; top: 11px; left:120px;}
-#hill2{position: absolute; top: 11px; right:120px;}
-#squirrel{position: absolute; top: 60px; left: Calc( 50% - 64px ); }
 
-/* EVERYTHING */
 
 .left { text-align:left; }
 
 a:link {color: #D00; text-decoration: none;} 
 a:visited {color: #D33; text-decoration: none;}
 a:hover {color: #000090; text-decoration: underline;} 
-
-
-/* NAVIGATION PART */
-
-#nav_wrap .mainmenu
-{
-	
-	margin-top:15px;
-	background-color: black;
-}
-
-#nav_wrap .mainmenu ul
-{
-	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0;
-}
-
-#nav_wrap .mainmenu ul a
-{
-	display:block;
-	color:#333;
-	text-decoration:none;
-	font-weight:700;
-	font-size:12px;
-	line-height:32px;
-	padding:0 15px;
-	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-#nav_wrap .mainmenu ul li
-{
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0;
-}
-
-#nav_wrap .mainmenu ul li.current-menu-item
-{
-	background:#ddd;
-}
-
-#nav_wrap .mainmenu ul li:hover
-{
-	background:#f6f6f6;
-}
-
-#nav_wrap .mainmenu ul ul
-{
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background:#fff;
-	padding:0;
-}
-
-#nav_wrap .mainmenu ul ul li
-{
-	float:none;
-	width:200px;
-}
-
-#nav_wrap .mainmenu ul ul a
-{
-	line-height:120%;
-	padding:10px 15px;
-}
-
-#nav_wrap .mainmenu ul ul ul
-{
-	top:0;
-	left:100%;
-}
-
-#nav_wrap .mainmenu ul li:hover > ul
-{
-	display:block;
-}
-
-/*
-
-#navbar
-{
-	 position:absolute;
-	 display:block;
-	 top: 100px;
-	 font-size: 10pt;
-	 text-align:center;
-	 vertical-align:middle;
-	 left:0px;
-	 right:0px;
-	 width:100%;
-	 height:22px;
-	 background-color:rgba(0,0,0,0);
-}
-#navbar::-moz-selection{background: transparent;}
-.main_button::-moz-selection{background: transparent;}
-img::-moz-selection{background: transparent;}
-.main_button a::-moz-selection{background: transparent;}
-
-.main_button { z-index:  200; height:20px; vertical-align: middle; display:inline-block; }
-.main_button a 		{ display:inline-block; background-color:#000;
-	-webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-	}
-.main_button a:link 	{ height:20px; width:80px; display:inline-block; color: #FFF;    text-decoration: none;      background-color:rgba(0,0,0,0.3);} 
-.main_button a:visited { height:20px; width:80px; display:inline-block; color: #FFF;    text-decoration: none;      background-color:rgba(0,0,0,0.3);}
-.main_button a:hover 	{ height:20px; width:90px; display:inline-block; color: #000;    text-decoration: underline; background-color:#5A5;} 
-
-.language{
-	position: absolute;
-	top: 105px;
-	right: 20px;
-	width: 16px;
-	height: 16px;
-}
-.language img:hover{
-	position:absolute;
-	top: -1px;
-	right: -2px;
-	width: 20px;
-	height: 20px;
-}
-.printer{
-	z-index: 1500;
-	position: absolute;
-	top: 125px;
-	right: 20px;
-	width: 16px;
-	height: 16px;
-}
-.printer img{
-	width:16px;
-	height:16px;
-}
-.printer img:hover{
-	position:absolute;
-	top: -1px;
-	right: -2px;
-	width: 20px;
-	height: 20px;
-}*/
 
 /* body + footer PART | typography */
 
@@ -194,7 +33,7 @@ top: 		120px;
 width: 		100%;  
 left:		0%; 
 position:	absolute; 
-min-height:	Calc( 100% - 120px );	
+min-height:	Calc ( 100vh - 12px	);
 overflow: 	hidden;
 }
 p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, .text_area::-moz-selection {
@@ -214,7 +53,7 @@ min-width:400px;
 left:5%; 
 min-height: 200px;	
 background-repeat: repeat-x;
-background-image: url('../image/Inside_back_text_inner.png');
+/*background-image: url('../image/Inside_back_text_inner.png');*/
 background-color: transparent;
 background-size:auto Calc( 100% - 16px );
 overflow: hidden;
@@ -222,7 +61,6 @@ overflow: hidden;
 
 .text_area #txt {
 position: relative;
-z-index:  1000;
 text-align: left;
 padding-left: 30px;
 padding-right: 30px;
@@ -371,7 +209,6 @@ text-align: center;
 
 .foot p{
 position: relative;
-z-index: 1000;
 display: block;
 padding-top: 11px;
 }*/
@@ -411,61 +248,14 @@ blockquote cite {
 }
 
 /*-----------------------------------------------------------------------------------*/
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) { 
 
 
 [class*="col-"] {
 	width: 100%;
 }
 
-#toptitle{
-	width: 100%;
-	background-image: url("/image/BG_wide.png"); 
-	position: absolute; 
-	top: 0px; 
-	left: 0px; 
-	height:111px;
-	border: 0px;
-} 
-#toptitle::-moz-selection{background: transparent;}
-#toptitle td:first-child{width: 100px;} 
-#toptitle td:last-child img{width: 0px; overflow: hidden;}
-#hill1{position: absolute; width:0; overflow: hidden;}
-#hill2{position: absolute; width:0; overflow: hidden;}
-#squirrel{position: absolute; width:0; overflow: hidden;}
-/*
 
-#navbar
-{
-	 z-index:1001;
-	 position:absolute;
-	 display:block;
-	 top: 100px;
-	 font-size: 11pt;
-	 text-align:center;
-	 vertical-align:middle;
-	 left:0px;
-	 right:0px;
-	 width:100%;
-	 height:24px;
-	 background-color:#000;
-}
-#navbar::-moz-selection{background: transparent;}
-.main_button::-moz-selection{background: transparent;}
-img::-moz-selection{background: transparent;}
-.main_button a::-moz-selection{background: transparent;}
-
-.main_button { padding-top:12px; height:24px; vertical-align: middle; display:inline-block; }
-.main_button a 		{ display:inline-block; background-color:#000;
-	-webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-	}
-.main_button a:link 	{ height:24px; width:80px; display:inline-block; color: #FFF;    text-decoration: none;      background-color:rgba(0,0,0,0.3);} 
-.main_button a:visited  { height:24px; width:80px; display:inline-block; color: #FFF;    text-decoration: none;      background-color:rgba(0,0,0,0.3);}
-.main_button a:hover 	{ height:24px; width:90px; display:inline-block; color: #000;    text-decoration: underline; background-color:#5A5;} 
-*/
 #bodyfoot { 
 vertical-align: top;
 display:	block;
@@ -493,7 +283,6 @@ overflow: hidden;
 
 .text_area #txt {
 position: relative;
-z-index:  1000;
 text-align: left;
 padding-left: 30px;
 padding-right: 30px;
@@ -547,4 +336,4 @@ blockquote:before {
 }
 }
 
-
+*/

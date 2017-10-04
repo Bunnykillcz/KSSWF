@@ -8,7 +8,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.0.1 
+// Version: 0.0.6 
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
@@ -52,7 +52,11 @@ body{
 <?php echo "background-color: $bg_color;";?>
 <?php if(file_exists($bg_image)) echo "background-image: url('$bg_image');"; ?>
 }
+.text_area{
+	min-height: Calc( 100vh - 120px - 32px - 12px - 3px - 3px );
+}
 footer{
+	posit
 	display:block;
 	left: 0;
 	right: 0;
@@ -69,18 +73,18 @@ footer{
 .footing{
 	display: inline-block;
 	text-align: left;
-	width: Calc( 50% - 24px );
+	width: Calc( 50% - 5% - 5% );
 	top: 0;
 	float: left;
-	padding-left: 12px;
+	padding-left: 5%;
 	padding-top: 3px;
 }
 .KSSWF{
 	display: inline-block;
 	text-align: right;
-	width: Calc( 50% - 24px );
+	width: Calc( 50% - 5% - 5% );
 	top: 0;
-	padding-right: 12px;
+	padding-right: 5%;
 	padding-top: 3px;
 	float: right;
 }
