@@ -39,12 +39,7 @@ $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 
 echo "<title>$title</title>";
-include("func/icons.php");
-include("func/links.php");
-include("func/rules.php");
-include("func/reload_cache.php");
-if(!file_exists("./cache/menu.html"))
-	include("func/gen_menu.php");
+include("func/all_loader.php");
 ?>
 <style>
 body{

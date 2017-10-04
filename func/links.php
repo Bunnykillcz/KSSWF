@@ -7,7 +7,9 @@
 <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' /> 
 <?php
+if(file_exists($template."/style.css"))
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css'>";
+//if(file_exists($template."/style-print.css"))
 //echo "<link rel='stylesheet' type='text/css' href='$template/style-print.css'>";
 echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon'/>";
 
