@@ -40,6 +40,8 @@ $root_link	 = getcwd();
 
 echo "<title>$title</title>";
 include("func/all_loader.php");
+if(!file_exists("cache/menu.html"))
+	include("func/gen_menu.php");
 ?>
 <style>
 body{

@@ -48,23 +48,24 @@ function search($folder) //Function that builds the menu according to "this.kstr
 						
 						//echo "testpoint #0002 - file exists: ".$tmp_address.".php"." || ".file_exists($tmp_address.".php");
 						
-						if(!file_exists($root."/".$tmp_address.".php") && $tmp_last_adr != "#")
+						if(!file_exists($root."/".$tmp_address.".php") && cleanx($tmp_last_adr) != "#")
 							$skip = true;
 						else
-						if(file_exists($root."/".$tmp_address.".php") && $tmp_last_adr != "#")
+						if(file_exists($root."/".$tmp_address.".php") && cleanx($tmp_last_adr) != "#")
 						{
 							$tmp_address = "index.php?w=".str_replace("/","+",$tmp_address);
 							
 							$skip = false;
 						}
 						else
-						if(!file_exists($root."/".$tmp_address.".php") && file_exists(dirname($root."/".$tmp_address)."/this.kstr") && $tmp_last_adr == "#")
+						if(!file_exists($root."/".$tmp_address.".php") && file_exists(dirname($root."/".$tmp_address)."/this.kstr") && cleanx($tmp_last_adr) == "#")
 						{
 							$readfrom = dirname($root."/".$tmp_address)."/this.kstr";
 							$file_2 = fopen($readfrom,"r");
 							while(! feof($file_2))
 							{
 								$tmp_address = fgets($file_2);
+								break;
 							}
 							fclose($file_2);
 							
@@ -142,7 +143,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 				{
 					$same = true;
 					
-					for($i = 0; $i < $ul_sign; $i++)
+					for($i = 0; $i <= $ul_sign; $i++)
 						$menu_export = $menu_export."</ul></li>";
 					
 					$lvl_current = $lvl-$ul_sign;
