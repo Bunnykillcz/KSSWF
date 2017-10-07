@@ -6,6 +6,7 @@
 <link href='https://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet'/> 
 <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' /> 
 <?php
 if(file_exists($template."/style.css"))
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css'>";

@@ -1,9 +1,11 @@
 /* MENU */
-/* Indicators: "|" - directory splitter; "#" - External URL(tells the script to read 'this.kstr' in that folder to get url) */
-/* Format: "folder|folder|filename;MyMenuName" // Make sure to write lines in order, or you might end up with duplicates */
+/* Indicators: "|" - define directory leveling; "ß" - define directory; "#" - External URL(tells the script to read 'this.kstr' in that folder to get url) */
+/* Format: 1. "folder|ß", 2."folder|filename;MyMenuName" // Make sure to write lines in order, or you might end up with duplicates */
 /*-----------------------Script starts reading here-----------------------*/
 home;Home
+m_A|ß;mA_f
 m_A|m_A;mAA
 m_A|m_B;mAB
+m_A|m_B|ß;mB_f
 m_A|m_B|m_B;mAB_B
 m_B|#;mBo
