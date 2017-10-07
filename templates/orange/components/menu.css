@@ -1,0 +1,153 @@
+#nav_wrap{
+	padding: 0 0 0 0;
+	padding-left: 100px;
+	background-color: black;;
+	color: white;
+	width: 100%;
+	display: block;
+	height: 32px;
+}
+
+.mainmenu, .mainmenu a
+{
+	z-index: 3000;
+	text-align: left;
+	color:white;
+	border: 0;
+}
+
+.mainmenu ul ul a:hover
+{
+	color: white;
+}
+
+.mainmenu ul
+{
+	z-index: 3000;
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	display: inline-block;
+	border-left: none;
+}
+
+.mainmenu ul a
+{
+	display:block;
+	z-index: 3000;
+	text-decoration:none;
+	font-size:14px;
+	line-height:32px;
+	padding:0 15px;
+	padding-left: 10px;
+	font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.mainmenu ul li
+{
+	z-index: 3000;
+	position:relative;
+	float:left;
+	margin:0;
+	font-weight:bold;
+	padding:0;
+	min-width: 50px;
+	height: 32px;
+	color: white;
+	border-left: none;
+}
+.mainmenu ul li~li 
+{ 
+-webkit-border-image: 
+  -webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+-moz-border-image:
+  -moz-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;    
+-o-border-image:
+  -o-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+border-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+border-left-width: 1px; 
+border-left-style: solid;
+}
+
+.mainmenu ul li:hover
+{
+	border-left-width: 3px; 
+	border-left-style: solid;
+	border-left-color: orange;
+	border-image: none;
+	z-index: 3700;
+	color: white;
+	height: 32px;
+}
+
+.mainmenu ul ul
+{
+	z-index: 3500;
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background: black;;
+	color: white;
+	padding:0;
+	border-left: none;
+}
+
+.mainmenu ul ul li
+{
+	z-index: 3400;
+	float:none;
+	font-weight:normal;
+	width:200px;
+	color: white;
+	border-left: none;
+}
+
+.mainmenu ul ul li:hover
+{
+	z-index: 3600;
+	color: black;;
+	width:195px;
+	border-left: none;
+	color: white;
+	background: orange;
+}
+
+.mainmenu ul ul a
+{
+	z-index: 3500;
+	line-height:120%;
+	padding-left: 8px;
+	padding-top: 8px;
+	border-left: none;
+}
+
+.mainmenu ul ul ul
+{
+	top:0;
+	left:100%;
+	border-left: none;
+}
+
+.mainmenu ul ul, .mainmenu ul ul li, .mainmenu ul ul a 
+{
+	z-index: 3800;
+	margin-left: 0px;
+	border-left: none;
+	border-image: none;
+	border-left-width: 0;
+}
+
+.mainmenu ul li:hover > ul
+{
+	z-index: 3600;
+	margin-left: -3px;
+	display:block;
+	border-left-width: 3px; 
+	border-left-style: solid;
+	border-left-color: orange;
+	color: white;
+}

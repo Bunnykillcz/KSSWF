@@ -30,7 +30,7 @@ $favicon = "img/favicon.ico";
 $logo	 = "img/logo.png";
 $bg_image = "img/bg.png";
 $bg_color = "#5D5D5D";
-$template = "templates/default";
+$template = "templates/orange";
 $foot_copyright = "Nikola Nejedlý | KyberSoft © 2017";
 
 //----------------------
@@ -39,9 +39,6 @@ $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 $subtitle = "";
 
-include("func/all_loader.php");
-if(!file_exists("cache/menu.html"))
-	include("func/gen_menu.php");
 ?>
 <style>
 body{
@@ -87,6 +84,11 @@ footer{
 }
 .KSSWF a{color: #84D3FF;}
 </style>
+<?php
+include("func/all_loader.php");
+if(!file_exists("cache/menu.html"))
+	include("func/gen_menu.php");
+?>
 </head>
 <body>
 <?php 

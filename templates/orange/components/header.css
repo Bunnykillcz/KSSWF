@@ -1,0 +1,25 @@
+#header
+{
+	top:0;
+	width: 100%;
+	height:0px;
+	background:black;
+}
+#header td, #header th, #header table
+{
+	top:0;
+	height: 0;
+	background:black;
+}
+#header img
+{
+	position:absolute;
+	padding: 5px 5px 5px 5px;
+	z-index: 2050;
+	height: 60px;
+	top: 0;
+	left: 0px;
+	background:orange;
+	border-right: 3px black solid;
+	border-bottom: 3px black solid;
+}
