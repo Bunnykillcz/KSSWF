@@ -1,6 +1,7 @@
 <div class="text_area">
 
 <div id="txt"><br><?php 
+$content = "";
 if(!empty($_GET['w']))
 	$content = $_GET['w'];
 

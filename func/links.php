@@ -7,6 +7,9 @@
 <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' /> 
 <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=BioRhyme' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' /> 
 <?php
 if(file_exists($template."/style.css"))
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css'>";

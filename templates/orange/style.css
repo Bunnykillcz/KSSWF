@@ -20,16 +20,6 @@ background-color: #CEC4B5;
 background-image: none;
 }
 
-#toptitle{
-	width: 100%;
-	position: absolute; 
-	top: 0px; 
-	left: 0px; 
-	height:111px;
-	border: 0px;
-} 
-
-
 .left { text-align:left; }
 
 a:link {color: #D00; text-decoration: none;} 
@@ -64,6 +54,7 @@ overflow: hidden;
 }
 
 .text_area #txt {
+font-family: 'Lato', arial, georgia, serif;
 position: relative;
 text-align: left;
 padding-left: 30px;
@@ -72,8 +63,7 @@ padding-bottom: 24px;
 padding-top: 10px;
 display:block;
 }
-.text_area p, .text_area p+p:first-letter{
-font-family: 'Kelly Slab', georgia, serif;
+.text_area p{
 text-align: justify;
 text-indent: 14px;
 margin: 0;
@@ -82,12 +72,7 @@ font-size: 14px;
 .text_area p:first-child {
 text-indent: 50px;
 }
-.text_area p:first-letter {
- font-family: 'Cormorant SC', times, Times New Roman, times-roman, georgia, serif;
- font-size: 22px;
- font-weight: bold;
-}
-.text_area p+p, .text_area p+p:first-letter{
+.text_area p+p{
  font-size: 14px;
  font-weight: normal;
  text-indent: 4px;
@@ -102,10 +87,10 @@ margin-bottom:5px;
 }
 
 .text_area h1{
- font-family: 'IM Fell English SC', times, Times New Roman, times-roman, georgia, serif;
+ font-family: 'BioRhyme', times, Times New Roman, times-roman, georgia, serif;
  color: #111;
  margin: 0;
- padding: 0px 0px 6px 0px;
+ padding-bottom: 14px;
  font-size: 51px;
  line-height: 34px;
  letter-spacing: -2px;
@@ -113,8 +98,8 @@ margin-bottom:5px;
  padding-left: 0px;
 }
 
-.text_area h2{
- font-family: 'Cormorant SC', times, Times New Roman, times-roman, georgia, serif;
+.text_area h2, h3, h4{
+ font-family: 'Fira Sans', times, Times New Roman, times-roman, georgia, serif;
  letter-spacing: -1px;
  font-size: 30px;
  font-weight: bold;
@@ -122,19 +107,11 @@ margin-bottom:5px;
 }
 
 .text_area h3{
- font-family: 'Monofett', times, Times New Roman, times-roman, georgia, serif;
- letter-spacing: 1px;
  font-size: 25px;
- font-weight: normal;
- padding-left: 18px;
 }
 
 .text_area h4{
- font-family: 'Aladin', times, Times New Roman, times-roman, georgia, serif;
- letter-spacing: 0px;
  font-size: 24px;
- font-weight: bold;
- padding-left: 22px;
 }
 
 .text_area img{
