@@ -4,6 +4,7 @@
 </div>
 <div class="KSSWF">
 This web uses <a href="https://github.com/Bunnykillcz/KSSWF">KSSWF</a></div>
+<div class="black_filler"></div>
 </footer>
 <!--div style="display:block; position:relative; height:36px;">
 <p style="display:inline-block; position:relative; padding:5px; float:left;"><a href="http://validator.webylon.info/check?uri=nejedniko.wz.cz&ss=1" target="_blank">

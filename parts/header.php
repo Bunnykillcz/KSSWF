@@ -1,7 +1,7 @@
 <table id="header">
 <tr>
 <td>
-<?php echo "<img src='$logo' alt='logo'>";?>
+<?php echo "<a href='$logo_url'><img src='$logo' alt='logo'></a>";?>
 </td>
 </tr>
 </table>

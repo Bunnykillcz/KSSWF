@@ -32,7 +32,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 		{
 			$temp = fgets($file);
 			  
-			if($line >= 4)
+			if($line >= 5)
 			{
 				if(!empty($temp))
 				{
@@ -61,7 +61,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 						$final_address = $final_address.$this_address_chain[$i]."/";
 					}
 					
-					if(cleanx($this_typename) != "#" && cleanx($this_typename) != "ß")
+					if(cleanx($this_typename) != "#" && cleanx($this_typename) != "ß" && cleanx($this_typename) != "##")
 					{
 						$type = "file";
 						
@@ -73,9 +73,11 @@ function search($folder) //Function that builds the menu according to "this.kstr
 						$this_target = "index.php?w=".str_replace("/","+",$final_address);
 					}
 					else 
-					if(cleanx($this_typename) == "#")
+					if(cleanx($this_typename) == "#" || cleanx($this_typename) == "##" )
 					{
 						$type = "url";
+						if(cleanx($this_typename) == "##" )
+							$type = "url_new";
 						if(file_exists($root."/".$final_address."/this.kstr"))
 						{
 							$readfrom = $root."/".$final_address."/this.kstr";
@@ -105,7 +107,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 						$list_names[$s]  = $this_name;						//name
 						$list_target[$s] = $this_target; 					//a href
 						$list_origin[$s] = dirname($final_address."x.php");	//folder structure
-						$list_type[$s]   = $type; 							//file, folder, url
+						$list_type[$s]   = $type; 							//file, folder, url, url_new
 						$list_lvl[$s]	 = count(explode("/",$final_address))-1-$konst; 
 						//echo $list_names[$s]." - ".$list_target[$s]." - ".$list_origin[$s]." - ".$list_type[$s]."</br>";
 						$s++;
@@ -128,6 +130,8 @@ function search($folder) //Function that builds the menu according to "this.kstr
 	$flvl = 0;
 	$ul = 0;
 	$li = 0;
+	$plvl_check = 0;
+	
 	foreach($list_names as &$name)
 	{
 		$href = $list_target[$id_name];
@@ -147,7 +151,11 @@ function search($folder) //Function that builds the menu according to "this.kstr
 		$skip = false;
 		
 		if($id_name > 0)
+			if($prev_lvl == $plvl_check)
 			for($i = 0; $i < ($prev_lvl - $lvl); $i++){
+				$menu_export = $menu_export."</ul></li>"; $ul--;$li--;
+			}else	
+			for($i = 0; $i < ($plvl_check - $lvl); $i++){
 				$menu_export = $menu_export."</ul></li>"; $ul--;$li--;
 			}
 			
@@ -164,8 +172,11 @@ function search($folder) //Function that builds the menu according to "this.kstr
 			$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
 		else if($type == "url")
 			$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
+		else if($type == "url_new")
+			$menu_export = $menu_export."<li><a target='_blank' href='$href'>".icon("_new",0)."$name</a></li>";
 		
 		
+	$plvl_check = $lvl;
 	$id_name++;
 	}
 	

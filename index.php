@@ -8,7 +8,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.0.10a
+// Version: 0.0.12a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
@@ -28,6 +28,7 @@ $title   = "TITLE";
 $tags    = "tag, tag, tag";
 $favicon = "img/favicon.ico";
 $logo	 = "img/logo.png";
+$logo_url = "index.php";
 $bg_image = "img/bg.png";
 $bg_color = "#5D5D5D";
 $template = "templates/orange";

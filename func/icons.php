@@ -1,6 +1,9 @@
 <?php 
 //simple icon callers -- returns the whole string with icon requested
 
+$ic_callers_list = ["globe","heart","wpforms","dropdown","_new",
+					"link","home","user","left","right","up","down"];
+
 function icon($type, $size)
 {
 	$icon = "";
@@ -17,6 +20,31 @@ function icon($type, $size)
 		case "dropdown":
 			$icon = "fa-angle-down";
 			break;
+		case "_new":
+			$icon = "fa-external-link";
+			break;
+		case "link":
+			$icon = "fa-link";
+			break;
+		case "home":
+			$icon = "fa-home";
+			break;
+		case "user":
+			$icon = "fa-user";
+			break;
+		case "left":
+			$icon = "fa-arrow-left";
+			break;
+		case "right":
+			$icon = "fa-arrow-right";
+			break;
+		case "up":
+			$icon = "fa-arrow-up";
+			break;
+		case "down":
+			$icon = "fa-arrow-down";
+			break;
+
 	}
 	$s = 0;
 	
@@ -34,7 +62,6 @@ function icon($type, $size)
 			$s = "fa-4x";
 			break;
 	}
-	
 	
 	
 	return "<i class='fa $icon $s'></i>";
