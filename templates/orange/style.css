@@ -46,7 +46,6 @@ top: 0px;
 min-width:600px; 
 left: Calc( 15% ); 
 width: Calc( 70% );
-min-height: 200px;
 background-color: transparent;
 overflow: hidden;
 }
@@ -67,7 +66,7 @@ display:block;
 }
 .text_area p{
 text-align: justify;
-text-indent: 14px;
+ text-indent: 2px;
 margin: 0;
 font-size: 14px;
 }
@@ -77,7 +76,7 @@ text-indent: 50px;
 .text_area p+p{
  font-size: 14px;
  font-weight: normal;
- text-indent: 4px;
+ text-indent: 2px;
  margin: 0px;
  margin-top: 2px;
 }
