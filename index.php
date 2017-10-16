@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<html lang="cs-CZ">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
-<script src="https://use.fontawesome.com/bd3d370837.js"></script>
 <?php 
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
@@ -12,7 +7,7 @@
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 08.10.2017
+// Last update: 16.10.2017
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -40,62 +35,30 @@ $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 $subtitle = "";
 
+include("func/all_loader.php");
 ?>
+<html lang="cs-CZ">
+<head>
+<meta charset="UTF-8">
+<?php include("func/setup.php"); 
+if($responsive)
+	include("func/meta.php"); 
+?>
+<script src="https://use.fontawesome.com/bd3d370837.js"></script>
 <style>
 body{
 	margin: 0;
 <?php echo "background-color: $bg_color;";?>
 <?php if(file_exists($bg_image)) echo "background-image: url('$bg_image');"; ?>
 }
-.text_area{
-	min-height: Calc( 100vh - 120px - 32px - 12px - 3px - 3px );
-}
-footer{
-	posit
-	display:block;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 18px;
-	color: white;
-	background: linear-gradient(rgba(255,0,0,0), black);
-	text-decoration: none;
-	padding: 3px 0 0 0;
-	margin: 0;
-	font-size: 10px;
-}
-.footing{
-	display: inline-block;
-	text-align: left;
-	width: Calc( 50% - 5% - 5% );
-	top: 0;
-	float: left;
-	padding-left: 5%;
-	padding-top: 3px;
-}
-.KSSWF{
-	display: inline-block;
-	text-align: right;
-	width: Calc( 50% - 5% - 5% );
-	top: 0;
-	padding-right: 5%;
-	padding-top: 3px;
-	float: right;
-}
-.KSSWF a{color: #84D3FF;}
 </style>
 <?php
-include("func/all_loader.php");
 if(!file_exists("cache/menu.html"))
 	include("func/gen_menu.php");
 ?>
 </head>
 <body>
 <?php 
-/* TESTING START
-icon("globe", 0);
-// TESTING END */
 
 include("parts/header.php");
 if(file_exists("./cache/menu.html"))

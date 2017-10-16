@@ -11,6 +11,8 @@ if(file_exists("./func/")){
 		if($temp[count($temp)-1] == "php")
 		{
 			if($file != "gen_menu.php")
+			if($file != "meta.php")
+			if($file != "setup.php")
 			if($file != $this_file)
 				include("./func/$file");
 		}
