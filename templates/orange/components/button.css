@@ -1,0 +1,63 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+.button {
+	min-height:	        10px;
+	min-width:	        10px;
+	position:			initial;
+	border-radius:		3px;
+	font-family: 		'Fredoka One', 'Roboto', Arial;
+	letter-spacing:		1px;
+	font-size: 			11px;
+	font-weight: 		normal;
+	padding: 			2px 2px 2px 2px;
+	margin:				3px 3px 3px 3px;
+	text-align: 		center;
+	font-style: 		normal;
+	text-transform: 	uppercase;
+	color: 				white;
+	background: 		none;
+	background-color: 	#444;
+	border: 			2px solid #555;
+    border-style: 		ridge;
+    vertical-align:		middle;
+    vertical-align:		-webkit-baseline-middle;
+	-webkit-transition: 300ms; /* Safari */
+    transition: 		300ms;
+    transition-timing-function: cubic-bezier(0, 0.8, 0.61, 0.16);
+    transition-delay: 	10ms;
+	overflow-y:			hidden;
+}
+.button:hover {
+	padding: 			3px 5px 3px 5px;
+	margin:				2px 0px 2px 0px;
+	font-size: 			11px;
+	color: 				orange;
+	background-color: 	#000;
+	border-color: 		#925e00;
+    border-style: 		ridge;
+	-webkit-transition: 200ms; /* Safari */
+    transition: 		200ms;
+    transition-timing-function: cubic-bezier(0.17, 1.24, 0.71, 0.94);
+    transition-delay: 	00ms;
+    text-decoration:	none;
+}
+.button i
+{
+	padding: 			2px;
+}
+.button a
+{
+	position:			relative;
+	display: 			block;
+	text-decoration:	inherit;
+	font-size: 			inherit;
+	color: 				inherit;
+	top:				Calc( 50% - 12px );
+	width: 				100%;
+	height:				100%;
+	font-style:	 		none;
+    vertical-align:		middle;
+    vertical-align:		-webkit-baseline-middle;
+}

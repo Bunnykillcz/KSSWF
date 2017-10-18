@@ -10,6 +10,13 @@
 <link href='https://fonts.googleapis.com/css?family=BioRhyme' rel='stylesheet' /> 
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' /> 
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Modak' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Concert+One' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' /> 
+<link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' /> 
 <?php
 if(file_exists($template."/style.css"))
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css' />";
