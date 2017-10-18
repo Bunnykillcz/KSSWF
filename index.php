@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="cs-CZ">
 <?php 
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
@@ -36,12 +37,12 @@ $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 $subtitle = "";
 
-include("func/all_loader.php");
 ?>
-<html lang="cs-CZ">
 <head>
-<meta charset="UTF-8">
-<?php include("func/setup.php"); 
+<meta charset="UTF-8" />
+<?php
+include("func/all_loader.php"); 
+include("func/setup.php"); 
 if($responsive)
 	include("func/meta.php"); 
 ?>
@@ -56,6 +57,8 @@ body{
 <?php
 if(!file_exists("cache/menu.html"))
 	include("func/gen_menu.php");
+
+get_title();
 ?>
 </head>
 <body>
@@ -67,7 +70,7 @@ if(file_exists("./cache/menu.html"))
 include("parts/body.php");
 
 ?>
-</body>
 <?php
 include("parts/footer.php");
 ?>
+</body>

@@ -1,4 +1,6 @@
 <?php 
+//set responsibility
+
 $responsive = FALSE;
 $init_scale = 1.0;
 
@@ -21,6 +23,26 @@ if(file_exists($template."/this.kstr"))
 	fclose($file_);
 }
 
+//get title
 
+function get_title()
+{
+	global $content;
+	global $subtitle;
+	global $title;
+	
+	if(!empty($_GET['w']))
+		$content = $_GET['w'];
+
+	if($content == "index" )
+		$content = "home";
+
+	$subtitle = explode("/",$content)[count(explode("/",$content))-1];
+
+	if(!empty($subtitle))
+		echo "<title>$title | $subtitle</title>";
+	else
+		echo "<title>$title</title>";
+}
 
 ?>

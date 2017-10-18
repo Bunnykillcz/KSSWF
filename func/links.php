@@ -12,10 +12,10 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' /> 
 <?php
 if(file_exists($template."/style.css"))
-echo "<link rel='stylesheet' type='text/css' href='$template/style.css'>";
+echo "<link rel='stylesheet' type='text/css' href='$template/style.css' />";
 //if(file_exists($template."/style-print.css"))
 //echo "<link rel='stylesheet' type='text/css' href='$template/style-print.css'>";
-echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon'/>";
+echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon' />";
 
 if(file_exists($template."/components/")){
 	$files = scandir($template."/components/");
@@ -25,7 +25,7 @@ if(file_exists($template."/components/")){
 		$temp = explode(".",$file);
 		if($temp[count($temp)-1] == "css")
 		{
-			echo "<link rel='stylesheet' type='text/css' href='$template/components/$file'>";
+			echo "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
 		}
 	}
 }

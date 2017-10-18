@@ -25,12 +25,6 @@ else
 	{
 		echo "file '"."./pages/".$content.".php"."' not found.";
 	}
-$subtitle = explode("/",$content)[count(explode("/",$content))-1];
 }
-
-if(!empty($subtitle))
-echo "<title>$title | $subtitle</title>";
-else
-echo "<title>$title</title>";
 ?></div>
 </div>
