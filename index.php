@@ -35,7 +35,7 @@
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'];
 $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
-$subtitle = "";
+$subtitle 	 = "";
 
 ?>
 <head>

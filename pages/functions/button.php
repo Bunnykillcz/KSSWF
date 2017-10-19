@@ -13,5 +13,13 @@ echo button("This is a button 128x64px","#",false,128,64);
 echo button("Another button [0x0]","#",false,0,0);
 echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
 ?>
-</table></p>
+</p>
+<h3>Usage</h3>
+<pre>
+<code class="php">	&lt;?php 
+	echo button("This is a button 128x64px","#",false,128,64);
+	echo button("Another button [0x0]","#",false,0,0);
+	echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
+	?></code>
+</pre>
 
