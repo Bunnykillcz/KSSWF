@@ -1,29 +1,30 @@
 <div class="text_area">
 
 <div id="txt"><br><?php 
-$content = "";
+$content_ = "";
 if(!empty($_GET['w']))
-	$content = $_GET['w'];
+	$content_ = $_GET['w'];
 
-if($content == "index" )
-$content = "home";
+if($content_ == "index" )
+$content_ = "home";
 
-if(empty($content))
+if(empty($content_) && empty($_GET['c']))
 {
 	$addr = $after_link;
-	$content = "home";
-	header('location:'.$addr."?w=".$content);
+	$content_ = "home";
+	header('location:'.$addr."?w=".$content_);
 }
 else
+if(!empty($content_))
 {
-	$content = str_replace(' ', '+', $content);
-	$content = str_replace('+', '/', $content);
-	if(file_exists("./pages/".$content.".php"))
+	$content_ = str_replace(' ', '+', $content_);
+	$content_ = str_replace('+', '/', $content_);
+	if(file_exists("./pages/".$content_.".php"))
 	{
-			include("./pages/".$content.".php");
+			include("./pages/".$content_.".php");
 	}else
 	{
-		echo "file '"."./pages/".$content.".php"."' not found.";
+	infobox("file '"."./pages/".$content_.".php"."' was not found.","warning");
 	}
 }
 ?></div>

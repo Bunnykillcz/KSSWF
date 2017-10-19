@@ -6,7 +6,6 @@ if(file_exists("./func/")){
 	
 	foreach($files_ as &$file)
 	{
-			//echo $file;
 		$temp = explode(".",$file);
 		if($temp[count($temp)-1] == "php")
 		{

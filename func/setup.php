@@ -37,7 +37,8 @@ function get_title()
 	if($content == "index" )
 		$content = "home";
 
-	$subtitle = explode("/",$content)[count(explode("/",$content))-1];
+	$content = str_replace(' ', '+', $content);
+	$subtitle = explode("+",$content)[count(explode("+",$content))-1];
 
 	if(!empty($subtitle))
 		echo "<title>$title | $subtitle</title>";

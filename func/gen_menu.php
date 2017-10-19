@@ -1,11 +1,15 @@
 <?php
+/*-----------------------------------------------------------------*/
 /* Menu generator (from a directory tree); Nikola Nejedlý (c) 2017 */
+/*-----------------------------------------------------------------*/
+
 $root = "./pages";
 $list_names[0]  = "";
 $list_target[0] = "";
 $list_origin[0] = "";
 $list_type[0] = "";
 $list_lvl[0] = 0;
+
 function search($folder) //Function that builds the menu according to "this.kstr" in $root folder (also skips files listed that doesn't exist in directories)
 {
 	global $after_link;
@@ -178,9 +182,11 @@ function search($folder) //Function that builds the menu according to "this.kstr
 	}
 	
 	$menu_export = $menu_export."</ul></div></nav>";
+	
+	
 	if (!file_exists('./cache/')) {
 		mkdir('./cache/', 0777, true);
 	}
 	if(!file_exists("./cache/menu.html"))
-		file_put_contents ( "./cache/menu.html" , $menu_export);	//*/
+		file_put_contents("./cache/menu.html" , $menu_export);
 ?>
