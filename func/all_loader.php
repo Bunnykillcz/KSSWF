@@ -12,6 +12,7 @@ if(file_exists("./func/")){
 			if($file != "gen_menu.php")
 			if($file != "meta.php")
 			if($file != "setup.php")
+			if($file != "js_load.php")
 			if($file != $this_file)
 				include("./func/$file");
 		}

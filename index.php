@@ -4,7 +4,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.0.22a
+// Version: 0.0.27a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
@@ -75,5 +75,6 @@ include("parts/body.php");
 ?>
 <?php
 include("parts/footer.php");
+include("./func/js_load.php");
 ?>
-</body>
+</body> 
