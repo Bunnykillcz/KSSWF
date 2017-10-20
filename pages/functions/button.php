@@ -6,6 +6,16 @@
 <p>bool <i>new_window</i> expects a BOOLEAN value (true/false) and accordingly opens the link in the same or new window.</p>
 <p>int <i>size_x</i>, int <i>size_y</i> expect a number (size in pixels to the width [x] and height [y]). If the size is not set (x, or y is left with 0) the button will have default settings. Which means that it should wrap the text inside and be as big as needed to contain it (it's basically just not limited to a specific size).</p><br/>
 
+<hr>
+<h3>Usage example</h3>
+<pre><code class="language-php" style="display:block; height: 100px;">	&lt;?php 
+	echo button("This is a button 128x64px","#",false,128,64);
+	echo button("Another button [0x0]","#",false,0,0);
+	echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
+	?>
+</code></pre>
+
+<hr>
 <h3>ShowTime!</h3>
 <p>
 <?php 
@@ -14,11 +24,4 @@ echo button("Another button [0x0]","#",false,0,0);
 echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
 ?>
 </p>
-<h3>Usage example</h3>
-<pre><code class="language-php" style="display:block; height: 100px;">	&lt;?php 
-	echo button("This is a button 128x64px","#",false,128,64);
-	echo button("Another button [0x0]","#",false,0,0);
-	echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
-	?>
-</code></pre>
 
