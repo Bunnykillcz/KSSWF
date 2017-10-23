@@ -1,7 +1,8 @@
 <?php 
 //simple icon callers -- returns the whole string with icon requested
 
-$ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info"];
+$ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
+"edit","save","file","folder"];
 
 function icon($type, $size)
 {
@@ -73,11 +74,26 @@ function icon($type, $size)
 		case "sign-out":
 			$icon = "fa-sign-out";
 			break;
+		case "log-out":
+			$icon = "fa-sign-out";
+			break;
 		case "warning":
 			$icon = "fa-exclamation-triangle";
 			break;
 		case "info":
 			$icon = "fa-info-circle";
+			break;
+		case "edit":
+			$icon = "fa-pencil-square";
+			break;
+		case "save":
+			$icon = "fa-floppy-o";
+			break;
+		case "file":
+			$icon = "fa-file";
+			break;
+		case "folder":
+			$icon = "fa-folder";
 			break;
 
 	}
