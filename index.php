@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cs-CZ">
 <?php 
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.0.30a
+// Version: 0.0.37a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 22.10.2017
+// Last update: 01.11.2017
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -21,7 +21,8 @@
 	//Change these settings:
 	//----------------------
 	$title   = "TITLE";
-	$tags    = "tag, tag, tag";
+	$description = "This site is abooout...";
+	$tags    = "tag, tag, tag"; //default keywords
 	$favicon = "img/favicon.ico";
 	$logo	 = "img/logo.png";
 	$logo_url = "index.php";
@@ -40,12 +41,16 @@ $this_w		 = "";
 if(!empty($_GET['w']))
 $this_w		 = str_replace(" ","+", $_GET['w']);
 
+session_start();
+include("func/all_loader.php"); 
+include("func/setup.php"); 
 ?>
 <head>
 <meta charset="UTF-8" />
+<meta name="description" content="<?php echo $description.':'.$subtitle;?>">
+<meta name="keywords" content="<?php echo $tags;?>">
+<meta name="author" content="Nikola Nejedlý">
 <?php
-include("func/all_loader.php"); 
-include("func/setup.php"); 
 if($responsive)
 	include("func/meta.php"); 
 ?>

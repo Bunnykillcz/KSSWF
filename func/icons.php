@@ -2,7 +2,7 @@
 //simple icon callers -- returns the whole string with icon requested
 
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
-"edit","save","file","folder"];
+"edit","save","file","folder","car","ticket","plane"];
 
 function icon($type, $size)
 {
@@ -94,8 +94,17 @@ function icon($type, $size)
 			break;
 		case "folder":
 			$icon = "fa-folder";
+			break; 
+		case "car":
+			$icon = "fa-car";
 			break;
-
+		case "ticket":
+			$icon = "fa-ticket";
+			break;
+		case "plane":
+			$icon = "fa-plane";
+			break;
+			
 	}
 	$s = 0;
 	

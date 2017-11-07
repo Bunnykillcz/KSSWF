@@ -9,7 +9,8 @@
 	color: white;
 	width: 100%;
 	display: block;
-	height: 32px;
+	height: 32px;    
+	white-space: nowrap;
 }
 
 .mainmenu, .mainmenu a
