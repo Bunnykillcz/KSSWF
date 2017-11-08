@@ -22,6 +22,8 @@ background-image: none;
 
 .left 	{ text-align: left; }
 .right	{ text-align: right;}
+.floatleft 	{ float: left; }
+.floatright	{ float: right;}
 
 a:link {color: #D00; text-decoration: none;} 
 a:visited {color: #D33; text-decoration: none;}
@@ -131,17 +133,18 @@ font-style: italic;
 }
 
 .text_area img{
-	display:block;
-	float:right;
-	position:relative;
-	margin: 10px;
-	margin-left: 15px;
-	margin-top:  0px;
-	margin-bottom: 20px;
-	border: 1px solid #000;
-	background-color: #135;
-	padding:1px;
+	display:	block;
+	float:		right;
+	position:	relative;
+	margin: 	10px;
+	margin-left: 		15px;
+	margin-top:  		10px;
+	margin-bottom: 		10px;
+	border: 			1px solid #000;
+	background-color: 	#135;
+	padding:			1px;
 }
+
 /*-------------*/
 /* -- TABLE -- */
 .text_area table
