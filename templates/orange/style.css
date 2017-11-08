@@ -28,6 +28,9 @@ a:visited {color: #D33; text-decoration: none;}
 a:hover {color: #174b4d; text-decoration: underline;} 
 
 /* body + footer PART | typography */
+strong{
+	font-weight:800;
+}
 
 #bodyfoot { 
 vertical-align: top;
@@ -187,48 +190,6 @@ font-size:30px;
 text-align:center;
 font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
-/*-------------*/
-/* -- UL LI -- */
-.text_area ul {
-	display:block;
-    border-left: 5px solid #4A4;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-ul li {list-style-type: none;}
-.text_area ul ul {
-	display:block;
-    border-left: 5px solid #8A8;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-.text_area ul ul ul {
-	display:block;
-    border-left: 5px solid #AFA;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-.text_area ol {
-	display:block;
-    border-left: 5px solid #44A;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-ol li {list-style-type: none;}
-.text_area ol ol {
-	display:block;
-    border-left: 5px solid #88A;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-.text_area ol ol ol {
-	display:block;
-    border-left: 5px solid #AAF;
-    list-style-type: none;
-    padding: 10px 20px;
-}
-/*-------------*/
 
 span {
   position: absolute;

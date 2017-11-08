@@ -2,7 +2,8 @@
 //simple icon callers -- returns the whole string with icon requested
 
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
-"edit","save","file","folder","car","ticket","plane"];
+"edit","save","file","folder","car","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
+"battery4","fork" ];
 
 function icon($type, $size)
 {
@@ -104,6 +105,41 @@ function icon($type, $size)
 		case "plane":
 			$icon = "fa-plane";
 			break;
+		case "time_h":
+			$icon = "fa-hourglass-half";
+			break;
+		case "html5":
+			$icon = "fa-html5";
+			break;
+		case "building":
+			$icon = "fa-building-o";
+			break;
+		case "server":
+			$icon = "fa-server";
+			break;
+		case "battery0":
+			$icon = "fa-battery-empty";
+			break;
+		case "battery1":
+			$icon = "fa-battery-quarter";
+			break;
+		case "battery2":
+			$icon = "fa-battery-half";
+			break;
+		case "battery3":
+			$icon = "fa-battery-three-quarters";
+			break;
+		case "battery4":
+			$icon = "fa-battery-full";
+			break;
+		case "fork":
+			$icon = "fa-code-fork";
+			break;
+/*
+		case "":
+			$icon = "";
+			break;
+*/
 			
 	}
 	$s = 0;
