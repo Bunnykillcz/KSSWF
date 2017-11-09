@@ -1,7 +1,7 @@
 <?php
-/*-----------------------------------------------------------------*/
-/* Read tags from page file (line 2);      Nikola Nejedlý (c) 2017 */
-/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/* Read tags and description from page file (line 2,4);      Nikola Nejedlý (c) 2017 */
+/*-----------------------------------------------------------------------------------*/
 $content_ = "";
 if(!empty($_GET['w']))
 	$content_ = $_GET['w'];
@@ -26,6 +26,13 @@ if(!empty($content_))
 					if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
 					{
 						$tags = cleandotcom($temp);
+					}
+				}
+				if($i == 3)
+				{ 
+					if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
+					{
+						$description = substr($temp,2,strlen($temp));
 						break; 
 					}
 					else
@@ -33,6 +40,7 @@ if(!empty($content_))
 						break;
 					}
 				}
+				
 				$i++;
 			}
 			fclose($file_r);
