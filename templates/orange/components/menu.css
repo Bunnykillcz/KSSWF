@@ -80,7 +80,7 @@ border-left-style: solid;
 
 .mainmenu ul li~li:hover > a
 {
-	padding-left: 9px;
+	padding-left: 8px;
 }
 
 .mainmenu ul li:hover
