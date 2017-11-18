@@ -5,7 +5,7 @@
 
 <hr>
 <h3>Usage example</h3>
-<pre><code class="language-php" style="display:block; height: 64px;">	
+<pre><code class="language-php" style="display:block; height: 96px;">	
 	&lt;?php 
 		$num = gallery("gallery"); //("" - empty parameter leads to "./img/", in this case "./img/gallery/")
 		echo $num;

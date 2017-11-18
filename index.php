@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.0.45a
+// Version: 0.0.57a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 08.11.2017
+// Last update: 18.11.2017
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -46,7 +46,7 @@ include("func/all_loader.php");
 include("func/setup.php"); 
 ?>
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="description" content="<?php echo $description.':'.$subtitle;?>">
 <meta name="keywords" content="<?php echo $tags;?>">
 <meta name="author" content="Nikola Nejedlý">
