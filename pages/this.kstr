@@ -11,6 +11,7 @@ functions|button;Button(...)
 functions|gallery;Gallery(...)
 functions|infobox;Infobox(...)
 functions|slideshow;Slideshow(...)
+functions|map_google;Map_google(...)
 //ins_plug|ß;Plugins
 test;Testing page
 faq;FAQ
