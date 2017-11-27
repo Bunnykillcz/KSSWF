@@ -1,6 +1,6 @@
 /* MENU */
 /* Indicators: "|" - define directory leveling; "ß" - define directory; "#" - External URL(tells the script to read 'this.kstr' in that folder to get url) */
-/*  "##" - External URL (open in NEW WINDOW) */
+/*  "##" - External URL (open in NEW WINDOW); "ß#" - define directory + link it with url;   */
 /* Format: 1. "folder|ß", 2."folder|filename;MyMenuName" // Make sure to write lines in order, or you might end up with duplicates */
 /*-----------------------Script starts reading here-----------------------*/
 home;Home

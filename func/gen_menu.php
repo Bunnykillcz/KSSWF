@@ -97,11 +97,22 @@ function search($folder) //Function that builds the menu according to "this.kstr
 							$skip2 = true;
 					}
 					else 
-					if(cleanx($this_typename) == "ß")
+					if(cleanx($this_typename) == "ß" || cleanx($this_typename) == "ß#")
 					{
 						$konst = 1;
 						$type = "folder";
 						$this_target = "#";
+						if(cleanx($this_typename) == "ß#")
+							{
+								$readfrom = $root."/".$final_address."/this.kstr";
+								$file_2 = fopen($readfrom,"r");
+								while(! feof($file_2))
+								{
+									$this_target = fgets($file_2);
+									break;
+								}
+								fclose($file_2);
+							}
 					}
 					else
 						$skip2 = true;
