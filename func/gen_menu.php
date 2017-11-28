@@ -65,7 +65,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 						$final_address = $final_address.$this_address_chain[$i]."/";
 					}
 					
-					if(cleanx($this_typename) != "#" && cleanx($this_typename) != "ß" && cleanx($this_typename) != "##")
+					if(cleanx($this_typename) != "#" && cleanx($this_typename) != "ß" && cleanx($this_typename) != "##" && cleanx($this_typename) != "ß#")
 					{
 						$type = "file";
 						
@@ -193,7 +193,6 @@ function search($folder) //Function that builds the menu according to "this.kstr
 	}
 	
 	$menu_export = $menu_export."</ul></div></nav>";
-	
 	
 	if (!file_exists('./cache/')) {
 		mkdir('./cache/', 0777, true);
