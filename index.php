@@ -72,7 +72,7 @@ if(!file_exists("./cache/menu.html"))
 	header('location:'.$addr."?w=home&s=1");
 }
 
-get_title();
+get_title(true);
 ?>
 </head>
 <body>

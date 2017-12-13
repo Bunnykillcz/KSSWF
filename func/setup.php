@@ -25,7 +25,7 @@ if(file_exists($template."/this.kstr"))
 
 //get title
 
-function get_title()
+function get_title($sub)
 {
 	global $content;
 	global $subtitle;
@@ -40,10 +40,8 @@ function get_title()
 	$content = str_replace(' ', '+', $content);
 	$subtitle = explode("+",$content)[count(explode("+",$content))-1];
 
-	if(!empty($subtitle))
+	if(!empty($subtitle) && $sub)
 		echo "<title>$title | $subtitle</title>";
 	else
 		echo "<title>$title</title>";
 }
-
-?>
