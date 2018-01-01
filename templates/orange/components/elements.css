@@ -1,0 +1,107 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+img{
+	display:			block;
+	float:				right;
+	position:			relative;
+	margin: 			10px;
+	margin-left: 		15px;
+	margin-top:  		10px;
+	margin-bottom: 		10px;
+	border: 			1px solid #000;
+	background-color: 	#135;
+}
+
+
+.center
+{
+	margin: 	0px;
+	padding:	0px;
+	float:		none;
+	text-align: center;
+	indent: 	none;
+}
+
+.r_column{
+	display:		inline-block;
+	width: 			Calc( 49% );	
+	right: 			0;	
+	padding-left: 	5px;
+	top: 			0;
+	vertical-align: top;
+	margin-left: 	-3px;
+}
+.r_column_small{
+	display: 		inline-block;
+	width: 			Calc( 24% );	
+	right: 			0;	
+	left: 			initial;
+	padding-left: 	15px;
+	top: 			0;
+	vertical-align: top;
+}
+.r_column_big{
+	display: 		inline-block;
+	width: 			Calc( 74% );	
+	right: 			0;	
+	top: 			0;
+	vertical-align: top;
+	margin-left: 	-3px;
+}
+.l_column{
+	display: 		inline-block;
+	width: 			Calc( 49% );	
+	left: 			0;	
+	padding-right: 	5px;
+	top: 			0;
+	vertical-align: top;
+}
+.l_column_small{
+	display: 		inline-block;
+	width: 			Calc( 24% );	
+	left: 			0;	
+	padding-right: 	15px;
+	top: 			0;
+	vertical-align: top;
+}
+.l_column_big{
+	display: 		inline-block;
+	width: 			Calc( 74% );	
+	left: 			0;	
+	right: 			initial;
+	top: 			0;
+	vertical-align: top;
+	margin-right: 	-3px;
+}
+
+
+
+
+
+span 		{}
+strong		{ font-weight:	800;			}
+b 			{ font-weight:	800;			}
+u 			{ text-decoration: underline;	}
+i			{ font-style: 	italic;			}
+p			{ text-align: 	justify;		}
+.left 		{ text-align: 	left; 			}
+.right		{ text-align: 	right;			}
+.floatleft 	{ float: 		left; 			}
+.floatright	{ float: 		right;			}
+
+.full_w 	{ width: 		100%; 			}
+.full_h 	{ height: 		100%; 			}
+.full_vw 	{ width: 		100vw;			}
+.full_vh 	{ height: 		100vh;			}
+
+.null_m		{ margin: 		0;				}
+.null_p		{ padding: 		0;				}
+.null_border{ border: 		none;			}
+.null_bg	{ background:	none;			}
+.null_bg_col{ background-color:		none;	}
+.null_float { float:		none;			}
+
+
+

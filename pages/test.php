@@ -68,4 +68,35 @@ Dolor sit amet, consectetuer adipiscing elit. Integer tempor. Vestibulum erat nu
 , <b> B </b>, <i> I </i>, <u> U </u>
 </p>
 
+<div class="l_column">
+<h2>l_column</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer tempor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Quisque porta. Integer vulputate sem a nibh rutrum consequat. Morbi scelerisque luctus velit. Nunc auctor. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Aliquam in lorem sit amet leo accumsan lacinia. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nunc dapibus tortor vel mi dapibus sollicitudin. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus faucibus molestie nisl. Nulla non lectus sed nisl molestie malesuada. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+</p>
+</div>
+<div class="r_column">
+<h2>r_column</h2>
+<p>
+Ipsum dolor sit amet, consectetuer adipiscing elit. Integer tempor. <strong>Vestibulum erat nulla STRONG</strong>, ullamcorper nec, rutrum non, nonummy ac, erat. Quisque porta. Integer vulputate sem a nibh rutrum consequat. Morbi scelerisque luctus velit. Nunc auctor. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Aliquam in lorem sit amet leo accumsan lacinia. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nunc dapibus tortor vel mi dapibus sollicitudin. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus faucibus molestie nisl. Nulla non lectus sed nisl molestie malesuada. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+</p>
+</div>
+
+<div class="l_column_big">
+<h2>l_column_big</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer tempor. Vestibulum erat nulla, ullamcorper nec, <u>rutrum U</u> non, nonummy ac, erat. Quisque porta. Integer vulputate sem a nibh rutrum consequat. Morbi scelerisque luctus velit. Nunc auctor. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Aliquam in lorem sit amet leo accumsan lacinia. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nunc dapibus tortor vel mi dapibus sollicitudin. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus faucibus molestie nisl. Nulla non lectus sed nisl molestie malesuada. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+</p>
+<br/>
+<img class="null_m  null_bg  null_float  null_p  null_border  full_w" src="https://images.pexels.com/photos/225231/pexels-photo-225231.jpeg" alt="test_image no_margin no_padding full_width" />
+</div>
+<div class="r_column_small">
+<h2>r_column_small</h2>
+<p>
+<b>ipsum B</b> dolor sit amet, consectetuer adipiscing elit. Integer tempor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Quisque porta. Integer vulputate sem a nibh rutrum consequat. Morbi scelerisque luctus velit. Nunc auctor. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Aliquam in lorem sit amet leo accumsan lacinia. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Nunc dapibus tortor vel mi dapibus sollicitudin. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Phasellus faucibus molestie nisl. Nulla non lectus sed nisl molestie malesuada. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <i>Integer tempor I</i>. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Quisque porta.  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+</p>
+</div>
+
 

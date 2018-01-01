@@ -14,25 +14,14 @@
 body{
 text-align:center;
 font-family: 'Fira Sans', sans-serif;
-overflow-y:scroll;
-overflow-x:hidden;
+overflow-y:  scroll;
+overflow-x:  hidden;
 background-color: #CEC4B5;
 background-image: none;
 }
 
-.left 	{ text-align: left; }
-.right	{ text-align: right;}
-.floatleft 	{ float: left; }
-.floatright	{ float: right;}
-
-a:link {color: #D00; text-decoration: none;} 
-a:visited {color: #D33; text-decoration: none;}
-a:hover {color: #174b4d; text-decoration: underline;} 
-
 /* body + footer PART | typography */
-strong{
-	font-weight:800;
-}
+
 
 #bodyfoot { 
 vertical-align: top;
@@ -122,29 +111,6 @@ margin-bottom:5px;
  font-size: 24px;
 }
 
-.text_area p b
-{
-font-weight: 800;
-}
-.text_area p i
-{
-font-style: italic;
-text-transform
-}
-
-.text_area img{
-	display:	block;
-	float:		right;
-	position:	relative;
-	margin: 	10px;
-	margin-left: 		15px;
-	margin-top:  		10px;
-	margin-bottom: 		10px;
-	border: 			1px solid #000;
-	background-color: 	#135;
-	padding:			1px;
-}
-
 /*-------------*/
 /* -- TABLE -- */
 .text_area table
@@ -194,157 +160,6 @@ text-align:center;
 font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-span {
-  position: absolute;
-}
-/*
-.foot{
-display: block;	
-width: 		60%;  
-min-width: 	240px; 
-left:		20%; 
-position:	relative;
-top: -8px; 
-min-height: 32px;
-height: 	32px;	
-background-repeat: 	repeat;
-background-color: 	transparent;
-color:				black;
-font-size: 	10px;
-text-align: center;
-}
-
-.foot p{
-position: relative;
-display: block;
-padding-top: 11px;
-}*/
-
-blockquote{
-	left: Calc( 50% - 250px - 10px - 40px );	
-	font-family: Georgia, serif;
-	font-size: 11px;
-	font-style: italic;
-	width: 500px;
-	margin: 5px;
-	padding: 40px;
-	padding-top: 0px;
-	padding-bottom: 5px;
-	line-height: 1.45;
-	position: relative;
-	color: #666;
-}
-blockquote:before {
-	display: block;
-	content: "\201C";
-	font-size: 80px;
-	position: absolute;
-	left: 10px;
-	top: -45px;
-	color: #7a7a7a;
-}
-blockquote cite:before {
-	content: "- ";
-}
-blockquote cite {
-	text-align: right;
-	color: #888;
-	font-size: 10px;
-	display: block;
-	margin-top: 5px;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*@media only screen and (max-width: 768px) { 
-
-
-[class*="col-"] {
-	width: 100%;
-}
-
-
-#bodyfoot { 
-vertical-align: top;
-display:	block;
-top: 		124px; 
-width: 		100%;  
-left:		0%; 
-position:	absolute; 
-min-height:	Calc( 100% - 124px );	
-overflow: 	hidden;
-}
-
-.text_area { 
-position: relative; 
-top: 0px;
-width: 100%;  
-min-width:280px; 
-left:0; 
-min-height: 200px;	
-background-repeat: repeat-x;
-background-image: url('../image/Inside_back_text_inner.png');
-background-color: transparent;
-background-size:auto Calc( 100% - 16px );
-overflow: hidden;
-}
-
-.text_area #txt {
-position: relative;
-text-align: left;
-padding-left: 30px;
-padding-right: 30px;
-padding-bottom: 24px;
-padding-top: 10px;
-display: block;
-}
-
-
-.text_area h1{
- padding: 0px 0px 4px 0px;
- font-size: 44px;
-}
-.text_area h2{
- font-size: 28px;
- padding-left: 12px;
-}
-.text_area h3{
- font-size: 22px;
- padding-left: 10px;
-}
-.text_area h4{
- font-size: 20px;
- padding-left: 16px;
-}
-
-.text_area img{
-	float: left;
-	position:relative;
-	margin: 15px;
-	margin-left:20px;
-	margin-right:100%;
-	left:0;
-	margin-top:  0px;
-}
-
-
-blockquote{
-	width: 280px;
-	left: Calc( 50% - 140px - 40px - 10px );
-	margin: 5px;
-	min-height: 120px;
-	padding: 40px;
-	padding-top: 30px;
-}
-blockquote:before {
-	left: Calc( 50% - 130px ) ;
-	top: -45px;
-	padding-top: 30px;
-	
-}
-}
-
-*/
-
 pre code * {
 	margin: 0;
 	padding: 0;
@@ -354,42 +169,12 @@ pre code * {
 	vertical-align: baseline;
 }
 
-.h_admin {
-	position: 	absolute;
-	display:	block;
-	z-index: 	2500;
-	top: 	4px;
-	right: 	5px;
-	width: 	72px;
-	height: 32px;
+
+/*-----------------------------------------------------------------------------------*/
+/*@media only screen and (max-width: 768px) { 
+
+
+[class*="col-"] {
+	width: 100%;
 }
-.editor i
-{
-	display: inline-block;
-	color: white;
-    -webkit-transition: 300ms ease-in-out;
-    transition:	300ms ease-in-out;
-	font-size:  16px;
-	padding: 1px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 4px;
-	margin: 1px;
-}
-.editor i:hover
-{
-	display: inline-block;
-	font-size:  18px;
-	color: orange;
-    -webkit-transition: 300ms ease-in-out;
-    transition:	300ms ease-in-out;
-	padding: 0px;
-	margin: 0px;
-	padding-top: 5px;
-	padding-left: 3px;
-	padding-right: 3px;
-}
-.editor a:last-of-type > i:hover
-{
-	color: red;
-}
+*/

@@ -1,0 +1,18 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+a:link {
+color: #D00; 
+text-decoration: none;
+} 
+
+a:visited {
+color: #D33; 
+text-decoration: none;
+}
+
+a:hover {
+color: #174b4d; 
+text-decoration: underline;
+} 

@@ -1,0 +1,44 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.editor i
+{
+	display: inline-block;
+	color: white;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  16px;
+	padding: 1px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	margin: 1px;
+}
+.editor i:hover
+{
+	display: inline-block;
+	font-size:  18px;
+	color: orange;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	padding: 0px;
+	margin: 0px;
+	padding-top: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.editor a:last-of-type > i:hover
+{
+	color: red;
+}
+
+.h_admin {
+	position: 	absolute;
+	display:	block;
+	z-index: 	2500;
+	top: 	4px;
+	right: 	5px;
+	width: 	72px;
+	height: 32px;
+}
