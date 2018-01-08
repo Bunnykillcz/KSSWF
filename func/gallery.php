@@ -5,7 +5,7 @@
 /*                 2017                 */
 /*--------------------------------------*/
 
-function gallery($folder) //the gallery folder directory --> default = ./img/......?
+function gallery($folder, $g_title) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3
 {
 	global $actual_link;
 	global $after_link;
@@ -41,6 +41,9 @@ function gallery($folder) //the gallery folder directory --> default = ./img/...
 	//$endclude.= "<script type='text/javascript' src='./javascript/gallery_fc.js'>";
 
 	echo "<div id='underwrap'></div><div class='img_gallery'>";
+	
+	if(!empty($g_title))
+	echo "<h3>".$g_title."</h3>";
 		 
 		foreach($images as $image)
 		{
