@@ -3,7 +3,7 @@
 
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
-"battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed"];
+"battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food"];
 
 function icon($type, $size)
 {
@@ -152,6 +152,9 @@ function icon($type, $size)
 			break;
 		case "bed":
 			$icon = "fa-bed";
+			break;
+		case "food":
+			$icon = "fa-cutlery";
 			break;
 /*
 		case "":
