@@ -1,7 +1,28 @@
 <?php
 // "pop-up" for text notifications
-function infobox($text, $type) //text = "Hi, my name is Bill"; type = "warning", "info"(default), "none" 
+function infobox() //text = "Hi, my name is ... Bodega!"; type = "error", "warning", "info"(default), "none" ; posx & posy = int absolute position -> if -1, then default
 {
+	$text=""; 
+	$type=""; 
+	$posx="-1";
+	$posy="-1";
+	
+	if(func_num_args() < 2 || func_num_args() > 4)
+	{
+		infobox("Wrong use of function <b>infobox()</b>!<br/>ERROR: Wrong amount of parameters! :[".func_num_args()."|of2-4]:","error");
+		return 0;
+	}
+	//function overloading
+	for ($i = 0; $i < func_num_args(); $i++) {
+		switch($i){
+			case 0: $text = func_get_arg($i); break;
+			case 1: $type = func_get_arg($i); break;
+			case 2: $posx = func_get_arg($i); break;
+			case 3: $posy = func_get_arg($i); break;			
+		}		
+    }
+	//overload end
+	
 	global $actual_link;
 	global $after_link;
 	
@@ -13,13 +34,23 @@ function infobox($text, $type) //text = "Hi, my name is Bill"; type = "warning",
 	$gen_message = "";
 	$gen_t = "";
 	
-	echo "<div class='info'>";
+	$pos = "";
+	
+	if($posx == "-1" || $posy == "-1")
+		$pos = "";
+	else
+		$pos = "style='position: absolute; left:".$posx."; top:".$posy.";'";
+	
+	echo "<div class='info' ".$pos.">";
 	
 	if($type == "none")
 		$gen_t=$gen_t."";
 	else
 	if($type == "warning")
 		$gen_t=$gen_t.icon("warning",1);
+	else
+	if($type == "error")
+		$gen_t=$gen_t.icon("error",1);
 	else
 		$gen_t=$gen_t.icon("info",1);
 	

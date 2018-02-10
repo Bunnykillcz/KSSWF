@@ -1,14 +1,20 @@
-<?php //admin stuff
+<?php 
+//admin stuff
 //------------------------------------------------//
-// 				Nikola Nejedlý - 2017 			  //
+// 				Nikola Nejedlý - 2017/18		  //
 //------------------------------------------------//
+
 $error = "";
+$addr = $after_link;
 
 //-----------------------------------------------    << Functions
 
 function admin_logout()
 {
-	session_start();
+	global $after_link;
+	$addr = $after_link;
+	
+	//session_start();
 	if(session_destroy()) 
 	{
 		header('location:'.$addr."?w=home&s=4");
@@ -40,6 +46,9 @@ if(!empty($_GET['a']))
 $a = $_GET['a'];
 
 	switch($a){
+	default: 
+		break;
+		
 	case 1: //login
 		$form  = "<div class='right' style='padding:7px; right:30px;font-weight: bold;'>";
 		$form .= "<form action='' method='post'><b><u>Admin login:</u></b><br/>";

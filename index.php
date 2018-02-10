@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.1.00a
+// Version: 0.1.27a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 01.01.2018
+// Last update: 11.02.2018
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -23,6 +23,7 @@
 	$title   = "TITLE";
 	$description = "This site is abooout...";
 	$tags    = "tag, tag, tag"; //default keywords
+	$author  = "Nikola Nejedlý"; //web developer = you ?
 	$favicon = "img/favicon.ico";
 	$logo	 = "img/logo.png";
 	$logo_url = "index.php";
@@ -43,17 +44,17 @@ if(!empty($_GET['w']))
 $this_w		 = str_replace(" ","+", $_GET['w']);
 
 session_start();
-include("func/all_loader.php"); 
-include("func/setup.php"); 
+include("./func/all_loader.php"); 
+include("./func/setup.php"); 
 ?>
 <head>
 <meta charset="UTF-8"/>
 <meta name="description" content="<?php echo $description.':'.$subtitle;?>">
 <meta name="keywords" content="<?php echo $tags;?>">
-<meta name="author" content="Nikola Nejedlý">
+<meta name="author" content="<?php echo $author;?>">
 <?php
 if($responsive)
-	include("func/meta.php");
+	include("./func/meta.php");
 
 include("./func/js_load.php");
 ?>
@@ -68,7 +69,7 @@ body{
 <?php
 if(!file_exists("./cache/menu.html"))
 {
-	include("func/gen_menu.php");
+	include("./func/gen_menu.php");
 	header('location:'.$addr."?w=home&s=1");
 }
 
@@ -78,16 +79,16 @@ get_title(true);
 <body>
 <?php 
 
-include("parts/header.php");
+include("./parts/header.php");
 if(file_exists("./cache/menu.html"))
 	include("./cache/menu.html");
-include("parts/body.php");
+include("./parts/body.php");
 
-include("parts/footer.php");
+include("./parts/footer.php");
 
 file_put_contents("./cache/endclude.html" , $endclude);
 include("./cache/endclude.html");
 
-include("parts/admin_login.php");
+include("./parts/admin_login.php");
 ?>
 </body> 

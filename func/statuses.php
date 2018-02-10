@@ -6,7 +6,8 @@ $s = $_GET['s'];
 	switch($s)
 	{
 		case 1: //cache
-		infobox("Cache has been cleared.","warning");
+			infobox("Cache has been cleared.","warning");
+			break;
 		
 		case 2: //logged in
 			infobox("Admin successfully logged in.","info");
