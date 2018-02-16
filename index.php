@@ -30,7 +30,7 @@
 	$bg_image = "img/bg.png";
 	$bg_color = "#5D5D5D";
 	$template = "templates/orange";
-	$foot_copyright = "Nikola Nejedlý | KyberSoft © 2017";
+	$foot_copyright = "Nikola Nejedlý | KyberSoft © 2017-2018";
 
 
 //-------------------------------------------------------------------------------------------------- //
