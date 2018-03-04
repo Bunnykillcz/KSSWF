@@ -7,7 +7,8 @@
 
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","uber","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
-"battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error"];
+"battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
+"phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "briefcase", "suitcase", "medkit", "gamepad" ];
 
 function icon($type, $size)
 {
@@ -166,6 +167,59 @@ function icon($type, $size)
 			break;
 		case "error":
 			$icon = "fa-times-circle";
+			break;
+		case "letter":
+		case "envelope":
+			$icon = "fa-envelope";
+			break;
+		case "letter-o":
+		case "envelope-o":
+			$icon = "fa-envelope-open";
+			break;
+		case "letter-s":
+		case "envelope-s":
+			$icon = "fa-envelope-square";
+			break;
+		case "phone":
+			$icon = "fa-phone";
+			break;
+		case "phone-s":
+			$icon = "fa-phone-square";
+			break;
+		case "headphones":
+			$icon = "fa-headphones";
+			break;
+		case "mphone":
+		case "microphone":
+			$icon = "fa-microphone";
+			break;
+		case "fort":
+			$icon = "fa-fort-awesome";
+			break;
+		case "bill":
+		case "cash":
+		case "money":
+			$icon = "fa-money";
+			break;
+		case "cam":
+		case "camera":
+			$icon = "fa-camera";
+			break;
+		case "cam2":
+		case "camera2":
+			$icon = "fa-camera-retro";
+			break;
+		case "briefcase":
+			$icon = "fa-briefcase";
+			break;
+		case "suitcase":
+			$icon = "fa-suitcase";
+			break;
+		case "gamepad":
+			$icon = "fa-gamepad";
+			break;
+		case "medkit":
+			$icon = "fa-medkit";
 			break;
 /*
 		case "":
