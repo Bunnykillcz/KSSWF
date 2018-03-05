@@ -8,7 +8,8 @@
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","uber","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
-"phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "briefcase", "suitcase", "medkit", "gamepad" ];
+"phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
+"DnD", "windows", "android", "linux", "apple" ];
 
 function icon($type, $size)
 {
@@ -221,9 +222,40 @@ function icon($type, $size)
 		case "medkit":
 			$icon = "fa-medkit";
 			break;
+		case "magic":
+		case "wand":
+			$icon = "fa-magic";
+			break;
+		case "like":
+		case "tup":
+		case "thumbsup":
+			$icon = "fa-thumbs-up";
+			break;
+		case "dislike":
+		case "tdown":
+		case "thumbsdown":
+			$icon = "fa-thumbs-down";
+			break;
+		case "DnD":
+		case "d-and-d":
+			$icon = "fab fa-d-and-d";
+			break;
+		case "windows":
+			$icon = "fa-windows";
+			break;
+		case "android":
+			$icon = "fa-android";
+			break;
+		case "linux":
+			$icon = "fa-linux";
+			break;
+		case "apple":
+			$icon = "fa-apple";
+			break;
+
 /*
 		case "":
-			$icon = "";
+			$icon = "fa-";
 			break;
 */
 	}
