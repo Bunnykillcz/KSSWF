@@ -14,14 +14,15 @@ function cache_clear()
 			unlink("./cache/$file");
 		}
 	}
+	
 }
 
 if(!empty($_GET['c']))
 if($_GET['c'] == "1")
 	{
 	cache_clear();
-	$addr = $after_link;
-	$content = "home";
+	//$addr = $after_link;
+	//$content = "home";
 	//header('location:'.$addr."?w=".$content);
 	}
 ?>

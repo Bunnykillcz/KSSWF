@@ -1,0 +1,88 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+
+.xdebug-error.xe-warning
+{
+	position: absolute;
+	display: block;
+	z-index: 9999999;
+	left: 100px;
+	top: 100px;
+	width: Calc( 100vw - 200px );
+	height: Calc( 100vh - 200px );
+	border: 2px #333 solid;
+	background: #808080ed;
+}
+.xdebug-error.xe-warning th
+{
+	padding: 2px;
+	width: Calc( 100vw - 200px );
+	background: #a50000;
+	color: white;
+}
+.xdebug-error.xe-warning span
+{
+	display: none;	
+}
+.xdebug-error.xe-warning tbody::before
+{
+	display: block;
+	content: "!";	
+	position: absolute;
+	left: -26px;
+	top: -2px;
+	width: 20px;
+	height: 20px;
+	font-family: "Fira Sans", sans-serif;
+	background-color: black;
+	border: 2px solid #ff0a0a;
+	color: red;
+	font-weight: bold;
+	font-size: 15px;
+}
+.xdebug-error.xe-warning tr:nth-of-type(2) th
+{
+	background: #0e0e0e;
+	padding-left: 20px;
+	color: white;
+	border: 1px solid black;
+}
+.xdebug-error.xe-warning tr:nth-of-type(3) th
+{
+	background: #964200;
+	padding-left: 10px;
+	text-align: left;
+	color: white;
+	border-left: 1px solid black;
+}
+.xdebug-error.xe-warning tr td
+{
+	background: whitesmoke;
+	padding: 1px;
+	padding-left: 14px;
+	text-align: left;
+	color: black;
+	border-left: 1px solid black;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(1),
+.xdebug-error.xe-warning tr td:nth-of-type(1)
+{
+	width: 100px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(2),
+.xdebug-error.xe-warning tr td:nth-of-type(2)
+{
+	width: 120px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(3),
+.xdebug-error.xe-warning tr td:nth-of-type(3)
+{
+	width: 150px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(4),
+.xdebug-error.xe-warning tr td:nth-of-type(4)
+{
+	width: 200px;
+}

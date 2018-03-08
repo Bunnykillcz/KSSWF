@@ -1,16 +1,15 @@
 /*-----------------------*/
-/* Nikola Nejedlý - 2017 */
+/* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
 .info {
 	z-index:			5000;
-	min-height:	        32px;
-	width:		        240px;
+	min-height:	        64px;
+	width:		        320px;
 	position: 			fixed;
 	right: 				10px;
 	top:				28px;
-	border-radius:		3px;
-	font-family: 		'Roboto', Arial;
+	/*font-family: 		'Roboto', Arial;*/
 	font-size: 			12px;
 	font-weight: 		normal;
 	padding: 			3px 3px 3px 3px;
@@ -19,57 +18,57 @@
 	font-style: 		normal;
 	color: 				black;
 	background: 		none;
-	background-color: 	#b19072;
-	border: 			4px solid #955234;
+	background-color: 	#fff;
+	border: 			2px solid whitesmoke;
 	border-style: 		ridge;
+	border-radius:		1px;
 	transition: 		opacity 500ms ease-in-out;
 }
 .info p
 {
 	position:			relative;
-	margin-top:			-7px;
-	padding-left: 		35px;
-	padding-right:		16px;
-	text-decoration:	inherit;
-	font-size: 			inherit;
-	color: 				inherit;
-}
-.info a
-{
-	padding: 			1px;
 	margin:				0px;
-	position:			float;
+	padding-left: 		38px;
+	padding-right:		16px;
+	padding-top:		10px;
+	text-decoration:	none;
+	font-size: 			12px;
+	color: 				inherit;
+	font-family: 		monospace, Arial;
+}
+.info a, 
+.info a svg,
+.info a i
+{
+	position:			absolute;
 	bottom: 			0px;
 	right: 				0px;
-	float:				right;
-	margin-bottom:		-3px;
 	text-decoration:	none;
-	font-size: 			10;
-	color: 				#007777;
+	font-size: 			16px;
+	color: 				#8e0000;
+	margin-top:			-25px;
+	margin-left:		-21px;
 }
-.info a:hover
+.info a:hover > svg,
+.info a:hover > i
 {
-	padding: 			0px;
-	margin:				1px;
-	text-decoration:	none;
-	font-size: 			inherit;
-	color: 				#770000;
-	opacity:			1;
-	margin-bottom:		-2px;
+	font-size: 			16px;
+	color: 				#cc0000;
 }
-.info i
+
+.info i,
+.info svg
 {
 	display: 			block;
-	position: 			relative;
+	position: 			absolute;
 	color: 				#000000;
-	top: 				3px;
-	left: 				3px;
-	opacity: 			0.8;
-	width:				15px;
-	height:				15px;
+	top: 				5px;
+	left: 				5px;
+	width:				26px;
+	height:				26px;
 }
 .info:hover
 {
-	opacity: 			0.77;
+	opacity: 			0.9;
 	transition: 		opacity 500ms ease-in-out;
 }
