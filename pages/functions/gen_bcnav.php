@@ -3,7 +3,7 @@
 <p>function <b>gen_bcnav</b> generates a html preset button div with a string of current location sequence, also known as "Breadcrumb Navigation".</p>
 <p>bool <i>href</i> expects a BOOLEAN value (true/false). If true, every breadcrumb will be an url, if existing.</p>
 <p>string <i>splitter</i> expects a value such as <i>"/"</i>, etc.; It represents the character that's used to split every single breadcrumb. If empty, using default "|";</p>
-
+<br/>
 <p><?php echo icon("warning",0); ?> <b> This function uses caching! Every change needs the cache to be cleared. </b> <?php echo icon("warning",0); ?></p><br>
 
 <hr>

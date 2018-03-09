@@ -4,15 +4,11 @@ function cache_clear()
 	if(file_exists("./cache/menu.html"))
 		unlink("./cache/menu.html");
 	
-	$files_ = scandir("./cache/");
-	
-	foreach($files_ as &$file)
-	{
-		$temp = explode("_",$file);
-		if(count($temp) > 1)
-		{
-			unlink("./cache/$file");
-		}
+	$dir = "./cache/";
+	$di = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
+	$ri = new RecursiveIteratorIterator($di, RecursiveIteratorIterator::CHILD_FIRST);
+	foreach ( $ri as $file ) {
+		$file->isDir() ?  rmdir($file) : unlink($file);
 	}
 	
 }

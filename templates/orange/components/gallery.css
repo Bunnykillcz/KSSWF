@@ -1,6 +1,6 @@
 /*--------------------------------------*/
 /*            Nikola Nejedlý            */
-/*                 2017                 */
+/*                 2018                 */
 /*--------------------------------------*/
 
 
@@ -12,29 +12,30 @@
 	user-select: none;
 
 	display: 	block;
-	width: 		100%;
+	width: 		370px;
 	border:			3px solid #444;
     border-style: 	ridge;
 	border-radius:	3px;
 	padding:		5px;
-	background-color:	#a2770e;
+	background-color:	#ab9c77;
 	
 	
 }
 .img_gallery #wrap
 {
-	background-color:#ce8500;
+	background-color:#d0d0d0;
 	display: 	inline-block;
-	width: 		28px;
-	height: 	28px;
+	width: 		64px;
+	height: 	48px;
 	overflow:	hidden;
-	margin:		5px;
-	padding:	1px;
-	border: solid 1px black;
-    -moz-box-shadow: 3px 3px 0px #999;
-    box-shadow: 3px 3px 0px #999;
-    -webkit-box-shadow: 3px 3px 0px #999;
-	border-radius:		3px;
+	margin:		3px;
+	padding:	0px;
+	border: solid 2px #b3b3b3;
+    border-style: 	ridge;
+    -moz-box-shadow: 2px 2px 0px #999;
+    box-shadow: 2px 2px 0px #999;
+    -webkit-box-shadow: 2px 2px 0px #999;
+	border-radius:		2px;
     
     -webkit-transition: 200ms cubic-bezier(0.26, -0.49, 0.67, 0.88);
     transition:			200ms cubic-bezier(0.26, -0.49, 0.67, 0.88);
@@ -42,7 +43,8 @@
 
 .img_gallery img
 {
-	height: 			32px;
+	height: 			140%;
+	width:				140%;
 	object-fit: 		fill;
 	background: 		none;
 	background-color:	none;
@@ -159,53 +161,25 @@
 }
 .img_gallery #wrap:hover
 {
-	background-color:	#ab6e00;
-	border-radius:		28px;
-	border:				2px;
-	border-style:		solid;
-	margin:				4px;
-	margin-top:			3px;
+	background-color:	#ffffff;
+	border-radius:		2px;
+	border:				2px solid white;
+    border-style: 		ridge;
 }
-.img_gallery #wrap:hover > img
+.img_gallery img:hover
 {
-	height:				64px;
-	margin: 			-22px;
+	height:				150%;
+	width:				150%;
 	filter:             grayscale(0%);
-	filter: 			brightness(150%);
+	filter: 			brightness(140%);
     -webkit-transition: 400ms ease-in-out;
     transition:	400ms ease-in-out;
-}/*
-.img_gallery #wrap:active
-{
-	z-index: 	3005;
-	position:	fixed;
-	padding: 	10px;
-	margin: 	2px;
-	display: 	block;
-	width: 		800px;
-	height: 	600px;
-	opacity:	1;
-	left: 		Calc( 50% - 400px );
-	bottom: 	Calc( 50% - 300px );
-	border-radius:		3px;
-	border:				4px solid #666;
-	border-style:		ridge;
-	background-color: 	orange;
-    -moz-box-shadow: 	none;
-    box-shadow: 		none;
-    -webkit-box-shadow: none;
-	
 }
-.img_gallery #wrap:active > img
+.img_gallery h3
 {
-	object-fit: 		scale-down;
-	width:				800px;
-	height:         	600px;
-	display: 			block;
-	border-radius:		none;
-	padding: 			0px;
-	left:				0px;
-	margin:				0;
-	opacity:			1;
-	filter:             grayscale(0%);
-}*/
+	font-family: monospace;
+	text-transform: capitalize;
+	width: 100%;
+	margin-left: -7px;
+	background: #00000042;
+}

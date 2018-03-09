@@ -1,5 +1,8 @@
-<?php  ?>
-
+<?php  
+gen_bcnav(true,">");
+?>
+<hr/>
+<br/>
 <h1>Lorem Ipsum h1</h1>
 <p>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer tempor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Quisque porta. Integer vulputate sem a nibh rutrum consequat. Morbi scelerisque luctus velit. Nunc auctor. 

@@ -29,6 +29,7 @@ function gen_bcnav($bool_href, $string_splitter) 	//Function that generates and 
 			return $i;
 		}
 	//--------------------
+		
 	if(empty($string_splitter))  
 		$string_splitter = "|";
 	
@@ -39,36 +40,48 @@ function gen_bcnav($bool_href, $string_splitter) 	//Function that generates and 
 	else
 		$gen_export .= "home";
 	$gen_export .= "</span>";
-	$gen_export .= " ".$string_splitter." ";
+	if($this_w != "home")
+		$gen_export .= " ".$string_splitter." ";
 
 
 	$temp_list = explode('+',$this_w);
 	$part_i = 1;
 	$tmp_addr_whole = "";
-	foreach($temp_list as &$l)
-	{
-		
-		if($part_i != 1)
+	$parent = "home";
+	if($this_w != "home")
+		foreach($temp_list as &$l)
 		{
-			$tmp_addr_whole .= "+$l";
-			$gen_export .= " ".$string_splitter." ";
-		}
-		else
-			$tmp_addr_whole .= "$l";
-		
-		$gen_export .= "<span class='bcnav_p' id='$part_i'>";
+			$bool_exist = false;
 			
-		if($bool_href)//EDIT HERE !! --> every href needs to check the existence of target! Otherwise set to "#";
-			$gen_export .= "<a href='index.php?w=$tmp_addr_whole'>";
-		
-		$gen_export .= $l;
-		
-		if($bool_href)//EDIT HERE !! --> every href needs to check the existence of target!
-			$gen_export .= "</a>";
-		
-		$gen_export .= "</span>";
-		$part_i++;
-	}
+			if($part_i != 1)
+			{
+				$tmp_addr_whole .= "+$l";
+				$gen_export .= " ".$string_splitter." ";
+			}
+			else
+				$tmp_addr_whole .= $l;
+			
+			$gen_export .= "<span class='bcnav_p' id='$part_i'>";
+				
+			$tmp_get_name = bc_get_name($l,$parent);
+			
+			if(empty($tmp_get_name) || $tmp_get_name=="#")
+				$tmp_get_name = $l;
+			else
+				$bool_exist = true;
+				
+			if($bool_href && $bool_exist)
+				$gen_export .= "<a href='index.php?w=$tmp_addr_whole'>";
+				
+			$gen_export .= $tmp_get_name;
+			
+			if($bool_href && $bool_exist)
+				$gen_export .= "</a>";
+				
+			$gen_export .= "</span>";
+			$part_i++;
+			$parent = $l;
+		}
 	
 	$gen_export .= "</div>";
 	
@@ -79,6 +92,51 @@ function gen_bcnav($bool_href, $string_splitter) 	//Function that generates and 
 	$i = count(explode('+',$this_w));
 	return $i;
 }
-		
+
+function bc_get_name($identificator,$parent_ident)
+{
+	$name_ret = "#";
+	$name = "#";
+	$folder = "./pages";
+	$line = 0;
+	if(file_exists($folder."/this.kstr"))
+	{	
+		$file = fopen($folder."/this.kstr","r");
+		while(! feof($file))
+		{
+			$temp = fgets($file);
+			  
+			if($line >= 5)
+			{
+				if(!empty($temp))
+				{
+					$skip=false;
+					$tp = explode(";",$temp);
+					
+					if(substr($temp,0,2) == "//")
+						$skip=true;
+					
+					if(!$skip)
+					{
+						$ident_get_parent = "home";
+						$ident_get = explode("|",$tp[0])[count(explode("|",$tp[0]))-1];
+						if(count(explode("|",$tp[0]))>1)
+							$ident_get_parent = explode("|",$tp[0])[count(explode("|",$tp[0]))-2];
+						if(!empty($tp[count($tp)-1]))
+							$name = $tp[count($tp)-1];
+						if($ident_get == $identificator && $parent_ident == $ident_get_parent)
+							$name_ret = $name;
+						
+						//if($ident_get == $identificator && $parent_ident == $ident_get_parent)
+						//echo "$ident_get == $identificator && $parent_ident == $ident_get_parent"." >> $name_ret";
+					}
+				}
+			}
+			$line++;
+		}
+	}
+	return $name_ret;
+}
+
 	
 ?>

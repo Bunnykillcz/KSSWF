@@ -12,7 +12,12 @@ if(empty($content_) && empty($_GET['c']))
 {
 	$addr = $after_link;
 	$content_ = "home";
-	header('location:'.$addr."?w=".$content_);
+	//header('location:'.$addr."?w=".$content_);
+	$this_w = "home";
+	if(file_exists("./pages/".$content_.".php"))
+	{
+			include("./pages/".$content_.".php");
+	}
 }
 else
 if(!empty($content_))

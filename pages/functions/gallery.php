@@ -2,6 +2,8 @@
 <h2>Gallery(string folder, string title);</h2>
 <p>function <b>gallery</b> gets all files in folder and makes a gallery of them for you. Also returns a number to tell you how many items it found (this does not need to be used).</p>
 <p>If the return value is <i>-1</i>, then the folder doesn't exist.</p>
+<br/>
+<p><?php echo icon("warning",0); ?> <b> This function uses caching! Every change needs the cache to be cleared. </b> <?php echo icon("warning",0); ?></p><br>
 
 <hr>
 <h3>Usage example</h3>
