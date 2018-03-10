@@ -40,17 +40,26 @@ function gen_bcnav($bool_href, $string_splitter) 	//Function that generates and 
 	else
 		$gen_export .= "home";
 	$gen_export .= "</span>";
-	if($this_w != "home")
+	if($this_w != "home" && $this_w != "index" && !empty($this_w))
 		$gen_export .= " ".$string_splitter." ";
-
 
 	$temp_list = explode('+',$this_w);
 	$part_i = 1;
-	$tmp_addr_whole = "";
+	$tmp_addr_whole = "index.php?w=";
 	$parent = "home";
-	if($this_w != "home")
+	$leave_next = false;
+	$current_read = "";
+	
+	if($this_w != "home" && $this_w != "index" && !empty($this_w))
 		foreach($temp_list as &$l)
 		{
+			$current_read.="$l/";
+			$readfrom = $root."/".$current_read."this.kstr";
+						
+			if($leave_next && (bc_get_name($l,$parent) == "#" || empty(bc_get_name($l,$parent))) || 
+				$leave_next && count($temp_list) == $part_i && !(bc_get_name($l,$parent) == "#" || empty(bc_get_name($l,$parent))))
+				break;
+			
 			$bool_exist = false;
 			
 			if($part_i != 1)
@@ -65,13 +74,62 @@ function gen_bcnav($bool_href, $string_splitter) 	//Function that generates and 
 				
 			$tmp_get_name = bc_get_name($l,$parent);
 			
-			if(empty($tmp_get_name) || $tmp_get_name=="#")
-				$tmp_get_name = $l;
-			else
+			if(substr($tmp_get_name,0,3) == "ß?")
+			{
 				$bool_exist = true;
 				
+				if(file_exists($readfrom))
+				{
+					$file_0d = fopen($readfrom,"r");
+					while(!feof($file_0d))
+					{
+						$tmp_addr_whole = fgets($file_0d);
+						break;
+					}
+					fclose($file_0d);
+				}
+				
+				$levels_got = substr($tmp_get_name,count($tmp_get_name)-2);
+				
+				if($levels_got == $part_i+1)
+					$leave_next = true;
+				
+				$tmp_get_name = substr($tmp_get_name,3,-2);
+				//if(count($temp_list)-1 == $part_i)
+				//	$leave_next = true;
+						
+			}else
+			if(substr($tmp_get_name,0,4) == "ßß")
+			{
+				$bool_exist = false;
+				$tmp_get_name = substr($tmp_get_name,4);
+			}else
+			if(substr($tmp_get_name,0,2) == "??")
+			{
+				if(file_exists($readfrom))
+				{
+					$file_0d = fopen($readfrom,"r");
+					while(!feof($file_0d))
+					{
+						$tmp_addr_whole = fgets($file_0d);
+						break;
+					}
+					fclose($file_0d);
+					$bool_exist = true;
+				}
+				else
+					$bool_exist = false;
+				
+				if(count($temp_list)-1 == $part_i)
+					$leave_next = true;
+				$tmp_get_name = substr($tmp_get_name,2);
+			}
+			
+			if(empty($tmp_get_name) || $tmp_get_name=="#")
+				$tmp_get_name = $l;
+			
 			if($bool_href && $bool_exist)
-				$gen_export .= "<a href='index.php?w=$tmp_addr_whole'>";
+				$gen_export .= "<a href='$tmp_addr_whole'>";
 				
 			$gen_export .= $tmp_get_name;
 			
@@ -124,6 +182,18 @@ function bc_get_name($identificator,$parent_ident)
 							$ident_get_parent = explode("|",$tp[0])[count(explode("|",$tp[0]))-2];
 						if(!empty($tp[count($tp)-1]))
 							$name = $tp[count($tp)-1];
+						
+						$levels = count(explode("|",$tp[0])); 
+						
+						if("ß#" == $ident_get && $identificator == $ident_get_parent)
+							$name_ret = "ß?".$name.sprintf('%02d', $levels-1);
+						else
+						if("ß" == $ident_get && $identificator == $ident_get_parent)
+							$name_ret = "ßß".$name;
+						else
+						if("#" == $ident_get && $identificator == $ident_get_parent)
+							$name_ret = "??".$name;
+							
 						if($ident_get == $identificator && $parent_ident == $ident_get_parent)
 							$name_ret = $name;
 						

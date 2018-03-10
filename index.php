@@ -58,6 +58,7 @@ if($responsive)
 
 if(!file_exists("./cache/menu.html"))
 {
+	$addr = $after_link;
 	include("./func/gen_menu.php");
 	header('location:'.$addr."?w=home&s=1");
 }
