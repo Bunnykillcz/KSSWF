@@ -8,8 +8,9 @@
 $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","uber","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
-"phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
-"DnD", "windows", "android", "linux", "apple" ];
+"phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
+"DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch"];
+
 
 function icon($type, $size)
 {
@@ -251,6 +252,30 @@ function icon($type, $size)
 			break;
 		case "apple":
 			$icon = "fa-apple";
+			break;
+		case "music":
+			$icon = "fa-music";
+			break;
+		case "video":
+			$icon = "fa-video";
+			break;
+		case "scart":
+			$icon = "fa-shopping-cart";
+			break;
+		case "scart-p":
+			$icon = "fa-cart-plus";
+			break;
+		case "scart-d":
+			$icon = "fa-cart-arrow-down";
+			break;
+		case "sbag":
+			$icon = "fa-shopping-bag";
+			break;
+		case "sbasket":
+			$icon = "fa-shopping-basket";
+			break;
+		case "stopwatch":
+			$icon = "fa-stopwatch";
 			break;
 
 /*
