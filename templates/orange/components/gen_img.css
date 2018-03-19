@@ -1,0 +1,68 @@
+/*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+
+.canvas_bg a
+{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+}
+
+.canvas_bg
+{
+	z-index: 50000;
+	position: fixed;
+	background: black;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.9;
+	top: 0;
+	left: 0;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+.canvas_bg a:hover,
+.canvas_bg:hover
+{
+	opacity: 0.7;
+}
+
+img.img
+{
+	border: none;
+	float: none;
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+a .canvas_i
+{
+	z-index: 50002;
+	position: fixed;
+	width: 80vw;
+	height: 80vh;
+	left: 10vw;
+	top: 10vh;
+	opacity: 1;
+	object-fit: contain;
+	background:none;
+	border: none;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+a .canvas_i:hover
+{
+	/*opacity: 0.9;*/
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}

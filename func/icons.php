@@ -9,8 +9,8 @@ $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","u
 "edit","save","file","folder","car","uber","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
 "phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
-"DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch"];
-
+"DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch",
+"fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config" ];
 
 function icon($type, $size)
 {
@@ -276,6 +276,51 @@ function icon($type, $size)
 			break;
 		case "stopwatch":
 			$icon = "fa-stopwatch";
+			break;
+		case "twitter":
+			$icon = "fa-twitter";
+			break;
+		case "twitter-s":
+			$icon = "fa-twitter-square";
+			break;
+		case "fb":
+		case "facebook":
+			$icon = "fa-facebook";
+			break;
+		case "fb-s":
+		case "facebook-s":
+			$icon = "fa-facebook-square";
+			break;
+		case "google":
+			$icon = "fa-google";
+			break;
+		case "gp-s":
+		case "google-plus-s":
+		case "google-s":
+			$icon = "fa-google-plus-square";
+			break;
+		case "share":
+			$icon = "fa-share-square";
+			break;
+		case "rot-loading":
+			$icon = "fa-spinner fa-pulse";
+			break;
+		case "spin-loading":
+			$icon = "fa-spinner fa-spin";
+			break;
+		case "spin-loading1":
+			$icon = "fa-circle-notch fa-spin";
+			break;
+		case "spin-loading2":
+			$icon = "fa-cog fa-spin";
+			break;
+		case "loading":
+			$icon = "fa-spinner";
+			break;
+		case "cog":
+		case "setup":
+		case "config":
+			$icon = "fa-cog";
 			break;
 
 /*

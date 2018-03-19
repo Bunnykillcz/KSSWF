@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.1.67a
+// Version: 0.1.98a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 09.03.2018
+// Last update: 19.03.2018
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -42,6 +42,7 @@ $this_w		 = "";
 $endclude 	 = "";
 if(!empty($_GET['w']))
 $this_w		 = str_replace(" ","+", $_GET['w']);
+$imageid 	 = 0;
 
 session_start();
 include("./func/all_loader.php"); 
@@ -91,5 +92,7 @@ file_put_contents("./cache/endclude.html" , $endclude);
 include("./cache/endclude.html");
 
 include("./parts/admin_login.php");
+
+echo "<div class='loadicon' id='loading' style='display: none;'>".icon("rot-loading",2)."</div>";
 ?>
 </body> 

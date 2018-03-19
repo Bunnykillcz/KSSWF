@@ -8,6 +8,7 @@ getstarted;Get started
 functions|ß;Functions
 functions|icon;Icon(...)
 functions|button;Button(...)
+functions|img;Img(...)
 functions|gallery;Gallery(...)
 functions|infobox;Infobox(...)
 functions|slideshow;Slideshow(...)
