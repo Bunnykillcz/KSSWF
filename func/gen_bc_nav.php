@@ -171,7 +171,7 @@ function bc_get_name($identificator,$parent_ident)
 					$skip=false;
 					$tp = explode(";",$temp);
 					
-					if(substr($temp,0,2) == "//")
+					if(substr($temp,0,2) == "//" && substr($temp,0,7) != "//:nav:")
 						$skip=true;
 					
 					if(!$skip)
@@ -183,6 +183,11 @@ function bc_get_name($identificator,$parent_ident)
 						if(!empty($tp[count($tp)-1]))
 							$name = $tp[count($tp)-1];
 						
+						if(substr($ident_get,0,7) == "//:nav:")
+							$ident_get = substr($ident_get,7);
+						if(substr($ident_get_parent,0,7) == "//:nav:")
+							$ident_get_parent = substr($ident_get_parent,7);
+						
 						$levels = count(explode("|",$tp[0])); 
 						
 						if("ß#" == $ident_get && $identificator == $ident_get_parent)
@@ -193,6 +198,10 @@ function bc_get_name($identificator,$parent_ident)
 						else
 						if("#" == $ident_get && $identificator == $ident_get_parent)
 							$name_ret = "??".$name;
+						
+						if(substr($temp,0,7) == "//:nav:")
+							if($ident_get == $identificator && $parent_ident == $ident_get_parent)
+								return $name;
 							
 						if($ident_get == $identificator && $parent_ident == $ident_get_parent)
 							$name_ret = $name;
@@ -207,6 +216,5 @@ function bc_get_name($identificator,$parent_ident)
 	}
 	return $name_ret;
 }
-
 	
 ?>

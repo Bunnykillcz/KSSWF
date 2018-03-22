@@ -1,0 +1,48 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.socials 
+{
+	display: block;
+	width: Calc( 100% - 10px );
+	position: relative;
+	background: linear-gradient(to right, #00000000, #00000017); 
+	border-top: 1px dashed #0000002b;
+	border-bottom: 1px dashed #0000002b;
+	text-align: right;
+	font-size: 12px;
+	padding-right: 10px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+.socials:hover
+{
+	background: #00000025; 
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+
+.socials a svg,
+.socials a i
+{
+	margin: 1px;
+	margin-right: 2px;
+	margin-left: 2px;
+	display: inline-block;
+	position: relative;
+	color: black;
+	background: white;
+	border-radius: 3px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+
+.socials a:hover > svg,
+.socials a:hover > i
+{
+	color: white;
+	background: black;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}

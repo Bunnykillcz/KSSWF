@@ -1,12 +1,13 @@
 /* MENU */
 /* Indicators: "|" - define directory leveling; "ß" - define directory; "#" - External URL(tells the script to read 'this.kstr' in that folder to get url) */
-/*  "##" - External URL (open in NEW WINDOW); "ß#" - define directory + link it with url;   */
+/*  "##" - External URL (open in NEW WINDOW); "ß#" - define directory + link it with url; "//:nav:" - nav comment that extra specifies navigation naming  */
 /* Format: 1. "folder|ß", 2."folder|filename;MyMenuName" // Make sure to write lines in order, or you might end up with duplicates */
 /*-----------------------Script starts reading here-----------------------*/
 home;Home
 getstarted;Get started
 functions|ß;Functions
 functions|icon;Icon(...)
+//:nav:functions|icon; ICONSIES
 functions|button;Button(...)
 functions|img;Img(...)
 functions|gallery;Gallery(...)
@@ -14,6 +15,7 @@ functions|infobox;Infobox(...)
 functions|slideshow;Slideshow(...)
 functions|map_google;Map_google(...)
 functions|gen_bcnav;Gen_bcnav(...)
+functions|socials;Socials(...)
 //ins_plug|ß;Plugins
 test;Testing page
 faq;FAQ
