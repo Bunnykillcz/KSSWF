@@ -1,8 +1,10 @@
 /*-----------------------*/
-/* Nikola Nejedlý - 2018 */
+/* Nikola NejedlÃ½ - 2018 */
 /*-----------------------*/
 
-.editor i
+/* ADMIN EDITOR */
+
+.editor i, .editor svg
 {
 	display: inline-block;
 	color: white;
@@ -15,7 +17,7 @@
 	padding-top: 4px;
 	margin: 1px;
 }
-.editor i:hover
+.editor i:hover, .editor svg:hover
 {
 	display: inline-block;
 	font-size:  18px;
@@ -28,7 +30,8 @@
 	padding-left: 3px;
 	padding-right: 3px;
 }
-.editor a:last-of-type > i:hover
+.editor a:last-of-type > i:hover,
+.editor a:last-of-type > svg:hover
 {
 	color: red;
 }
@@ -41,4 +44,37 @@
 	right: 	5px;
 	width: 	72px;
 	height: 32px;
+}
+
+
+.editor_c i, .editor_c svg, .editor_c a
+{
+	display: inline-block;
+	color: #ffa5a5;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  12px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+}
+.editor_c a:hover,
+.editor_c a:hover > svg,
+.editor_c a:hover > i
+{
+	display: inline-block;
+	font-size:  13px;
+	color: #bd0000;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	padding: 0px;
+	margin: 0px;
+	padding-top: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-decoration: none;
 }

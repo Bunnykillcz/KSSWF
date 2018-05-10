@@ -20,8 +20,13 @@ if(empty($content_) && empty($_GET['c']))
 	}
 }
 else
-if(!empty($content_))
+if(!empty($content_) || !empty($_GET['c']))
 {
+	if(!empty($_GET['c']))
+	{
+		$content_ = "home";
+	}
+	
 	$content_ = str_replace(' ', '+', $content_);
 	$content_ = str_replace('+', '/', $content_);
 	if(file_exists("./pages/".$content_.".php"))

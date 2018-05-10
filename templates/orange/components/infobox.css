@@ -72,3 +72,38 @@
 	opacity: 			0.9;
 	transition: 		opacity 500ms ease-in-out;
 }
+
+
+/*admin login stuff*/
+
+.info form
+{
+	width: 60%;
+	position: relative;
+	display: block;
+	left: Calc(50% - 105px);
+	opacity: 1;
+}
+
+.info form input
+{
+	background: #efefef;
+	padding: 1px;
+	border: 1px solid darkgray;
+}
+
+.info form input:hover
+{
+	background: #efefef;
+	border: 1px solid black;
+}
+
+.info form u
+{
+	display: block;
+	position: relative;
+	right: 35px;
+	padding: 5px;
+}
+
+

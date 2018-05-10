@@ -1,11 +1,11 @@
 <h1>Functions</h1>
-<h2>Icon(string type, int size);</h2>
+<h2 class="code">Icon(<span class="string">string</span> type, <span class="int">int</span> size);</h2>
 <p>function <b>icon</b> searches in it's preset icon callers and returns an icon in the form of the correct html tag for the text symbol using <b>font awesome</b> resources. This means that the font icons won't work if your project is offline.</p>
-<p>string <i>type</i> expects a value such as <i>"globe"</i>, etc. (preset values in the table below)</p>
-<p>int <i>size</i> expects a value between 0 - 3, where 0 is normal size and 3 is huge.</p><br/>
+<p><span class="string">string</span> <i>type</i> expects a value such as <i>"globe"</i>, etc. (preset values in the table below)</p>
+<p><span class="int">int</span> <i>size</i> expects a value between 0 - 3, where 0 is normal size and 3 is huge.</p><br/>
 <p><div class="right"><a href="http://fontawesome.io/" target="_blank"><?php echo icon("_new",0); ?><i>More about font awesome?</i></a></div></p><br/>
 
-<hr>
+
 <h3>Usage example</h3>
 <pre><code class="language-php" style="display:block; height: 132px;">	
 	&lt;?php 
@@ -17,7 +17,7 @@
 	&lt;/div>
 </code></pre>
 
-<hr>
+
 <h3>Table of preset icons</h3>
 <p><table>
 <tr>

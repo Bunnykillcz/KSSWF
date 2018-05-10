@@ -1,0 +1,29 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+h2.code
+{
+	border-left: 1px black solid;
+	font-size: 16px;
+	color: black;
+	font-family: monospace, times-roman, georgia, serif;
+	background: linear-gradient(to right, #9c8d76, #8c8c8c2b 10px, #bfbfbf2b 98%, #ff000000);
+	margin: 5px;
+	margin-left: 0px;
+	margin-top: -6px;
+	padding-left: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h2.code .fce 	,.code .fce 	{color: #840000;}
+h2.code .int 	,.code .int		{color: #0045a5;}
+h2.code .string ,.code .string 	{color: #00790b;}
+h2.code .bool 	,.code .bool 	{color: #8c009a;}
+h2.code .float 	,.code .float 	{color: #0084a5;}
+h2.code .char 	,.code .char 	{color: #078e00;}
+h2.code .var 	,.code .var 	{color: #7c9a90;}
+
+.code{ opacity: 0.8; }
+h2.code{ opacity: 1; }

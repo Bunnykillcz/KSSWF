@@ -1,0 +1,90 @@
+﻿/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+.header
+{
+	position:	absolute;
+	display:block;
+	top:0;
+	width: 100%;
+	height:0px;
+	left: 0;
+	background:black;
+}
+.header a img
+{
+	margin: 0;
+	margin-left: 10px;
+	margin-top:  5px;
+	position:	absolute;
+	padding: 	5px 5px 5px 5px;
+	z-index: 	2050;
+	height: 	60px;
+	top: 		0;
+	left: 		0px;
+	background:		orange;
+	border: 	3px black solid;
+}
+
+/*RESETOR - START*/
+.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6
+{
+	text-align: left;
+	margin:0;
+	margin-top:10px;
+	margin-bottom:5px;
+	text-decoration: none;
+}
+/*RESETOR - END*/
+
+.text_area h1
+{
+	display: block;
+	position: relative;
+	font-family: "Kelly Slab", monospace;
+	color: #111;
+	margin: 0;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+	left: -32px; 
+	z-index: 5;
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 900;
+	padding-left: 0px;
+	text-decoration: none;
+	border: 2px black solid;
+	width: fit-content;
+	background: #ffc760;
+	padding: 3px;
+}
+
+.text_area h2
+{
+	font-family: 'Fira Sans', times, Times New Roman, times-roman, georgia, serif;
+	letter-spacing: -1px;
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.text_area h3
+{
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: max-content;
+	background: linear-gradient(to right, #dc8500, #ffc760 20px, transparent);
+}
+
+.text_area h4
+{
+	font-size: 24px;
+}

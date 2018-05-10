@@ -75,41 +75,6 @@ text-indent: 50px;
  margin: 0px;
  margin-top: 2px;
 }
-.text_area h1,h2,h3,h4 {
-text-align: left;
-margin:0;
-margin-top:10px;
-margin-bottom:5px;
-}
-
-.text_area h1{
- font-family: 'BioRhyme', times, Times New Roman, times-roman, georgia, serif;
- color: #111;
- margin: 0;
- padding-bottom: 14px;
- font-size: 51px;
- line-height: 34px;
- letter-spacing: -2px;
- font-weight: bold;
- padding-left: 0px;
- text-decoration:underline;
-}
-
-.text_area h2, h3, h4{
- font-family: 'Fira Sans', times, Times New Roman, times-roman, georgia, serif;
- letter-spacing: -1px;
- font-size: 30px;
- font-weight: bold;
- padding-left: 15px;
-}
-
-.text_area h3{
- font-size: 25px;
-}
-
-.text_area h4{
- font-size: 24px;
-}
 
 /*-------------*/
 /* -- TABLE -- */

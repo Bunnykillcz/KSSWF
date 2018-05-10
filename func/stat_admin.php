@@ -6,6 +6,7 @@
 
 $error = "";
 $addr = $after_link;
+$salt = "Žluťoučký kůň úpěl ďábelské ódy!";
 
 //-----------------------------------------------    << Functions
 
@@ -32,11 +33,68 @@ if (isset($_POST['submit']))
 	{
 		$username=$_POST['username'];
 		$password=$_POST['password'];
-		$username = stripslashes($username);
-		$password = stripslashes($password);
-		//CHECK IF ADMIN !!!
-		$_SESSION['login_admin']=$username;
-		header('location:'.$addr."?w=home&s=2");
+		$username = stripcslashes(htmlspecialchars(trim($username)));
+		$password = stripcslashes(htmlspecialchars(trim($password)));
+		$isadmin = false;
+		
+		$password = $password.$salt;
+		$password = md5($password);
+		$password = strrev($password);
+		$username = md5($username);
+		
+		//Infobox("N: ".$username."<br>P: ".$password, "info", "", "");
+
+		
+		$fil_ = "./admin/admin_login.pwd";
+		$i = 0;
+		$e = 0;
+		$untest = "";
+		$pwtest = "";
+
+		if(!file_exists($fil_))
+		{
+			infobox("ADMIN LOGON IMPOSSIBLE. FILE NOT FOUND.", "error","","");
+			return 0;
+		}
+		else
+		{
+			$file_r = fopen($fil_,"r");
+			while(! feof($file_r))
+			{
+				$temp = fgets($file_r);
+				  
+				if($i == 0)
+				{ 
+					$untest = trim($temp);
+				}
+				else
+				if($i == 1)
+				{ 
+					$pwtest = trim($temp);
+				}
+				
+				$i++;
+			}
+			fclose($file_r);
+		}
+		
+		if(trim($username) != $untest)
+			$e++;
+		if(trim($password) != $pwtest)
+			$e++;
+		
+		
+		if($e == 0)
+			$isadmin = true;
+		else
+			$error = "<div style='display:block; color:red; padding-left:12px; '>Username or Password is incorrect. </div>";
+		
+		
+		if($isadmin)
+		{
+			$_SESSION['login_admin']=$username;
+			header('location:'.$addr."?w=home&s=2");
+		}
 	}
 }
 //-----------------------------------------------    << $_GET

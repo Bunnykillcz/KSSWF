@@ -1,11 +1,11 @@
 <h1>Functions</h1>
-<h2>map_google(...);</h2>
+<h2 class="code">map_google(...);</h2>
 <p>function <b>map_google</b> ... </p>
 <p>*YET TO BE EDITED*</p>
 <br/>
 <p><?php echo icon("info",0);?> <b>This has to be used only once per page max. Having more will cause issues.</b></p>
 
-<hr>
+
 <h3>Usage example</h3>
 <pre><code class="language-php" style="display:block; height: 200px;">	
 &lt;div style='display:block;border:1px black solid;left:Calc( 50% - 400px );text-align:center;width:800px;position:relative;'>
@@ -15,7 +15,7 @@
 &lt;/div>
 </code></pre>
 
-<hr>
+
 <h3>Showtime!</h3>
 <div style='display:block;border:1px black solid;left:Calc( 50% - 400px );text-align:center;width:800px;position:relative;'>
 <?php  
