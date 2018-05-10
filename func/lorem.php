@@ -92,7 +92,7 @@ function lorem($paragraphs, $lines, $minW, $maxW, $start_w_lipsum)
 	$ww = $_GET["w"];
 	$this_lorem = "";
 	if(!empty($ww))
-		$target_name = trim($ww)."lorem";
+		$target_name = trim(str_replace("+","_",str_replace(" ","_",$ww)))."_lorem";
 	else
 		return 0;
 	
