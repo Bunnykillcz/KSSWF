@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.2.52a
+// Version: 0.2.67a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 10.05.2018
+// Last update: 11.05.2018
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -34,7 +34,7 @@
 
 
 //-------------------------------------------------------------------------------------------------- //
-$actual_link = 'http://'.$_SERVER['HTTP_HOST'];
+$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
 $after_link  = trim($_SERVER['PHP_SELF']);
 $root_link	 = getcwd();
 $subtitle 	 = "";

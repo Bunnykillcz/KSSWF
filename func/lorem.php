@@ -83,21 +83,52 @@ function lorem_p($lines, $minW, $maxW, $start_w_lipsum)
 			$final_output .= ". ";
 			$totalwords = rand($minW, $maxW);
 		}
-		echo $final_output."</p>";
+		return $final_output."</p>";
 
 }
 
 function lorem($paragraphs, $lines, $minW, $maxW, $start_w_lipsum)
 {
+	$ww = $_GET["w"];
+	$this_lorem = "";
+	if(!empty($ww))
+		$target_name = trim($ww)."lorem";
+	else
+		return 0;
+	
+	//CACHE CHECK:
+	if(file_exists("./cache/lorem/$target_name.html"))
+	{
+		include("./cache/lorem/$target_name.html");
+		return 1;
+	}
+	//-----------
 	
 	for($i = 0; $i < $paragraphs; $i++)
 	{
-		lorem_p($lines, $minW, $maxW, $start_w_lipsum);
+		$this_lorem .= lorem_p($lines, $minW, $maxW, $start_w_lipsum);
 		
 		if($i == 0)
 			$start_w_lipsum = false;
 	}
 	
+	//CACHING HERE:
+	if (!file_exists('./cache/')) {
+		mkdir('./cache/', 0777, true);
+	}
+	
+	if (!file_exists('./cache/lorem/')) {
+		mkdir('./cache/lorem/', 0777, true);
+	}
+	
+	if(!file_exists("./cache/lorem/$target_name.html"))
+		file_put_contents("./cache/lorem/$target_name.html" , $this_lorem);
+
+	include("./cache/lorem/$target_name.html");
+	
+	//-----------
+	
+	return 1;
 }
 
 //lorem(7,5,10,10, true);

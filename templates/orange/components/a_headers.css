@@ -62,11 +62,17 @@
 
 .text_area h2
 {
-	font-family: 'Fira Sans', times, Times New Roman, times-roman, georgia, serif;
-	letter-spacing: -1px;
-	font-size: 30px;
-	font-weight: bold;
-	padding-left: 15px;
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: fit-content;
+	background: linear-gradient(to right, #dc0000d1, #ff5448ad 20px, transparent);
 }
 
 .text_area h3
@@ -80,11 +86,21 @@
 	padding-right: 15px;
 	border-bottom: black 2px solid;
 	border-left: black 2px solid;
-	width: max-content;
+	width: fit-content;
 	background: linear-gradient(to right, #dc8500, #ffc760 20px, transparent);
 }
 
 .text_area h4
 {
-	font-size: 24px;
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: fit-content;
+	background: linear-gradient(to right, #008adc, #60dfff 20px, transparent);
 }

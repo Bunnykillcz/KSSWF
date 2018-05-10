@@ -14,36 +14,36 @@ if(!empty($content_))
 	$fil = "./pages/".$content_.".php";
 	$i = 0;
 
-		if(file_exists($fil))
+	if(file_exists($fil))
+	{
+		$file_r = fopen($fil,"r");
+		while(! feof($file_r))
 		{
-			$file_r = fopen($fil,"r");
-			while(! feof($file_r))
-			{
-				$temp = fgets($file_r);
-				  
-				if($i == 1)
-				{ 
-					if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
-					{
-						$tags = cleandotcom($temp);
-					}
+			$temp = fgets($file_r);
+			  
+			if($i == 1)
+			{ 
+				if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
+				{
+					$tags = cleandotcom($temp);
 				}
-				if($i == 3)
-				{ 
-					if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
-					{
-						$description = substr($temp,2,strlen($temp));
-						break; 
-					}
-					else
-					{
-						break;
-					}
-				}
-				
-				$i++;
 			}
-			fclose($file_r);
+			if($i == 3)
+			{ 
+				if(substr($temp,0,2) == "//" || substr($temp,0,2) == "/*")
+				{
+					$description = substr($temp,2,strlen($temp));
+					break; 
+				}
+				else
+				{
+					break;
+				}
+			}
+			
+			$i++;
 		}
+		fclose($file_r);
+	}
 }
 ?>

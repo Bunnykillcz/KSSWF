@@ -1,5 +1,5 @@
-﻿/*-----------------------*/
-/* Nikola NejedlÃ½ - 2017 */
+/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
 /*-----------------------*/
 
 #nav_wrap{
@@ -7,9 +7,9 @@
 	padding-left: 100px;
 	background-color: black;
 	color: white;
-	width: 100%;
+	width: Calc( 100vw - 100px);
 	display: block;
-	height: 32px;    
+	height: 32px;
 	white-space: nowrap;
 }
 

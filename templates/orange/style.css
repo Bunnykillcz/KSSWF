@@ -136,6 +136,13 @@ pre code * {
 	font: inherit;
 	vertical-align: baseline;
 }
+pre code
+{
+	position: relative;
+	display: block;
+	min-height: 80px;
+	height: fit-content;
+}
 
 hr, .text_area hr
 {

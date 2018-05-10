@@ -4,17 +4,21 @@
 
 h2.code
 {
-	border-left: 1px black solid;
-	font-size: 16px;
-	color: black;
 	font-family: monospace, times-roman, georgia, serif;
+	font-weight: 200;
+	font-size: 14px;
 	background: linear-gradient(to right, #9c8d76, #8c8c8c2b 10px, #bfbfbf2b 98%, #ff000000);
 	margin: 5px;
-	margin-left: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: Calc( 100% - 10px );
 	margin-top: -6px;
 	padding-left: 14px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	color: black;
+	border: none;
+	border-left: 1px black solid;
 }
 
 h2.code .fce 	,.code .fce 	{color: #840000;}
@@ -25,5 +29,14 @@ h2.code .float 	,.code .float 	{color: #0084a5;}
 h2.code .char 	,.code .char 	{color: #078e00;}
 h2.code .var 	,.code .var 	{color: #7c9a90;}
 
-.code{ opacity: 0.8; }
 h2.code{ opacity: 1; }
+
+p .fce 		{color: #840000; background:#ffeac8; padding: 0 3px 0 3px;}
+p .int 		{color: #0045a5; background:#ffeac8; padding: 0 3px 0 3px;}
+p .string 	{color: #00790b; background:#ffeac8; padding: 0 3px 0 3px;}
+p .bool 	{color: #8c009a; background:#ffeac8; padding: 0 3px 0 3px;}
+p .float 	{color: #0084a5; background:#ffeac8; padding: 0 3px 0 3px;}
+p .char 	{color: #078e00; background:#ffeac8; padding: 0 3px 0 3px;}
+p .var 		{color: #7c9a90; background:#ffeac8; padding: 0 3px 0 3px;}
+p .function	{color: #636363; background:#ffeac8d1; padding: 0 3px 0 3px;}
+p.code		{color: black;	 background:#ffeac8; padding: 0 3px 0 3px; font-weight: 900;}

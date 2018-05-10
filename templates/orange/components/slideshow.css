@@ -1,3 +1,6 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
 
 
 /* Slideshow container */
@@ -60,6 +63,13 @@
 	border: 3px white solid;
 	background-color: #444;
 	left: 10px;
+	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.next svg, 
+.prev svg
+{
+	font-size: 14px;
 }
 
 /* Position the "next button" to the right */
@@ -73,6 +83,7 @@
 .prev:hover, .next:hover {
 	opacity: 0.9;
 	color: white;
+	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
 /* Caption text */

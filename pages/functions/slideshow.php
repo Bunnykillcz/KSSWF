@@ -1,6 +1,6 @@
 <h1>Functions</h1>
 <h2 class="code">slideshow(<span class="var">var</span> identifier, <span class="string">string</span> folder, <span class="bool">bool</span> show_controls_arrow, <span class="bool">bool</span> show_controls_dots, <span class="int">int</span> time, <span class="string">string</span> effect);</h2>
-<p>function <b>slideshow</b> gets all files in folder and makes a slideshow of them for you. </p>
+<p><span class="function">function</span> <b>slideshow</b> gets all files in folder and makes a slideshow of them for you. </p>
 <p><span class="var">var</span> <i>identifier</i> expects any value, but numbers are very recommended.</p>
 <p><span class="string">string</span> <i>folder</i> expects a folder name such as <i>"slideshow"</i> which will then lead to <i>"./img/slideshow/**"</i> and read all images inside.</p>
 <p><span class="bool">bool</span> <i>show_controls_arrow</i> and <i>show_controls_dots</i> expect a <i>true</i>/<i>false</i>. This will turn on or off according controls (dots, or arrows).</p>
@@ -13,7 +13,7 @@
 
 
 <h3>Usage example</h3>
-<pre><code class="language-php" style="display:block; height: 92px;">	
+<pre><code class="language-php">	
 	&lt;?php 
 		slideshow(0,"gallery",true,true,15000,"fade"); 
 		//("" - empty parameter 'folder' leads to "./img/", but in this case goes to "./img/gallery/")
@@ -21,7 +21,7 @@
 </code></pre>
 
 
-<h3>Showtime!</h3>
+<h2>Showtime!</h2>
 <?php 
 	slideshow(0,"gallery",true,true,15000,"fade"); 
 ?>

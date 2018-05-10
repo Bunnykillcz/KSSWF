@@ -177,9 +177,15 @@
 }
 .img_gallery h3
 {
+	margin: 0;
+	padding: 0;
+	background: none;
+	left: 0; 
+	border: none;
 	font-family: monospace;
 	text-transform: capitalize;
 	width: 100%;
-	margin-left: -7px;
+	margin-left: -4px;
+	padding-left: 8px;
 	background: #00000042;
 }

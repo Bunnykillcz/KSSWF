@@ -1,13 +1,13 @@
 <h1>Functions</h1>
 <h2 class="code">img(<span class="string">string</span> source, <span class="string">string</span> alt, <span class="string">string</span> css_class, <span class="bool">bool</span> cache_this, <span class="bool">bool</span> click_big, <span class="int">int</span> width)</h2>
-<p>function <b>img</b> will generate html tag for each image according to parameters; This allows to easily use caching and click-enlarging of images.</p>
+<p><span class="function">function</span> <b>img</b> will generate html tag for each image according to parameters; This allows to easily use caching and click-enlarging of images.</p>
 <p> ... To be filled out ..</p>
 <br/>
 <p><?php echo icon("warning",0); ?> <b> This function uses (2x) caching! Every change needs the cache to be cleared. </b> <?php echo icon("warning",0); ?></p><br>
 
 
 <h3>Usage example</h3>
-<pre><code class="language-php" style="display:block; height: 96px;">	
+<pre><code class="language-php">	
 	&lt;?php 
 	echo "&lt;div style='display:block;'>";
 		$chk = img("./img/gallery/IMG_9187.jpg", "", "", true, true, 320);
@@ -17,7 +17,7 @@
 	?> 
 </code></pre>
 
-<h3>Showtime!</h3>
+<h2>Showtime!</h2>
 <?php 
 	echo "<div style='display:block;position:static;'>";
 		$chk = img("./img/gallery/IMG_9187.jpg", "", "", true, true, 320);
