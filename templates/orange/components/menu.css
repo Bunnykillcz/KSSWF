@@ -58,7 +58,7 @@
 	margin:0;
 	font-weight:bold;
 	padding:0;
-	min-width: 50px;
+	min-width: 44px;
 	height: 32px;
 	color: white;
 	border-left: 3px solid transparent;
@@ -98,6 +98,7 @@ border-left-style: solid;
 	  linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
 	z-index: 3700;
 	color: white;
+	border-right: none; 
 	height: 32px;
 }
 

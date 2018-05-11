@@ -89,10 +89,17 @@ function lorem_p($lines, $minW, $maxW, $start_w_lipsum)
 
 function lorem($paragraphs, $lines, $minW, $maxW, $start_w_lipsum)
 {
+	global $lorem_id;
+	
+	if(!empty($lorem_id))
+		$lorem_id++;
+	else
+		$lorem_id = 1;
+	
 	$ww = $_GET["w"];
 	$this_lorem = "";
 	if(!empty($ww))
-		$target_name = trim(str_replace("+","_",str_replace(" ","_",$ww)))."_lorem";
+		$target_name = trim(str_replace("+","_",str_replace(" ","_",$ww)))."_lorem".$lorem_id;
 	else
 		return 0;
 	
