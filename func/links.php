@@ -20,6 +20,18 @@
  
 
 <?php
+
+if(isset($_SESSION['login_admin'])) //if admin logged in 
+{
+	$a = 0;
+	if(!empty($_GET['a']))
+		$a = $_GET['a'];
+	if($a == 3)
+	{
+		echo "<link rel='stylesheet' href='./addons/RichTextEditor/src/richtext.min.css'>";
+	}
+}
+
 if(file_exists($template."/style.css"))
 echo "<link rel='stylesheet' type='text/css' href='$template/style.css' />";
 //if(file_exists($template."/style-print.css"))

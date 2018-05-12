@@ -38,5 +38,29 @@ p .bool 	{color: #8c009a; background:#ffeac8; padding: 0 3px 0 3px;}
 p .float 	{color: #0084a5; background:#ffeac8; padding: 0 3px 0 3px;}
 p .char 	{color: #078e00; background:#ffeac8; padding: 0 3px 0 3px;}
 p .var 		{color: #7c9a90; background:#ffeac8; padding: 0 3px 0 3px;}
-p .function	{color: #636363; background:#ffeac8d1; padding: 0 3px 0 3px;}
-p.code		{color: black;	 background:#ffeac8; padding: 0 3px 0 3px; font-weight: 900;}
+p .function	{color: #636363; background:#ffeac8a6; padding: 0 3px 0 3px;}
+p.code		{color: black;	 background:#ffeac8;   padding: 0 3px 0 3px; font-weight: 800;}
+p span + i	
+{
+	color: black; 	 
+	background:#ffeac8;   
+	padding: 0 5px 0 5px; 
+	font-weight: 800;	 
+	text-decoration: none; 	
+	font-style: normal;
+	margin-left: -3px;
+}
+p span + b
+{
+	color: black; 	 
+	background:#ffeac8a6;  
+	padding: 0 5px 0 5px; 
+	font-weight: 800;	 
+	text-decoration: none; 	
+	font-style: normal;
+	margin-left: -3px;
+}
+p span + b:after
+{
+	content: "(...)";
+}

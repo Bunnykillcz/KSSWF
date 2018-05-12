@@ -32,6 +32,7 @@ if (isset($_POST['submit']))
 	else
 	{
 		$username=$_POST['username'];
+		$uunn = $username;
 		$password=$_POST['password'];
 		$username = stripcslashes(htmlspecialchars(trim($username)));
 		$password = stripcslashes(htmlspecialchars(trim($password)));
@@ -92,16 +93,24 @@ if (isset($_POST['submit']))
 		
 		if($isadmin)
 		{
+			savetolog("<span style='color:green;'>$uunn</span> logged in.");
 			$_SESSION['login_admin']=$username;
 			header('location:'.$addr."?w=home&s=2");
 		}
 	}
 }
+
 //-----------------------------------------------    << $_GET
 
 if(!empty($_GET['a']))
 {
-$a = $_GET['a'];
+	$a = $_GET['a'];
+	
+	if($a > 1)
+	if(!isset($_SESSION['login_admin']))
+		return 0;
+	
+	$admin_message = "<div style='min-height: 320px; border: 1px solid transparent; z-index: 5; background: none; display: block; position: absolute; width: 200px; font-size: 8px; right: 0px; top: 32px; padding: 2px; margin: 2px; white-space: none; text-align: right; color: white;'>";
 
 	switch($a){
 	default: 
@@ -119,10 +128,19 @@ $a = $_GET['a'];
 		break;
 		
 	case 2:
+		savetolog("<span style='color:#af0000;'>admin logged out.</span>");
 		admin_logout();
 		break;
 		
 	case 3: //edit page
+		$endclude .= "<script>
+			$(document).ready(
+			function() {
+				$('.to_edit').richText();
+			});
+		</script>";
+		$admin_message .= "Editing: ./pages/".str_replace(' ', '/', $content_).".php";
+		$admin_message .= "<br/><br/><br/><span style='color: #af0000;'>Don't forget to save your changes!</span>";
 		break;
 		
 	case 4: //new file
@@ -131,9 +149,51 @@ $a = $_GET['a'];
 	case 5: //new folder
 		break;
 		
-	case 6: //save
+	case 6: //saving $_POST form
+	
+	
+		$admin_message .= "Saved as: ./pages/".str_replace(' ', '/', $content_).".php";
+		savetolog("Edited: ./pages/".str_replace(' ', '/', $content_).".php");
+		
+		
+		break;
+		
+	case 6: //settings
 		break;
 		
 	}
+	echo $admin_message."</div>";
 }
+
+function readlog($lines)
+{
+	$log_addr = "./admin/log.txt";
+	$data = explode("\n",file_get_contents($log_addr),$lines);
+	if($lines == 0 || $lines == -1)
+		$data = explode("\n",file_get_contents($log_addr));
+
+	$out  = "";
+	foreach($data as $d)
+	if(!empty($d))
+		$out .= "> $d <br/>\n";
+	return $out;
+}
+
+function savetolog($string_add)
+{
+    date_default_timezone_set('Europe/Prague');
+	$date = date('d.m.Y');
+	$time = date('H:i:s');
+	$string_out = "$date | $time | ".$string_add."\n";
+	$log_addr = "./admin/log.txt";
+	
+	$old_data = file_get_contents($log_addr);
+	$log_op = fopen($log_addr, "w");
+		fwrite($log_op, $string_out);
+		fwrite($log_op, $old_data);
+	fclose($log_op);	
+}
+
+
+
 ?>

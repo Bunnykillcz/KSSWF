@@ -4,7 +4,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.2.71a
+// Version: 0.2.87a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
@@ -41,7 +41,7 @@ $subtitle 	 = "";
 $this_w		 = "";
 $endclude 	 = "";
 if(!empty($_GET['w']))
-$this_w		 = str_replace(" ","+", $_GET['w']);
+	$this_w		 = str_replace("%20","+", str_replace(" ","+", $_GET['w']));
 $imageid 	 = 0;
 
 session_start();

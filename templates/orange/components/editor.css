@@ -1,11 +1,19 @@
 /*-----------------------*/
-/* Nikola NejedlÃ½ - 2018 */
+/* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
 /* ADMIN EDITOR */
 
+.editor a
+{
+	position: relative;
+	display: inline-block;
+	width: 24px;	
+}
+
 .editor i, .editor svg
 {
+	position: relative;
 	display: inline-block;
 	color: white;
     -webkit-transition: 300ms ease-in-out;
@@ -14,27 +22,31 @@
 	padding: 1px;
 	padding-left: 4px;
 	padding-right: 4px;
-	padding-top: 4px;
+	padding-top: 5px;
 	margin: 1px;
 }
 .editor i:hover, .editor svg:hover
 {
 	display: inline-block;
-	font-size:  18px;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
 	color: orange;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
 	padding: 0px;
 	margin: 0px;
-	padding-top: 5px;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding: 1px 1px 4px 1px;
+	box-shadow: 0px 3px 3px white;
+	border-radius: 16px;
+
 }
-.editor a:last-of-type > i:hover,
-.editor a:last-of-type > svg:hover
-{
-	color: red;
-}
+.editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #ff8282;}
+.editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
+.editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #beffbe;}
+.editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
+.editor a:nth-of-type(1) > i, 		.editor a:nth-of-type(1) > svg 			{color: #b9dbff;}
+.editor a:nth-of-type(1) > i:hover, .editor a:nth-of-type(1) > svg:hover 	{color: #007bff;}
 
 .h_admin {
 	position: 	absolute;
@@ -76,5 +88,34 @@
 	padding-top: 3px;
 	padding-left: 2px;
 	padding-right: 2px;
+	text-decoration: none;
+}
+
+
+.editor_settings i, .editor_settings svg, .editor_settings a
+{
+	display: inline-block;
+	color: #757575;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  18px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+}
+.editor_settings a:hover,
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+	display: inline-block;
+	font-size:  18px;
+	color: #fffe00;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+    transform: rotate(30deg);
 	text-decoration: none;
 }
