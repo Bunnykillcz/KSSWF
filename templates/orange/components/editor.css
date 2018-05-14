@@ -4,25 +4,41 @@
 
 /* ADMIN EDITOR */
 
+.editor
+{
+	z-index: 99000; 
+	display:block; 
+	width: 36px; 
+	height: 140px; 
+	left: Calc( 0vw - 4px ); 
+	position: fixed; 
+	/*top: Calc( 50vh - 75px ); */
+	background-color: white; 
+	color: black; 
+	border:1px black ridge; 
+	border-radius: 2px;
+	top: 92px; 
+}
+
 .editor a
 {
 	position: relative;
 	display: inline-block;
-	width: 24px;	
+	width: 28px;	
+	height: 28px;	
 }
 
 .editor i, .editor svg
 {
 	position: relative;
 	display: inline-block;
-	color: white;
+	color: black;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
 	font-size:  16px;
-	padding: 1px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 5px;
+	padding: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
 	margin: 1px;
 }
 .editor i:hover, .editor svg:hover
@@ -31,24 +47,31 @@
 	position: relative;
 	font-size:  20px;
 	width: 24px;
-	color: orange;
+	color: #ffa600;
+	background-color: whitesmoke;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
-	padding: 0px;
 	margin: 0px;
-	padding: 1px 1px 4px 1px;
-	box-shadow: 0px 3px 3px white;
-	border-radius: 16px;
-
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
 }
-.editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #ff8282;}
-.editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
-.editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #beffbe;}
-.editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
-.editor a:nth-of-type(1) > i, 		.editor a:nth-of-type(1) > svg 			{color: #b9dbff;}
-.editor a:nth-of-type(1) > i:hover, .editor a:nth-of-type(1) > svg:hover 	{color: #007bff;}
 
-.h_admin {
+.editor a:nth-of-type(1) > i, 		.editor a:nth-of-type(1) > svg 			{color: #000000;}
+.editor a:nth-of-type(1) > i:hover, .editor a:nth-of-type(1) > svg:hover 	{color: #007bff;}
+.editor a:nth-of-type(2) > i, 		.editor a:nth-of-type(2) > svg 			{color: #000000;}
+.editor a:nth-of-type(2) > i:hover, .editor a:nth-of-type(2) > svg:hover 	{color: #9E9E9E;}
+.editor a:nth-of-type(3) > i, 		.editor a:nth-of-type(3) > svg 			{color: #000000;}
+.editor a:nth-of-type(3) > i:hover, .editor a:nth-of-type(3) > svg:hover 	{color: #FFC107;}
+.editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #000000;}
+.editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
+.editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #9a0000;}
+.editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
+
+.h_admin 
+{
 	position: 	absolute;
 	display:	block;
 	z-index: 	2500;
@@ -57,15 +80,28 @@
 	width: 	72px;
 	height: 32px;
 }
-
+.editor_c
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 280px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
 
 .editor_c i, .editor_c svg, .editor_c a
 {
 	display: inline-block;
-	color: #ffa5a5;
+	color: #650000;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
-	font-size:  12px;
+	font-size:  18px;
 	padding: 1px;
 	padding-left: 1px;
 	padding-right: 1px;
@@ -73,24 +109,46 @@
 	margin: 1px;
 	text-decoration: none;
 	font-weight: 900;
+	height: 20px;
 }
+
 .editor_c a:hover,
 .editor_c a:hover > svg,
 .editor_c a:hover > i
 {
+	color: #e20000;
 	display: inline-block;
-	font-size:  13px;
-	color: #bd0000;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
-	padding: 0px;
 	margin: 0px;
-	padding-top: 3px;
-	padding-left: 2px;
-	padding-right: 2px;
-	text-decoration: none;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.editor_c a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
 }
 
+.editor_settings
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 240px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
 
 .editor_settings i, .editor_settings svg, .editor_settings a
 {
@@ -106,16 +164,66 @@
 	margin: 1px;
 	text-decoration: none;
 	font-weight: 900;
+	height: 20px;
 }
+
 .editor_settings a:hover,
 .editor_settings a:hover > svg,
 .editor_settings a:hover > i
 {
+	color: #673AB7;
 	display: inline-block;
-	font-size:  18px;
-	color: #fffe00;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
-    transform: rotate(30deg);
-	text-decoration: none;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
 }
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+    transform: rotate(90deg);
+    background: none;
+}
+.editor_settings a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+
+.editor a:hover:after,
+.editor_c a:hover:after,
+.editor_settings a:hover:after
+{
+	color: black; 
+	content: " Placeholder "; 
+	background: #ffffff; 
+	border: 1px black solid; 
+	border-radius: 1px;
+	position: absolute; 
+	z-index: 99999; 
+	box-shadow: 0px 3px 3px black;
+	display: block;
+	padding: 2px;
+	left: 36px;
+	top: 16px;
+	min-width: 5px;
+	min-height: 8px;
+	font-size: 9px;
+	white-space: nowrap;
+}
+.editor a:nth-of-type(1):hover:after	{ content: "Edit page"; }
+.editor a:nth-of-type(2):hover:after	{ content: "New page"; }
+.editor a:nth-of-type(3):hover:after	{ content: "Folder manager"; }
+.editor a:nth-of-type(4):hover:after	{ content: "Save page"; }
+.editor a:last-of-type:hover:after		{ content: "Log out"; }
+.editor_c a:hover:after					{ content: "Clear cache"; }
+.editor_settings a:hover:after			{ content: "Site settings & configuration"; }

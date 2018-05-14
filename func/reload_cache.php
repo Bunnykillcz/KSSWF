@@ -17,6 +17,7 @@ if(!empty($_GET['c']))
 if($_GET['c'] == "1")
 if(isset($_SESSION['login_admin']))
 {
+	savetolog("Cache cleared.");
 	cache_clear();
 	//$addr = $after_link;
 	//$content = "home";

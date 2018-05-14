@@ -1,0 +1,5 @@
+ErrorDocument 404 "/KSSWF/index.php?w=home&er=404"
+ErrorDocument 401 "/KSSWF/index.php?w=home&er=401"
+ErrorDocument 403 "/KSSWF/index.php?w=home&er=403"
+
+DirectoryIndex index.php

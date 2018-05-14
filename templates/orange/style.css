@@ -50,7 +50,7 @@ min-height: 200px;
 background-color: #ffdba5;
 border-left: 2px solid;
 border-right: 2px solid;
-font-family: 'Lato', arial, georgia, serif;
+font-family: 'Open Sans','Lato', arial, georgia, serif;
 position: relative;
 text-align: left;
 padding-left: 30px;
@@ -103,6 +103,18 @@ hr, .text_area hr
 	border-bottom: 1px solid black;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+.error_img
+{
+	 position: absolute;
+	 display: block;
+	 background: none;
+	 float: none;
+	 border:none;
+	 right: 0;
+	 top: -10px;
+	 width: 600px;
 }
 
 
