@@ -14,7 +14,7 @@
 <script type="text/javascript" src="./javascript/gallery_fc.js"></script>
 <script type="text/javascript" src="./javascript/setdisplay_fc.js"></script>
 <?php
-// adding RichText AFTER jquery
+// load up CKEditor AFTER jquery
 if(isset($_SESSION['login_admin']))
 {
 	$a = 0;
@@ -22,8 +22,8 @@ if(isset($_SESSION['login_admin']))
 		$a = $_GET['a'];
 	if($a == 3)
 	{
-		echo "<link rel='stylesheet' href='./addons/RichTextEditor/examples/css/site_edit.css'>";
-		echo "<script src='./addons/RichTextEditor/src/jquery.richtext.js'></script>";
+		echo "<link rel='stylesheet' href='./addons/CKEditor4/samples/toolbarconfigurator/lib/codemirror/neo.css'>";
+		echo "<script src='./addons/CKEditor4/ckeditor.js'></script>";
 	}
 }
 ?>

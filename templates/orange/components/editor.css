@@ -227,3 +227,49 @@
 .editor a:last-of-type:hover:after		{ content: "Log out"; }
 .editor_c a:hover:after					{ content: "Clear cache"; }
 .editor_settings a:hover:after			{ content: "Site settings & configuration"; }
+
+.editor a.e_gray svg
+{
+	color: #80808054;
+}
+.editor a.e_gray
+{
+	cursor: default;
+}
+.editor a.e_gray:hover > svg
+{
+	color: #80808054;
+	box-shadow: none;
+	background: none;
+	font-size: 16px;
+	padding-top: 5px;
+}
+.editor a.e_gray:hover:after
+{
+	opacity: 0.35;
+	font-style: italic;
+	background: lightgrey;
+}
+
+textarea.to_edit
+{
+	display: block;
+	position: relative;
+	padding: 4px;
+	width: Calc( 100% + 24px );
+	left: -16px;
+	height: Calc( 100vh - 112px);
+	background: black;
+	top: 0px;
+	resize: none;
+	color: #73d600;
+}
+#cke_editor_field
+{
+	display: block;
+	position: relative;
+	width: Calc( 100% + 64px );
+	left: -32px;
+	margin-top: -10px;
+	margin-bottom: -24px;
+}

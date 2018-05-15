@@ -2,6 +2,7 @@
 
 <div id="txt"><br><?php 
 $content_ = "";
+$er404r = "";
 if(!empty($_GET['w']))
 	$content_ = $_GET['w'];
 
@@ -52,15 +53,18 @@ if(empty($_GET['er']))
 			if($getA == 3)
 			{	
 				$w_t = "";
+				$gray[1] = true;
+				$gray[4] = false;
 				
 				if(!empty($_GET['w']))
 					$w_t_ = "?w=".$_GET['w'];
 				else
 					$w_t_="?w="."home";
 				
-				echo "<form id='edit_form' action='"."$actual_link$after_link$w_t_"."&a=6"."' method='post'><textarea class='to_edit' name='editor_field'>";
+				echo "<form id='edit_form' action='"."$actual_link$after_link$w_t_"."&a=6"."' method='post'><textarea class='to_edit' id='editor_field' name='editor_field'>";
 				echo file_get_contents("./pages/".$content_.".php");
-				echo "</textarea></form>";
+				echo "</textarea>";
+				echo "</form>";
 			}
 			else
 			include("./pages/".$content_.".php");
@@ -69,7 +73,8 @@ if(empty($_GET['er']))
 			include("./pages/".$content_.".php");
 		}else
 		{
-		infobox("file '"."./pages/".$content_.".php"."' was not found.","warning");
+			$er404r = $content_;
+			include("./error/error.php");
 		}
 	}
 
