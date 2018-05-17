@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.2.97a
+// Version: 0.3.00a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.tk
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 11.05.2018
+// Last update: 16.05.2018
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -45,7 +45,7 @@ if(!empty($_GET['w']))
 $imageid 	 = 0;
 
 session_start();
-$gray = array(0, false, false, false, true, false); //init for editor graying
+$gray = array(0, false, false, false, true, true, false); //init for editor graying
 include("./func/all_loader.php"); 
 include("./func/setup.php"); 
 ?>

@@ -15,6 +15,8 @@ if(!isset($_SESSION['login_admin']))
 	echo button("Admin","$actual_link$after_link$w_t_"."&a=1",false,0,0);
 if(isset($_SESSION['login_admin']))
 {
+	$w_t_ = str_replace(" ", "+", $w_t_);
+	
 	echo "<div class='editor'>";
 	if($gray[1])
 		echo 	"<a href='#' class='e_gray' style='color:gray;'>".icon("edit",0)."</a>";
@@ -37,6 +39,11 @@ if(isset($_SESSION['login_admin']))
 		echo 	"<a href='#' onclick=\"document.getElementById('edit_form').submit();\" id='form_save'>".icon("save",0)."</a>";
 	
 	if($gray[5])
+		echo 	"<a href='#' class='e_gray' style='color:gray;'>".icon("ban",0)."</a>";
+	else	
+		echo 	"<a href='"."$actual_link$after_link$w_t_"."'>".icon("ban",0)."</a>";
+	
+	if($gray[6])
 		echo 	"<a href='#' class='e_gray' style='color:gray;'>".icon("sign-out",0)."</a>";
 	else	
 		echo 	"<a href='"."$actual_link$after_link$w_t_"."&a=2"."'>".icon("sign-out",0)."</a>";

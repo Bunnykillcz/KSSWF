@@ -9,7 +9,7 @@
 	z-index: 99000; 
 	display:block; 
 	width: 36px; 
-	height: 140px; 
+	height: 170px; 
 	left: Calc( 0vw - 4px ); 
 	position: fixed; 
 	/*top: Calc( 50vh - 75px ); */
@@ -67,6 +67,8 @@
 .editor a:nth-of-type(3) > i:hover, .editor a:nth-of-type(3) > svg:hover 	{color: #FFC107;}
 .editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #000000;}
 .editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
+.editor a:nth-of-type(5) > i, 		.editor a:nth-of-type(5) > svg 			{color: #000000;}
+.editor a:nth-of-type(5) > i:hover, .editor a:nth-of-type(5) > svg:hover 	{color: #cc00cc;}
 .editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #9a0000;}
 .editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
 
@@ -88,7 +90,7 @@
 	height: 26px; 
 	left: 	Calc( 0vw - 4px ); 
 	position: 	fixed; 
-	top: 	Calc( 280px ); 
+	top: 	Calc( 285px ); 
 	background-color: white; 
 	color:  black; 
 	border: 1px black ridge; 
@@ -143,7 +145,7 @@
 	height: 26px; 
 	left: 	Calc( 0vw - 4px ); 
 	position: 	fixed; 
-	top: 	Calc( 240px ); 
+	top: 	Calc( 320px ); 
 	background-color: white; 
 	color:  black; 
 	border: 1px black ridge; 
@@ -224,6 +226,7 @@
 .editor a:nth-of-type(2):hover:after	{ content: "New page"; }
 .editor a:nth-of-type(3):hover:after	{ content: "Folder manager"; }
 .editor a:nth-of-type(4):hover:after	{ content: "Save page"; }
+.editor a:nth-of-type(5):hover:after	{ content: "Cancel"; }
 .editor a:last-of-type:hover:after		{ content: "Log out"; }
 .editor_c a:hover:after					{ content: "Clear cache"; }
 .editor_settings a:hover:after			{ content: "Site settings & configuration"; }
@@ -253,7 +256,8 @@
 
 textarea.to_edit
 {
-	display: block;
+	display: none;
+	/*display: block;*/
 	position: relative;
 	padding: 4px;
 	width: Calc( 100% + 24px );
@@ -268,7 +272,7 @@ textarea.to_edit
 {
 	display: block;
 	position: relative;
-	width: Calc( 100% + 64px );
+	width: Calc( 100% + 64px - 2px );
 	left: -32px;
 	margin-top: -10px;
 	margin-bottom: -24px;

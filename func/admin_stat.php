@@ -151,15 +151,14 @@ if(!empty($_GET['a']))
 		
 	case 6: //saving $_POST form
 	
-	
 		$admin_message .= "Saved as: ./pages/".str_replace(' ', '/', $content_).".php";
 		savetolog("Edited: ./pages/".str_replace(' ', '/', $content_).".php");
 		
-		
 		break;
 		
-	case 6: //settings
+	case 7: //settings
 		break;
+		
 		
 	}
 	echo $admin_message."</div>";

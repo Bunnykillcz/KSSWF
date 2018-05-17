@@ -1,6 +1,21 @@
 <div class="text_area">
 
 <div id="txt"><br><?php 
+
+function convert_php_headers($s_input, $b_encode)
+{
+	$s_output = "";
+	
+	if($b_encode)//, ; (when ENT_NOQUOTES is not set),  (when ENT_QUOTES is set),  and ;.
+		$s_output = str_replace("&quot;", "&!quot;", str_replace("&#039;", "&!#039;", str_replace("&lt;", "&!lt;", str_replace("&gt;", "&!gt;", str_replace("&amp;", "&!amp;", 
+					str_replace("<?php", "<_php", str_replace("?>", "_>", $s_input)))))));
+	else //b_decode
+		$s_output = str_replace("&!quot;", "&quot;", str_replace("&!#039;", "&#039;", str_replace("&!lt;", "&lt;", str_replace("&!gt;", "&gt;", str_replace("&!amp;", "&amp;", 
+					htmlspecialchars_decode(str_replace("<_php", "<?php", str_replace("_>", "?>", $s_input))))))));
+	
+	return $s_output;
+}
+
 $content_ = "";
 $er404r = "";
 if(!empty($_GET['w']))
@@ -55,6 +70,7 @@ if(empty($_GET['er']))
 				$w_t = "";
 				$gray[1] = true;
 				$gray[4] = false;
+				$gray[5] = false;
 				
 				if(!empty($_GET['w']))
 					$w_t_ = "?w=".$_GET['w'];
@@ -62,7 +78,7 @@ if(empty($_GET['er']))
 					$w_t_="?w="."home";
 				
 				echo "<form id='edit_form' action='"."$actual_link$after_link$w_t_"."&a=6"."' method='post'><textarea class='to_edit' id='editor_field' name='editor_field'>";
-				echo file_get_contents("./pages/".$content_.".php");
+				echo convert_php_headers(file_get_contents("./pages/".$content_.".php"), true);
 				echo "</textarea>";
 				echo "</form>";
 			}

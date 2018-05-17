@@ -1,3 +1,12 @@
+17.05.2018 | 21:32:59 | Cache cleared.
+17.05.2018 | 21:31:52 | Cache cleared.
+17.05.2018 | 20:49:18 | Cache cleared.
+15.05.2018 | 21:01:43 | Edited: ./pages/home.php
+15.05.2018 | 16:29:47 | <span style='color:green;'>admin</span> logged in.
+15.05.2018 | 16:26:27 | <span style='color:#af0000;'>admin logged out.</span>
+15.05.2018 | 16:12:33 | Cache cleared.
+15.05.2018 | 16:06:33 | <span style='color:green;'>admin</span> logged in.
+15.05.2018 | 01:17:50 | <span style='color:#af0000;'>admin logged out.</span>
 14.05.2018 | 13:49:49 | <span style='color:green;'>admin</span> logged in.
 14.05.2018 | 13:45:52 | <span style='color:#af0000;'>admin logged out.</span>
 14.05.2018 | 13:26:57 | Cache cleared.

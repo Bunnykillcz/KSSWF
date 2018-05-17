@@ -28,4 +28,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.uiColor = '#607d8b';/*'#F7B42C';*/
 	config.height = 500;
 	config.toolbarCanCollapse = true;
+	config.contentsCss = "../KSSWF/cache/css-full.css";
 };

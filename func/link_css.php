@@ -39,16 +39,25 @@ echo "<link rel='stylesheet' type='text/css' href='$template/style.css' />";
 echo "<link rel='shortcut icon' href='$favicon' type='image/x-icon' />";
 
 if(file_exists($template."/components/")){
+	
+	/*
 	$files = scandir($template."/components/");
+	$linker = "";
 	
 	foreach($files as &$file)
 	{
 		$temp = explode(".",$file);
 		if($temp[count($temp)-1] == "css")
 		{
-			echo "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
+			$linker .= "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
 		}
 	}
+	*/
+	if(!file_exists("./cache/css-full.css"))
+		mk_cache_css();
+	
+	$linker = "<link rel='stylesheet' type='text/css' href='./cache/css-full.css' />";
+	echo $linker;
 }
 	
 

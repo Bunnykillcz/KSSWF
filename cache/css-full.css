@@ -1,0 +1,1847 @@
+ /* ------------------------------------------------------ |START| orange : 01_KSSWF_footer.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+footer{
+	display:block;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 18px;
+	color: white;
+	background: linear-gradient(rgba(255,0,0,0), black);
+	text-decoration: none;
+	padding: 3px 0 0 0;
+	margin: 0;
+	font-size: 10px;
+}
+.footing{
+	display: inline-block;
+	text-align: left;
+	width: Calc( 50% - 5% - 5% );
+	top: 0;
+	float: left;
+	padding-left: 5%;
+	padding-top: 3px;
+}
+.KSSWF{
+	display: inline-block;
+	text-align: right;
+	width: Calc( 50% - 5% - 5% );
+	top: 0;
+	padding-right: 5%;
+	padding-top: 3px;
+	float: right;
+}
+.KSSWF a{color: #84D3FF;}  /* ------------------------------------------------------ | END | orange : 01_KSSWF_footer.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : a_headers.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/*RESETOR - START*/
+.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6
+{
+	text-align: left;
+	margin:0;
+	margin-top:10px;
+	margin-bottom:5px;
+	text-decoration: none;
+}
+/*RESETOR - END*/
+
+.text_area h1
+{
+	display: block;
+	position: relative;
+	font-family: "Kelly Slab", monospace;
+	color: #111;
+	margin: 0;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+	left: -32px; 
+	z-index: 5;
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 900;
+	padding-left: 0px;
+	text-decoration: none;
+	border: 2px black solid;
+	width: fit-content;
+	background: #ffc760;
+	padding: 3px;
+}
+
+.text_area h2
+{
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: fit-content;
+	background: linear-gradient(to right, #dc0000d1, #ff5448ad 20px, transparent);
+}
+
+.text_area h3
+{
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: fit-content;
+	background: linear-gradient(to right, #dc8500, #ffc760 20px, transparent);
+}
+
+.text_area h4
+{
+	font-family: "Kelly Slab", monospace;
+	font-size: 25px;
+	left: -32px; 
+	display: block;
+	position: relative;
+	padding: 4px;
+	padding-right: 15px;
+	border-bottom: black 2px solid;
+	border-left: black 2px solid;
+	width: fit-content;
+	background: linear-gradient(to right, #008adc, #60dfff 20px, transparent);
+}  /* ------------------------------------------------------ | END | orange : a_headers.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : a_links.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+a:link {
+color: #D00; 
+text-decoration: none;
+} 
+
+a:visited {
+color: #D33; 
+text-decoration: none;
+}
+
+a:hover {
+color: #174b4d; 
+text-decoration: underline;
+} 
+  /* ------------------------------------------------------ | END | orange : a_links.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : admin_parts.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.admin_log
+{
+	display: block; 
+	position: fixed; 
+	font-family: 'Open Sans',monospace; 
+	background: #000000; 
+	opacity: 1;
+	min-height: 120px; 
+	border: 1px solid transparent; 
+	z-index:  99900; 
+	width: 300px; 
+	font-size: 8px; 
+	top: 32px; 
+	left: Calc(-318px); 
+	padding: 2px; 
+	margin: 2px;  
+	text-align: left; 
+	color: black;
+	transition: all 500ms cubic-bezier(0, 0, 0.54, 1.1);
+	border: 1px black solid;
+	border-radius: 2px;
+	padding-left: 7px;
+}
+
+.admin_log:after
+{
+	display: block;
+	position: absolute;
+	content:" < Log ";
+	border-radius: 2px;
+	padding: 3px;
+	font-size: 10px;
+	top: 0px; 
+	z-index: 20;
+	width: 32px;
+	left: 312px;
+	text-align: center;
+	background: white;
+	border: 1px black solid;
+}
+
+.admin_log:hover
+{
+	opacity: 1;
+	left: Calc(-5px); 
+	background: white;
+	box-shadow: 2px 2px 8px black;
+}
+
+.admin_log:hover:after
+{
+	content: "";
+	background: none;
+	border: none;
+	height: 32px;
+}
+
+  /* ------------------------------------------------------ | END | orange : admin_parts.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : bc_nav.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.bcnav
+{
+	display: block;
+	width: Calc( 100% - 41px - 40px );
+	padding: 0;
+	padding-left: 10px;
+	left: 30px;
+	position: relative;
+	font-family: monospace;
+	font-size: 12px;
+	font-weight: bold;
+	background: #80808052;
+	margin: 1px;
+}
+.bcnav_p
+{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #00000042; 
+	padding: 2px;
+	font-weight: 100;
+}
+.bcnav_p:first-letter
+{
+	text-transform: capitalize;
+}
+.bcnav_p a
+{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background: #00000029;
+	text-decoration: none;
+	color: black;
+}
+.bcnav_p a:hover
+{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background: #00000094;
+	text-decoration: none;
+	color: white;
+}  /* ------------------------------------------------------ | END | orange : bc_nav.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : blockquote.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+blockquote{
+	left: Calc( 50% - 250px - 10px - 40px );	
+	font-family: Georgia, serif;
+	font-size: 11px;
+	font-style: italic;
+	width: 500px;
+	margin: 5px;
+	padding: 40px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	line-height: 1.45;
+	position: relative;
+	color: #666;
+}
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: 10px;
+	top: -45px;
+	color: #7a7a7a;
+}
+blockquote cite:before {
+	content: "- ";
+}
+blockquote cite {
+	text-align: right;
+	color: #888;
+	font-size: 10px;
+	display: block;
+	margin-top: 5px;
+}  /* ------------------------------------------------------ | END | orange : blockquote.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : button.css ------------------------------------------------------  */   /*--------------------------*/
+/* Nikola Nejedlý - 2017/18 */
+/*--------------------------*/
+
+.button {
+	position:		    relative;
+	display: 			block;
+	min-height:	        12px;
+	min-width: 			32px;
+	border-radius:		0px;
+	font-family: 		'Roboto', Arial;
+	letter-spacing:		1px;
+	font-size: 			10px;
+	font-weight: 		lighter;
+	padding: 			0;
+	margin:				3px 3px 3px 3px;
+	text-align: 		center;
+	font-style: 		normal;
+	text-transform: 	uppercase;
+	color: 				#d0d0d0;
+	background: 		#444;
+	border: 			1px groove #555;
+	-webkit-transition: all 200ms; /* Safari */
+    transition: 		all 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.button:hover {
+	color: 				#ffffff;
+	background-color: 	#222;
+	border-color: 		#999;
+    border-style: 		ridge;
+    text-decoration:	none;
+    font-weight:		100;
+}
+.button i, .button svg
+{
+	padding: 			2px;
+	font-size:			8px;	
+}
+.button a
+{
+	position:			relative;
+	display: 			table;
+	text-decoration:	inherit;
+	font-size: 			inherit;
+	color: 				inherit;
+	width:				100%;
+	height: 			100%;
+}
+.button #table /* redundant filler for styling */
+{
+	position:			relative;
+	display: 			table;
+	width:				100%;
+	height: 			100%;
+}
+.button #cell
+{
+	position:			relative;
+	display: 			table-cell;
+	vertical-align: 	middle;  
+	width:				100%;
+	height: 			auto;
+	padding: 			1px 3px 1px 3px;
+}  /* ------------------------------------------------------ | END | orange : button.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : editor.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/* ADMIN EDITOR */
+
+.editor
+{
+	z-index: 99000; 
+	display:block; 
+	width: 36px; 
+	height: 170px; 
+	left: Calc( 0vw - 4px ); 
+	position: fixed; 
+	/*top: Calc( 50vh - 75px ); */
+	background-color: white; 
+	color: black; 
+	border:1px black ridge; 
+	border-radius: 2px;
+	top: 92px; 
+}
+
+.editor a
+{
+	position: relative;
+	display: inline-block;
+	width: 28px;	
+	height: 28px;	
+}
+
+.editor i, .editor svg
+{
+	position: relative;
+	display: inline-block;
+	color: black;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  16px;
+	padding: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin: 1px;
+}
+.editor i:hover, .editor svg:hover
+{
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	color: #ffa600;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+.editor a:nth-of-type(1) > i, 		.editor a:nth-of-type(1) > svg 			{color: #000000;}
+.editor a:nth-of-type(1) > i:hover, .editor a:nth-of-type(1) > svg:hover 	{color: #007bff;}
+.editor a:nth-of-type(2) > i, 		.editor a:nth-of-type(2) > svg 			{color: #000000;}
+.editor a:nth-of-type(2) > i:hover, .editor a:nth-of-type(2) > svg:hover 	{color: #9E9E9E;}
+.editor a:nth-of-type(3) > i, 		.editor a:nth-of-type(3) > svg 			{color: #000000;}
+.editor a:nth-of-type(3) > i:hover, .editor a:nth-of-type(3) > svg:hover 	{color: #FFC107;}
+.editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #000000;}
+.editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
+.editor a:nth-of-type(5) > i, 		.editor a:nth-of-type(5) > svg 			{color: #000000;}
+.editor a:nth-of-type(5) > i:hover, .editor a:nth-of-type(5) > svg:hover 	{color: #cc00cc;}
+.editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #9a0000;}
+.editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
+
+.h_admin 
+{
+	position: 	absolute;
+	display:	block;
+	z-index: 	2500;
+	top: 	4px;
+	right: 	5px;
+	width: 	72px;
+	height: 32px;
+}
+.editor_c
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 285px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
+
+.editor_c i, .editor_c svg, .editor_c a
+{
+	display: inline-block;
+	color: #650000;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  18px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+	height: 20px;
+}
+
+.editor_c a:hover,
+.editor_c a:hover > svg,
+.editor_c a:hover > i
+{
+	color: #e20000;
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.editor_c a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+.editor_settings
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 320px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
+
+.editor_settings i, .editor_settings svg, .editor_settings a
+{
+	display: inline-block;
+	color: #757575;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  18px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+	height: 20px;
+}
+
+.editor_settings a:hover,
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+	color: #673AB7;
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+    transform: rotate(90deg);
+    background: none;
+}
+.editor_settings a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+
+.editor a:hover:after,
+.editor_c a:hover:after,
+.editor_settings a:hover:after
+{
+	color: black; 
+	content: " Placeholder "; 
+	background: #ffffff; 
+	border: 1px black solid; 
+	border-radius: 1px;
+	position: absolute; 
+	z-index: 99999; 
+	box-shadow: 0px 3px 3px black;
+	display: block;
+	padding: 2px;
+	left: 36px;
+	top: 16px;
+	min-width: 5px;
+	min-height: 8px;
+	font-size: 9px;
+	white-space: nowrap;
+}
+.editor a:nth-of-type(1):hover:after	{ content: "Edit page"; }
+.editor a:nth-of-type(2):hover:after	{ content: "New page"; }
+.editor a:nth-of-type(3):hover:after	{ content: "Folder manager"; }
+.editor a:nth-of-type(4):hover:after	{ content: "Save page"; }
+.editor a:nth-of-type(5):hover:after	{ content: "Cancel"; }
+.editor a:last-of-type:hover:after		{ content: "Log out"; }
+.editor_c a:hover:after					{ content: "Clear cache"; }
+.editor_settings a:hover:after			{ content: "Site settings & configuration"; }
+
+.editor a.e_gray svg
+{
+	color: #80808054;
+}
+.editor a.e_gray
+{
+	cursor: default;
+}
+.editor a.e_gray:hover > svg
+{
+	color: #80808054;
+	box-shadow: none;
+	background: none;
+	font-size: 16px;
+	padding-top: 5px;
+}
+.editor a.e_gray:hover:after
+{
+	opacity: 0.35;
+	font-style: italic;
+	background: lightgrey;
+}
+
+textarea.to_edit
+{
+	display: none;
+	/*display: block;*/
+	position: relative;
+	padding: 4px;
+	width: Calc( 100% + 24px );
+	left: -16px;
+	height: Calc( 100vh - 112px);
+	background: black;
+	top: 0px;
+	resize: none;
+	color: #73d600;
+}
+#cke_editor_field
+{
+	display: block;
+	position: relative;
+	width: Calc( 100% + 64px - 2px );
+	left: -32px;
+	margin-top: -10px;
+	margin-bottom: -24px;
+}
+  /* ------------------------------------------------------ | END | orange : editor.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : elements.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+img{
+	display:			block;
+	float:				right;
+	position:			relative;
+	margin: 			10px;
+	margin-left: 		15px;
+	margin-top:  		10px;
+	margin-bottom: 		10px;
+	border: 			1px solid #000;
+	background-color: 	#135;
+}
+
+
+.center
+{
+	margin: 	0px;
+	padding:	0px;
+	float:		none;
+	text-align: center;
+	indent: 	none;
+}
+
+.r_column{
+	display:		inline-block;
+	width: 			Calc( 49% );	
+	right: 			0;	
+	padding-left: 	5px;
+	top: 			0;
+	vertical-align: top;
+	margin-left: 	-3px;
+}
+.r_column_small{
+	display: 		inline-block;
+	width: 			Calc( 24% );	
+	right: 			0;	
+	left: 			initial;
+	padding-left: 	15px;
+	top: 			0;
+	vertical-align: top;
+}
+.r_column_big{
+	display: 		inline-block;
+	width: 			Calc( 74% );	
+	right: 			0;	
+	top: 			0;
+	vertical-align: top;
+	margin-left: 	-3px;
+}
+.l_column{
+	display: 		inline-block;
+	width: 			Calc( 49% );	
+	left: 			0;	
+	padding-right: 	5px;
+	top: 			0;
+	vertical-align: top;
+}
+.l_column_small{
+	display: 		inline-block;
+	width: 			Calc( 24% );	
+	left: 			0;	
+	padding-right: 	15px;
+	top: 			0;
+	vertical-align: top;
+}
+.l_column_big{
+	display: 		inline-block;
+	width: 			Calc( 74% );	
+	left: 			0;	
+	right: 			initial;
+	top: 			0;
+	vertical-align: top;
+	margin-right: 	-3px;
+}
+
+
+
+
+
+span 		{}
+strong		{ font-weight:	800;			}
+b 			{ font-weight:	800;			}
+u 			{ text-decoration: underline;	}
+i			{ font-style: 	italic;			}
+p			{ text-align: 	justify;		}
+.left 		{ text-align: 	left; 			}
+.right		{ text-align: 	right;			}
+.floatleft 	{ float: 		left; 			}
+.floatright	{ float: 		right;			}
+
+.full_w 	{ width: 		100%; 			}
+.full_h 	{ height: 		100%; 			}
+.full_vw 	{ width: 		100vw;			}
+.full_vh 	{ height: 		100vh;			}
+
+.null_m		{ margin: 		0;				}
+.null_p		{ padding: 		0;				}
+.null_border{ border: 		none;			}
+.null_bg	{ background:	none;			}
+.null_bg_col{ background-color:		none;	}
+.null_float { float:		none;			}
+
+
+
+  /* ------------------------------------------------------ | END | orange : elements.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : footer.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+footer
+{
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	border-color: black;
+	position:relative;
+	display:block;
+	width:100%;	
+	background: none;
+	background-color: orange;
+	color:black;
+	font-size:11px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	overflow: hidden;
+}
+.footing
+{
+	position:relative;
+	vertical-align: middle;
+	color: black;
+	bottom:0;
+}
+.KSSWF{
+	color: black;
+}
+.KSSWF a{
+	color: #423200;
+	font-weight: bolder;
+}
+.KSSWF a:hover{
+	color: #000000;
+	font-weight: bolder;
+	text-decoration:overline;
+}
+.black_filler
+{
+	position: fixed;
+	z-index: -10;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: black;
+}  /* ------------------------------------------------------ | END | orange : footer.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : gallery.css ------------------------------------------------------  */   /*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+
+.img_gallery
+{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	display: 	block;
+	width: 		370px;
+	border:			3px solid #444;
+    border-style: 	ridge;
+	border-radius:	3px;
+	padding:		5px;
+	background-color:	#ab9c77;
+	
+	
+}
+.img_gallery #wrap
+{
+	background-color:#d0d0d0;
+	display: 	inline-block;
+	width: 		64px;
+	height: 	48px;
+	overflow:	hidden;
+	margin:		3px;
+	padding:	0px;
+	border: solid 2px #b3b3b3;
+    border-style: 	ridge;
+    -moz-box-shadow: 2px 2px 0px #999;
+    box-shadow: 2px 2px 0px #999;
+    -webkit-box-shadow: 2px 2px 0px #999;
+	border-radius:		2px;
+    
+    -webkit-transition: 200ms cubic-bezier(0.26, -0.49, 0.67, 0.88);
+    transition:			200ms cubic-bezier(0.26, -0.49, 0.67, 0.88);
+}
+
+.img_gallery img
+{
+	height: 			140%;
+	width:				140%;
+	object-fit: 		fill;
+	background: 		none;
+	background-color:	none;
+	display: 			block;
+	border: 			0px none;
+	border-radius:		2px;
+	padding:			0px;
+	filter:             grayscale(80%);
+	margin:			    -1px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	
+}
+#canvas_bg
+{
+	z-index: 50000;
+	position: fixed;
+	background: black;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.8;
+	top: 0;
+	left: 0;
+    transition:	all 200ms ease-in-out;
+}
+#canvas
+{
+	z-index: 51000;
+	position: fixed;
+	display: block;
+	width: 90vw;
+	height: 90vh;
+	left: 5vw;
+	top: 5vh;
+	opacity: 100%;
+	background-color: none;
+	background-position: center;
+    transition:	all 200ms ease-in-out;
+}
+#a_close, #a_left, #a_right
+{
+	position: fixed;
+	display:  block;
+	z-index: 5000;
+	top: Calc( 50vh - 20px );
+	left: 5vw;
+	width: 40px;
+	height: 40px;
+    transition:	all 200ms ease-in-out;
+}
+#a_right
+{
+	left: Calc( 93vw );
+    transition:	all 200ms ease-in-out;
+}
+#a_close
+{
+	left: 90vw;
+	top: 10vh;
+    transition:	all 200ms ease-in-out;
+}
+#a_close a 
+{
+	color: red;
+	opacity: 0.3;
+    transition:	all 200ms ease-in-out;
+}
+#a_close a:hover
+{
+	color: red;
+	opacity: 0.85;
+    transition:	all 200ms ease-in-out;
+}
+#a_left a, #a_right a
+{
+	color: white;
+	opacity: 0.3;
+    transition:	all 200ms ease-in-out;
+}
+#a_left a:hover,
+#a_right a:hover
+{
+	color: white;
+	opacity: 0.85;
+    transition:	all 200ms ease-in-out;
+}
+.img_gallery #wrap:active #underwrap
+{
+	z-index:			3001;
+	position: 			fixed;
+	width:				100vw;
+	height:         	100vh;
+	display: 			block;
+	padding: 			0px;
+	opacity:			0.5;
+	background-color:	black;
+	top:				0;
+	left:				0;
+}
+#underwrap
+{
+	position: 			fixed;
+	padding: 			0px;
+	top:	    		0;
+	left:				0px;
+	width:				100vw;
+	height:				100vh;
+	opacity:			0;
+	background-color:	black;
+	z-index:			-10;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+.img_gallery #wrap:hover
+{
+	background-color:	#ffffff;
+	border-radius:		2px;
+	border:				2px solid white;
+    border-style: 		ridge;
+}
+.img_gallery img:hover
+{
+	height:				150%;
+	width:				150%;
+	filter:             grayscale(0%);
+	filter: 			brightness(140%);
+    -webkit-transition: 400ms ease-in-out;
+    transition:	400ms ease-in-out;
+}
+.img_gallery h3
+{
+	margin: 0;
+	padding: 0;
+	background: none;
+	left: 0; 
+	border: none;
+	font-family: monospace;
+	text-transform: capitalize;
+	width: 100%;
+	margin-left: -4px;
+	padding-left: 8px;
+	background: #00000042;
+}  /* ------------------------------------------------------ | END | orange : gallery.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : gen_img.css ------------------------------------------------------  */   /*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+
+.canvas_bg a
+{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+}
+
+.canvas_bg
+{
+	z-index: 50000;
+	position: fixed;
+	background: black;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.9;
+	top: 0;
+	left: 0;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+.canvas_bg a:hover,
+.canvas_bg:hover
+{
+	opacity: 0.7;
+}
+
+img.img
+{
+	border: none;
+	float: none;
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+a .canvas_i
+{
+	z-index: 50002;
+	position: fixed;
+	width: 80vw;
+	height: 80vh;
+	left: 10vw;
+	top: 10vh;
+	opacity: 1;
+	object-fit: contain;
+	background:none;
+	border: none;
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}
+a .canvas_i:hover
+{
+	/*opacity: 0.9;*/
+    transition:	all 200ms ease-in-out;
+	white-space: nowrap;
+}  /* ------------------------------------------------------ | END | orange : gen_img.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : infobox.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.info {
+	z-index:			5000;
+	min-height:	        64px;
+	width:		        320px;
+	position: 			fixed;
+	right: 				10px;
+	top:				28px;
+	/*font-family: 		'Roboto', Arial;*/
+	font-size: 			12px;
+	font-weight: 		normal;
+	padding: 			3px 3px 3px 3px;
+	margin: 			0;
+	text-align: 		justify;
+	font-style: 		normal;
+	color: 				black;
+	background: 		none;
+	background-color: 	#fff;
+	border: 			2px solid whitesmoke;
+	border-style: 		ridge;
+	border-radius:		1px;
+	transition: 		opacity 500ms ease-in-out;
+}
+.info p
+{
+	position:			relative;
+	margin:				0px;
+	padding-left: 		38px;
+	padding-right:		16px;
+	padding-top:		10px;
+	text-decoration:	none;
+	font-size: 			12px;
+	color: 				inherit;
+	font-family: 		monospace, Arial;
+}
+.info a, 
+.info a svg,
+.info a i
+{
+	position:			absolute;
+	bottom: 			0px;
+	right: 				0px;
+	text-decoration:	none;
+	font-size: 			16px;
+	color: 				#8e0000;
+	margin-top:			-25px;
+	margin-left:		-21px;
+}
+.info a:hover > svg,
+.info a:hover > i
+{
+	font-size: 			16px;
+	color: 				#cc0000;
+}
+
+.info i,
+.info svg
+{
+	display: 			block;
+	position: 			absolute;
+	color: 				#000000;
+	top: 				5px;
+	left: 				5px;
+	width:				26px;
+	height:				26px;
+}
+.info:hover
+{
+	opacity: 			0.9;
+	transition: 		opacity 500ms ease-in-out;
+}
+
+
+/*admin login stuff*/
+
+.info form
+{
+	width: 60%;
+	position: relative;
+	display: block;
+	left: Calc(50% - 105px);
+	opacity: 1;
+}
+
+.info form input
+{
+	background: #efefef;
+	padding: 1px;
+	border: 1px solid darkgray;
+}
+
+.info form input:hover
+{
+	background: #efefef;
+	border: 1px solid black;
+}
+
+.info form u
+{
+	display: block;
+	position: relative;
+	right: 35px;
+	padding: 5px;
+}
+
+
+  /* ------------------------------------------------------ | END | orange : infobox.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : loading.css ------------------------------------------------------  */   /*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+
+.loadicon
+{
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 50001;
+	left: 50vw;
+	top: 50vh;
+}  /* ------------------------------------------------------ | END | orange : loading.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : menu.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+#nav_wrap{
+	padding: 0 0 0 0;
+	padding-left: 100px;
+	background-color: black;
+	color: white;
+	width: Calc( 100vw - 100px);
+	display: block;
+	height: 32px;
+	white-space: nowrap;
+}
+
+.mainmenu, .mainmenu a
+{
+	z-index: 3000;
+	text-align: left;
+	color:white;
+	border:0;
+}
+
+.mainmenu ul ul a:hover
+{
+	color: white;
+}
+
+.mainmenu ul
+{
+	z-index: 3000;
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	display: inline-block;
+	border-left: none;
+}
+
+.mainmenu ul a
+{
+	display:block;
+	z-index: 3000;
+	text-decoration:none;
+	font-size:14px;
+	line-height:32px;
+	padding:0 15px;
+	padding-left: 10px;
+	font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.mainmenu ul li
+{
+	z-index: 3000;
+	position:relative;
+	float:left;
+	margin:0;
+	font-weight:bold;
+	padding:0;
+	min-width: 44px;
+	height: 32px;
+	color: white;
+	border-left: 3px solid transparent;
+}
+
+.mainmenu ul li~li 
+{ 
+-webkit-border-image: 
+  -webkit-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+-moz-border-image:
+  -moz-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;    
+-o-border-image:
+  -o-linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+border-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),gray, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)) 1 100%;
+border-left-width: 1px; 
+border-left-style: solid;
+}
+
+.mainmenu ul li~li:hover > a
+{
+	padding-left: 8px;
+}
+
+.mainmenu ul li:hover
+{
+	border-left-width: 3px; 
+	border-left-style: solid;
+	border-left-color: orange;
+	-webkit-border-image: 
+	  -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
+	-moz-border-image:
+	  -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
+	-o-border-image:
+	  -o-linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
+	border-image:
+	  linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
+	z-index: 3700;
+	color: white;
+	border-right: none; 
+	height: 32px;
+}
+
+.mainmenu ul ul
+{
+	z-index: 3500;
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background: black;
+	color: white;
+	padding:0;
+	border-left: none;
+}
+
+.mainmenu ul ul li
+{
+	z-index: 3400;
+	float:none;
+	font-weight:normal;
+	width:200px;
+	color: white;
+	border-left: none;
+}
+
+.mainmenu ul ul li:hover
+{
+	z-index: 3600;
+	color: black;;
+	width:195px;
+	border-left: none;
+	color: white;
+	background: orange;
+}
+
+.mainmenu ul ul a
+{
+	z-index: 3500;
+	line-height:120%;
+	padding-left: 8px;
+	padding-top: 8px;
+	border-left: none;
+}
+
+.mainmenu ul ul ul
+{
+	top:0;
+	left:100%;
+	border-left: none;
+}
+
+.mainmenu ul ul, .mainmenu ul ul li, .mainmenu ul ul a 
+{
+	z-index: 3800;
+	margin-left: 0px;
+	border-left: none;
+	border-image: none;
+	border-left-width: 0;
+}
+
+.mainmenu ul li:hover > ul
+{
+	z-index: 3600;
+	margin-left: -3px;
+	display:block;
+	border-left-width: 3px; 
+	border-left-style: solid;
+	border-left-color: orange;
+	color: white;
+}  /* ------------------------------------------------------ | END | orange : menu.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : page_header.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+.header
+{
+	position:	absolute;
+	display:block;
+	top:0;
+	width: 100%;
+	height:0px;
+	left: 0;
+	background:black;
+}
+.header a img
+{
+	margin: 0;
+	margin-left: 10px;
+	position:	absolute;
+	padding: 	5px 5px 5px 5px;
+	z-index: 	2050;
+	height: 	60px;
+	top: 		-50px;
+	left: 		0px;
+	background:		orange;
+	border: 	3px black solid;
+	transition: all 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.header a img:hover
+{
+	top: 		0px;
+}  /* ------------------------------------------------------ | END | orange : page_header.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : slideshow.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+
+/* Slideshow container */
+.slideshow-container {
+	box-sizing: border-box;
+	position: 	relative;
+	top: 		0px;
+	display: 	block;
+	margin: 0;
+	height: 400px;
+	width:	Calc( 100% );
+	left: 	0;
+	/*background: #DEF;
+	border: #ABC 2px solid;*/
+	border-radius: 0;
+	font-align: center; 
+	padding: 0;
+	overflow: hidden;
+}
+.slideshow-container img {
+	object-fit: scale-down;
+	display: block;
+	width:	inherit;
+	height:	inherit;
+	float:	none;
+	margin: 0px;
+	margin-top:0px;
+	padding: 0px;
+	left: 0;
+	border: none;
+	background: none;
+	border-radius: 0;
+}
+
+.thisSlide {
+    display: none;
+    transition: 0.6s ease-in-out;
+    height: 400px;
+    width:  100%;
+}
+
+/* Next & previous buttons */
+/* Next & previous buttons */
+.prev, .next {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	float: left;
+	bottom: 210px;
+	width: 	28px;
+	height:	28px;
+	padding: 0px;
+	vertical-align: middle;
+	text-align:	center;
+	color: white;
+	font-size: 18px;
+	transition: 0.6s ease;
+	opacity: 0.15;
+	border-radius: 50%;
+	border: 3px white solid;
+	background-color: #444;
+	left: 10px;
+	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.next svg, 
+.prev svg
+{
+	font-size: 14px;
+}
+
+/* Position the "next button" to the right */
+.next {
+	float: right;
+	right: 10px;
+	left: initial;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	opacity: 0.9;
+	color: white;
+	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+/* Caption text */
+.text {
+	display: block;
+	color: #f2f2f2;
+	font-size: 10px;
+	position: relative;
+	bottom: 40px;
+	left: 	5%;
+	width: 	90%;
+	padding: 3px;
+	border-radius: 2px;
+	background-color: black;
+	opacity: 0.65;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	display: none;
+	color: #000;
+	font-size: 10px;
+	padding: 8px 12px;
+	position: relative;
+	top:  20px;
+	left: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	display: inline-block;
+	font-size: 7px;
+	cursor:pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0px;
+	background-color: #bbb;
+	border-radius: 50%;
+	border: 1px solid white;
+	padding: 		1px;
+	padding-top: 	2px;
+	padding-right:  2px;
+	vertical-align: center;
+	text-align: center;
+	transition: background-color 0.6s ease;
+}
+.dot-container {
+	display: block;
+	text-align: center;
+}
+.dot-container span{
+	position: relative;
+}
+
+.active, .dot:hover {
+	background-color: #666;
+	color: white;
+	border: 1px solid black;
+}
+
+/* Fading animation / fade effect */
+.fade {
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 1.5s;
+	/* animation-name: fadein; */
+	/* animation-duration: 1.5s; */
+}
+
+@-webkit-keyframes fadein {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fadein {
+  from {opacity: .2} 
+  to {opacity: 1}
+}  /* ------------------------------------------------------ | END | orange : slideshow.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : socials.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.socials 
+{
+	display: block;
+	width: Calc( 100% - 10px );
+	position: relative;
+	background: linear-gradient(to right, #00000000, #00000017); 
+	border-top: 1px dashed #0000002b;
+	border-bottom: 1px dashed #0000002b;
+	text-align: right;
+	font-size: 12px;
+	padding-right: 10px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+.socials:hover
+{
+	background: #00000025; 
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+
+.socials a svg,
+.socials a i
+{
+	margin: 1px;
+	margin-right: 2px;
+	margin-left: 2px;
+	display: inline-block;
+	position: relative;
+	color: black;
+	background: white;
+	border-radius: 3px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+
+.socials a:hover > svg,
+.socials a:hover > i
+{
+	color: white;
+	background: black;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}  /* ------------------------------------------------------ | END | orange : socials.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : tables.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.text_area table
+{
+width:100%;
+padding:3px;
+margin:0;
+border:0;
+border-collapse:collapse;
+}
+
+.text_area td
+{
+padding: 3px 3px 3px 3px;
+border-bottom: 1px black solid;
+font-weight:bold;
+font-size:14px;
+text-align:center;
+vertical-align:middle;
+transition: all 80ms linear;
+}
+
+.text_area td:first-child
+{
+width:120px;
+padding: 3px 3px 3px 3px;
+border-right: 2px #b19872 solid;
+background-color: #eaca99;
+font-weight:bold;
+font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 16px;
+}
+
+.text_area tr:hover td
+{
+background-color: #000000;
+border-bottom: 1px #000000 solid;
+font-weight:bold;
+font-size:  14px;
+text-align: center;
+font-weight:bold;
+padding:    3px;
+margin:     0px;
+color:      white;
+}
+
+.text_area tr:hover td:first-child
+{
+    background-color: #b19872;
+    color:            black;
+}
+
+.text_area tr svg,
+.text_area tr i
+{
+    transition: transform 2000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.text_area tr svg:hover
+{
+    transform: rotate(-360deg);
+}
+
+.text_area th
+{
+padding: 3px 3px 3px 3px;
+background-color:#b19872;
+border-bottom: 2px black solid;
+font-weight:bold;
+font-size:30px;
+text-align:center;
+font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+  /* ------------------------------------------------------ | END | orange : tables.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : ul_li_ol.css ------------------------------------------------------  */   ul li {list-style-type: none;}
+ol li {list-style-type: none;}
+
+.text_area ul {
+	display:block;
+    border-left: 5px solid #FFA500;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.text_area ul ul {
+	display:block;
+    border-left: 5px solid #DDA500;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.text_area ul ul ul {
+	display:block;
+    border-left: 5px solid #BBA500;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.text_area ol {
+	display:block;
+    border-left: 5px solid #00AAAA;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.text_area ol ol {
+	display:block;
+    border-left: 5px solid #009999;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.text_area ol ol ol {
+	display:block;
+    border-left: 5px solid #006666;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.text_area li{
+	padding-bottom: 1px;
+	padding-top: 1px;
+}  /* ------------------------------------------------------ | END | orange : ul_li_ol.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : wampserver_warning_table_styling.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+
+.xdebug-error.xe-warning
+{
+	position: absolute;
+	display: block;
+	z-index: 9999999;
+	left: 100px;
+	top: 100px;
+	width: Calc( 100vw - 200px );
+	height: Calc( 100vh - 200px );
+	border: 2px #333 solid;
+	background: #808080ed;
+}
+.xdebug-error.xe-warning th
+{
+	padding: 2px;
+	width: Calc( 100vw - 200px );
+	background: #a50000;
+	color: white;
+}
+.xdebug-error.xe-warning span
+{
+	display: none;	
+}
+.xdebug-error.xe-warning tbody::before
+{
+	display: block;
+	content: "!";	
+	position: absolute;
+	left: -26px;
+	top: -2px;
+	width: 20px;
+	height: 20px;
+	font-family: "Fira Sans", sans-serif;
+	background-color: black;
+	border: 2px solid #ff0a0a;
+	color: red;
+	font-weight: bold;
+	font-size: 15px;
+}
+.xdebug-error.xe-warning tr:nth-of-type(2) th
+{
+	background: #0e0e0e;
+	padding-left: 20px;
+	color: white;
+	border: 1px solid black;
+}
+.xdebug-error.xe-warning tr:nth-of-type(3) th
+{
+	background: #964200;
+	padding-left: 10px;
+	text-align: left;
+	color: white;
+	border-left: 1px solid black;
+}
+.xdebug-error.xe-warning tr td
+{
+	background: whitesmoke;
+	padding: 1px;
+	padding-left: 14px;
+	text-align: left;
+	color: black;
+	border-left: 1px solid black;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(1),
+.xdebug-error.xe-warning tr td:nth-of-type(1)
+{
+	width: 100px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(2),
+.xdebug-error.xe-warning tr td:nth-of-type(2)
+{
+	width: 120px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(3),
+.xdebug-error.xe-warning tr td:nth-of-type(3)
+{
+	width: 150px;
+}
+.xdebug-error.xe-warning tr th:nth-of-type(4),
+.xdebug-error.xe-warning tr td:nth-of-type(4)
+{
+	width: 200px;
+}
+br:nth-of-type(1)
+{
+	display:none;
+}
+  /* ------------------------------------------------------ | END | orange : wampserver_warning_table_styling.css ------------------------------------------------------  */   /* ------------------------------------------------------ |START| orange : z_code_h2.css ------------------------------------------------------  */   /*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+h2.code
+{
+	font-family: monospace, times-roman, georgia, serif;
+	font-weight: 200;
+	font-size: 14px;
+	background: linear-gradient(to right, #9c8d76, #8c8c8c2b 10px, #bfbfbf2b 98%, #ff000000);
+	margin: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: Calc( 100% - 10px );
+	margin-top: -6px;
+	padding-left: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: black;
+	border: none;
+	border-left: 1px black solid;
+}
+
+h2.code .fce 	,.code .fce 	{color: #840000;}
+h2.code .int 	,.code .int		{color: #0045a5;}
+h2.code .string ,.code .string 	{color: #00790b;}
+h2.code .bool 	,.code .bool 	{color: #8c009a;}
+h2.code .float 	,.code .float 	{color: #0084a5;}
+h2.code .char 	,.code .char 	{color: #078e00;}
+h2.code .var 	,.code .var 	{color: #7c9a90;}
+
+h2.code{ opacity: 1; }
+
+p .fce 		{color: #840000; background:#ffeac8; padding: 0 3px 0 3px;}
+p .int 		{color: #0045a5; background:#ffeac8; padding: 0 3px 0 3px;}
+p .string 	{color: #00790b; background:#ffeac8; padding: 0 3px 0 3px;}
+p .bool 	{color: #8c009a; background:#ffeac8; padding: 0 3px 0 3px;}
+p .float 	{color: #0084a5; background:#ffeac8; padding: 0 3px 0 3px;}
+p .char 	{color: #078e00; background:#ffeac8; padding: 0 3px 0 3px;}
+p .var 		{color: #7c9a90; background:#ffeac8; padding: 0 3px 0 3px;}
+p .function	{color: #636363; background:#ffeac8a6; padding: 0 3px 0 3px;}
+p.code		{color: black;	 background:#ffeac8;   padding: 0 3px 0 3px; font-weight: 800;}
+p span + i	
+{
+	color: black; 	 
+	background:#ffeac8;   
+	padding: 0 5px 0 5px; 
+	font-weight: 800;	 
+	text-decoration: none; 	
+	font-style: normal;
+	margin-left: -3px;
+}
+p span + b
+{
+	color: black; 	 
+	background:#ffeac8a6;  
+	padding: 0 5px 0 5px; 
+	font-weight: 800;	 
+	text-decoration: none; 	
+	font-style: normal;
+	margin-left: -3px;
+}
+p span + b:after
+{
+	content: "(...)";
+}
+  /* ------------------------------------------------------ | END | orange : z_code_h2.css ------------------------------------------------------  */  
