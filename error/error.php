@@ -10,7 +10,7 @@ $text = "Neznámá chyba.";
 $erget = 404;
 if(!empty($_GET['er']) || !empty($er404r))
 {
-	if(!isset($_SESSION['login_admin']))
+	if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 		$er404r = "";
 	
 	if(!empty($er404r))

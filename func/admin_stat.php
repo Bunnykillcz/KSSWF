@@ -19,7 +19,6 @@ function admin_logout()
 {
 	global $after_link;
 	$addr = $after_link;
-	
 	//session_start();
 	if(session_destroy()) 
 	{
@@ -99,7 +98,7 @@ if (isset($_POST['submit']))
 		if($isadmin)
 		{
 			savetolog("<span style='color:green;'>$uunn</span> logged in.");
-			$_SESSION['login_admin']=$username;
+			$_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))] = $uunn;
 			header('location:'.$addr."?w=home&s=2");
 		}
 	}
@@ -112,7 +111,7 @@ if(!empty($_GET['a']))
 	$a = $_GET['a'];
 	
 	if($a > 1)
-	if(!isset($_SESSION['login_admin']))
+	if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 		return 0;
 	
 	$admin_message = "<div style='min-height: 320px; border: 1px solid transparent; z-index: 5; background: none; display: block; position: absolute; width: 200px; font-size: 8px; right: 0px; top: 32px; padding: 2px; margin: 2px; white-space: none; text-align: right; color: white;'>";
@@ -133,7 +132,8 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 2:
-		savetolog("<span style='color:#af0000;'>admin logged out.</span>");
+		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+		savetolog("<span style='color:#af0000;'>".$usrn." logged out.</span>");
 		admin_logout();
 		break;
 		

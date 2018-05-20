@@ -15,7 +15,7 @@
 <script type="text/javascript" src="./javascript/setdisplay_fc.js"></script>
 <?php
 // load up CKEditor AFTER jquery
-if(isset($_SESSION['login_admin']))
+if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 {
 	$a = 0;
 	if(!empty($_GET['a']))

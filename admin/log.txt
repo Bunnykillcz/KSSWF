@@ -1,3 +1,28 @@
+20.05.2018 | 15:22:37 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:22:32 | <span style='color:#af0000;'>admin logged out.</span>
+20.05.2018 | 15:21:59 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:21:54 | <span style='color:#af0000;'>Array logged out.</span>
+20.05.2018 | 15:21:13 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:21:10 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:21:08 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:21:04 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:20:11 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:20:07 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:19:30 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:19:25 | <span style='color:#af0000;'>1 logged out.</span>
+20.05.2018 | 15:17:56 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:17:51 | <span style='color:#af0000;'>21232f297a57a5a743894a0e4a801fc3 logged out.</span>
+20.05.2018 | 15:14:47 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:14:44 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:12:40 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:12:31 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:05:57 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:05:53 | <span style='color:#af0000;'> logged out.</span>
+20.05.2018 | 15:05:32 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:05:26 | <span style='color:#af0000;'>Array logged out.</span>
+20.05.2018 | 14:56:48 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 14:55:04 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 14:47:25 | <span style='color:green;'>admin</span> logged in.
 17.05.2018 | 21:32:59 | Cache cleared.
 17.05.2018 | 21:31:52 | Cache cleared.
 17.05.2018 | 20:49:18 | Cache cleared.

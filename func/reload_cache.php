@@ -15,7 +15,7 @@ function cache_clear()
 
 if(!empty($_GET['c']))
 if($_GET['c'] == "1")
-if(isset($_SESSION['login_admin']))
+if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 {
 	savetolog("Cache cleared.");
 	cache_clear();
@@ -24,6 +24,6 @@ if(isset($_SESSION['login_admin']))
 	//header('location:'.$addr."?w=".$content);
 }
 else
-if(!isset($_SESSION['login_admin']))
+if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 	Infobox("Admin logon required.","warning", "", "");
 ?>

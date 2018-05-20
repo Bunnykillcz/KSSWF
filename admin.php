@@ -1,5 +1,5 @@
 <?php
-$actual_link 	= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+$actual_link 	= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER['HTTP_HOST']";
 $after_link  	= trim($_SERVER['PHP_SELF']);
 $exploded 		= explode('/',$after_link);
 $after_link		= "";

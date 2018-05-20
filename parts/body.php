@@ -38,7 +38,7 @@ if(empty($_GET['er']))
 		$this_w = "home";
 		if(file_exists("./pages/".$content_.".php"))
 		{
-			if(isset($_SESSION['login_admin']))
+			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 			if($getA == 3)
 			{
 				echo "<form id='edit_form'><textarea class='to_edit' name='editor_field'>";
@@ -48,7 +48,7 @@ if(empty($_GET['er']))
 			else
 			include("./pages/".$content_.".php");
 		
-			if(!isset($_SESSION['login_admin']))
+			if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 			include("./pages/".$content_.".php");
 		}
 	}
@@ -64,7 +64,7 @@ if(empty($_GET['er']))
 		$content_ = str_replace('+', '/', $content_);
 		if(file_exists("./pages/".$content_.".php"))
 		{
-			if(isset($_SESSION['login_admin']))
+			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 			if($getA == 3)
 			{	
 				$w_t = "";
@@ -85,7 +85,7 @@ if(empty($_GET['er']))
 			else
 			include("./pages/".$content_.".php");
 			
-			if(!isset($_SESSION['login_admin']))
+			if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 			include("./pages/".$content_.".php");
 		}else
 		{

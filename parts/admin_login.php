@@ -11,9 +11,9 @@
 	else
 		$w_t_="?w="."home";
 	
-if(!isset($_SESSION['login_admin']))
+if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 	echo button("Admin","$actual_link$after_link$w_t_"."&a=1",false,0,0);
-if(isset($_SESSION['login_admin']))
+if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 {
 	$w_t_ = str_replace(" ", "+", $w_t_);
 	
