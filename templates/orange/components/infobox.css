@@ -87,14 +87,14 @@
 
 .info form input
 {
-	background: #efefef;
+	background-color: #efefef;
 	padding: 1px;
 	border: 1px solid darkgray;
 }
 
 .info form input:hover
 {
-	background: #efefef;
+	background-color: #efefef;
 	border: 1px solid black;
 }
 

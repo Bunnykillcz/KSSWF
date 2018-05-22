@@ -18,7 +18,7 @@
 }
 .socials:hover
 {
-	background: #00000025; 
+	background-color: #00000025; 
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
 }

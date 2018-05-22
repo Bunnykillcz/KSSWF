@@ -7,7 +7,7 @@
 	display: block; 
 	position: fixed; 
 	font-family: 'Open Sans',monospace; 
-	background: #000000; 
+	background-color: #000000; 
 	opacity: 1;
 	min-height: 120px; 
 	border: 1px solid transparent; 

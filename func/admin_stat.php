@@ -15,6 +15,20 @@ $content_ = str_replace('%20', '/', str_replace('+', '/', $content_));
 
 //-----------------------------------------------    << Functions
 
+function convert_php_headers($s_input, $b_encode)
+{
+	$s_output = "";
+	
+	if($b_encode)//, ; (when ENT_NOQUOTES is not set),  (when ENT_QUOTES is set),  and ;.
+		$s_output = str_replace("&quot;", "&!quot;", str_replace("&#039;", "&!#039;", str_replace("&lt;", "&!lt;", str_replace("&gt;", "&!gt;", str_replace("&amp;", "&!amp;", 
+					str_replace("<?php", "<_php", str_replace("?>", "_>", $s_input)))))));
+	else //b_decode
+		$s_output = str_replace("&!quot;", "&quot;", str_replace("&!#039;", "&#039;", str_replace("&!lt;", "&lt;", str_replace("&!gt;", "&gt;", str_replace("&!amp;", "&amp;", 
+					htmlspecialchars_decode(str_replace("<_php", "<?php", str_replace("_>", "?>", str_replace("&lt;_php", "<?php", str_replace("_&gt;", "?>", $s_input))))))))));
+	
+	return $s_output;
+}
+
 function admin_logout()
 {
 	global $after_link;
@@ -109,6 +123,7 @@ if (isset($_POST['submit']))
 if(!empty($_GET['a']))
 {
 	$a = $_GET['a'];
+	$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
 	
 	if($a > 1)
 	if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
@@ -132,7 +147,6 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 2:
-		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
 		savetolog("<span style='color:#af0000;'>".$usrn." logged out.</span>");
 		admin_logout();
 		break;
@@ -150,15 +164,38 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 6: //saving $_POST form
-	
-		$admin_message .= "Saved as: ./pages/".str_replace(' ', '/', $content_).".php";
-		savetolog("Edited: ./pages/".str_replace(' ', '/', $content_).".php");
+		if (!empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
+		{
+			global $admin_create_backups;
+			
+			if($admin_create_backups)
+			{
+				$backup_file = file_get_contents("./pages/".str_replace(' ', '/', $content_).".php");
+				file_put_contents("./pages/bcp_".str_replace(' ', '/', $content_).".php_bcp",$backup_file);
+				savetolog("AutoBackup: ./pages/bcp_".str_replace(' ', '/', $content_).".php_bcp");
+			}
+			
+			$new_data = convert_php_headers($_POST["editor_field"], false);
+			$name = "./pages/".str_replace(' ', '/', $content_).".php";
+			file_put_contents($name, $new_data);
+			
+			savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $content_).".php");
+			
+			header('location:'.$addr."?w=$content_&a=61");
+		}
+		else
+			$admin_message .= "Error: Empty handlers sent!";
 		
+		break;
+	case 61:
+			$admin_message .= "Saved as: ./pages/".str_replace(' ', '/', $content_).".php";
 		break;
 		
 	case 7: //settings
 		break;
 		
+	case 8: //revert to backup
+		break;
 		
 	}
 	echo $admin_message."</div>";

@@ -1,3 +1,17 @@
+22.05.2018 | 02:10:55 | <b>admin</b> edited: ./pages/home.php
+22.05.2018 | 02:10:55 | AutoBackup: ./pages/bcp_home.php_bcp
+22.05.2018 | 02:03:50 | Cache cleared.
+22.05.2018 | 02:03:11 | Edited: ./pages/faq.php
+22.05.2018 | 02:03:11 | Backup created: ./pages/bcp_faq.php_bcp
+22.05.2018 | 01:55:11 | Edited: ./pages/getstarted.php
+22.05.2018 | 01:55:11 | Backup created: ./pages/bcp_getstarted.php_bcp
+22.05.2018 | 01:45:59 | Edited: ./pages/getstarted.php
+22.05.2018 | 01:45:59 | Backup created: ./pages/bcp_getstarted.php_bcp
+22.05.2018 | 01:44:34 | Edited: ./pages/getstarted.php
+22.05.2018 | 01:44:34 | Backup created: ./pages/bcp_getstarted.php_bcp
+21.05.2018 | 19:01:02 | <span style='color:green;'>admin</span> logged in.
+21.05.2018 | 00:36:05 | <span style='color:green;'>admin</span> logged in.
+20.05.2018 | 15:29:30 | <span style='color:#af0000;'>admin logged out.</span>
 20.05.2018 | 15:22:37 | <span style='color:green;'>admin</span> logged in.
 20.05.2018 | 15:22:32 | <span style='color:#af0000;'>admin logged out.</span>
 20.05.2018 | 15:21:59 | <span style='color:green;'>admin</span> logged in.

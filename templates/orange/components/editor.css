@@ -207,7 +207,7 @@
 {
 	color: black; 
 	content: " Placeholder "; 
-	background: #ffffff; 
+	background-color: #ffffff; 
 	border: 1px black solid; 
 	border-radius: 1px;
 	position: absolute; 

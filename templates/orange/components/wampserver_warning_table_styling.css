@@ -13,13 +13,13 @@
 	width: Calc( 100vw - 200px );
 	height: Calc( 100vh - 200px );
 	border: 2px #333 solid;
-	background: #808080ed;
+	background-color: #808080ed;
 }
 .xdebug-error.xe-warning th
 {
 	padding: 2px;
 	width: Calc( 100vw - 200px );
-	background: #a50000;
+	background-color: #a50000;
 	color: white;
 }
 .xdebug-error.xe-warning span
@@ -44,14 +44,14 @@
 }
 .xdebug-error.xe-warning tr:nth-of-type(2) th
 {
-	background: #0e0e0e;
+	background-color: #0e0e0e;
 	padding-left: 20px;
 	color: white;
 	border: 1px solid black;
 }
 .xdebug-error.xe-warning tr:nth-of-type(3) th
 {
-	background: #964200;
+	background-color: #964200;
 	padding-left: 10px;
 	text-align: left;
 	color: white;

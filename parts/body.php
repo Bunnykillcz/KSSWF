@@ -2,20 +2,6 @@
 
 <div id="txt"><br><?php 
 
-function convert_php_headers($s_input, $b_encode)
-{
-	$s_output = "";
-	
-	if($b_encode)//, ; (when ENT_NOQUOTES is not set),  (when ENT_QUOTES is set),  and ;.
-		$s_output = str_replace("&quot;", "&!quot;", str_replace("&#039;", "&!#039;", str_replace("&lt;", "&!lt;", str_replace("&gt;", "&!gt;", str_replace("&amp;", "&!amp;", 
-					str_replace("<?php", "<_php", str_replace("?>", "_>", $s_input)))))));
-	else //b_decode
-		$s_output = str_replace("&!quot;", "&quot;", str_replace("&!#039;", "&#039;", str_replace("&!lt;", "&lt;", str_replace("&!gt;", "&gt;", str_replace("&!amp;", "&amp;", 
-					htmlspecialchars_decode(str_replace("<_php", "<?php", str_replace("_>", "?>", $s_input))))))));
-	
-	return $s_output;
-}
-
 $content_ = "";
 $er404r = "";
 if(!empty($_GET['w']))

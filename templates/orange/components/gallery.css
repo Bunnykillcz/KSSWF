@@ -80,7 +80,7 @@
 	height: 90vh;
 	left: 5vw;
 	top: 5vh;
-	opacity: 100%;
+	opacity: 1;
 	background-color: none;
 	background-position: center;
     transition:	all 200ms ease-in-out;
@@ -187,5 +187,5 @@
 	width: 100%;
 	margin-left: -4px;
 	padding-left: 8px;
-	background: #00000042;
+	background-color: #00000042;
 }
