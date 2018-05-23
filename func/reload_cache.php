@@ -17,7 +17,8 @@ if(!empty($_GET['c']))
 if($_GET['c'] == "1")
 if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 {
-	savetolog("Cache cleared.");
+	$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+	savetolog("Cache cleared by <b>$usrn</b>.");
 	cache_clear();
 	//$addr = $after_link;
 	//$content = "home";
