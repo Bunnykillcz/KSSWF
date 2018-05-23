@@ -166,6 +166,8 @@ if(!empty($_GET['a']))
 	case 6: //saving $_POST form
 		if (!empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
 		{
+			$content = str_replace('%20', '/', $content_);
+			
 			global $admin_create_backups;
 			
 			if($admin_create_backups)
@@ -179,9 +181,18 @@ if(!empty($_GET['a']))
 			$name = "./pages/".str_replace(' ', '/', $content_).".php";
 			file_put_contents($name, $new_data);
 			
-			savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $content_).".php");
-			
-			header('location:'.$addr."?w=$content_&a=61");
+			$new_name = trim(htmlspecialchars($_POST['filename']));
+						
+			if(str_replace(' ', '/', $new_name) == str_replace(' ', '/', $content_) || rename("./pages/".str_replace(' ', '/', $content_).".php", "./pages/".str_replace(' ', '/', $new_name).".php"))
+			{
+				savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $new_name).".php");
+				header('location:'.$addr."?w=$new_name&a=61");
+			}
+			else
+			{
+				savetolog("<b>$usrn</b> tried to edit: './pages/".str_replace(' ', '/', $content_).".php', but the operation failed.");
+				$admin_message .= "Error: Operation failed!";
+			}
 		}
 		else
 			$admin_message .= "Error: Empty handlers sent!";

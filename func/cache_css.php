@@ -24,6 +24,8 @@ function mk_cache_css()
 			}
 			
 		file_put_contents("./cache/css-full.css",$contents_css);
+		if(file_exists("./addons/CKEditor4"))
+			file_put_contents("./addons/CKEditor4/css-full.cache.css",$contents_css);
 		return 1;
 	}
 	else

@@ -25,17 +25,17 @@ if(empty($_GET['er']))
 		if(file_exists("./pages/".$content_.".php"))
 		{
 			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
-			if($getA == 3)
-			{
+			if($getA != 3)
+			/*{
 				echo "<form id='edit_form'><textarea class='to_edit' name='editor_field'>";
 				echo file_get_contents("./pages/".$content_.".php");
 				echo "</textarea></form>";
 			}
-			else
-			include("./pages/".$content_.".php");
+			else*/
+				include("./pages/".$content_.".php");
 		
 			if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
-			include("./pages/".$content_.".php");
+				include("./pages/".$content_.".php");
 		}
 	}
 	else
@@ -63,9 +63,16 @@ if(empty($_GET['er']))
 				else
 					$w_t_="?w="."home";
 				
+				$disnm = "";
+				//disnm = filename input disable
+				
+				if($content_ == "home" || $content_ == "index" || $content_ == "")
+					$disnm = "disabled='true'";
+				
 				echo "<form id='edit_form' action='"."$actual_link$after_link$w_t_"."&a=6"."' method='post'><textarea class='to_edit' id='editor_field' name='editor_field'>";
 				echo convert_php_headers(file_get_contents("./pages/".$content_.".php"), true);
 				echo "</textarea>";
+				echo "<div class='edit_filename'>Filename: <input name='filename' $disnm type='text' value='$content_' ></div>";
 				echo "</form>";
 			}
 			else

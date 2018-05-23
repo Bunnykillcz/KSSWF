@@ -3,21 +3,24 @@
 /*-----------------------*/
 
 /*RESETOR - START*/
-.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6
+.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6,
+.text_area#txt h1,.text_area#txt h2,.text_area#txt h3,.text_area#txt h4,.text_area#txt h5,.text_area#txt h6
 {
 	text-align: left;
 	margin:0;
 	margin-top:10px;
 	margin-bottom:5px;
 	text-decoration: none;
+	font-weight: 400;
 }
 /*RESETOR - END*/
 
-.text_area h1
+.text_area h1,
+.text_area#txt h1
 {
 	display: block;
 	position: relative;
-	font-family: "Kelly Slab", monospace;
+	font-family: 'Kelly Slab', monospace;
 	color: #111;
 	margin: 0;
 	padding-bottom: 0px;
@@ -35,9 +38,10 @@
 	padding: 3px;
 }
 
-.text_area h2
+.text_area h2,
+.text_area#txt h2
 {
-	font-family: "Kelly Slab", monospace;
+	font-family: 'Kelly Slab', monospace;
 	font-size: 25px;
 	left: -32px; 
 	display: block;
@@ -50,9 +54,10 @@
 	background: linear-gradient(to right, #dc0000d1, #ff5448ad 20px, transparent);
 }
 
-.text_area h3
+.text_area h3,
+.text_area#txt h3
 {
-	font-family: "Kelly Slab", monospace;
+	font-family: 'Kelly Slab', monospace;
 	font-size: 25px;
 	left: -32px; 
 	display: block;
@@ -65,9 +70,10 @@
 	background: linear-gradient(to right, #dc8500, #ffc760 20px, transparent);
 }
 
-.text_area h4
+.text_area h4,
+.text_area#txt h4
 {
-	font-family: "Kelly Slab", monospace;
+	font-family: 'Kelly Slab', monospace;
 	font-size: 25px;
 	left: -32px; 
 	display: block;

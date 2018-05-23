@@ -268,6 +268,32 @@ textarea.to_edit
 	resize: none;
 	color: #73d600;
 }
+
+#edit_form .edit_filename
+{
+	display: block;
+	position: fixed;
+	top: 64px;
+	left: 48px;
+	font-weight: 600;
+}
+#edit_form .edit_filename input
+{
+	font-weight: 100;
+	font-size: 9px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid black;
+	width: 80px;
+	height: 14px;
+	background-color: whitesmoke;
+}
+#edit_form .edit_filename input:disabled
+{
+	background-color: lightgray;
+	font-style: italic;
+}
+
 #cke_editor_field
 {
 	display: block;

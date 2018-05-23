@@ -35,48 +35,6 @@ min-height: 100%;
 overflow: 	hidden;
 }
 
-.text_area { 
-position: relative; 
-top: 0px;
-min-width:600px; 
-left: Calc( 15% ); 
-width: Calc( 70% );
-background-color: transparent;
-overflow: hidden;
-}
-
-.text_area #txt {
-min-height: 200px;
-background-color: #ffdba5;
-border-left: 2px solid;
-border-right: 2px solid;
-font-family: 'Open Sans','Lato', arial, georgia, serif;
-position: relative;
-text-align: left;
-padding-left: 30px;
-padding-right: 30px;
-padding-bottom: 24px;
-padding-top: 10px;
-display:block;
-}
-.text_area p{
-text-align: justify;
- text-indent: 2px;
-margin: 0;
-font-size: 14px;
-}
-.text_area p:first-child {
-text-indent: 50px;
-}
-.text_area p+p{
- font-size: 14px;
- font-weight: normal;
- text-indent: 2px;
- margin: 0px;
- margin-top: 2px;
-}
-
-
 pre code * {
 	margin: 0;
 	padding: 0;
@@ -91,18 +49,6 @@ pre code
 	display: block;
 	min-height: 80px;
 	height: fit-content;
-}
-
-hr, .text_area hr
-{
-	display: block;
-	width: 100%;
-	height: 0px;
-	color: black;
-	background: black;
-	border-bottom: 1px solid black;
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
 
 .error_img

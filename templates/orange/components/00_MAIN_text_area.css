@@ -1,0 +1,95 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+hr, .text_area hr
+{
+	display: block;
+	width: 100%;
+	height: 0px;
+	color: black;
+	background: black;
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.text_area { 
+	position: relative; 
+	top: 0px;
+	min-width:600px; 
+	left: Calc( 15% ); 
+	width: Calc( 70% );
+	background-color: transparent;
+	overflow: hidden;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.text_area #txt{
+	min-height: 200px;
+	background-color: #ffdba5;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	font-family: 'Open Sans','Lato', arial, georgia, serif;
+	position: relative;
+	text-align: left;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 24px;
+	padding-top: 10px;
+	display:block;
+}
+
+.text_area#txt /* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+	left: 0px;
+	width: Calc( 100% - 60px );
+	font-family: 'Open Sans','Lato', arial, georgia, serif;
+	position: relative;
+	text-align: left;
+	padding-left: 30px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	background-color: #ffdba5;
+	background: linear-gradient(to right, #ffcd6d 0%, transparent 2%, transparent 98%, #ffcd6d 100%);
+	overflow: auto;
+}
+.text_area#txt img /* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+	max-height: 100%;
+	max-width: 100%;
+}
+.text_area#txt i,
+.text_area#txt b,
+.text_area#txt strong,
+.text_area#txt p,
+.text_area#txt ul,
+.text_area#txt ol,
+.text_area#txt li/* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+	font-family: 'Open Sans','Lato', arial, georgia, serif;
+}
+
+
+.text_area p{
+	font-family: 'Open Sans','Lato', arial, georgia, serif;
+	text-align: justify;
+	text-indent: 2px;
+	margin: 0;
+	font-size: 14px;
+}
+.text_area p:first-child {
+	text-indent: 50px;
+}
+.text_area p+p{
+	font-family: 'Open Sans','Lato', arial, georgia, serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-indent: 2px;
+	margin: 0px;
+	margin-top: 2px;
+}
+
