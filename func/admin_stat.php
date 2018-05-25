@@ -23,8 +23,8 @@ function convert_php_headers($s_input, $b_encode)
 		$s_output = str_replace("&quot;", "&!quot;", str_replace("&#039;", "&!#039;", str_replace("&lt;", "&!lt;", str_replace("&gt;", "&!gt;", str_replace("&amp;", "&!amp;", 
 					str_replace("<?php", "<_php", str_replace("?>", "_>", $s_input)))))));
 	else //b_decode
-		$s_output = str_replace("&!quot;", "&quot;", str_replace("&!#039;", "&#039;", str_replace("&!lt;", "&lt;", str_replace("&!gt;", "&gt;", str_replace("&!amp;", "&amp;", 
-					htmlspecialchars_decode(str_replace("<_php", "<?php", str_replace("_>", "?>", str_replace("&lt;_php", "<?php", str_replace("_&gt;", "?>", $s_input))))))))));
+		$s_output = str_replace("<p>&nbsp;</p>", "", str_replace("&!quot;", "&quot;", str_replace("&!#039;", "&#039;", str_replace("&!lt;", "&lt;", str_replace("&!gt;", "&gt;", str_replace("&!amp;", "&amp;", 
+					htmlspecialchars_decode(str_replace("<_php", "<?php", str_replace("_>", "?>", str_replace("&lt;_php", "<?php", str_replace("_&gt;", "?>", $s_input)))))))))));
 	
 	return $s_output;
 }
@@ -41,7 +41,7 @@ function admin_logout()
 	else
 	{
 		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
-		savetolog("<span style='color:orange;'>$usrn</span> failed to log out.");	
+		savetolog("<span style='color:orange;'><b>$usrn</b></span> failed to log out.");	
 	}	
 }
 
@@ -117,7 +117,7 @@ if (isset($_POST['submit']))
 		if($isadmin)
 		{
 			$_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))] = $uunn;
-			savetolog("<span style='color:green;'>$uunn</span> logged in.");
+			savetolog("<span style='color:green;'><b>$uunn</b></span> logged in.");
 			header('location:'.$addr."?w=home&s=2");
 		}
 	}
@@ -155,7 +155,7 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 2:
-		savetolog("<span style='color:#af0000;'>".$usrn." logged out.</span>");
+		savetolog("<span style='color:#af0000;'><b>$usrn</b> logged out.</span>");
 		admin_logout();
 		break;
 		
@@ -193,8 +193,19 @@ if(!empty($_GET['a']))
 						
 			if(str_replace(' ', '/', $new_name) == str_replace(' ', '/', $content_) || rename("./pages/".str_replace(' ', '/', $content_).".php", "./pages/".str_replace(' ', '/', $new_name).".php"))
 			{
-				savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $new_name).".php");
-				header('location:'.$addr."?w=$new_name&a=61");
+				if(str_replace(' ', '/', $content_) == "home")
+					$new_name = "home";
+				
+				if(!empty($new_name))
+				{
+					savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $new_name).".php");
+					header('location:'.$addr."?w=$new_name&a=61");
+				}
+				else
+				{
+					savetolog("<b>$usrn</b> tried to edit: './pages/".str_replace(' ', '/', $content_).".php', but the name went blank!");
+					$admin_message .= "Error: Operation failed!";
+				}
 			}
 			else
 			{

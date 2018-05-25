@@ -51,6 +51,23 @@ pre code
 	height: fit-content;
 }
 
+.hover-invert,
+.hover-invert50
+{
+	filter: invert(0%);
+	-webkit-transition: all 200ms ease-in-out;
+    transition:	all 200ms ease-in-out;
+}
+.hover-invert:hover
+{
+	filter: invert(100%);
+}
+.hover-invert50:hover
+{
+	filter: invert(50%);
+}
+
+
 .error_img
 {
 	 position: absolute;
@@ -63,6 +80,88 @@ pre code
 	 width: 600px;
 }
 
+
+.extras_references
+{
+	width: 100%;
+	min-height: 100px;
+	-webkit-transition: all 300ms ease-in-out;
+    transition:	all 300ms ease-in-out;
+}
+.extras_references a img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.extras_references a
+{
+	display: inline-block;
+	margin: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	position: relative;
+	background: white;
+	border: black 1px solid;
+	width: 100px;
+	height: 100px;
+	filter: grayscale(80%);
+    overflow: hidden;
+	-webkit-transition: all 300ms ease-in-out;
+    transition:	all 300ms ease-in-out;
+}
+.extras_references a:hover > img
+{
+	width: 120%;
+	height: 120%;
+	margin-left: -10%;
+	margin-top: -10%;
+}
+.extras_references a:hover
+{
+	display: inline-block;
+	margin: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	background: black;
+	border: 1px solid #ffffff;
+	width: 110px;
+	height: 110px;
+	filter: grayscale(0%);
+}
+.extras_references a b
+{
+	z-index: 10;
+	position: absolute;
+	display: inline-block;
+	background: linear-gradient(to bottom, transparent, white);
+	width: 100%;
+	text-align: center;
+	color: black;
+	left: 0;
+	height: 16px;
+	font-size: 10px;
+	bottom: -1px;
+	border-bottom: 1px black solid;
+}
+
+
+.License_banner
+{
+	display: block;
+	position: relative;
+	right: 0;
+	top: -8px;
+}
+
+.License_terms
+{
+	background: linear-gradient(to right, transparent, white 2%, white 98%, transparent);
+	padding: 10px;
+	border-top: 1px black solid;
+	border-bottom: 1px black solid;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*@media only screen and (max-width: 768px) { 
