@@ -32,12 +32,14 @@
 	<li>WYSIWYG HTML OpenSource Editor - <b>CKEditor 4 by CKSource sp. z o.o. sp.k</b> | <a href="https://www.mozilla.org/en-US/MPL/1.1/" target="_BLANK">Mozilla Public License Version 1.1 or later</a></li>
 	<li>Icons from - <b>Font Awesome 4, 5 by Fonticons, Inc.</b> | Using free license > CC BY 4.0 - more <a href="https://fontawesome.com/license">here</a> </li>
 	<li>Javascript code highlighter - <b>Prism by Lea Verou, Golmote & others</b> | License not specified - <a href="http://prismjs.com">Prism website</a> </li>
+	<li>OpenSource Fonts from - <b>Google fonts by Google LLC</b> |  <a href="http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web">SIL Open Font License</a> | <a href="https://fonts.google.com/">Google fonts website</a> </li>
 </ul>
 
 <h3>Known KSSWF websites:</h3>
 <div class='extras_references'>
 	<a href="http://www.soveticka.cz" target="_blank"><?php img("./img/ref/Soveticka.png","http://www.Soveticka.cz","", true, false, 320); ?><b>Sovětička</b></a>
 	<a href="http://www.GetAway.cz" target="_blank"><?php img("./img/ref/Getaway.png","http://www.GetAway.cz","", true, false, 320); ?><b>GetAway.cz</b></a>
+	<a href="http://portfolio.nejedniko.cz" target="_blank"><?php img("./img/ref/NiklakPhoto.png","http://portfolio.nejedniko.cz","", true, false, 320); ?><b>Niklák Photography</b></a>
 	<!--a href="http://www.." target="_blank"><?php img("./img/ref/Fekal.png","http://www..","", true, false, 320); ?><b>Fekálník #</b></a>
 	<a href="http://www.nejedniko.tk" target="_blank"><?php img("./img/ref/Nejedniko.png","http://www.NejedNiko.tk","", true, false, 320); ?><b>NejedNiko</b></a-->
 </div>
