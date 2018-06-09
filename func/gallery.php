@@ -46,6 +46,8 @@ function gallery($folder, $g_title) //the gallery folder directory --> default =
 
 	echo "<div id='underwrap'></div><div class='img_gallery'>";
 	
+	$kstrtexts = "<div class='gallery_text'>";
+	
 	if(!empty($g_title))
 	echo "<h3>".$g_title."</h3>";
 		 
@@ -62,16 +64,30 @@ function gallery($folder, $g_title) //the gallery folder directory --> default =
 			$imgsrctemp = $folder."/".$img_;
 			if(file_exists("./cache/img/".$folder."/".$img_))
 				$imgsrctemp = "./cache/img/".$folder."/".$img_;
+			
 			echo "<div id='wrap'><a href='#' onclick='canvas_goto(".$amount.");return false;'><img src='$imgsrctemp' alt='$img_'></a></div>";
+			
+			$tmpex = explode('.', $img_)[0];
+			$kstradr = $dir_root."/".$tmpex.".kstr";
+			
+			if(file_exists($kstradr))
+			{
+				$kstrtxt = file_get_contents($kstradr);
+				$kstrtexts .= "<span id='g_text_$amount' name='g_text' class='g_text' style='display:none;'>$kstrtxt</span>";
+			}
 			
 			$amount++;
 		}
+		
+	$kstrtexts .= "</div>";
 		
 	echo "</div><a href='#' onclick='canvas_close();return false;'><div id='canvas_bg'></div></a>
 	<div id='canvas'>
 	<span id='a_left'><a href='#' onclick='canvas_prev();return false;'>".icon("left",2)."</a></span>
 	<span id='a_right'><a href='#' onclick='canvas_next();return false;'>".icon("right",2)."</a></span>
-	<span id='a_close'><a href='#' onclick='canvas_close();return false;'>".icon("close",2)."</a></span></div>";
+	<span id='a_close'><a href='#' onclick='canvas_close();return false;'>".icon("close",2)."</a></span>
+	$kstrtexts
+	</div>";
 
 	return $amount;
 }
