@@ -1,8 +1,7 @@
-<p><?php //tag, homepage, tag, KSSWF, Lorem, Ipsum //keywords can be set-up for every page on line 2 in a comment! //correct syntax is "//one, two, three, four, five, etc" //if incorrect, or not set, the keywords will be default; default keywords are set in index.php ?> <?php gen_bcnav(true,">"); ?></p>
+<?php //tag, homepage, tag, KSSWF, Lorem, Ipsum //keywords can be set-up for every page on line 2 in a comment! //correct syntax is "//one, two, three, four, five, etc" //if incorrect, or not set, the keywords will be default; default keywords are set in index.php ?> 
 
-<hr />
 <h1>KSSWF</h1>
-<p>Welcome! You are watching a website, or a downloaded copy within the framework. This is here to privide enough information for you to edit and use for your purposes under the international license <b>CC-BY-SA 4.0</b> or modified if allowed by the official creator, Nikola Nejedlý, aka KyberSoft.</p>
+<p>Welcome! You are watching a website, or a downloaded copy within the framework. This is here to privide enough information for you to edit and use KSSWF for your purposes under the international license <b>CC-BY-SA 4.0</b> or modified if allowed by the official creator, Nikola Nejedlý, aka KyberSoft.</p>
 <p>To start I recommend reading "Get Started" section. For further questions go to "FAQ" section. If you need to use implemented functions and have no idea how to use them, they are listed under "Functions" section. To enter administration the default name and password are both "admin". It's recommended to change those before making your website public.</p>
 
 <p><b>KSSWF is available on GITHUB: </b><a href='https://github.com/Bunnykillcz/KSSWF'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/GitHubLogo.png"/></a></p>
@@ -17,8 +16,10 @@
 	<p>This can be modified, if allowed by the official creator, Nikola Nejedlý, aka KyberSoft specifically. </p>
 	<p>This also applies to all the materials and coding used, php, css, html, javascript, etc. It is not allowed to modify, copy, or share these materials without naming the original authors and stating the made changes.</p>
 	<br/><br/>
-	<p>Author is permitted to change these conditions at any given moment without any warning, or notice and these would apply to all the versions above the one it was used at first, if not specified differently. </p>
+	<p>KSSWF author is permitted to change these conditions at any given moment without any warning, or notice and these would apply to all the versions above the one it was used at first, if not specified differently. </p>
 	<p><i><b>This applies to version 0.0.01a and above</b> with no license changes made before. </i></p>
+	<br/>
+	<p><b style='color:red;'>Disclaimer: </b>This framework is distributed in the hope that it will be useful, but <b>WITHOUT ANY WARRANTY</b>. See the GNU General Public License for more details.</p>
 </div>
 <br/>
 
@@ -49,4 +50,11 @@
 <br />
 > KyberSoft Simple Website Framework, aka KSSWF<br />
 > created by Nikola Nejedl&yacute; 2017-18<br />
-> All Rights Reserved"; ?> </strong> <?php //generate HOME stuff like NEWS? ?></p>
+> All Rights Reserved"; ?> </strong> 
+</p>
+
+<br/>
+<div class="socials">
+<b>Share KSSWF on social media: </b><?php socials("facebook"); socials("twitter"); socials("google"); ?>
+</div>
+

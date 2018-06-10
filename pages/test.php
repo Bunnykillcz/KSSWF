@@ -87,4 +87,5 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 <?php lorem(1, 5, 3, 10, false); ?>
 </div>
 
+<?php socials("all"); ?>
 
