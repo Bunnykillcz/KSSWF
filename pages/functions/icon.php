@@ -3,8 +3,8 @@
 <p><span class="function">function</span> <b>icon</b> searches in it's preset icon callers and returns an icon in the form of the correct html tag for the text symbol using <b>font awesome</b> resources. This means that the font icons won't work if your project is offline.</p>
 <p><span class="string">string</span> <i>type</i> expects a value such as <i>"globe"</i>, etc. (preset values in the table below)</p>
 <p><span class="int">int</span> <i>size</i> expects a value between 0 - 3, where 0 is normal size and 3 is huge.</p><br/>
+<p>Note that with update to framework version <b>0.3.37a</b>+ the icon function can use even values that are not in the preset table.</p><br/>
 <p><div class="right"><a href="http://fontawesome.io/" target="_blank"><?php echo icon("_new",0); ?><i>More about font awesome?</i></a></div></p><br/>
-<p>Note that with update to framework version 0.3.31a icon function can use even values that are not in the preset table (but this requires correct input as in FA itself).</p><br/>
 
 <h3>Usage example</h3>
 <pre><code class="language-php">	

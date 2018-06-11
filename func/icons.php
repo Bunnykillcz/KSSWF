@@ -15,8 +15,9 @@ $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","u
 function icon($type, $size)
 {
 	$icon = "";
+	$fab = "";
 	switch($type){
-		case default:
+		default:
 			$icon = "fa-$type";
 			break;
 		case "globe":
@@ -310,6 +311,7 @@ function icon($type, $size)
 			break;
 		case "patreon":
 			$icon = "fa-patreon";
+			$fab = "b";
 			break;
 		case "share":
 			$icon = "fa-share-square";
@@ -359,7 +361,7 @@ function icon($type, $size)
 	}
 	
 	
-	return "<i class='fa $icon $s'></i>";
+	return "<i class='fa$fab $icon $s'></i>";
 } 
 ?>
 
