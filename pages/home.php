@@ -5,6 +5,12 @@
 <p>To start I recommend reading "Get Started" section. For further questions go to "FAQ" section. If you need to use implemented functions and have no idea how to use them, they are listed under "Functions" section. To enter administration the default name and password are both "admin". It's recommended to change those before making your website public.</p>
 
 <p><b>KSSWF is available on GITHUB: </b><a href='https://github.com/Bunnykillcz/KSSWF'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/GitHubLogo.png"/></a></p>
+
+<p><b>You can support KSSWF and my other projects at Patreon: </b><a href='https://www.patreon.com/KyberSoft'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/PatreonLogo.png"/></a></p>
+<br/>
+<br/>
+
+<p style='text-align:center;'><i>This project is completely free. That's why I very much depend on your support and all of it is greatly appreciated. Thank you.</i></p>
 <br/><br/>
 
 
