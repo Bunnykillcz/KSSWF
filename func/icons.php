@@ -10,12 +10,15 @@ $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","u
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
 "phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
 "DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch",
-"fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config" ];
+"fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "patreon", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config" ];
 
 function icon($type, $size)
 {
 	$icon = "";
 	switch($type){
+		case default:
+			$icon = "fa-$type";
+			break;
 		case "globe":
 			$icon = "fa-globe";
 			break;
@@ -304,6 +307,9 @@ function icon($type, $size)
 		case "google-plus-s":
 		case "google-s":
 			$icon = "fa-google-plus-square";
+			break;
+		case "patreon":
+			$icon = "fa-patreon";
 			break;
 		case "share":
 			$icon = "fa-share-square";
