@@ -45,6 +45,108 @@ function admin_logout()
 	}	
 }
 
+function admin_newpass($newpass, $oldpass)
+{
+	global $after_link;
+	global $salt;
+	$addr = $after_link;
+	$fil_ = "./admin/admin_login.pwd";
+	
+	if(!file_exists($fil_))
+	{
+		infobox("OPERATION IMPOSSIBLE. FILE NOT FOUND.", "error","","");
+		return 5;
+	}
+		
+	$usrn = "";
+	if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
+		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+	
+	if(empty($usrn))	
+		return 1;
+	
+	$username = stripcslashes(htmlspecialchars(trim($usrn)));
+	$username = md5($username);
+	
+	$userID = -1;
+	$passID = -1;
+	$priv = "";
+	$file = "";
+	
+	$password = $oldpass;
+	$password = stripcslashes(htmlspecialchars(trim($password)));
+	$password = $password.$salt;
+	$password = md5($password);
+	$password = strrev($password);
+	
+	$admin = false;
+	
+	$handle = fopen($fil_, "r");
+	if ($handle) 
+	{
+		$id = 0;
+		while(!feof($handle))
+		{
+			$line = fgets($handle); 
+			$trimline = stripcslashes(trim($line));
+			if($username == $trimline)
+			{
+				$userID = $id;
+			}
+			else
+			if($id == $userID+1 && $password == $trimline)
+			{
+				$passID = $id;
+			}
+			else
+			if($id == $userID+2 && $id == $passID+1)
+			{
+				$priv = $trimline;
+				$admin = true;
+			}
+			else
+				$file .= $trimline."\r\n";
+			
+			$id++;
+		}
+    }
+	else
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. File not accessed.");	
+		return 4;
+	}
+	
+	fclose($handle);
+	
+	if(!$admin)
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Incorrect password?");	
+		return 2;
+	}
+	
+	$passwordn = $newpass;
+	$passwordn = stripcslashes(htmlspecialchars(trim($passwordn)));
+	$passwordn = $passwordn.$salt;
+	$passwordn = md5($passwordn);
+	$passwordn = strrev($passwordn);
+	
+	$file .= $username."\r\n".$passwordn."\r\n".$priv; //generated filedata
+	
+	$ret = file_put_contents($fil_, $file);
+	
+	if($ret == 1 || $ret){
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:green;'>successfully</span> changed password.");	
+		header('location:'.$addr."?w=home&s=6");
+		return 0;
+	}
+	else
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Write error.");	
+		header('location:'.$addr."?w=home&s=5");
+		return 3;
+	}
+}
+
 //-----------------------------------------------    << $_POST
 if (isset($_POST['submit'])) 
 {
@@ -225,6 +327,9 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 8: //revert to backup
+		break;
+	
+	case 9: //change password	
 		break;
 		
 	}

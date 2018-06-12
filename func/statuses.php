@@ -20,6 +20,17 @@ $s = $_GET['s'];
 		case 4: //logout
 			infobox("Admin logged out.","info");
 			break;
+			
+		case 5: //Password change failed
+			infobox("ADMIN LOGON FAILED. FILE WRITE ERROR.", "error","","");
+			break;
+			
+		case 6: //Password change succeeded
+			$usrn = "";
+			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
+				$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+			infobox("<b>$usrn</b> password successfully changed.", "info","","");
+			break;
 	}
 }
 ?>
