@@ -1,5 +1,5 @@
 <?php
-$this_file = "all_loader.php";
+$this_file = "all_func_loader.php";
 
 if(file_exists("./func/")){
 	$files_ = scandir("./func/");

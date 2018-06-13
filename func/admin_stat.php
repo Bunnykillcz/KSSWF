@@ -248,8 +248,8 @@ if(!empty($_GET['a']))
 	case 1: //login
 		$form  = "<div class='right' style='padding:7px; right:30px;font-weight: bold;'>";
 		$form .= "<form action='' method='post'><b><u>Admin login:</u></b><br/>";
-		$form .= "<label>N: </label><input type='text' id='name' name='username' placeholder='username'></input><br/>";
-		$form .= "<label>P: </label><input type='password' id='password' placeholder='***' name='password'></input><br/>";
+		$form .= "<label style='display: inline-block; position: relative; bottom: 22px; left: -30px; margin: 0; padding: 0;'>".icon("user",0)." </label><input type='text' id='name' name='username' placeholder='username'></input><br/>";
+		$form .= "<label style='display: inline-block; position: relative; bottom: 22px; left: -30px; margin: 0; padding: 0;'>".icon("key",0)." </label><input type='password' id='password' placeholder='***' name='password'></input><br/>";
 		$form .= "<input type='submit' name='submit' value='login' style='border: 1px black solid;'></input></form></div>";
 		$form .= $error;
 		

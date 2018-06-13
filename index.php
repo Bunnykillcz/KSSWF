@@ -4,7 +4,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.3.40a
+// Version: 0.3.47a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.cz
 // Origin: https://github.com/Bunnykillcz/KSSWF

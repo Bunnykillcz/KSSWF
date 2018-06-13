@@ -1,12 +1,12 @@
 <?php //tag, homepage, tag, KSSWF, Lorem, Ipsum //keywords can be set-up for every page on line 2 in a comment! //correct syntax is "//one, two, three, four, five, etc" //if incorrect, or not set, the keywords will be default; default keywords are set in index.php ?> 
 
 <h1>KSSWF</h1>
-<p>Welcome! You are watching a website, or a downloaded copy within the framework. This is here to privide enough information for you to edit and use KSSWF for your purposes under the international license <b>CC-BY-SA 4.0</b> or modified if allowed by the official creator, Nikola Nejedlý, aka KyberSoft.</p>
-<p>To start I recommend reading "Get Started" section. For further questions go to "FAQ" section. If you need to use implemented functions and have no idea how to use them, they are listed under "Functions" section. To enter administration the default name and password are both "admin". It's recommended to change those before making your website public.</p>
+<p>Welcome to KSSWF!! KSSWF stands for <b>K</b>yber<b>S</b>oft <b>S</b>imple <b>W</b>eb(site) <b>F</b>ramework. You are currently watching a website, or a downloaded copy within the framework. This is here to privide enough information for you to edit and use KSSWF for your purposes under the international license <b>CC-BY-SA 4.0</b> or modified if allowed by the official creator, Nikola Nejedlý, aka KyberSoft.</p>
+<p>To start I recommend reading "Get Started" section. For further questions go to "FAQ" section. If you need to use implemented functions and have no idea how to use them, they are listed under "Functions" section. To enter administration the <b>default name and password</b> are both "admin". It's recommended to change those before making your website public.</p>
 
-<p><b>KSSWF is available on GITHUB: </b><a href='https://github.com/Bunnykillcz/KSSWF'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/GitHubLogo.png"/></a></p>
+<p><b>KSSWF is available on GITHUB: </b><a href='https://github.com/Bunnykillcz/KSSWF' target="_BLANK"><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/GitHubLogo.png"/></a></p>
 
-<p><b>You can support KSSWF and my other projects at Patreon: </b><a href='https://www.patreon.com/KyberSoft'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/PatreonLogo.png"/></a></p>
+<p><b>You can support KSSWF and my other projects at Patreon: </b><a target="_BLANK" href='https://www.patreon.com/KyberSoft'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/PatreonLogo.png"/></a></p>
 <br/>
 <br/>
 
@@ -16,7 +16,7 @@
 
 <h2>License, terms of use:</h2>
 <div class="License_terms">
-	<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_BLANK"><img alt="Licence Creative Commons" style="border-width:0; display: block; position: relative; float:right;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /> CC-BY-SA 4.0</a>, or <a href='https://github.com/Bunnykillcz/KSSWF/blob/master/LICENSE'>GNU General Public License v3.0</a><p>
+	<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_BLANK"><img alt="Licence Creative Commons" style="border-width:0; display: block; position: relative; float:right;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /> CC-BY-SA 4.0</a>, or <a target="_BLANK" href='https://github.com/Bunnykillcz/KSSWF/blob/master/LICENSE'>GNU General Public License v3.0</a><p>
 	<br/><br/>
 	<p>Basically, it's allowed to share and modify this work, even for commercial use, but it's necessary to leave a <i>link and name to the original and author</i>, state the made changes and to share with the same license. </p>
 	<p>This can be modified, if allowed by the official creator, Nikola Nejedlý, aka KyberSoft specifically. </p>
@@ -37,9 +37,9 @@
 <b>KSSWF is currently using: </b>
 <ul>
 	<li>WYSIWYG HTML OpenSource Editor - <b>CKEditor 4 by CKSource sp. z o.o. sp.k</b> | <a href="https://www.mozilla.org/en-US/MPL/1.1/" target="_BLANK">Mozilla Public License Version 1.1 or later</a></li>
-	<li>Icons from - <b>Font Awesome 4, 5 by Fonticons, Inc.</b> | Using free license > CC BY 4.0 - more <a href="https://fontawesome.com/license">here</a> </li>
-	<li>Javascript code highlighter - <b>Prism by Lea Verou, Golmote & others</b> | License not specified - <a href="http://prismjs.com">Prism website</a> </li>
-	<li>OpenSource Fonts from - <b>Google fonts by Google LLC</b> |  <a href="http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web">SIL Open Font License</a> | <a href="https://fonts.google.com/">Google fonts website</a> </li>
+	<li>Icons from - <b>Font Awesome 4, 5 by Fonticons, Inc.</b> | Using free license > CC BY 4.0 - more <a href="https://fontawesome.com/license" target="_BLANK">here</a> </li>
+	<li>Javascript code highlighter - <b>Prism by Lea Verou, Golmote & others</b> | License not specified - <a href="http://prismjs.com" target="_BLANK">Prism website</a> </li>
+	<li>OpenSource Fonts from - <b>Google fonts by Google LLC</b> (actual font authors vary) |  <a href="http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web" target="_BLANK">SIL Open Font License</a> OR <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_BLANK">Apache License 2.0</a> | <a href="https://fonts.google.com/" target="_BLANK">Google fonts website</a> </li>
 </ul>
 
 <h3>Known KSSWF websites:</h3>

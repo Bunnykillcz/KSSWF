@@ -18,7 +18,7 @@ session_cache_limiter('private');
 session_cache_expire($admin_logon_time);
 
 $gray = array(0, false, false, false, true, true, false); //init for editor graying
-include("./func/all_loader.php"); 
+include("./func/all_func_loader.php"); 
 include("./func/setup.php"); 
 ?>
 <head>
