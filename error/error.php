@@ -28,7 +28,7 @@ if(!empty($_GET['er']) || !empty($er404r))
 	else 
 	if($erget == 403){
 	$title = "ERROR 403";
-	$text = "Forbidden! || Přístup odmítnut! ";
+	$text = "Forbidden! || Přístup zamítnut! ";
 	$text .= "<br/><img class='error_img' src='./error/403.png' alt='err403'/>";
 	
 	}
@@ -51,7 +51,8 @@ if(!empty($_GET['er']) || !empty($er404r))
 }else
 {
 	global $actual_link;
-	header('location:'.$actual_link."/index.php?er=404");
+	
+	redirect($actual_link."/index.php?er=404", false);
 }
 ?>
 <h1><?php echo $title; ?></h1>

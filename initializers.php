@@ -17,6 +17,11 @@ session_start([
 session_cache_limiter('private');
 session_cache_expire($admin_logon_time);
 
+include("./func/.app.php"); 
+
+if(strpos($actual_link, "//localhost/") != false) //if localhosting, don't use BASE
+	echo "<base href='/' />";
+
 $gray = array(0, false, false, false, true, true, false); //init for editor graying
 include("./func/all_func_loader.php"); 
 include("./func/setup.php"); 
@@ -34,7 +39,7 @@ if(!file_exists("./cache/menu.html"))
 {
 	$addr = $after_link;
 	include("./func/gen_menu.php");
-	header('location:'.$addr."?w=home&s=1");
+	redirect($addr."?w=home&s=1", false);
 }
 
 include("./func/js_load.php");

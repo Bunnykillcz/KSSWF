@@ -24,7 +24,7 @@ function mk_cache_img($source,$target_name,$resize_width) //returns false if fai
 	else
 		return false;
 	
-	if(file_exists("./cache/img/$target_name"))
+	if(file_exists("./cache/img/$target_name.$vartype"))
 		return false;
 	
 	if (!file_exists('./cache/img')) 
@@ -61,7 +61,7 @@ function mk_cache_img($source,$target_name,$resize_width) //returns false if fai
 	imagecopyresampled($new_image, $image, 0, 0, 0, 0, $resize_width, $resize_height, imagesx($image), imagesy($image));
 	$image = $new_image;
 	
-	img_save($image,"./cache/img/$target_name",$imgtp, 70,null);
+	img_save($image,"./cache/img/$target_name.$vartype",$imgtp, 70,null);
 	return true;
 	
 }

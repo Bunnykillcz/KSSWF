@@ -36,7 +36,7 @@ function admin_logout()
 	
 	if(session_destroy()) 
 	{
-		header('location:'.$addr."?w=home&s=4");
+		redirect($addr."?w=home&s=4",false);
 	}	
 	else
 	{
@@ -45,7 +45,7 @@ function admin_logout()
 	}	
 }
 
-function admin_newpass($newpass, $oldpass)
+function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorrect password (?); 4 = file not accessed; 3 = write error; 0 = success;
 {
 	global $after_link;
 	global $salt;
@@ -136,13 +136,13 @@ function admin_newpass($newpass, $oldpass)
 	
 	if($ret == 1 || $ret){
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:green;'>successfully</span> changed password.");	
-		header('location:'.$addr."?w=home&s=6");
+		redirect($addr."?w=home&s=6", false);
 		return 0;
 	}
 	else
 	{
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Write error.");	
-		header('location:'.$addr."?w=home&s=5");
+		redirect($addr."?w=home&s=5", false);
 		return 3;
 	}
 }
@@ -220,7 +220,7 @@ if (isset($_POST['submit']))
 		{
 			$_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))] = $uunn;
 			savetolog("<span style='color:green;'><b>$uunn</b></span> logged in.");
-			header('location:'.$addr."?w=home&s=2");
+			redirect($addr."?w=home&s=2",false);
 		}
 	}
 }
@@ -231,6 +231,7 @@ if(!empty($_GET['a']))
 {
 	$a = $_GET['a'];
 	
+	//if not logging in ( = you're not admin) do nothing!
 	if($a > 1)
 	{
 		if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
@@ -275,6 +276,7 @@ if(!empty($_GET['a']))
 		
 	case 6: //saving $_POST form
 		if (!empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
+		if(!empty($_POST["editor_field"]))
 		{
 			$content = str_replace('%20', '/', $content_);
 			
@@ -301,7 +303,7 @@ if(!empty($_GET['a']))
 				if(!empty($new_name))
 				{
 					savetolog("<b>$usrn</b> edited: ./pages/".str_replace(' ', '/', $new_name).".php");
-					header('location:'.$addr."?w=$new_name&a=61");
+					redirect($addr."?w=$new_name&a=61", false);
 				}
 				else
 				{
@@ -330,6 +332,46 @@ if(!empty($_GET['a']))
 		break;
 	
 	case 9: //change password	
+		if (!empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
+		{
+			if (!empty($_POST["pass_old"]) && !empty($_POST["pass_new"]))
+			{
+				$a = admin_newpass($_POST["pass_new"], $_POST["pass_old"]); 
+				
+				//1 = no-login;  2 = incorrect password (?); 4 = file not accessed; 3 = write error; 0 = success;
+				switch($a)
+				{
+					default:
+					case 0:
+					break;
+					
+					case 1:
+						infobox("Not logged in","error");
+					break;
+					case 2:
+						infobox("Incorrect (old) password! No changes were made.","warning");
+					break;
+					case 3:
+						infobox("Write error; Try again.","error");
+					break;
+					case 4:
+						infobox("File not accessible!","error");
+					break;
+				}
+				
+			}
+		}
+		else
+		{
+			$form = icon("key",1);
+			$form .= "<div class='right' style='padding:7px; right:30px; font-weight: bold;'>";
+			$form .= "<form action='' method='post'><b><u>Change password for <span style='color: green'>$usrn:</span></u></b><br/>";
+			$form .= "<label style='display: inline-block; position: relative; bottom: 0; left: -4px; margin: 0; padding: 0;'>old</label><input type='password' id='pass_old' placeholder='***' name='pass_old'></input><br/>";
+			$form .= "<label style='display: inline-block; position: relative; bottom: 0; left: -4px; margin: 0; padding: 0;'>new</label><input type='password' id='pass_new' placeholder='***' name='pass_new'></input><br/>";
+			$form .= "<input type='submit' name='submit' value='change' style='border: 1px black solid;'></input></form></div>";
+			
+			infobox($form,"none");
+		}
 		break;
 		
 	}

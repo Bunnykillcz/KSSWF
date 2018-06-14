@@ -50,6 +50,9 @@ function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("
 		}			
 	//--------------------
 	
+	$forma_ = explode(".",$source);
+	$format = $forma_[count($forma_)-1];
+	
 	if($click_big)
 	{
 		$output_img .= "<div class='canvas_bg' style='display: none;' name='bg_canvas$id'> <a href='#' name='bg_canvas$id' onclick=\"setDisplay('bg_canvas$id','none');return false;\"> </a></div>";
@@ -61,11 +64,11 @@ function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("
 	
 	if($cache_this)
 	{
-		$chk = mk_cache_img($source,$page."/image".$id,$width);
+		$chk = mk_cache_img($source,$page."/image".$id.".".$format,$width);
 		if(!$chk)
 			return false;
 		
-		$src_i = "./cache/img/".$page."/image".$id;
+		$src_i = "./cache/img/".$page."/image".$id.".".$format;
 	}
 	else
 		$src_i = $source;

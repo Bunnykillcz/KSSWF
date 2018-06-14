@@ -1,3 +1,125 @@
+15.06.2018 | 01:53:53 | Cache cleared by <b>admin</b>.
+15.06.2018 | 01:48:11 | Cache cleared by <b>admin</b>.
+15.06.2018 | 01:47:06 | Cache cleared by <b>admin</b>.
+15.06.2018 | 01:46:53 | Cache cleared by <b>admin</b>.
+14.06.2018 | 21:26:36 | <span style='color:green;'><b>admin</b></span> logged in.
+14.06.2018 | 21:26:25 | <span style='color:#af0000;'><b>admin</b> logged out.</span>
+14.06.2018 | 13:45:19 | <span style='color:black;'><b>admin</b></span> <span style='color:green;'>successfully</span> changed password.
+14.06.2018 | 13:45:02 | <span style='color:black;'><b>admin</b></span> <span style='color:green;'>successfully</span> changed password.
+14.06.2018 | 13:44:47 | <span style='color:black;'><b>admin</b></span> <span style='color:red;'>failed</span> to change password. Incorrect password?
+14.06.2018 | 13:44:33 | <span style='color:black;'><b>admin</b></span> <span style='color:red;'>failed</span> to change password. Incorrect password?
+14.06.2018 | 13:37:12 | <span style='color:black;'><b>admin</b></span> <span style='color:red;'>failed</span> to change password. Incorrect password?
+14.06.2018 | 13:36:44 | <span style='color:black;'><b>admin</b></span> <span style='color:green;'>successfully</span> changed password.
+13.06.2018 | 05:46:37 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:36:03 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:33:16 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:32:33 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:31:32 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:30:34 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:30:33 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:28:43 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:24:25 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:21:27 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:20:17 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:18:28 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:17:22 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:15:02 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:14:22 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:11:58 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:10:39 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:09:03 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:08:43 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:06:43 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:05:58 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:04:33 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:04:00 | Cache cleared by <b>admin</b>.
+13.06.2018 | 05:01:32 | Cache cleared by <b>admin</b>.
+12.06.2018 | 02:58:57 | <span style='color:green;'><b>admin</b></span> logged in.
+12.06.2018 | 02:53:35 | <span style='color:#af0000;'><b>admin</b> logged out.</span>
+12.06.2018 | 02:53:17 | Cache cleared by <b>admin</b>.
+12.06.2018 | 02:07:19 | <span style='color:black;'><b>admin</b></span> <span style='color:green;'>successfully</span> changed password.
+11.06.2018 | 20:49:27 | Cache cleared by <b>admin</b>.
+10.06.2018 | 01:32:41 | Cache cleared by <b>admin</b>.
+10.06.2018 | 01:32:04 | <span style='color:green;'><b>admin</b></span> logged in.
+09.06.2018 | 15:49:10 | <span style='color:#af0000;'><b>admin</b> logged out.</span>
+09.06.2018 | 14:06:52 | <span style='color:green;'><b>admin</b></span> logged in.
+08.06.2018 | 23:57:44 | <span style='color:green;'><b>admin</b></span> logged in.
+08.06.2018 | 23:46:36 | <span style='color:#af0000;'><b>admin</b> logged out.</span>
+08.06.2018 | 23:46:27 | Cache cleared by <b>admin</b>.
+08.06.2018 | 23:46:14 | <span style='color:green;'><b>admin</b></span> logged in.
+06.06.2018 | 00:27:44 | <span style='color:green;'><b>admin</b></span> logged in.
+06.06.2018 | 00:21:26 | <span style='color:green;'><b>admin</b></span> logged in.
+06.06.2018 | 00:10:56 | <span style='color:green;'><b>admin</b></span> logged in.
+06.06.2018 | 00:10:41 | <span style='color:green;'><b>admin</b></span> logged in.
+06.06.2018 | 00:08:47 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 23:45:53 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:29:59 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:17:23 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:16:15 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:13:40 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:12:19 | <span style='color:green;'><b>admin</b></span> logged in.
+05.06.2018 | 21:12:10 | <span style='color:green;'><b>admin</b></span> logged in.
+25.05.2018 | 15:29:58 | Cache cleared by <b>admin</b>.
+24.05.2018 | 22:58:36 | Cache cleared by <b>admin</b>.
+24.05.2018 | 22:55:44 | <span style='color:green;'><b>admin</b></span> logged in.
+24.05.2018 | 22:53:42 | <span style='color:#af0000;'><b>admin</b> logged out.</span>
+24.05.2018 | 00:28:50 | Cache cleared by <b>admin</b>.
+24.05.2018 | 00:24:26 | Cache cleared by <b>admin</b>.
+23.05.2018 | 22:37:40 | Cache cleared by <b>admin</b>.
+23.05.2018 | 22:34:27 | Cache cleared by <b>admin</b>.
+23.05.2018 | 22:28:25 | Cache cleared by <b>admin</b>.
+23.05.2018 | 22:28:21 | <span style='color:green;'>admin</span> logged in.
+23.05.2018 | 18:01:37 | <span style='color:#af0000;'>admin logged out.</span>
+23.05.2018 | 18:01:03 | <b>admin</b> edited: ./pages/home.php
+23.05.2018 | 18:01:03 | AutoBackup: ./pages/bcp_home.php_bcp
+23.05.2018 | 14:51:57 | <b>admin</b> edited: ./pages/.php
+23.05.2018 | 14:51:57 | AutoBackup: ./pages/bcp_home.php_bcp
+23.05.2018 | 13:55:46 | Cache cleared by <b>admin</b>.
+23.05.2018 | 13:54:39 | <span style='color:green;'>admin</span> logged in.
+23.05.2018 | 13:54:34 | <span style='color:#af0000;'>admin logged out.</span>
+23.05.2018 | 13:53:51 | <span style='color:green;'>admin</span> logged in.
+23.05.2018 | 13:52:17 | <span style='color:#af0000;'>admin logged out.</span>
+23.05.2018 | 13:47:50 | <span style='color:green;'>admin</span> logged in.
+23.05.2018 | 13:42:43 | <span style='color:#af0000;'>admin logged out.</span>
+23.05.2018 | 00:13:10 | Cache cleared.
+23.05.2018 | 00:09:07 | Cache cleared.
+23.05.2018 | 00:06:14 | Cache cleared.
+23.05.2018 | 00:01:55 | Cache cleared.
+22.05.2018 | 23:59:51 | Cache cleared.
+22.05.2018 | 23:54:01 | <b>admin</b> edited: ./pages/functions/slideshow.php
+22.05.2018 | 23:54:01 | AutoBackup: ./pages/bcp_functions/slideshou.php_bcp
+22.05.2018 | 23:53:07 | Cache cleared.
+22.05.2018 | 23:49:37 | <b>admin</b> edited: ./pages/functions/slideshow.php
+22.05.2018 | 23:49:37 | AutoBackup: ./pages/bcp_functions/slideshow.php_bcp
+22.05.2018 | 23:49:16 | <b>admin</b> edited: ./pages/functions/slideshou.php
+22.05.2018 | 23:49:16 | AutoBackup: ./pages/bcp_functions/slideshou.php_bcp
+22.05.2018 | 23:48:45 | <b>admin</b> edited: ./pages/functions/slideshou.php
+22.05.2018 | 23:48:45 | AutoBackup: ./pages/bcp_functions/slideshou.php_bcp
+22.05.2018 | 23:47:34 | <b>admin</b> edited: ./pages/functions/slideshow.php
+22.05.2018 | 23:47:34 | AutoBackup: ./pages/bcp_functions/slideshow.php_bcp
+22.05.2018 | 23:33:54 | Cache cleared.
+22.05.2018 | 23:30:38 | Cache cleared.
+22.05.2018 | 23:29:47 | Cache cleared.
+22.05.2018 | 23:29:05 | Cache cleared.
+22.05.2018 | 23:27:04 | Cache cleared.
+22.05.2018 | 23:26:58 | Cache cleared.
+22.05.2018 | 23:26:20 | Cache cleared.
+22.05.2018 | 23:23:16 | Cache cleared.
+22.05.2018 | 23:22:00 | Cache cleared.
+22.05.2018 | 23:18:47 | Cache cleared.
+22.05.2018 | 22:35:07 | Cache cleared.
+22.05.2018 | 18:34:10 | Cache cleared.
+22.05.2018 | 18:25:58 | Cache cleared.
+22.05.2018 | 18:24:18 | Cache cleared.
+22.05.2018 | 18:22:05 | Cache cleared.
+22.05.2018 | 18:21:22 | Cache cleared.
+22.05.2018 | 18:17:23 | Cache cleared.
+22.05.2018 | 18:15:35 | Cache cleared.
+22.05.2018 | 18:07:34 | Cache cleared.
+22.05.2018 | 18:00:33 | Cache cleared.
+22.05.2018 | 18:00:24 | Cache cleared.
+22.05.2018 | 17:42:09 | Cache cleared.
+22.05.2018 | 17:40:30 | Cache cleared.
 22.05.2018 | 02:10:55 | <b>admin</b> edited: ./pages/home.php
 22.05.2018 | 02:10:55 | AutoBackup: ./pages/bcp_home.php_bcp
 22.05.2018 | 02:03:50 | Cache cleared.

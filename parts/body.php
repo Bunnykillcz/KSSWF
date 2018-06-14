@@ -19,7 +19,6 @@ if(empty($_GET['er']))
 	{
 		$addr = $after_link;
 		$content_ = "home";
-		//header('location:'.$addr."?w=".$content_);
 		
 		$this_w = "home";
 		if(file_exists("./pages/".$content_.".php"))

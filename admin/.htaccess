@@ -1,0 +1,21 @@
+Options -Indexes
+
+DirectoryIndex index.php
+
+ErrorDocument 403 /index.php?er=403
+ErrorDocument 401 /index.php?er=401
+ErrorDocument 404 /index.php?er=404
+ErrorDocument 500 /index.php?er=500
+
+Order Deny,Allow
+Deny from all
+Allow from host
+<Files ".htaccess"> 
+Allow from all 
+</Files>
+<Files "index.php"> 
+Allow from all 
+</Files>
+<Files "/"> 
+Allow from all 
+</Files>
