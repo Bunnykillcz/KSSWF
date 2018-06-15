@@ -10,7 +10,7 @@
 <pre><code class="language-php">	
 &lt;div style='display:block;border:1px black solid;left:Calc( 50% - 400px );text-align:center;width:800px;position:relative;'>
 	&lt;?php 
-		map_google(2846, "AIzaSyBm-zVgKndR4Cl9UhaoS5Te56ejXv2aIDA","","Somewhere 01", 20.79974, 17.04694, 5, 800, 400, true);
+		map_google(2846, "AIzaSyBm-zVgKndR4Cl9UhaoS5Te56ejXv2aIDA","","Somewhere in CzechRepublic 01", 49.5798787, 14.5064755, 7, 800, 400, true);
 	?> 
 &lt;/div>
 </code></pre>
@@ -19,6 +19,6 @@
 <h2>Showtime!</h2>
 <div style='display:block;border:1px black solid;left:Calc( 50% - 400px );text-align:center;width:800px;position:relative;'>
 <?php  
-		map_google(2846, "AIzaSyBm-zVgKndR4Cl9UhaoS5Te56ejXv2aIDA","","Somewhere 01", 20.79974, 17.04694, 5, 800, 400, true);
+		map_google(2846, "AIzaSyBm-zVgKndR4Cl9UhaoS5Te56ejXv2aIDA","","Somewhere in CzechRepublic 01", 49.5798787, 14.5064755, 7, 800, 400, true);
 ?>
 </div>

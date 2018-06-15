@@ -19,7 +19,7 @@ session_cache_expire($admin_logon_time);
 
 include("./func/.app.php"); 
 
-if(strpos($actual_link, "//localhost/") != false) //if localhosting, don't use BASE
+if(strpos($actual_link, "//localhost") == 0) //if localhosting, don't use BASE
 	echo "<base href='/' />";
 
 $gray = array(0, false, false, false, true, true, false); //init for editor graying

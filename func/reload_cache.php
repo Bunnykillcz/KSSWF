@@ -10,6 +10,11 @@ function cache_clear()
 	foreach ( $ri as $file ) {
 		$file->isDir() ?  rmdir($file) : unlink($file);
 	}
+	$c_htaccess = "Options -Indexes \r\n
+					Order Deny,Allow\r\n
+					Allow from all";
+	
+	file_put_contents("./cache/.htaccess",$c_htaccess);
 	
 }
 
