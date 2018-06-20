@@ -47,8 +47,8 @@
 	<a href="http://www.soveticka.cz" target="_blank"><?php img("./img/ref/Soveticka.png","http://www.Soveticka.cz","", true, false, 320); ?><b>Sovětička</b></a>
 	<a href="http://www.GetAway.cz" target="_blank"><?php img("./img/ref/Getaway.png","http://www.GetAway.cz","", true, false, 320); ?><b>GetAway.cz</b></a>
 	<a href="http://portfolio.nejedniko.cz" target="_blank"><?php img("./img/ref/NiklakPhoto.png","http://portfolio.nejedniko.cz","", true, false, 320); ?><b>Niklák Photography</b></a>
-	<!--a href="http://www.." target="_blank"><?php img("./img/ref/Fekal.png","http://www..","", true, false, 320); ?><b>Fekálník #</b></a>
-	<a href="http://www.nejedniko.tk" target="_blank"><?php img("./img/ref/Nejedniko.png","http://www.NejedNiko.tk","", true, false, 320); ?><b>NejedNiko</b></a-->
+	<a href="http://odpady-janicek.cz/" target="_blank"><?php img("./img/ref/odpady-janicek.png","http://odpady-janicek.cz/","", true, false, 320); ?><b>Odpady Janíček</b></a>
+	<!--a href="http://www.nejedniko.tk" target="_blank"><?php img("./img/ref/Nejedniko.png","http://www.NejedNiko.tk","", true, false, 320); ?><b>NejedNiko</b></a-->
 </div>
 
 <h3>Current firmware version:</h3>
