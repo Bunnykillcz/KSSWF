@@ -2,6 +2,10 @@
 // "pop-up" for text notifications
 function infobox() //text = "Hi, my name is ... Bodega!"; type = "error", "warning", "info"(default), "none" ; posx & posy = int absolute position -> if -1, then default
 {
+	$a_t_ = "";
+	if(!empty($_GET["a"]))
+		if($_GET["a"] == 9)
+			$a_t_ = "&a=7";
 	$text=""; 
 	$type=""; 
 	$posx="-1";
@@ -56,7 +60,7 @@ function infobox() //text = "Hi, my name is ... Bodega!"; type = "error", "warni
 	
 	
 
-	$gen_message = $gen_message.$gen_t."<p>".$text."</p><a href='".$actual_link.$after_link.$w_t."'>".icon("wclose",0)."</a>";
+	$gen_message = $gen_message.$gen_t."<p>".$text."</p><a href='".$actual_link.$after_link.$w_t.$a_t_."'>".icon("wclose",0)."</a>";
 	echo $gen_message;
 	echo "</div>";
 }

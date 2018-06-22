@@ -119,5 +119,30 @@ function mk_cache_css()
 	return 0;
 }
 
+//------------------------------------------------------------------------------------------------//
+// Functions of basic Caesar encrypting/decrypting
+// Nejedlý Nikola | 2018
+
+function encrypt_caesar($inp_string, $key_num)
+{
+	$key_num = abs($key_num);
+	$out = "";
+	$asciimax = 256;
+	for($i = 0; $i < strlen($inp_string); $i++)
+		$out .= chr((ord($inp_string[$i])+$key_num)%$asciimax);
+	
+	return $out;
+}
+function decrypt_caesar($inp_string, $key_num)
+{
+	$key_num = abs($key_num);
+	$out = "";
+	$asciimax = 256;
+	for($i = 0; $i < strlen($inp_string); $i++)
+		$out .= chr((ord($inp_string[$i])-$key_num)%$asciimax);
+	
+	return $out;
+}
+
 
 ?>

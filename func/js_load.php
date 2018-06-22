@@ -27,12 +27,17 @@ if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SE
 	}
 }
 ?>
-<!-- here we mix-up Font Awesome 4 (remote) with Font Awesome 5 (local) elements -->
+<!-- here we mix-up Font Awesome 4 (remote) with Font Awesome 5 (local) elements || updated to 5.1 -->
 <script src="https://use.fontawesome.com/bd3d370837.js"></script>
-<script defer type="text/javascript" src="./javascript/fa_5_free/fa-regular.js"></script>
+<!--script defer type="text/javascript" src="./javascript/fa_5_free/fa-regular.js"></script>
 <script defer type="text/javascript" src="./javascript/fa_5_free/fa-solid.js"></script>
 <script defer type="text/javascript" src="./javascript/fa_5_free/fa-brands.js"></script>
 <script defer type="text/javascript" src="./javascript/fa_5_free/fa-v4-shims.js"></script>
-<script defer type="text/javascript" src="./javascript/fa_5_free/fontawesome.js"></script>
+<script defer type="text/javascript" src="./javascript/fa_5_free/fontawesome.js"></script-->
+<script defer type="text/javascript" src="./javascript/fa_5_free/fa_51/js/regular.js"></script>
+<script defer type="text/javascript" src="./javascript/fa_5_free/fa_51/js/solid.js"></script>
+<script defer type="text/javascript" src="./javascript/fa_5_free/fa_51/js/brands.js"></script>
+<script defer type="text/javascript" src="./javascript/fa_5_free/fa_51/js/v4-shims.js"></script>
+<script defer type="text/javascript" src="./javascript/fa_5_free/fa_51/js/fontawesome.js"></script>
 
 <!--script language="JavaScript" type="text/javascript" src="./javascript/htmlspecialchars.js"></script-->

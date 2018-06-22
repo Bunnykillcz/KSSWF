@@ -46,7 +46,10 @@ function admin_logout()
 }
 
 function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorrect password (?); 4 = file not accessed; 3 = write error; 0 = success;
-{
+{	
+	//echo $en=encrypt_caesar("admin",25);  //$usrn, length^2
+	//echo " | ".decrypt_caesar($en,25);	//$usrn, length^2
+	
 	global $after_link;
 	global $salt;
 	$addr = $after_link;
@@ -136,13 +139,13 @@ function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorre
 	
 	if($ret == 1 || $ret){
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:green;'>successfully</span> changed password.");	
-		redirect($addr."?w=home&s=6", false);
+		redirect($addr."?w=home&s=6&a=7", false);
 		return 0;
 	}
 	else
 	{
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Write error.");	
-		redirect($addr."?w=home&s=5", false);
+		redirect($addr."?w=home&s=5&a=7", false);
 		return 3;
 	}
 }
@@ -220,7 +223,7 @@ if (isset($_POST['submit']))
 		{
 			$_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))] = $uunn;
 			savetolog("<span style='color:green;'><b>$uunn</b></span> logged in.");
-			redirect($addr."?w=home&s=2",false);
+			redirect($addr."?w=home&s=2&a=7",false);
 		}
 	}
 }
@@ -326,8 +329,8 @@ if(!empty($_GET['a']))
 		break;
 		
 	case 7: //settings
+	//## Happens in "body.php"
 		break;
-		
 	case 8: //revert to backup
 		break;
 	

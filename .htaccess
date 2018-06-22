@@ -11,15 +11,17 @@ RedirectMatch ^/pages/$ /index.php?er=403
 RedirectMatch ^/parts/$ /index.php?er=403
 RedirectMatch ^/templates/$ /index.php?er=403
 
-DirectoryIndex index.php?w=home
+DirectoryIndex index.php
 
-Options -Indexes
+Options -Indexes +FollowSymLinks
 
 Order Deny,Allow
-Deny from all
 Allow from host
 
-<Files ~ "(.htaccess|index.php|admin.php)$"> 
+<Files "admin.php"> 
+Allow from all 
+</Files>
+<Files ".htaccess"> 
 Allow from all 
 </Files>
 <Files ~ "\.(js|css|jpeg|jpg|png|ttf|gif)$">

@@ -5,14 +5,14 @@
 //------------------------------------------------//
 
 
-$ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
+$ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","user","users","agent","left","right","up","down","wclose","wclose-o","close","card-o","user-c","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","uber", "bus", "train","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
 "phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
 "DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch", "key", "keyboard", "mouse-p",
 "fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "patreon", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config" ];
 
-function icon($type, $size)
+function icon($type, $size = 0)
 {
 	$icon = "";
 	$fab = "";
@@ -43,6 +43,12 @@ function icon($type, $size)
 			break;
 		case "user":
 			$icon = "fa-user";
+			break;
+		case "users":
+			$icon = "fa-users";
+			break;
+		case "agent":
+			$icon = "fa-user-secret";
 			break;
 		case "left":
 			$icon = "fa-arrow-left";

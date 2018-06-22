@@ -25,7 +25,6 @@
 	border-radius: 2px;
 	padding-left: 7px;
 }
-
 .admin_log:after
 {
 	display: block;
@@ -42,7 +41,6 @@
 	background: white;
 	border: 1px black solid;
 }
-
 .admin_log:hover
 {
 	opacity: 1;
@@ -50,7 +48,6 @@
 	background: white;
 	box-shadow: 2px 2px 8px black;
 }
-
 .admin_log:hover:after
 {
 	content: "";
@@ -58,4 +55,62 @@
 	border: none;
 	height: 32px;
 }
+
+
+.admin_setup_button
+{
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	top: 0px;
+	width: 64px;
+	height: 64px;
+	background: white;
+	border: 1px solid black;
+	font-size: 10px;
+	text-align: center;
+	margin: 4px;
+	border-radius: 2px;
+	font-family: "Open Sans", sans-serif;
+	color: black;
+}
+.admin_setup_button:hover
+{
+	background: black;
+	border: gray 1px solid;
+}
+.admin_setup_button:hover > a b,
+.admin_setup_button:hover > a svg
+{
+	color: white;
+}
+.admin_setup_button a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+.admin_setup_button a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.admin_setup_button svg
+{
+	display: block;
+	position: relative;
+	font-size: 24px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	text-align: center;
+	width: 100%;
+	left: Calc( 50% - 12px);
+	color: black;
+}
+.admin_setup_button b
+{
+	color: black;
+}
+
 
