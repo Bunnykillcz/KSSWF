@@ -4,11 +4,11 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.3.72a
+// Version: 0.4.00a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.cz
 // Origin: https://github.com/Bunnykillcz/KSSWF
-// Last update: 14.06.2018
+// Last update: 17.06.2018
 // License: CC-BY-SA 4.0  (https://creativecommons.org/licenses/by/4.0/legalcode)
 //-------------------------------------------------------------------------------------------------- //
 // Copy: Nikola Nejedlý
@@ -23,7 +23,7 @@
 	$title   		= "KSSWF";
 	$description 	= "KSSWF - KyberSoft Simple Web(site) Framework informative web";
 	$tags    		= "framework, fw, wf, KSSWF, "; //default keywords
-	$author  		= "Nikola Nejedlý"; //web developer = you ?
+	$author  		= "Nikola Nejedlý"; 
 	$favicon 		= "img/favicon.ico";
 	$logo	 		= "img/logo.png";
 	$logo_url 		= "index.php";

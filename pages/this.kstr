@@ -17,6 +17,7 @@ functions|map_google;Map_google(...)
 functions|gen_bcnav;Gen_bcnav(...)
 functions|socials;Socials(...)
 functions|lorem;Lorem(...)
+functions|encrypt_caesar;Encrypt_Caesar(...)
 //ins_plug|ß;Plugins
 test;Testing page
 faq;FAQ
