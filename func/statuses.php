@@ -21,7 +21,8 @@ $s = $_GET['s'];
 			infobox("Admin logged out.","info");
 			break;
 			
-		case 5: //Password change failed
+		case 5: //Password, or name change failed
+		case 51:
 			infobox("ADMIN LOGON FAILED. FILE WRITE ERROR.", "error","","");
 			break;
 			
@@ -30,6 +31,13 @@ $s = $_GET['s'];
 			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
 				$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
 			infobox("<b>$usrn</b> password successfully changed.", "info","","");
+			break;
+		case 61: //Name change succeeded
+			$usrn = "";
+			if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
+				$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+			infobox("<b>$usrn</b> name successfully changed; please log in again with your new nickname.", "info","","");
+			admin_logout(true);
 			break;
 	}
 }

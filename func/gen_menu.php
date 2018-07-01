@@ -97,7 +97,7 @@ function search($folder) //Function that builds the menu according to "this.kstr
 							$skip2 = true;
 					}
 					else 
-					if(cleanx($this_typename) == "ß" || cleanx($this_typename) == "ß#")
+					if(cleanx($this_typename) == "ß" || cleanx($this_typename) == "ß#" || cleanx($this_typename) == "ß!")
 					{
 						$konst = 1;
 						$type = "folder";
@@ -112,6 +112,13 @@ function search($folder) //Function that builds the menu according to "this.kstr
 									break;
 								}
 								fclose($file_2);
+							}
+						else
+						if(cleanx($this_typename) == "ß!")
+							{
+								$this_name = "";
+								$this_target = "";
+								$type = "folder-close";
 							}
 					}
 					else
@@ -171,21 +178,23 @@ function search($folder) //Function that builds the menu according to "this.kstr
 				$menu_export = $menu_export."</ul></li>"; $ul--;$li--;
 			}
 			
-		if($id_name == count($list_names)-1 && ($ul > 0 && $li > 0)){
+		if($id_name == count($list_names) && ($ul > 0 && $li > 0)){
 				$menu_export = $menu_export."</ul></li>"; $ul--;$li--;
 			}
 			
 		if($type == "folder")
 		{
-			$menu_export = $menu_export."<li><a href='$href'>$name".icon("dropdown",0)."</a><ul>";
-			$flvl++; $ul++;$li++;
+			$menu_export = $menu_export."<li><a href='$href'>$name".$def_menu_symbol."</a><ul>";
+			$flvl++; $ul++; $li++;
 		}
+		else if($type == "folder-close")
+		{	$menu_export = $menu_export."</ul></li>"; $flvl--; $ul--;$li--;	}
 		else if($type == "file")
 			$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
 		else if($type == "url")
 			$menu_export = $menu_export."<li><a href='$href'>$name</a></li>";
 		else if($type == "url_new")
-			$menu_export = $menu_export."<li><a target='_blank' href='$href'>".icon("_new",0)."$name</a></li>";
+			$menu_export = $menu_export."<li><a target='_blank' href='$href'>".$def_oint_symbol."$name</a></li>";
 		
 		
 	$plvl_check = $lvl;

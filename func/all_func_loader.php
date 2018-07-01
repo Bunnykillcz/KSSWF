@@ -15,11 +15,14 @@ if(file_exists("./func/")){
 			if($file != "setup.php")
 			if($file != "js_load.php")
 			if($file != "admin_stat.php")
+			if($file != "statuses.php")
+			if($file != "icons.php")
 			if($file != $this_file)
 				include("./func/$file");
 		}
 	}
 	include("./func/admin_stat.php");
+	include("./func/statuses.php");
 }
 
 ?>

@@ -29,20 +29,141 @@ function convert_php_headers($s_input, $b_encode)
 	return $s_output;
 }
 
-function admin_logout()
+function admin_logout($silent = false)
 {
 	global $after_link;
 	$addr = $after_link;
+	$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
 	
 	if(session_destroy()) 
 	{
-		redirect($addr."?w=home&s=4",false);
+		if(!$silent)
+			redirect($addr."?w=home&s=4",false);
+		else
+			savetolog("<span style='color:#af0000;'><b>$usrn</b> has been logged out.</span>");
 	}	
 	else
 	{
-		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
 		savetolog("<span style='color:orange;'><b>$usrn</b></span> failed to log out.");	
 	}	
+}
+
+function admin_newname($newname, $passwd) 
+{
+	global $after_link;
+	global $salt;
+	$addr = $after_link;
+	$fil_ = "./admin/admin_login.pwd";
+	
+	if(!file_exists($fil_))
+	{
+		infobox("OPERATION IMPOSSIBLE. FILE NOT FOUND.", "error","","");
+		return 5;
+	}
+	
+	$usrn = "";
+	if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
+		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+	
+	if(empty($usrn))	
+		return 1;
+	
+	$username = stripcslashes(htmlspecialchars(trim($usrn)));
+	$username = md5($username);
+	
+	$userID = -1;
+	$passID = -1;
+	$priv = "";
+	$file = "";
+	
+	$password = $passwd;
+	$password = stripcslashes(htmlspecialchars(trim($password)));
+	$password = $password.$salt;
+	$password = md5($password);
+	$password = strrev($password);
+	
+	$admin = false;
+	
+	$handle = fopen($fil_, "r");
+	if ($handle) 
+	{
+		$id = 0;
+		while(!feof($handle))
+		{
+			$line = fgets($handle); 
+			$trimline = stripcslashes(trim($line));
+			if($username == $trimline)
+			{
+				$userID = $id;
+			}
+			else
+			if($id == $userID+1 && $password == $trimline)
+			{
+				$passID = $id;
+			}
+			else
+			if($id == $userID+2 && $id == $passID+1)
+			{
+				$priv = $trimline;
+				
+				$priv_name = explode(";",$priv)[2];
+				
+				$username_ex = stripcslashes(htmlspecialchars(trim(decrypt_caesar($priv_name,37))));
+				$username_ex = md5($username_ex);
+				
+				if($username_ex != $username)
+				{
+					savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change name. Access violation! ");	
+					fclose($handle);
+					return 5;
+				}
+				
+				$new_enc_name = encrypt_caesar($newname,37);
+				$usernewname = stripcslashes(htmlspecialchars(trim($newname)));
+				$usernewname = md5($usernewname);
+				
+				$priv = explode(";",$priv)[0].";".explode(";",$priv)[1].";".$new_enc_name;
+				
+				
+				$admin = true;
+			}
+			else
+				$file .= $trimline."\r\n";
+			
+			$id++;
+		}
+    }
+	else
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change name. File not accessed.");	
+		fclose($handle);
+		return 4;
+	}
+	
+	fclose($handle);
+	
+	if(!$admin)
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change name. Incorrect password?");	
+		return 2;
+	}
+		
+	$file .= $usernewname."\r\n".$password."\r\n".$priv; //generated filedata
+	
+	$ret = file_put_contents($fil_, $file);
+	
+	if($ret == 1 || $ret){
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:green;'>successfully</span> changed name to <span style='color:black;'><b>$newname</b></span>.");	
+		redirect($addr."?w=home&s=61&a=7", false);
+		return 0;
+	}
+	else
+	{
+		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change name. Write error.");	
+		redirect($addr."?w=home&s=51&a=7", false);
+		return 3;
+	}
+	
 }
 
 function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorrect password (?); 4 = file not accessed; 3 = write error; 0 = success;
@@ -58,7 +179,7 @@ function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorre
 	if(!file_exists($fil_))
 	{
 		infobox("OPERATION IMPOSSIBLE. FILE NOT FOUND.", "error","","");
-		return 5;
+		return 6;
 	}
 		
 	$usrn = "";
@@ -105,6 +226,18 @@ function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorre
 			if($id == $userID+2 && $id == $passID+1)
 			{
 				$priv = $trimline;
+				
+				$priv_name = explode(";",$priv)[2];
+				
+				$username_ex = stripcslashes(htmlspecialchars(trim(decrypt_caesar($priv_name,37))));
+				$username_ex = md5($username_ex);
+				
+				if($username_ex != $username)
+				{
+					savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Access violation! ");	
+					fclose($handle);
+					return 5;
+				}
 				$admin = true;
 			}
 			else
@@ -116,6 +249,7 @@ function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorre
 	else
 	{
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. File not accessed.");	
+		fclose($handle);
 		return 4;
 	}
 	
@@ -360,6 +494,12 @@ if(!empty($_GET['a']))
 					case 4:
 						infobox("File not accessible!","error");
 					break;
+					case 5:
+						infobox("Access violation or broken file coding!","error");
+					break;
+					case 6:
+						infobox("File not accessible!","error");
+					break;
 				}
 				
 			}
@@ -377,7 +517,56 @@ if(!empty($_GET['a']))
 		}
 		break;
 		
+	case 91: //change name
+		if (!empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
+		{
+			if (!empty($_POST["newname"]) && !empty($_POST["passwd"]))
+			{
+				$a = admin_newname($_POST["newname"], $_POST["passwd"]); 
+				
+				switch($a)
+				{
+					default:
+					case 0:
+					break;
+					
+					case 1:
+						infobox("Not logged in","error");
+					break;
+					case 2:
+						infobox("Incorrect password! No changes were made.","warning");
+					break;
+					case 3:
+						infobox("Write error; Try again.","error");
+					break;
+					case 4:
+						infobox("File not accessible!","error");
+					break;
+					case 5:
+						infobox("Access violation or broken file coding!","error");
+					break;
+					case 6:
+						infobox("File not accessible!","error");
+					break;
+				}
+				
+			}
+		}
+		else
+		{
+			$form = icon("card-o",1);
+			$form .= "<div class='right' style='padding:7px; right:30px; font-weight: bold;'>";
+			$form .= "<form action='' method='post'><b><u>Change nickname for <span style='color: green'>$usrn:</span></u></b><br/>";
+			$form .= "<label style='display: inline-block; position: relative; bottom: 0; left: -4px; margin: 0; padding: 0;'>new</label><input type='text' id='newname' placeholder='your new username' name='newname'></input><br/>";
+			$form .= "<label style='display: inline-block; position: relative; bottom: 0; left: -4px; margin: 0; padding: 0;'>pwd</label><input type='password' id='passwd' placeholder='***' name='passwd'></input><br/>";
+			$form .= "<input type='submit' name='submit' value='change' style='border: 1px black solid;'></input></form></div>";
+			
+			infobox($form,"none");
+		}
+		break;
+		
 	}
+	
 	echo $admin_message."</div>";
 }
 
