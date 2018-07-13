@@ -96,7 +96,11 @@ function lorem($paragraphs, $lines, $minW, $maxW, $start_w_lipsum)
 	else
 		$lorem_id = 1;
 	
-	$ww = $_GET["w"];
+	$ww = "home";
+	if(isset($_GET['w']))
+		if(!empty($_GET['w']))
+			$ww = $_GET['w'];
+	
 	$this_lorem = "";
 	if(!empty($ww))
 		$target_name = trim(str_replace("+","_",str_replace(" ","_",$ww)))."_lorem".$lorem_id;
