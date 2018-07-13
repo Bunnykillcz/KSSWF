@@ -9,8 +9,8 @@ $ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","u
 "edit","save","file","folder","car","uber", "bus", "train","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
 "phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
-"DnD", "windows", "android", "linux", "apple", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch", "key", "keyboard", "mouse-p", "stamp",
-"fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "patreon", "steam", "steam-sy", "steam-s", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config" ];
+"DnD", "windows", "android", "linux", "apple", "ms", "scart", "scart-p", "scart-d", "sbag", "sbasket", "stopwatch", "key", "keyboard", "mouse-p", "stamp",
+"fb", "fb-s", "twitter", "twitter-s", "google", "google-s", "patreon", "steam", "steam-sy", "steam-s", "sc", "share", "rot-loading", "spin-loading", "spin-loading1", "spin-loading2", "loading", "config", "s-up", "s-down" ];
 
 function icon($type, $size = 0)
 {
@@ -326,8 +326,12 @@ function icon($type, $size = 0)
 			$icon = "fa-patreon";
 			$fab = "b";
 			break;
+		case "skype":
+			$icon = "fa-skype";
+			$fab = "b";
+			break;
 		case "steam":
-			$icon = "fa-¨steam";
+			$icon = "fa-steam";
 			$fab = "b";
 			break;
 		case "steam-s":
@@ -335,7 +339,7 @@ function icon($type, $size = 0)
 			$fab = "b";
 			break;
 		case "steam-sy":
-			$icon = "steam-symbol";
+			$icon = "fa-steam-symbol";
 			$fab = "b";
 			break;
 		case "share":
@@ -358,6 +362,20 @@ function icon($type, $size = 0)
 			break;
 		case "stamp":
 			$icon = "fa-stamp";
+			break;
+		case "soundcloud":
+		case "sc":
+			$icon = "fa-soundcloud";
+			break;
+		case "microsoft":
+		case "ms":
+			$icon = "fa-soundcloud";
+			break;
+		case "s-up":
+			$icon = "fa-sort-up";
+			break;
+		case "s-down":
+			$icon = "fa-sort-down";
 			break;
 		case "cog":
 		case "setup":
