@@ -370,6 +370,7 @@ function icon($type, $size = 0)
 		case "microsoft":
 		case "ms":
 			$icon = "fa-microsoft";
+			$fab = "b";
 			break;
 		case "s-up":
 			$icon = "fa-sort-up";
