@@ -1,0 +1,70 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/*RESETOR - START*/
+.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6,
+.text_area#txt h1,.text_area#txt h2,.text_area#txt h3,.text_area#txt h4,.text_area#txt h5,.text_area#txt h6
+{
+	font-family: 'Fira Sans';
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	margin-top:10px;
+	margin-bottom:5px;
+	text-decoration: none;
+	font-weight: 400;
+	color: black;
+}
+/*RESETOR - END*/
+
+.text_area h1,
+.text_area#txt h1
+{
+	display: block;
+	position: relative;
+	margin-bottom: 15px;
+	z-index: 5;
+	font-size: 48px;
+	line-height: 32px;
+	font-weight: 900;
+	padding-left: 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.text_area h2,
+.text_area#txt h2
+{
+	display: block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 10px;
+	font-weight: 900;
+	font-size: 24px;
+}
+
+.text_area h3,
+.text_area#txt h3
+{
+	display: block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 10px;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.text_area h4,
+.text_area#txt h4
+{
+	display: block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 10px;
+	font-weight: 900;
+	font-size: 18px;
+}

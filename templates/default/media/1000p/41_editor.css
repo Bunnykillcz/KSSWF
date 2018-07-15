@@ -1,0 +1,323 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/* ADMIN EDITOR */
+
+.editor
+{
+	z-index: 99000; 
+	display:block; 
+	width: 36px; 
+	height: 170px; 
+	left: Calc( 0vw - 4px ); 
+	position: fixed; 
+	/*top: Calc( 50vh - 75px ); */
+	background-color: white; 
+	color: black; 
+	border:1px black ridge; 
+	border-radius: 2px;
+	top: 92px; 
+}
+
+.editor a
+{
+	font-family: monospace,"Open Sans","Fira Sans",sans-serif;
+	position: relative;
+	display: inline-block;
+	width: 28px;	
+	height: 28px;	
+	left: 8px;
+}
+
+.editor i, .editor svg
+{
+	position: relative;
+	display: inline-block;
+	color: black;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  16px;
+	padding: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin: 1px;
+}
+.editor i:hover, .editor svg:hover
+{
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	color: #ffa600;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+.editor a:nth-of-type(1) > i, 		.editor a:nth-of-type(1) > svg 			{color: #000000;}
+.editor a:nth-of-type(1) > i:hover, .editor a:nth-of-type(1) > svg:hover 	{color: #007bff;}
+.editor a:nth-of-type(2) > i, 		.editor a:nth-of-type(2) > svg 			{color: #000000;}
+.editor a:nth-of-type(2) > i:hover, .editor a:nth-of-type(2) > svg:hover 	{color: #9E9E9E;}
+.editor a:nth-of-type(3) > i, 		.editor a:nth-of-type(3) > svg 			{color: #000000;}
+.editor a:nth-of-type(3) > i:hover, .editor a:nth-of-type(3) > svg:hover 	{color: #FFC107;}
+.editor a:nth-of-type(4) > i, 		.editor a:nth-of-type(4) > svg 			{color: #000000;}
+.editor a:nth-of-type(4) > i:hover, .editor a:nth-of-type(4) > svg:hover 	{color: green;}
+.editor a:nth-of-type(5) > i, 		.editor a:nth-of-type(5) > svg 			{color: #000000;}
+.editor a:nth-of-type(5) > i:hover, .editor a:nth-of-type(5) > svg:hover 	{color: #cc00cc;}
+.editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #9a0000;}
+.editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
+
+.h_admin 
+{
+	position: 	absolute;
+	display:	block;
+	z-index: 	2500;
+	top: 	4px;
+	right: 	5px;
+	width: 	72px;
+	height: 32px;
+}
+.editor_c
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 285px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
+
+.editor_c i, .editor_c svg, .editor_c a
+{
+	display: block;
+	position:relative;
+	color: #650000;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  18px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+	height: 20px;
+}
+.editor_c a
+{
+	font-family: monospace,"Open Sans","Fira Sans",sans-serif;
+	left: 8px;
+	width: 20px;
+}
+
+.editor_c a:hover,
+.editor_c a:hover > svg,
+.editor_c a:hover > i
+{
+	color: #e20000;
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.editor_c a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+.editor_settings
+{
+	z-index: 	99000; 
+	display:	block; 
+	width:  36px; 
+	height: 26px; 
+	left: 	Calc( 0vw - 4px ); 
+	position: 	fixed; 
+	top: 	Calc( 320px ); 
+	background-color: white; 
+	color:  black; 
+	border: 1px black ridge; 
+	border-radius: 2px;
+}
+
+.editor_settings i, .editor_settings svg, .editor_settings a
+{
+	display: inline-block;
+	position: relative;
+	color: #757575;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	font-size:  18px;
+	padding: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	margin: 1px;
+	text-decoration: none;
+	font-weight: 900;
+	height: 20px;
+}
+.editor_settings a
+{
+	font-family: monospace,"Open Sans","Fira Sans",sans-serif;
+	left: 8px;
+	width: 20px;
+}
+
+.editor_settings a:hover,
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+	color: #673AB7;
+	display: inline-block;
+	position: relative;
+	font-size:  20px;
+	width: 24px;
+	background-color: whitesmoke;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+	margin: 0px;
+	padding: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+    -webkit-transition: 300ms ease-in-out;
+    transition:	300ms ease-in-out;
+}
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+    transform: rotate(90deg);
+    background: none;
+}
+.editor_settings a:hover
+{
+	box-shadow: 0px 3px 3px black;
+	border-radius: 2px;
+}
+
+
+.editor a:hover:after,
+.editor_c a:hover:after,
+.editor_settings a:hover:after
+{
+	color: black; 
+	content: " Placeholder "; 
+	background-color: #ffffff; 
+	border: 1px black solid; 
+	border-radius: 1px;
+	position: absolute; 
+	z-index: 99999; 
+	box-shadow: 0px 3px 3px black;
+	display: block;
+	padding: 2px;
+	left: 36px;
+	top: 16px;
+	min-width: 5px;
+	min-height: 8px;
+	font-size: 9px;
+	white-space: nowrap;
+}
+.editor a:nth-of-type(1):hover:after	{ content: "Edit page"; }
+.editor a:nth-of-type(2):hover:after	{ content: "New page"; }
+.editor a:nth-of-type(3):hover:after	{ content: "Folder manager"; }
+.editor a:nth-of-type(4):hover:after	{ content: "Save page"; }
+.editor a:nth-of-type(5):hover:after	{ content: "Cancel"; }
+.editor a:last-of-type:hover:after		{ content: "Log out"; }
+.editor_c a:hover:after					{ content: "Clear cache"; }
+.editor_settings a:hover:after			{ content: "Site settings & configuration"; }
+
+.editor a.e_gray svg
+{
+	color: #80808054;
+}
+.editor a.e_gray
+{
+	cursor: default;
+}
+.editor a.e_gray:hover > svg
+{
+	color: #80808054;
+	box-shadow: none;
+	background: none;
+	font-size: 16px;
+	padding-top: 5px;
+}
+.editor a.e_gray:hover:after
+{
+	opacity: 0.35;
+	font-style: italic;
+	background: lightgrey;
+}
+
+textarea.to_edit
+{
+	display: none;
+	/*display: block;*/
+	position: relative;
+	padding: 4px;
+	width: Calc( 100% + 24px );
+	left: -16px;
+	height: Calc( 100vh - 112px);
+	background: black;
+	top: 0px;
+	resize: none;
+	color: #73d600;
+}
+
+#edit_form .edit_filename
+{
+	display: block;
+	position: fixed;
+	top: 100px;
+	right: 4px;
+	font-weight: 600;
+	max-width: 120px; 
+}
+#edit_form .edit_filename input
+{
+	font-weight: 100;
+	font-size: 9px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid black;
+	width: 80px;
+	height: 14px;
+	background-color: whitesmoke;
+}
+#edit_form .edit_filename input:disabled
+{
+	background-color: lightgray;
+	font-style: italic;
+}
+
+#cke_editor_field
+{
+	display: block;
+	position: relative;
+	width: Calc( 100% + 64px - 2px );
+	left: -32px;
+	margin-top: -32px;
+	margin-bottom: -24px;
+}
+

@@ -1,0 +1,63 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.text_area table
+{
+width:100%;
+padding:0px;
+margin:0;
+border:0;
+border-collapse:collapse;
+font-family: inherit;
+}
+
+.text_area td
+{
+padding: 3px 3px 3px 3px;
+border-bottom: 1px black solid;
+font-weight:bold;
+font-size:14px;
+text-align:center;
+vertical-align:middle;
+transition: all 80ms linear;
+}
+
+.text_area td:first-child
+{
+width:120px;
+padding: 3px 3px 3px 3px;
+border-right: 2px #adadad solid;
+background-color: #828282;
+font-weight:bold;
+font-size: 16px;
+}
+
+.text_area tr:hover td
+{
+background-color: #dadada;
+border-bottom: 1px #adadad solid;
+font-weight:bold;
+font-size:  14px;
+text-align: center;
+font-weight:bold;
+padding:    3px;
+margin:     0px;
+}
+
+.text_area tr:hover td:first-child
+{
+    background-color: #c3c3c3;
+    color:            black;
+}
+
+.text_area th
+{
+padding: 3px 3px 3px 3px;
+background-color:#a2a2a2;
+border-bottom: 2px black solid;
+font-weight:bold;
+font-size:30px;
+text-align:center;
+font-family: 'Alegreya Sans SC', "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

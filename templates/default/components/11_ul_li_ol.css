@@ -1,0 +1,37 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+ul li {list-style-type: square;}
+ol li {list-style-type: upper-roman;}
+
+.text_area ul {
+	display:block;
+    padding: 10px 20px;
+}
+.text_area ul ul {
+	display:block;
+    padding: 10px 20px;
+}
+.text_area ul ul ul {
+	display:block;
+    padding: 10px 20px;
+}
+
+.text_area ol {
+	display:block;
+    padding: 10px 20px;
+}
+.text_area ol ol {
+	display:block;
+    padding: 10px 20px;
+}
+.text_area ol ol ol {
+	display:block;
+    padding: 10px 20px;
+}
+
+.text_area li{
+	padding-bottom: 1px;
+	padding-top: 1px;
+}

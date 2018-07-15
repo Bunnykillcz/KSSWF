@@ -1,0 +1,12 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+
+span 		{}
+div			{}
+strong		{ font-weight:	800;			}
+b 			{ font-weight:	800;			}
+u 			{ text-decoration: underline;	}
+i			{ font-style: 	italic;			}
+p			{ text-align: 	justify;		}

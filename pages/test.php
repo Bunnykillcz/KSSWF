@@ -16,6 +16,8 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 
 <h2>Lorem Ipsum h2</h2>
 <?php lorem(2, 10, 5, 18, true); ?>
+<h4>Slideshow: </h4>
+<?php slideshow(0,"gallery",true,true,15000,"fade"); ?>
 <?php lorem(2, 10, 5, 18, false); ?>
 
 <h3>Ipsum Dolor h3</h3>
@@ -57,6 +59,8 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 	</ul>
 </ul>
 <br/>
+
+<?php gallery("gallery", "Gallery", "cba", true); ?>
 
 <h4>Basic tags: </h4>
 <p>

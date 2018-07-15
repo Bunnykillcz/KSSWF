@@ -1,0 +1,30 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-weight: default;
+	color: default;
+	background: none;
+	display: default;
+	position: default;
+	object-fit: default;
+	transition: none;
+}
+
+body
+{
+	text-align: default;
+	font-family: default;
+	overflow-y:  scroll;
+	overflow-x:  hidden;
+	background-color: none;
+	background-image: none;
+}
+ 

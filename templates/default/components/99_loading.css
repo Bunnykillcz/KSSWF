@@ -1,0 +1,15 @@
+/*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+
+.loadicon
+{
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 40001;
+	left: 50vw;
+	top: 50vh;
+}

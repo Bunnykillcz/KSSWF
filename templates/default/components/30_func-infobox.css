@@ -1,0 +1,110 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.info {
+	z-index:			5000;
+	min-height:	        64px;
+	width:		        320px;
+	position: 			fixed;
+	right: 				10px;
+	top:				28px;
+	font-size: 			12px;
+	font-weight: 		normal;
+	padding: 			3px 3px 3px 3px;
+	margin: 			0;
+	text-align: 		justify;
+	font-style: 		normal;
+	color: 				black;
+	background: 		none;
+	background-color: 	#fff;
+	border: 			2px solid whitesmoke;
+	border-style: 		ridge;
+	border-radius:		1px;
+	transition: 		opacity 500ms ease-in-out;
+	font-family: 		monospace, Arial;
+}
+.info p
+{
+	position:			relative;
+	margin:				0px;
+	padding-left: 		38px;
+	padding-right:		16px;
+	padding-top:		10px;
+	text-decoration:	none;
+	font-size: 			12px;
+	color: 				inherit;
+	font-family: 		monospace, Arial;
+}
+.info a, 
+.info a svg,
+.info a i
+{
+	position:			absolute;
+	bottom: 			0px;
+	right: 				0px;
+	text-decoration:	none;
+	font-size: 			16px;
+	color: 				#8e0000;
+	margin-top:			-25px;
+	margin-left:		-21px;
+}
+.info a:hover > svg,
+.info a:hover > i
+{
+	font-size: 			16px;
+	color: 				#cc0000;
+}
+
+.info i,
+.info svg
+{
+	display: 			block;
+	position: 			absolute;
+	color: 				#000000;
+	top: 				5px;
+	left: 				5px;
+	width:				26px;
+	height:				26px;
+}
+.info:hover
+{
+	opacity: 			0.9;
+	transition: 		opacity 500ms ease-in-out;
+}
+
+
+/*admin login stuff*/
+
+.info form
+{
+	width: 60%;
+	position: relative;
+	display: block;
+	left: Calc(50% - 105px);
+	opacity: 1;
+	font-family: monospace, Arial;
+}
+
+.info form input
+{
+	background-color: #efefef;
+	padding: 1px;
+	border: 1px solid darkgray;
+}
+
+.info form input:hover
+{
+	background-color: #efefef;
+	border: 1px solid black;
+}
+
+.info form u
+{
+	display: block;
+	position: relative;
+	right: 35px;
+	padding: 5px;
+}
+
+
