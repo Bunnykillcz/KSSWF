@@ -1,0 +1,27 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+h2.code
+{
+}
+
+h2.code .fce 	,.code .fce 	{}
+h2.code .int 	,.code .int		{}
+h2.code .string ,.code .string 	{}
+h2.code .bool 	,.code .bool 	{}
+h2.code .float 	,.code .float 	{}
+h2.code .char 	,.code .char 	{}
+h2.code .var 	,.code .var 	{}
+
+h2.code{}
+
+p .fce 		{}
+p .int 		{}
+p .string 	{}
+p .bool 	{}
+p .float 	{}
+p .char 	{}
+p .var 		{}
+p .function	{}
+p.code		{}

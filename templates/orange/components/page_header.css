@@ -30,4 +30,5 @@
 .header a img:hover
 {
 	top: 		0px;
+	opacity: 1;
 }

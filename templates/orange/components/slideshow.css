@@ -19,6 +19,7 @@
 	text-align: center; 
 	padding: 0;
 	overflow: hidden;
+	border: none;
 }
 .slideshow-container img {
 	object-fit: scale-down;
@@ -60,7 +61,7 @@
 	transition: 0.6s ease;
 	opacity: 0.15;
 	border-radius: 50%;
-	border: 3px white solid;
+	border: none;
 	background-color: #444;
 	left: 10px;
 	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
@@ -69,7 +70,7 @@
 .next svg, 
 .prev svg
 {
-	font-size: 14px;
+	font-size: 15px;
 }
 
 /* Position the "next button" to the right */
@@ -81,7 +82,7 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-	opacity: 0.9;
+	opacity: 0.75;
 	color: white;
 	transition: opacity 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
@@ -127,6 +128,8 @@
 	padding: 		1px;
 	padding-top: 	2px;
 	padding-right:  2px;
+	top: 0;
+	margin-bottom: 15px;
 	vertical-align: center;
 	text-align: center;
 	transition: background-color 0.6s ease;

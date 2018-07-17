@@ -1,0 +1,26 @@
+/*--------------------------*/
+/* Nikola Nejedlý - 2017/18 */
+/*--------------------------*/
+
+.button 
+{
+height: 24px;
+}
+.button:hover 
+{
+}
+.button i, .button svg
+{
+}
+.button a
+{
+	color: white;
+	font-style: normal;
+	font-weight: normal;
+}
+.button #table /* redundant filler for styling */
+{
+}
+.button #cell
+{
+}

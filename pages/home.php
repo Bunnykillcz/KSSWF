@@ -52,10 +52,9 @@
 </div>
 
 <h3>Current firmware version:</h3>
-<p><strong><?php echo "> v"; echo get_ver().""; echo "<br />
-<br />
-> KyberSoft Simple Website Framework, aka KSSWF<br />
-> created by Nikola Nejedl&yacute; 2017-18<br />
+<p><strong><?php echo "> v"; echo get_ver().""; echo "<br/>
+> KyberSoft Simple Website Framework, aka KSSWF<br/>
+> created by Nikola Nejedl&yacute; 2017-18<br/>
 > All Rights Reserved"; ?> </strong> 
 </p>
 

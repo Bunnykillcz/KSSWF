@@ -1,0 +1,78 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/* Slideshow container */
+.slideshow-container 
+{
+}
+.slideshow-container img 
+{
+}
+
+.thisSlide 
+{
+}
+
+/* Next & previous buttons */
+/* Next & previous buttons */
+.prev, .next 
+{
+	width: 48px;
+	height: 48px;
+	left: 32px;
+}
+
+.next svg, 
+.prev svg
+{
+	padding-top: 10px;
+	font-size: 28px;
+}
+
+/* Position the "next button" to the right */
+.next 
+{
+	left: initial;
+	right: 32px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover 
+{
+}
+
+/* Caption text */
+.text 
+{
+}
+
+/* Number text (1/3 etc) */
+.numbertext 
+{
+}
+
+/* The dots/bullets/indicators */
+.dot 
+{
+width: 16px;
+height: 16px;
+font-size: 10px;
+margin: 3px;
+margin-bottom: 15px;
+}
+.dot-container
+{
+}
+.dot-container span
+{
+}
+
+.active, .dot:hover 
+{
+}
+
+/* Fading animation / fade effect */
+.fade 
+{
+}

@@ -1,0 +1,49 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+body
+{
+}
+
+.text_area 
+{ 
+	top: 0;
+	left: 0;
+	width: Calc( 100% );
+}
+
+hr, .text_area hr
+{
+}
+
+.text_area #txt
+{
+}
+
+.text_area#txt /* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+}
+.text_area#txt img /* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+}
+
+.text_area#txt i,
+.text_area#txt b,
+.text_area#txt strong,
+.text_area#txt p,
+.text_area#txt ul,
+.text_area#txt ol,
+.text_area#txt li/* THIS ONLY APPLIES TO ADMIN EDITOR */
+{
+}
+
+.text_area p
+{
+}
+.text_area p:first-child 
+{
+}
+.text_area p+p
+{
+}

@@ -1,0 +1,80 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+ 
+ #nav_wrap{
+ 	padding-left: 80px;
+	height: 48px;
+	width: Calc( 100% - 80px );
+}
+
+.mainmenu
+{
+	height: 48px;
+}
+.mainmenu ul,
+.mainmenu li,
+.mainmenu ul ul,
+.mainmenu ul li,
+.mainmenu ul ul ul,
+.mainmenu ul ul li,
+.mainmenu ul ul ul ul,
+.mainmenu ul ul ul li
+{
+	line-height: 42px;
+	padding-top: 4px;
+}
+
+.mainmenu ul
+{
+}
+
+.mainmenu ul a
+{
+}
+
+.mainmenu ul li
+{
+}
+.mainmenu ul li~li 
+{ 
+}
+
+.mainmenu ul li:hover
+{
+}
+.mainmenu ul li:hover > a
+{
+}
+
+.mainmenu ul ul
+{
+}
+
+.mainmenu ul ul li
+{
+}
+.mainmenu ul ul li a
+{
+}
+
+.mainmenu ul ul li:hover
+{
+}
+.mainmenu ul ul li:hover > a
+{
+}
+
+.mainmenu ul ul a
+{
+}
+
+.mainmenu ul ul ul
+{
+}
+
+.mainmenu ul li:hover > ul
+{
+}
+
+

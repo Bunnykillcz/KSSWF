@@ -13,10 +13,11 @@ footer
 	background: none;
 	background-color: orange;
 	color:black;
-	font-size:11px;
+	font-size:10px;
 	padding-bottom: 2px;
 	font-weight: bold;
 	overflow: hidden;
+	font-family: "Open Sans", Tahoma;
 }
 .footing
 {
@@ -24,9 +25,11 @@ footer
 	vertical-align: middle;
 	color: black;
 	bottom:0;
+	padding-top: 0;
 }
 .KSSWF{
 	color: black;
+	padding-top: 3px;
 }
 .KSSWF a{
 	color: #423200;
@@ -46,4 +49,17 @@ footer
 	height: 100%;
 	overflow: hidden;
 	background-color: black;
+}
+
+footer img
+{
+	display: block;
+	position: absolute;
+	width: initial;
+	left: Calc( 50% - 40px );
+	top: 10px;
+}
+footer img:hover
+{
+	opacity: 0.9;
 }

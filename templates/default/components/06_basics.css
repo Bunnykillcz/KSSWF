@@ -10,3 +10,4 @@ b 			{ font-weight:	800;			}
 u 			{ text-decoration: underline;	}
 i			{ font-style: 	italic;			}
 p			{ text-align: 	justify;		}
+br 			{ display: initial;				}

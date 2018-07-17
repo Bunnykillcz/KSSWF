@@ -11,6 +11,8 @@
 	display: block;
 	height: 32px;
 	white-space: nowrap;
+	top: 0;
+	transition: color 100ms linear;
 }
 
 .mainmenu, .mainmenu a
@@ -19,6 +21,7 @@
 	text-align: left;
 	color:white;
 	border:0;
+	transition: color 100ms linear;
 }
 
 .mainmenu ul ul a:hover
@@ -81,6 +84,12 @@ border-left-style: solid;
 .mainmenu ul li~li:hover > a
 {
 	padding-left: 8px;
+	transition: border 0ms linear;
+}
+.mainmenu ul li:hover > a
+{
+	color: orange;
+	transition: border 0ms linear;
 }
 
 .mainmenu ul li:hover
@@ -88,6 +97,7 @@ border-left-style: solid;
 	border-left-width: 3px; 
 	border-left-style: solid;
 	border-left-color: orange;
+	background: transparent;
 	-webkit-border-image: 
 	  -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0),orange) 1 100%;
 	-moz-border-image:
@@ -100,6 +110,7 @@ border-left-style: solid;
 	color: white;
 	border-right: none; 
 	height: 32px;
+	transition: border 0ms linear;
 }
 
 .mainmenu ul ul
@@ -128,11 +139,14 @@ border-left-style: solid;
 .mainmenu ul ul li:hover
 {
 	z-index: 3600;
-	color: black;;
+	color: black;
 	width:195px;
 	border-left: none;
-	color: white;
 	background: orange;
+}
+.mainmenu ul ul li:hover > a
+{
+	color: black;
 }
 
 .mainmenu ul ul a

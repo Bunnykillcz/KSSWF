@@ -1,0 +1,106 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/* ADMIN EDITOR */
+
+.editor
+{
+}
+
+.editor a
+{
+}
+
+.editor i, .editor svg
+{
+}
+.editor i:hover, .editor svg:hover
+{
+}
+
+.h_admin 
+{
+}
+.editor_c
+{
+}
+
+.editor_c i, .editor_c svg, .editor_c a
+{
+}
+.editor_c a
+{
+}
+
+.editor_c a:hover,
+.editor_c a:hover > svg,
+.editor_c a:hover > i
+{
+}
+.editor_c a:hover
+{
+}
+
+.editor_settings
+{
+}
+
+.editor_settings i, .editor_settings svg, .editor_settings a
+{
+}
+.editor_settings a
+{
+}
+
+.editor_settings a:hover,
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+}
+.editor_settings a:hover > svg,
+.editor_settings a:hover > i
+{
+}
+.editor_settings a:hover
+{
+}
+
+
+.editor a:hover:after,
+.editor_c a:hover:after,
+.editor_settings a:hover:after
+{
+}
+
+.editor a.e_gray svg
+{
+}
+.editor a.e_gray
+{
+}
+.editor a.e_gray:hover > svg
+{
+}
+.editor a.e_gray:hover:after
+{
+}
+
+textarea.to_edit
+{
+}
+
+#edit_form .edit_filename
+{
+}
+#edit_form .edit_filename input
+{
+}
+#edit_form .edit_filename input:disabled
+{
+}
+
+#cke_editor_field
+{
+}
+

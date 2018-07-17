@@ -92,13 +92,15 @@ function get_ver()
 function mk_cache_css()
 {
 	global $template;
+	global $disable_default;
 	
 	
 	if(file_exists($template."/components/"))
 	{
 		$contents_css = "";
 		
-		if(file_exists("./templates/default/components/") && file_exists("./templates/default/media/"))
+		if(!$disable_default)
+		if(file_exists("./templates/default/components/"))
 		{		
 			$files = scandir("./templates/default/components/");
 			$contents_css .= "\r /* ------------------------------------------------------ < COMPONENTS DEF > ------------------------------------------------------  */ \r \r ";
@@ -107,14 +109,33 @@ function mk_cache_css()
 			{
 				$temp = explode(".",$file);
 				if($temp[count($temp)-1] == "css")
+				if(!file_exists($template."/components/$file"))
 				{
 					$contents_css .= "\r /* ------------------------------------------------------ |START| default : $file ------------------------------------------------------  */ \r \r ";
-					$contents_css .= file_get_contents("$template/components/$file");
+					$contents_css .= file_get_contents("./templates/default/components/$file");
 					$contents_css .= "\r \r /* ------------------------------------------------------ | END | default : $file ------------------------------------------------------  */ \r ";
 					//$linker .= "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
 				}
 			}
 				
+		}
+		$contents_css .= "\r /* ------------------------------------------------------ < COMPONENTS > ------------------------------------------------------  */ \r \r ";
+		$files = scandir($template."/components/");
+		foreach($files as &$file)
+		{
+			$temp = explode(".",$file);
+			if($temp[count($temp)-1] == "css")
+			{
+				$contents_css .= "\r /* ------------------------------------------------------ |START| ".explode("/",$template)[1]." : $file ------------------------------------------------------  */ \r \r ";
+				$contents_css .= file_get_contents("$template/components/$file");
+				$contents_css .= "\r \r /* ------------------------------------------------------ | END | ".explode("/",$template)[1]." : $file ------------------------------------------------------  */ \r ";
+				//$linker .= "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
+			}
+		}
+		
+		if(!$disable_default)
+		if(file_exists("./templates/default/media/"))
+		{
 			$contents_css .= "\r /* ------------------------------------------------------ < MEDIA DEF > ------------------------------------------------------  */ \r \r ";
 				
 			$directories = glob("./templates/default/media".'/*' , GLOB_ONLYDIR);
@@ -123,9 +144,10 @@ function mk_cache_css()
 			{
 				$temp = explode(".",$file);
 				if($temp[count($temp)-1] == "css")
+				if(!file_exists($template."/media/$file"))
 				{
 					$contents_css .= "\r /* ------------------------------------------------------ |START| default : $file ------------------------------------------------------  */ \r \r ";
-					$contents_css .= file_get_contents("$template/components/$file");
+					$contents_css .= file_get_contents("./templates/default/media/$file");
 					$contents_css .= "\r \r /* ------------------------------------------------------ | END | default : $file ------------------------------------------------------  */ \r ";
 					//$linker .= "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
 				}
@@ -141,6 +163,7 @@ function mk_cache_css()
 					{
 						$temp = explode(".",$file);
 						if($temp[count($temp)-1] == "css")
+						if(!file_exists($template."/media/".explode('/',$dirz)[count(explode('/',$dirz))-1]."/".$file))
 						{
 							$contents_css .= "\r /* ------------------------------------------------------ |START| default - media : $file ------------------------------------------------------  */ \r \r ";
 							$contents_css .= file_get_contents("$dirz/$file");
@@ -150,20 +173,7 @@ function mk_cache_css()
 					}
 			}
 		}
-		$contents_css .= "\r /* ------------------------------------------------------ < COMPONENTS > ------------------------------------------------------  */ \r \r ";
-		$files = scandir($template."/components/");
-		foreach($files as &$file)
-		{
-			$temp = explode(".",$file);
-			if($temp[count($temp)-1] == "css")
-			{
-				$contents_css .= "\r /* ------------------------------------------------------ |START| ".explode("/",$template)[1]." : $file ------------------------------------------------------  */ \r \r ";
-				$contents_css .= file_get_contents("$template/components/$file");
-				$contents_css .= "\r \r /* ------------------------------------------------------ | END | ".explode("/",$template)[1]." : $file ------------------------------------------------------  */ \r ";
-				//$linker .= "<link rel='stylesheet' type='text/css' href='$template/components/$file' />";
-			}
-		}
-
+			
 		if(file_exists($template."/media/"))
 		{
 			$contents_css .= "\r /* ------------------------------------------------------ < MEDIA > ------------------------------------------------------  */ \r \r ";
