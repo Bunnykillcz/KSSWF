@@ -1,0 +1,38 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+footer
+{
+	bottom: -64px;
+	height: 38px;
+}
+
+footer img
+{
+	width: 128px;
+	height:auto;
+	left: Calc( 50% - 64px );
+}
+
+.KSSWF,
+.footing
+{
+	font-size: 13px;
+	width: 20%;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.KSSWF
+{
+}
+.KSSWF a
+{
+}
+.KSSWF a:hover
+{
+}
+.black_filler
+{
+}
+ 

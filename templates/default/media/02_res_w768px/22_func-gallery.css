@@ -3,6 +3,7 @@
 /*                 2018                 */
 /*--------------------------------------*/
 
+
 .img_gallery
 {
 }
@@ -22,21 +23,38 @@
 }
 #a_close, #a_left, #a_right
 {
+	font-size: 22px;
+	width: 58px;
+	height: 58px;
+}
+#a_left
+{
+	left: 10px;
+	right: auto;
 }
 #a_right
 {
+	left: auto;
+	right: 10px;
 }
 #a_close
 {
+	left:auto;
+	right: 32px;
+	top: 28px;
 }
 #a_close a 
 {
+	opacity: 0.4;
 }
 #a_close a:hover
 {
 }
 #a_left a, #a_right a
 {
+	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 #a_left a:hover,
 #a_right a:hover
@@ -64,5 +82,3 @@
 .gallery_text .g_text:hover
 {
 }
-
- 

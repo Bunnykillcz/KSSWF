@@ -1,0 +1,92 @@
+/*--------------------------------------*/
+/*            Nikola Nejedlý            */
+/*                 2018                 */
+/*--------------------------------------*/
+
+.img_gallery
+{
+}
+.img_gallery #wrap
+{
+}
+
+.img_gallery img
+{
+	
+}
+#canvas_bg
+{
+}
+#canvas
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:  0;
+}
+#a_close, #a_left, #a_right
+{
+	font-size: 14px;
+	width: 38px;
+	height: 38px;
+}
+#a_left
+{
+	left: 3px;
+}
+#a_right
+{
+	right: 3px;
+}
+#a_close
+{
+	top: 0;
+	right: 0;
+	font-size: 20px;
+	width: 48px;
+	height: 48px;
+}
+#a_close a 
+{
+}
+#a_close a:hover
+{
+}
+#a_left a, #a_right a
+{
+}
+#a_left a:hover,
+#a_right a:hover
+{
+}
+.img_gallery #wrap:active #underwrap
+{
+}
+#underwrap
+{
+}
+.img_gallery #wrap:hover
+{
+}
+.img_gallery img:hover
+{
+}
+.img_gallery h3
+{
+}
+
+
+.gallery_text .g_text
+{
+	font-size: 10px;
+	width: 100%;
+	left: 0;
+}
+.gallery_text .g_text:hover
+{
+}
+ 
+ 
+ 

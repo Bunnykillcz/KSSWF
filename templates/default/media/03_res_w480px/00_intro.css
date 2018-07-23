@@ -2,10 +2,6 @@
 /* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
-img
+@media only screen and (max-width: 480px) 
 {
-}
-
-a:hover > img
-{
-}
+/*  ... next files ... */ 

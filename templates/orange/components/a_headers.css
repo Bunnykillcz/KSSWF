@@ -12,6 +12,7 @@
 	margin-bottom:5px;
 	text-decoration: none;
 	font-weight: 400;
+	width: fit-content(450px);
 	width: max-content;
 }
 /*RESETOR - END*/

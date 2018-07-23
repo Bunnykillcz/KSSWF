@@ -2,6 +2,8 @@
 /* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
-@media only screen and (max-width: 720px) 
+sub, sup 
 {
-/*  ... next files ... */ 
+}
+sup {}
+sub {}

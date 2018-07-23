@@ -2,28 +2,14 @@
 /* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
-footer
+img
 {
 }
 
-footer img
+a:hover > img
 {
 }
 
-.KSSWF,
-.footing
+.error_img
 {
 }
-.KSSWF
-{
-}
-.KSSWF a
-{
-}
-.KSSWF a:hover
-{
-}
-.black_filler
-{
-}
- 

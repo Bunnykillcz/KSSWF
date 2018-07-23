@@ -1,0 +1,190 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+#nav_wrap
+{
+	display: block;
+	position: fixed;
+ 	padding-left: 80px;
+	height: 32px;
+	width: Calc( 100% - 80px );
+	top:  0;
+	left: 0;
+	z-index: 102;
+}
+
+.mainmenu
+{
+	height: 32px;
+}
+.mainmenu ul
+{
+	width: 120px;
+	right: -120px;
+	position: fixed;
+	display: block;
+	background: black;
+	line-height: 18px;
+	top: 32px;
+	height: Calc(100% - 32px);
+	transition: linear 50ms all;
+}
+.mainmenu ul::after
+{
+	margin: 0;
+	padding: 0;
+    font-family: "FontAwesome";
+	font-size: 32px;
+	display:  block;
+	position: fixed;
+	content: "\f0c9";
+	width: 32px;
+	height: 32px;
+	right: 0;
+	top: 0;
+	padding: 0px;
+	color: white;
+	background: none;
+	opacity: 1;
+	line-height: 32px;
+}
+.mainmenu ul:hover
+{
+	right: 0;
+}
+.mainmenu ul:hover:after
+{
+	opacity: 0.4;
+}
+.mainmenu ul ul:after
+{
+	display: none;
+}
+.mainmenu ul ul:after:hover
+{
+}
+
+.mainmenu li,
+.mainmenu ul ul,
+.mainmenu ul li,
+.mainmenu ul ul ul,
+.mainmenu ul ul li,
+.mainmenu ul ul ul ul,
+.mainmenu ul ul ul li
+{
+}
+
+.mainmenu a
+{
+}
+
+.mainmenu ul a
+{
+	color: white;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.mainmenu ul li
+{
+	width: 120px;
+	height: 24px;
+}
+.mainmenu ul li~li 
+{ 
+	border: none;
+}
+
+.mainmenu ul li:hover
+{
+	height: initial;
+}
+.mainmenu ul li:hover > a
+{
+}
+
+.mainmenu ul ul
+{
+	display: block;
+	position: fixed;
+	width: 120px;
+	height: 100%;
+	background: black;
+	left: auto;
+	right: 120px;
+	top: -100vh;
+	z-index: 101;
+}
+.mainmenu ul li:hover > ul 
+{
+	left: auto;
+	top:	32px;
+	z-index: inherit;
+	width: 120px;
+}
+
+.mainmenu ul ul li
+{
+	height: 24px;
+	width: 120px;
+}
+.mainmenu ul ul li a
+{
+}
+
+.mainmenu ul ul li:hover
+{
+}
+.mainmenu ul ul li:hover > a
+{
+}
+
+.mainmenu ul ul a
+{
+}
+
+.mainmenu ul ul ul
+{
+	display: block;
+	position: fixed;
+	width: 120px;
+	height: 100%;
+	background: black;
+	left: auto;
+	right: 240px;
+	top: -100vh;
+	z-index: 100;
+}
+
+.mainmenu ul ul li:hover > ul
+{
+	left: auto;
+	top:	32px;
+	z-index: inherit;
+}
+.mainmenu ul,
+.mainmenu ul li,
+.mainmenu li a,
+.mainmenu ul a,
+.mainmenu ul li a
+{
+	z-index: 102;
+}
+.mainmenu ul ul,
+.mainmenu ul ul li,
+.mainmenu ul li a,
+.mainmenu ul ul a,
+.mainmenu ul ul li a
+{
+	z-index: 101;
+}
+.mainmenu ul ul ul,
+.mainmenu ul ul ul li,
+.mainmenu ul ul li a,
+.mainmenu ul ul ul a,
+.mainmenu ul ul ul li a
+{
+	z-index: 100;
+}
+ 

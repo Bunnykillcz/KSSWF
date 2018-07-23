@@ -1,0 +1,33 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2017 */
+/*-----------------------*/
+
+.header
+{
+}
+
+.header img
+{
+}
+.header a
+{
+}
+.header a img
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	height: 22px;
+	border-width: 1px;
+	padding: 4px;
+}
+
+.header a img:hover
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+ 

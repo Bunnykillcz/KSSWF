@@ -1,0 +1,33 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+/*RESETOR - START*/
+.text_area h1,.text_area h2,.text_area h3,.text_area h4,.text_area h5,.text_area h6,
+.text_area#txt h1,.text_area#txt h2,.text_area#txt h3,.text_area#txt h4,.text_area#txt h5,.text_area#txt h6
+{
+	left: 0px;
+}
+/*RESETOR - END*/
+
+.text_area h1,
+.text_area#txt h1
+{
+	font-size: 16px;
+}
+
+.text_area h2,
+.text_area#txt h2
+{
+}
+
+.text_area h3,
+.text_area#txt h3
+{
+}
+
+.text_area h4,
+.text_area#txt h4
+{
+}
+ 

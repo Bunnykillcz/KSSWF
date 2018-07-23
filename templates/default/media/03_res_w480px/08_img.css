@@ -1,0 +1,27 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+img
+{
+}
+
+a:hover > img
+{
+}
+
+.error_img
+{
+}
+
+.text_area img
+{
+	width: 100%;
+	padding: 0;
+	margin: 0px;
+}
+
+.text_area a img
+{
+	width: initial;
+}

@@ -1,0 +1,92 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.center
+{
+}
+
+.r_column
+{
+}
+.r_column_small
+{
+	margin-right: 0;
+	padding-left: 5px;
+	padding-right: 0px;
+	width: Calc( 28% - 5px );
+}
+.r_column_big
+{
+	margin-right: 0;
+	padding-left: 5px;
+	padding-right: 0px;
+	width: Calc( 72% - 10px );
+}
+.l_column
+{
+}
+.l_column_small
+{
+	margin-left: 0;
+	padding-right: 5px;
+	padding-left: 0px;
+	width: Calc( 28% - 5px );
+}
+.l_column_big
+{
+	margin-left: 0;
+	padding-right: 5px;
+	padding-left: 0px;
+	width: Calc( 72% - 10px );
+}
+
+.left 		{}
+.right		{}
+.floatleft 	{}
+.floatright	{}
+
+.full_w 	{}
+.full_h 	{}
+.full_vw 	{}
+.full_vh 	{}
+
+.null_m		{}
+.null_p		{}
+.null_border{}
+.null_bg	{}
+.null_bg_col{}
+.null_float {}
+
+
+
+.hover-invert,
+.hover-invert50
+{
+}
+.hover-invert:hover
+{
+}
+.hover-invert50:hover
+{
+}
+
+.h_admin
+{
+	right: 40px;
+	position:fixed;
+}
+.h_admin .button
+{
+	margin: 0;
+	height: 22px;
+	min-width: 22px;
+}
+
+pre code * 
+{
+}
+pre code
+{
+}
+

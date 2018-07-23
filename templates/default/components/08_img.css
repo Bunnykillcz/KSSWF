@@ -18,3 +18,15 @@ a:hover > img
 {
 	opacity: 0.8;
 }
+
+.error_img
+{
+	 position: absolute;
+	 display: block;
+	 background: none;
+	 float: none;
+	 border:none;
+	 right: 0;
+	 top: -10px;
+	 width: 600px;
+}

@@ -77,6 +77,17 @@ img{
 }
 
 
+.h_admin
+{
+	right: 80px;
+	position:fixed;
+	display:block;
+}
+.h_admin .button
+{
+	height: 48px;
+	min-width: 48px;
+}
 
 
 

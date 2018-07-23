@@ -31,9 +31,9 @@ include("./func/setup.php");
 <meta name="description" content="<?php echo $description.':'.$subtitle;?>">
 <meta name="keywords" content="<?php echo $tags;?>">
 <meta name="author" content="<?php echo $author;?>">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
 <?php
-if($responsive)
-	include("./func/meta.php");
 
 if(!file_exists("./cache/menu.html"))
 {

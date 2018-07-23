@@ -1,0 +1,20 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.socials 
+{
+}
+.socials:hover
+{
+}
+
+.socials a svg,
+.socials a i
+{
+}
+
+.socials a:hover > svg,
+.socials a:hover > i
+{
+}

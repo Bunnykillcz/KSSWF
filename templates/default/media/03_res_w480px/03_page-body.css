@@ -8,9 +8,10 @@ body
 
 .text_area 
 { 
-	top: 0;
-	left: 0;
+	top:   32px;
+	left:  0;
 	width: Calc( 100% );
+	min-width: 180px;
 }
 
 hr, .text_area hr
@@ -19,6 +20,8 @@ hr, .text_area hr
 
 .text_area #txt
 {
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 .text_area#txt /* THIS ONLY APPLIES TO ADMIN EDITOR */
@@ -40,10 +43,12 @@ hr, .text_area hr
 
 .text_area p
 {
+	font-size: 11px;
 }
 .text_area p:first-child 
 {
 }
 .text_area p+p
 {
+	font-size: 11px;
 }

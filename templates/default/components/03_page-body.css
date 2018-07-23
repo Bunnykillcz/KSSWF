@@ -7,6 +7,18 @@ body
 	
 }
 
+#bodyfoot { 
+vertical-align: top;
+display:	block;
+top: 		120px; 
+width: 		100%;  
+left:		0%; 
+position:	absolute; 
+min-height: 100%;
+/*min-height:	Calc( 100vh - 12px	);*/
+overflow: 	hidden;
+}
+
 hr, .text_area hr
 {
 	display: block;
