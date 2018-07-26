@@ -9,6 +9,7 @@ $ad_priv	 =  0;
 if(!empty($_GET['w']))
 	$this_w		 = str_replace("%20","+", str_replace(" ","+", $_GET['w']));
 $imageid 	 = 0;
+$this_con;
 
 session_start([
     'cookie_lifetime' => $admin_logon_time,
