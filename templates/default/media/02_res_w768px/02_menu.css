@@ -20,18 +20,7 @@
 {
 	height: 64px;
 }
-.mainmenu ul
-{
-	width: 200px;
-	right: -200px;
-	position: fixed;
-	display: block;
-	background: black;
-	line-height: 48px;
-	top: 64px;
-	height: Calc(100% - 64px);
-	transition: linear 200ms all;
-}
+
 .mainmenu ul::after
 {
 	margin: 0;
@@ -50,6 +39,23 @@
 	background: none;
 	opacity: 1;
 }
+
+.mainmenu ul
+{
+	width: 120px;
+	right: -120px;
+	position: fixed;
+	display: block;
+	background: black;
+	line-height: 32px;
+	top: 64px;
+	height: Calc(100% - 32px);
+	transition: linear 50ms all;
+}
+.mainmenu ul::after
+{
+	line-height: 48px;
+}
 .mainmenu ul:hover
 {
 	right: 0;
@@ -61,6 +67,7 @@
 .mainmenu ul ul:after
 {
 	display: none;
+	line-height: 32px;
 }
 .mainmenu ul ul:after:hover
 {
@@ -83,14 +90,14 @@
 .mainmenu ul a
 {
 	color: white;
-	font-size: 18px;
-	line-height: 32px;
+	font-size: 12px;
+	line-height: 24px;
 }
 
 .mainmenu ul li
 {
-	width: 200px;
-	height: 32px;
+	width: 120px;
+	height: 24px;
 }
 .mainmenu ul li~li 
 { 
@@ -99,6 +106,7 @@
 
 .mainmenu ul li:hover
 {
+	height: initial;
 }
 .mainmenu ul li:hover > a
 {
@@ -108,24 +116,26 @@
 {
 	display: block;
 	position: fixed;
-	width: 200px;
+	width: 120px;
 	height: 100%;
 	background: black;
 	left: auto;
-	right: 200px;
+	right: 120px;
 	top: -100vh;
 	z-index: 101;
 }
 .mainmenu ul li:hover > ul 
 {
 	left: auto;
-	top:	64px;
+	top: 64px;
 	z-index: inherit;
+	width: 120px;
 }
 
 .mainmenu ul ul li
 {
-	height: 32px;
+	height: 24px;
+	width: 120px;
 }
 .mainmenu ul ul li a
 {
@@ -146,11 +156,11 @@
 {
 	display: block;
 	position: fixed;
-	width: 200px;
+	width: 120px;
 	height: 100%;
 	background: black;
 	left: auto;
-	right: 400px;
+	right: 240px;
 	top: -100vh;
 	z-index: 100;
 }
@@ -158,7 +168,7 @@
 .mainmenu ul ul li:hover > ul
 {
 	left: auto;
-	top:	64px;
+	top: 64px;
 	z-index: inherit;
 }
 .mainmenu ul,

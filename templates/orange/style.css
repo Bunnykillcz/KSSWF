@@ -36,21 +36,6 @@ overflow: 	hidden;
 }
 
 
-.hover-invert,
-.hover-invert50
-{
-	filter: invert(0%);
-	-webkit-transition: all 200ms ease-in-out;
-    transition:	all 200ms ease-in-out;
-}
-.hover-invert:hover
-{
-	filter: invert(100%);
-}
-.hover-invert50:hover
-{
-	filter: invert(50%);
-}
 
 
 .error_img

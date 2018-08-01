@@ -93,5 +93,7 @@ pre code *
 }
 pre code
 {
+	font-size: 10px;
+	min-height: 32px;
 }
 

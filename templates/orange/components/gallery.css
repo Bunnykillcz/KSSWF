@@ -18,8 +18,7 @@
 	border-radius:	3px;
 	padding:		5px;
 	background-color:	#ab9c77;
-	
-	
+    text-align: center;
 }
 .img_gallery #wrap
 {
@@ -46,8 +45,11 @@
 	height: 			140%;
 	width:				140%;
 	object-fit: 		fill;
+	object-position: 	middle;
+	float: 				none;
+	left: 				-20%;
+	right: 				-20%;
 	background: 		none;
-	background-color:	none;
 	display: 			block;
 	border: 			0px none;
 	border-radius:		2px;
@@ -56,7 +58,22 @@
 	margin:			    -1px;
     -webkit-transition: 300ms ease-in-out;
     transition:	300ms ease-in-out;
-	
+	min-width: 64px;
+	min-height: 48px;
+}
+.img_gallery img:hover
+{
+	height:				160%;
+	width:				160%;
+	filter:             grayscale(0%);
+	filter: 			brightness(100%);
+    -webkit-transition: 400ms ease-in-out;
+    transition:	400ms ease-in-out;
+	object-fit: 		fill;
+	object-position: 	middle;
+	float: 				none;
+	left: 				-30%;
+	right: 				-30%;
 }
 #canvas_bg
 {

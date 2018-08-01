@@ -4,6 +4,8 @@
 
 h2.code
 {
+	font-size: 10px;
+	width: Calc( 100% - 64px );
 }
 
 h2.code .fce 	,.code .fce 	{}

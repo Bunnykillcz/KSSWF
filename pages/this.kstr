@@ -18,6 +18,8 @@ functions|gen_bcnav;Gen_bcnav(...)
 functions|socials;Socials(...)
 functions|lorem;Lorem(...)
 functions|encrypt_caesar;Encrypt_Caesar(...)
+functions|youtube;Youtube(...)
+functions|database;Database functions
 //ins_plug|ß;Plugins
 test;Testing page
 faq;FAQ

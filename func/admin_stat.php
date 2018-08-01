@@ -6,7 +6,7 @@
 
 $error = "";
 $addr = $after_link;
-$salt = "Žluťoučký kůň úpěl ďábelské ódy!";
+global $salt;
 
 $content_ = "";
 if(!empty($_GET['w']))
@@ -168,8 +168,6 @@ function admin_newname($newname, $passwd)
 
 function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorrect password (?); 4 = file not accessed; 3 = write error; 0 = success;
 {	
-	//echo $en=encrypt_caesar("admin",25);  //$usrn, length^2
-	//echo " | ".decrypt_caesar($en,25);	//$usrn, length^2
 	
 	global $after_link;
 	global $salt;
@@ -280,6 +278,63 @@ function admin_newpass($newpass, $oldpass) //returns: 1 = no-login;  2 = incorre
 	{
 		savetolog("<span style='color:black;'><b>$usrn</b></span> <span style='color:red;'>failed</span> to change password. Write error.");	
 		redirect($addr."?w=home&s=5&a=7", false);
+		return 3;
+	}
+}
+function admin_reset_users($defu, $defp, $priv = "")
+{	
+	
+	global $after_link;
+	global $salt;
+	$addr = $after_link;
+	$fil_ = "./admin/admin_login.pwd";
+	
+	if(empty($priv))
+		$priv = "7;0;".encrypt_caesar($defu,37);
+	
+	/*if(!file_exists($fil_))
+	{
+		infobox("OPERATION IMPOSSIBLE. FILE NOT FOUND.", "error","","");
+		return 6;
+	}*/
+		
+	$usrn = "";
+	if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
+		$usrn = $_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))];
+	
+	if(empty($usrn))	
+		return 1;
+	
+	$usrn_l = $usrn;
+	$usrn = $defu;	
+	$username = stripcslashes(htmlspecialchars(trim($usrn)));
+	$username = md5($username);
+	
+	$userID = -1;
+	$passID = -1;
+	$file = "";
+	
+	$password = $defp;
+	$password = stripcslashes(htmlspecialchars(trim($password)));
+	$password = $password.$salt;
+	$password = md5($password);
+	$password = strrev($password);
+	
+	
+		
+	$file = $username."\r\n".$password."\r\n".$priv; //generated filedata
+	
+	$ret = file_put_contents($fil_, $file);
+	
+	if($ret == 1 || $ret){
+		savetolog("<span style='color:black;'><b>$usrn_l</b></span> has <span style='color:red;'>RESET ALL USERS</span>.");	
+		redirect($addr."?w=home", false);
+		return 0;
+	}
+	else
+	{
+		savetolog("<span style='color:black;'><b>$usrn_l</b></span> has <span style='color:red;'>failed</span> to RESET ALL USERS.");		
+		redirect($addr."?w=home", false);
 		return 3;
 	}
 }
@@ -564,7 +619,9 @@ if(!empty($_GET['a']))
 			infobox($form,"none");
 		}
 		break;
-		
+	case 9937519: //reset userfile
+		admin_reset_users("admin","admin");
+		break;
 	}
 	
 	echo $admin_message."</div>";

@@ -12,7 +12,10 @@
 
 .img_gallery img
 {
-	
+	min-width:  80px;
+	min-height: 64px;
+	left: 0px;
+	top: 0px;
 }
 #canvas_bg
 {

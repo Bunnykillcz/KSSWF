@@ -25,7 +25,7 @@
 	position: fixed;
 	display: block;
 	background: black;
-	line-height: 18px;
+	line-height: 32px;
 	top: 32px;
 	height: Calc(100% - 32px);
 	transition: linear 50ms all;
@@ -60,6 +60,7 @@
 .mainmenu ul ul:after
 {
 	display: none;
+	line-height: 32px;
 }
 .mainmenu ul ul:after:hover
 {
@@ -83,7 +84,7 @@
 {
 	color: white;
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 24px;
 }
 
 .mainmenu ul li

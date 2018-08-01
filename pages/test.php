@@ -77,6 +77,10 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 <?php lorem(1, 8, 5, 8, false); ?>
 </div>
 
+<?php
+	youtube("dj4VoPO-2pE");
+?>
+
 <div class="l_column_big">
 <h2>l_column_big</h2>
 <?php lorem(1, 12, 4, 8, true); ?>

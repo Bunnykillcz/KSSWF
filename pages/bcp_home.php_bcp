@@ -1,0 +1,26 @@
+<p><?php //tag, homepage, tag, KSSWF, Lorem, Ipsum //keywords can be set-up for every page on line 2 in a comment! //correct syntax is "//one, two, three, four, five, etc" //if incorrect, or not set, the keywords will be default; default keywords are set in index.php ?> <?php gen_bcnav(true,">"); ?></p>
+
+<hr />
+
+
+<h1>KSSWF</h1>
+
+<p>Welcome!</p>
+
+<h3>Known KSSWF websites:</h3>
+
+<ul>
+	<li><a href="http://www.soveticka.cz" target="_blank">http://www.Soveticka.cz</a></li>
+	<li><a href="http://www.GetAway.cz" target="_blank">http://www.GetAway.cz</a></li>
+	<li><a href="http://www.nejedniko.tk" target="_blank">http://www.NejedNiko.tk</a></li>
+</ul>
+
+<h3>Current firmware version:</h3>
+
+
+
+<p><strong><?php echo "> v"; echo get_ver().""; echo "<br />
+<br />
+> KyberSoft Simple Website Framework, aka KSSWF<br />
+> created by Nikola Nejedl&yacute; 2017-18<br />
+> All Rights Reserved"; ?> </strong> <?php //generate HOME stuff like NEWS? ?></p>

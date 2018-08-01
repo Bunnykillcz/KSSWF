@@ -53,9 +53,9 @@ footer
 
 footer img
 {
+	width: 80px;
 	display: block;
 	position: absolute;
-	width: initial;
 	left: Calc( 50% - 40px );
 	top: 10px;
 }

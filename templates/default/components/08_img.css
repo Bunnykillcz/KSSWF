@@ -14,7 +14,7 @@ img
 	object-fit: cover;*/
 }
 
-a:hover > img
+.text_area a:hover > img
 {
 	opacity: 0.8;
 }

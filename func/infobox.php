@@ -60,7 +60,8 @@ function infobox() //text = "Hi, my name is ... Bodega!"; type = "error", "warni
 	
 	
 
-	$gen_message = $gen_message.$gen_t."<p>".$text."</p><a href='".$actual_link.$after_link.$w_t.$a_t_."'>".icon("wclose",0)."</a>";
+	//$gen_message = $gen_message.$gen_t."<p>".$text."</p><a href='".$actual_link.$after_link.$w_t.$a_t_."'>".icon("wclose",0)."</a>";
+	$gen_message = $gen_message.$gen_t."<p>".$text."</p><a href=\"javascript:hide_element('.info', 300);\">".icon("wclose",0)."</a>";
 	echo $gen_message;
 	echo "</div>";
 }

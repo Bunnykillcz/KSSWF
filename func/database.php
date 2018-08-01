@@ -15,9 +15,11 @@ function database_init($this_id, $servername, $username, $password, $database_na
 {
 	global $this_con;
 	
-	íf(!is_numeric($this_id))
+	if(!is_numeric($this_id))
+	if(!($this_id <= 9 && $this_id >= 0))
 		return -1;
-	
+		
+	$this_con[$this_id] = null;
 	$this_con[$this_id] = new mysqli($servername, $username, $password, $database_name);
 	
 	if ($this_con[$this_id]->connect_error) 
@@ -63,12 +65,14 @@ function database_delete($this_id, $delete_db_name, $silent = true)
 	return 1;
 }
 
-function database_query($this_id, $query)
+function database_query($this_id, $query, $silent = true)
 {
 	global $this_con;
 	
-	$sql = "$query";
-	if ($qer = $this_con[$this_id]->query($sql) === TRUE) 
+	$sql = $query;
+	$qer = $this_con[$this_id]->query($sql);
+	
+	if ($qer == TRUE) 
 	{
 		if(!$silent)
 			echo "Query successful";
@@ -84,7 +88,7 @@ function database_close($this_id)
 {
 	global $this_con;
 	
-	if($this_id)
+	if(!empty($this_id))
 		$this_con[$this_id]->close();
 	else
 		return -1;
@@ -97,29 +101,77 @@ function database_close($this_id)
 
 function database_create_T($this_id, $setup, $table)
 {
+	global $this_con;
 	$out = database_query($this_id, "CREATE TABLE $table($setup)");
 	return $out;
 }
 function database_update_T($this_id, $set_data, $update_rule, $table)
 {
+	global $this_con;
 	$out = database_query($this_id, "UPDATE $table SET $set_data WHERE $update_rule");
 	return $out;
 }
+/*function database_select_T($this_id, $set_data, $table)
+{
+	$out = database_query($this_id, "INSERT INTO $table VALUES $set_data");
+	return $out;
+}*/
 function database_write_T($this_id, $set_data, $table)
 {
+	global $this_con;
 	$out = database_query($this_id, "INSERT INTO $table VALUES $set_data");
 	return $out;
 }
 function database_read_T($this_id, $what_to_read, $table)
 {
+	global $this_con;
 	$out = database_query($this_id, "SELECT $what_to_read FROM $table");
-	return $out;
+	return mysql_fetch_assoc($out);
 }
 function database_deletefrom_T($this_id, $delete_rule, $table)
 {
+	global $this_con;
 	$out = database_query($this_id, "DELETE FROM $table WHERE $delete_rule");
 	return $out;
 }
+
+/* ------------------------------------------ ADVANCED functions ------------------------------------------ */
+
+function database_show_T($element_class, $this_id, $servername, $username, $password, $database_name, $what_to_read, $from_table)
+{
+	global $this_con;
+	$table = $from_table;
+	if(database_init($this_id, $servername, $username, $password, $database_name) != 1)
+		return -9;
+		
+	$read_db = database_query($this_id, "SELECT $what_to_read FROM $table");
+	
+	if(is_numeric($read_db))
+		return $read_db;
+	
+		
+	echo "<table class='$element_class'>";
+	while($data = mysqli_fetch_assoc($read_db))
+	{
+		echo "<tr>";
+			foreach($data as $element)
+			echo "<td>$element</td>";
+		echo "<tr>";
+	}
+	echo "</table>";
+	database_close($this_id);
+	
+	return 1;
+}
+
+
+
+
+
+
+
+
+
 
 
 

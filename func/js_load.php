@@ -13,6 +13,7 @@
 <script type="text/javascript" src="./javascript/prism/prism.js"></script>
 <script type="text/javascript" src="./javascript/gallery_fc.js"></script>
 <script type="text/javascript" src="./javascript/setdisplay_fc.js"></script>
+<script type="text/javascript" src="./javascript/hide_element_fc.js"></script>
 <?php
 // load up CKEditor AFTER jquery
 if(isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))

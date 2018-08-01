@@ -73,14 +73,14 @@
 
 .h_admin
 {
-	right: 40px;
+	right: 24px;
 	position:fixed;
 }
 .h_admin .button
 {
-	margin: 0;
-	height: 22px;
-	min-width: 22px;
+	top: -6px;
+	height: 28px;
+	min-width: 28px;
 }
 
 pre code * 
@@ -88,5 +88,7 @@ pre code *
 }
 pre code
 {
+	font-size: 10px;
+	min-height: 32px;
 }
 

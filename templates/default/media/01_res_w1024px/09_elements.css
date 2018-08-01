@@ -67,6 +67,8 @@ pre code *
 }
 pre code
 {
+	font-size: 12px;
+	min-height: 48px;
 }
 
 

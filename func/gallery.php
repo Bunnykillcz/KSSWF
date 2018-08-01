@@ -113,7 +113,7 @@ function gallery($folder, $g_title = "", $order = "abc", $cache_all = false /* (
 		
 	$kstrtexts .= "</div>";
 		
-	$out_ .= "</div><a href='#' onclick='canvas_close();return false;'><div id='canvas_bg'></div></a>	
+	$out_ .= "</div><a href='#' onclick='canvas_close();return false;'><div id='canvas_bg' style='display:none;'></div></a>	
 	<div id='canvas'><span id='a_left'><a href='#' onclick='canvas_prev();return false;'>".icon("left",2)."</a></span><span id='a_right'><a href='#' onclick='canvas_next();return false;'>".icon("right",2)."</a></span><span id='a_close'><a href='#' onclick='canvas_close();return false;'>".icon("close",2)."</a></span>".$kstrtexts."</div>";
 	
 	if($cache_all)

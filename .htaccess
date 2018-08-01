@@ -27,3 +27,7 @@ Allow from all
 <Files ~ "\.(js|css|jpeg|jpg|png|ttf|gif)$">
 Allow from all 
 </Files>
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}

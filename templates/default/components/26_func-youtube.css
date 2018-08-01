@@ -1,0 +1,27 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.text_area .YTvideo
+{
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background: linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.text_area iframe
+{
+	display: block;
+	position: relative;
+	height: 240px;
+	width: 400px;
+	left: Calc( 50% - 200px );
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+

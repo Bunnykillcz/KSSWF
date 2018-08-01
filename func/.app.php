@@ -173,7 +173,8 @@ function mk_cache_css()
 					}
 			}
 		}
-			
+		$directories = null;
+		
 		if(file_exists($template."/media/"))
 		{
 			$contents_css .= "\r /* ------------------------------------------------------ < MEDIA > ------------------------------------------------------  */ \r \r ";
@@ -192,6 +193,7 @@ function mk_cache_css()
 				}
 			}
 		}
+		if($directories != null)
 		if(count($directories) > 0 && $directories != null && !empty($directories))
 		foreach($directories as &$dirz)
 		{
