@@ -40,6 +40,7 @@
 	<li>Icons from - <b>Font Awesome 4, 5 by Fonticons, Inc.</b> | Using free license > CC BY 4.0 - more <a href="https://fontawesome.com/license" target="_BLANK">here</a> </li>
 	<li>Javascript code highlighter - <b>Prism by Lea Verou, Golmote & others</b> | License not specified - <a href="http://prismjs.com" target="_BLANK">Prism website</a> </li>
 	<li>OpenSource Fonts from - <b>Google fonts by Google LLC</b> (actual font authors vary) |  <a href="http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web" target="_BLANK">SIL Open Font License</a> OR <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_BLANK">Apache License 2.0</a> | <a href="https://fonts.google.com/" target="_BLANK">Google fonts website</a> </li>
+	<li>Scrolling smoother - <b>ZenScroll by </b> | <a href="https://zengabor.github.io/zenscroll/" target="_BLANK">GITHUB link</a> [Public domain]</li>
 </ul>
 
 <h3>Known KSSWF websites:</h3>
