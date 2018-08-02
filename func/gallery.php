@@ -4,8 +4,9 @@
 /*            Nikola Nejedlý            */
 /*                 2018                 */
 /*--------------------------------------*/
+/* Upgraded to self-updating (02_08_18) */
 
-function gallery($folder, $g_title = "", $order = "abc", $cache_all = false /* (3,4 Optionals) */) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
+function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $release_frequency = null /* MINUTES */, $release_folder = null) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
 {
 	global $gal_id;
 	global $actual_link;
@@ -18,10 +19,96 @@ function gallery($folder, $g_title = "", $order = "abc", $cache_all = false /* (
 	if(!file_exists($dir_root) && !is_dir($dir_root))
 		return -1;
 	
-	$amount = 0;
+	$amount = 0;	
 	$images = glob("$dir_root/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
-	
 	$img_array = array(array());
+	
+	//------------------------------------------------------------------------------------------------------------
+	//autorelease:
+	
+	if($release_frequency != null && $release_folder != null)
+	{
+		$conti = true;
+		
+		if($release_frequency == "hour")
+			(int)$release_frequency = 3600/60;
+		else
+		if($release_frequency == "day")
+			(int)$release_frequency = 86400/60;
+		else
+		if($release_frequency == "week")
+			(int)$release_frequency = 604800/60;
+		else
+		if($release_frequency == "month")
+			(int)$release_frequency = 2629743/60;
+		else
+		if($release_frequency == "year")
+			(int)$release_frequency = 31556926/60;
+		
+		$rf = str_replace("\\","/", $root_link)."/img/".$release_folder;
+		
+		if(!is_numeric($release_frequency))	
+			$conti = false;
+		if($release_frequency <= 0)	
+			$conti = false;
+		if(!file_exists($rf))
+			$conti = false;
+		
+		$images_to_add = glob("$rf/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
+		
+		if(count($images_to_add) <= 0)
+			$conti = false;
+		
+		if($conti)
+		{
+			$today = getdate();
+			$lastupdate; $nextupdate; $rel_sec;
+			$rel_sec = $release_frequency*60;
+			
+			if(file_exists($rf."/this.kstr"))
+			{
+				$thiskstr = file_get_contents("$rf/this.kstr");
+				$thisexp = explode(";",$thiskstr);
+				$lastupdate = $thisexp[0];
+				$nextupdate = $thisexp[1];
+			}
+			else
+			{
+				$lastupdate = $today[0];
+				$nextupdate = $lastupdate + $rel_sec;
+			}
+
+			while($today[0] - $nextupdate >= $rel_sec)
+			{
+				$nextupdate += $rel_sec;
+				if(count($images_to_add) > 0)
+				{
+					$xpld = explode("/",$images_to_add[0]);
+					$filename = $xpld[count($xpld)-1];
+					//echo $filename;
+					//rename($images_to_add[0], $dir_root."/".$filename);
+					if(file_exists("$images_to_add[0]"))
+					if (copy ($images_to_add[0],$dir_root."/".$filename)) 
+					{
+						unlink($images_to_add[0]);
+						$images_to_add = glob("$rf/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
+					}
+				}
+			}
+			
+			$kstrreport = $today[0].";".$nextupdate;
+			$rep = file_put_contents($rf."/this.kstr",$kstrreport);	
+			
+			if(file_exists('./cache/gal_'.$gal_id.str_replace("/","_",$dir).".html"))
+				unlink('./cache/gal_'.$gal_id.str_replace("/","_",$dir).".html");
+			
+			//echo $rep;
+		}
+	}
+	//------------------------------------------------------------------------------------------------------------
+	//gallery itself:
+	
+	$images = glob("$dir_root/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
 	
 	$i_ = 0;
 	foreach($images as $image)
