@@ -5,7 +5,7 @@
 //------------------------------------------------//
 
 
-$ic_callers_list = ["globe","heart","wpforms","dropdown","_new","link","home","left","right","up","down","wclose","wclose-o","close","card-o","ban","bin","bin-o","sign-in","sign-out","warning","info",
+$ic_callers_list = ["globe","heart-o","heart","wpforms","dropdown","_new","link","home","left","right","up","down","wclose","wclose-o","close","card-o","ban","bin","bin-o","sign-in","sign-out","warning","info",
 "edit","save","file","folder","car","uber", "bus", "train","ticket","plane","time_h","html5","building","server","battery0","battery1","battery2","battery3",
 "battery4","fork", "star", "star-o", "star-half", "star-half-o", "shield", "bed", "food", "error", "letter", "letter-o", "letter-s", "phone", 
 "phone-s", "mphone","headphones", "fort", "bill", "camera", "camera2", "music", "video", "briefcase", "suitcase", "medkit", "gamepad", "magic", "like", "dislike", 
@@ -25,8 +25,12 @@ function icon($type, $size = 0)
 		case "globe":
 			$icon = "fa-globe";
 			break;
-		case "heart":
+		case "heart-o":
 			$icon = "fa-heart-o";
+			break;
+		case "heart":
+			$icon = "fa-heart";
+			$fab = "s";
 			break;
 		case "wpforms":
 			$icon = "fa-wpforms";

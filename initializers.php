@@ -6,8 +6,15 @@ $subtitle 	 = "";
 $this_w		 = "";
 $endclude 	 = "";
 $ad_priv	 =  0;
+
+$global_locale		= "cs-CZ"; 
+//list of locales available at: https://stackoverflow.com/questions/3191664/list-of-all-locales-and-their-short-codes
+setlocale(LC_TIME, $global_locale);
+date_default_timezone_set($default_timezone);
+//List of timezones available at: http://php.net/manual/en/timezones.php
+
 if(!empty($_GET['w']))
-	$this_w		 = str_replace("%20","+", str_replace(" ","+", $_GET['w']));
+	$this_w	= str_replace("%20","+", str_replace(" ","+", $_GET['w']));
 $imageid 	 = 0;
 $this_con = array(); 
 

@@ -1,0 +1,598 @@
+/*-----------------------*/
+/* Nikola Nejedlý - 2018 */
+/*-----------------------*/
+
+.PS_POST a,
+.PS_POST a:hover
+{
+	text-decoration: none;
+	width: Calc( 100% - 8px );
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	display: block;
+}
+.PS_POST,
+.PS_POST_E
+{
+	position: relative;
+	display: block;
+	width: 90%;
+	border-radius: 3px;
+	box-shadow: 0px 2px 5px;
+	background: #00000021;
+	padding: 8px;
+	left: Calc( 5% - 8px );
+	font-family: 'Fira Sans',monospace;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	min-height: 155px;
+}
+.PS_POST .PS_Empty,
+.PS_POST_E .PS_Empty
+{
+	font-style: italic;
+	padding: 20px;
+}
+
+.PS_POST_E
+{
+	min-height: 48px;
+}
+
+.PS_POST .PS_Title h2
+{
+	border: none;
+	background: none;
+	position: relative;
+	display: block;
+	margin: 0;
+	margin-left: 170px;
+	font-size: 24px;
+	width: Calc( 100% - 170px );
+	border-bottom: black 1px solid;
+	padding: 0px;
+	margin-bottom: 5px;
+	line-height: 38px;
+	min-height: 38px;
+	left: 0;
+	top: 0;
+	font-family: "Kelly Slab","Open Sans", sans-serif;
+}
+
+.PS_POST .PS_DateP,
+.PS_POST .PS_Date
+{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 18px;
+	text-align: right;
+	left: Calc( 100% - 120px );
+	color: #2f2f2fba;
+	line-height: 20px;
+	top: 0;
+}
+.PS_POST .PS_DateP:hover
+{
+	color: #9c0000ba;
+}
+.PS_POST .PS_DateP:hover:after
+{
+	content: "Publish date; Can be seen only by administrator.";
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-family: monospace;
+	font-size: 10px;
+	padding: 2px;
+	border: 1px solid black;
+	background:beige;
+	top: -24px;
+	color:black;
+	margin: 0;
+	line-height: 14px;
+	right: 24px;
+	opacity: 1;
+	white-space: nowrap;
+}
+.PS_POST .PS_Date svg,
+.PS_POST .PS_DateP svg
+{
+	width: 16px;
+	padding-left: 3px;
+	display: inline-block;
+	float: right;
+}
+.PS_POST .PS_Author
+{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 18px;
+	text-align: right;
+	left: Calc( 100% - 120px );
+	color: #2f2f2fba;
+	line-height: 20px;
+	top: 0;
+}
+.PS_POST .PS_Author svg
+{
+	width: 16px;
+	padding-left: 3px;
+	display: inline-block;
+	float: right;
+}
+.PS_POST .PS_Preview img
+{
+	display: block;
+	position: absolute;
+	width: 155px;
+	height: 155px;
+	top: 8px;
+	left: 8px;
+	object-fit: cover;
+}
+.PS_POST .PS_Likes
+{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 18px;
+	text-align: right;
+	left: Calc( 100% - 120px );
+	color: #2f2f2fba;
+	line-height: 16px;
+	top: 0;
+}
+.PS_POST .PS_Likes svg
+{
+	width: 16px;
+	padding-left: 3px;
+	display: inline-block;
+	float: right;
+}
+
+.PS_POST .PS_ViewCount
+{
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 18px;
+	text-align: right;
+	left: Calc( 100% - 120px );
+	color: #2f2f2fba;
+	line-height: 16px;
+	top: 0;
+}
+.PS_POST .PS_ViewCount svg
+{
+	width: 16px;
+	padding-left: 3px;
+	display: inline-block;
+	float: right;
+}
+.PS_POST .PS_Text_Short
+{
+	position: absolute;
+	display: block;
+	width: 120px;
+	height: 18px;
+	text-align: left;
+	left: Calc( 100% - 120px );
+	color: #000000;
+	line-height: 16px;
+	top: 44px;
+	left: 170px;
+	background: none;
+	border: 1px ridge #40404014;
+	width: Calc( 100% - 170px - 120px - 20px );
+	min-height: 112px;
+	margin: 0;
+	padding: 2px;
+	background: #40404014;
+	font-family: "Open Sans", sans-serif;
+}
+.PS_POST .PS_more
+{
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 18px;
+	text-align: center;
+	right: 10px;
+	border: 1px #2f2f2fba solid;
+	line-height: 16px;
+	bottom: 10px;
+	padding: 3px;
+	background: #60574a5c;
+	color: initial;
+}
+.PS_POST:hover
+{
+	cursor: pointer;
+	box-shadow: 0px 2px 5px #000000ad;
+	background: #f5f5f55e;
+}
+.PS_POST:hover > .PS_more
+{
+	background: #86827c59;
+}
+
+
+/* ------------------------------------------------------ */
+/*                        Full post view:                 */
+
+
+.PS_FULL .PS_FULL_Date
+{
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	opacity: 0.5;
+	width: 20%;
+	text-align: left;
+	border-bottom: 1px solid black;
+	padding-bottom: 5px;
+	top: -10px;
+}
+.PS_FULL .PS_FULL_Author
+{
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	color: #000000;
+	opacity: 0.5;
+	width: Calc( 80% - 1px );
+	text-align: left;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	padding-bottom: 5px;
+	top: -10px;
+}
+.PS_FULL .PS_FULL_Date svg,
+.PS_FULL .PS_FULL_Author svg,
+.PS_FULL .PS_FULL_Views svg,
+.PS_FULL .PS_FULL_Likes svg
+{
+	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+}
+.PS_FULL .PS_FULL_IMG
+{	
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	background: white;
+	width: 300px;
+	height: 200px;
+	float: right;
+	margin-top: -10px;
+}
+.PS_FULL .PS_FULL_IMG img
+{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.PS_FULL .PS_FULL_Views
+{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	right: 0;
+	left: auto;
+	min-width: 64px;
+}
+.PS_FULL .PS_FULL_Likes
+{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	right: 0;
+	left: auto;
+	min-width: 64px;
+}
+.PS_FULL hr
+{
+	border-color: black;
+	opacity: 0.5;
+}
+.PS_FULL .PS_FULL_Text,
+.PS_FULL .PS_FULL_Text p
+{
+	text-align: justify;
+}
+
+/* ------------------------------------------------------ */
+/*                          Admin only:                   */
+
+.PS_AddNew
+{
+	position: relative;
+	display: block;
+	width: 90%;
+	border-radius: 3px;
+	box-shadow: 0px 2px 5px;
+	background: #00000021;
+	padding: 8px;
+	left: Calc( 5% - 8px );
+	font-family: 'Fira Sans',monospace;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.PS_AddNew input
+{
+	position: relative;
+	display: inline-block;
+	padding-left: 10px;
+	border: 1px transparent solid;
+	width: Calc( 100% - 100px );
+	line-height: 18px;
+	font-weight: normal;
+	transition: linear all 200ms;
+}
+.PS_AddNew input:disabled
+{
+	cursor:not-allowed;
+}
+.PS_AddNew .PS_Title,
+.PS_AddNew .PS_Author,
+.PS_AddNew .PS_Date,
+.PS_AddNew .PS_Publish,
+.PS_AddNew .PS_Preview
+{
+	display: inline-block;
+	position: relative;
+	text-align:right;
+	font-weight:bold;
+}
+.PS_AddNew input.PS_Title
+{
+	padding: 0;
+	width: 100%;
+	height: 32px;
+	font-size: 18px;
+	font-family: 'Kelly Slab',monospace;
+}
+.PS_AddNew input.PS_Author
+{
+}
+.PS_AddNew input.PS_Date,
+.PS_AddNew input.PS_Publish
+{
+}
+.PS_AddNew input.PS_Preview
+{
+	width: Calc( 100% - 100px );
+	display: inline-block;
+	font-weight: normal;
+}
+.PS_AddNew textarea.PS_Text
+{
+	padding: 0;
+	width: 100%;
+	background: #00000021;
+	height: 200px;
+	max-width:  Calc( 100% - 5px );
+	min-width:  Calc( 100% - 5px );
+	min-height: 64px;
+	text-align: justify;
+	border: 1px solid #0000006e;
+	left: 0;
+}
+
+.PS_AddNew textarea.PS_Text_Short 
+{
+	padding:	0;
+	margin:     0;
+	width: 		100%;
+	max-width:  Calc( 100% - 5px );
+	min-width:  Calc( 100% - 5px );
+	min-height: 48px;
+	max-height: 128px;
+	height: 	64px;
+	background: #00000021;
+	border: 1px solid #0000006e;
+	box-shadow: 0px 0px 0px;
+	left: 0;
+}
+
+
+.PS_AddNew textarea.PS_Text_Short:focus,
+.PS_AddNew textarea.PS_Text:focus,
+.PS_AddNew input.PS_Author:focus,
+.PS_AddNew input.PS_Title:focus
+{
+	background: whitesmoke;
+	border: 1px solid #0000006e;
+	box-shadow: none;
+}
+.PS_AddNew  textarea.PS_Text_Short::placeholder,
+.PS_AddNew  textarea.PS_Text::placeholder
+{
+	color: #ffffffc9;
+	padding: 3px;
+}
+.PS_AddNew  textarea.PS_Text_Short,
+.PS_AddNew  textarea.PS_Text
+{
+	color: black;
+	padding: 3px;
+	width: Calc( 100% - 6px );
+	box-shadow: inset 0px 0px 3px black;
+}
+.PS_AddNew input:hover
+{
+	box-shadow: 0px 0px 5px #f5f5f570;
+	background: #f5f5f570;
+	border: 1px solid #ababab6e;
+}
+.PS_AddNew input#PS_OK
+{
+	width: 64px;
+	height: 32px;
+	text-align: center;
+	display: block;
+	position: relative;
+	left: Calc( 100% - 64px );
+	border-radius: 3px;
+	box-shadow: 0px 2px 5px;
+	background: #00000021;
+	padding: 0;
+}
+.PS_AddNew input#PS_OK:hover
+{
+	box-shadow: 0px 2px 5px whitesmoke;
+	background: whitesmoke;
+}
+
+
+.PS_only_admin
+{
+	display: block;
+	position: relative;
+	z-index: 1;
+	margin-left: -40px;
+	font-size: 18px;
+	color: black;
+	opacity: 0.5;
+	width: 32px;
+}
+.PS_only_admin:hover
+{
+	opacity: 1;
+	cursor: default;
+}
+.PS_only_admin:hover:after
+{
+	content: "This post can only be seen by administrator until published";
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-family: monospace;
+	font-size: 10px;
+	width: 164px;
+	padding: 2px;
+	border: 1px solid black;
+	background:beige;
+	top: 24px;
+	left: 24px;
+}
+
+.PS_admin
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: -38px;
+	width: 32px;
+	height: 160px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: right;
+	background: #00000033;
+	border-radius: 3px;
+	box-shadow: 0px 2px 5px;
+	z-index: 5;
+	cursor: default;
+}
+.PS_admin svg
+{
+	color: black;
+	text-align: center;
+	display: block;
+	position:relative;
+	width: 100%;
+	min-width: 100%;
+	height: 100%;
+}
+.PS_admin a
+{
+	margin-top: 5px;
+	display: block;
+	width: 32px;
+	height: 16px;
+	right: 0;
+	top: 0;
+	position: relative;
+}
+.PS_admin a:hover
+{
+	position: relative;
+	width: 32px;
+	height: 16px;
+	top: 0;
+}
+
+.PS_admin a:nth-of-type(1) > svg
+{	color: #420000;   }
+
+.PS_admin a:nth-of-type(1)
+{	
+	color: #420000; 
+	border-bottom: 1px solid black; 
+	padding-bottom: 5px; 
+	margin-bottom: 10px;   
+}
+
+.PS_admin a:hover > svg
+{	color: white;   }
+.PS_admin a:nth-of-type(1):hover > svg
+{	color: red;   }
+.PS_admin a:nth-of-type(2):hover > svg
+{	color: #9C27B0;   }
+
+.PS_admin a:hover:after
+{
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-family: monospace;
+	font-size: 10px;
+	padding: 2px;
+	border: 1px solid black;
+	background:beige;
+	top: 14px;
+	right: 28px;
+	text-align:justify;
+	white-space: nowrap;
+}
+
+.PS_admin a:nth-of-type(1):hover:after { 	content: "delete post";	}
+.PS_admin a:nth-of-type(2):hover:after { 	content: "edit post";	}
+
+.PS_POST .PS_ID
+{
+	display: block;
+	position: absolute;
+	z-index: 2;
+	left: -32px;
+	bottom: -3px;
+	background: #f5f5f5b3;
+	padding: 2px;
+	border-radius: 2px;
+	border-bottom: 1px black solid;
+	border-right: 1px black solid;
+	cursor: default;
+}
+.PS_POST .PS_ID:before
+{
+	content: "ID: ";
+}
+
+

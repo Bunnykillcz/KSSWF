@@ -39,7 +39,9 @@ function database_create($this_id, $new_db_name, $silent = true)
 	{
 		if(!$silent)
 			echo "Database created successfully";
-	} else {
+	} 
+	else 
+	{
 		if(!$silent)
 			echo "Error creating database: " . $this_con[$this_id]->error;
 		return -1;
@@ -68,20 +70,22 @@ function database_delete($this_id, $delete_db_name, $silent = true)
 function database_query($this_id, $query, $silent = true)
 {
 	global $this_con;
-	
-	$sql = $query;
-	$qer = $this_con[$this_id]->query($sql);
+		
+	$qer = $this_con[$this_id]->query($query);
 	
 	if ($qer == TRUE) 
 	{
 		if(!$silent)
 			echo "Query successful";
 		return $qer;
-	} else {
+	} 
+	else 
+	{
 		if(!$silent)
 			echo "Query failed: " . $this_con[$this_id]->error;
 		return -1;
 	}
+	return "unknown error";
 }
 
 function database_close($this_id)
@@ -99,10 +103,13 @@ function database_close($this_id)
 /* ------------------------------------------ TABLES ------------------------------------------ */
 // Notice : These can return arrays of information!
 
-function database_create_T($this_id, $setup, $table)
+function database_create_T($this_id, $setup, $table, $engine = "InnoDB" ,$overwrite = false)
 {
+	$ov = "IF NOT EXISTS ";
+	if($overwrite)
+		$ov = "";
 	global $this_con;
-	$out = database_query($this_id, "CREATE TABLE $table($setup)");
+	$out = database_query($this_id, "CREATE TABLE $ov$table ( $setup ) ENGINE=$engine");
 	return $out;
 }
 function database_update_T($this_id, $set_data, $update_rule, $table)
@@ -122,11 +129,17 @@ function database_write_T($this_id, $set_data, $table)
 	$out = database_query($this_id, "INSERT INTO $table VALUES $set_data");
 	return $out;
 }
-function database_read_T($this_id, $what_to_read, $table)
+function database_read_T($this_id, $what_to_read, $table, $order = "", $desc = true)
 {
 	global $this_con;
-	$out = database_query($this_id, "SELECT $what_to_read FROM $table");
-	return mysql_fetch_assoc($out);
+	$d = "DESC";
+	if(!$desc)
+		$d = "";
+	
+	if(!empty($order))
+		$order = "ORDER BY ".$order." $d";
+	$out = database_query($this_id, "SELECT $what_to_read FROM $table $order");
+	return $out;
 }
 function database_deletefrom_T($this_id, $delete_rule, $table)
 {

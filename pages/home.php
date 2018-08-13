@@ -7,6 +7,8 @@
 <p><b>KSSWF is available on GITHUB: </b><a href='https://github.com/Bunnykillcz/KSSWF' target="_BLANK"><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/GitHubLogo.png"/></a></p>
 
 <p><b>You can support KSSWF and my other projects at Patreon: </b><a target="_BLANK" href='https://www.patreon.com/KyberSoft'><img class="hover-invert50" style="margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; max-width:120px;" src="./img/PatreonLogo.png"/></a></p>
+
+<p><b>Or, if you like what I do, you can just... </b><a href='https://ko-fi.com/Bunnykill' target='_blank'><img class="hover-invert" height='36' style='margin-bottom: -15px; display: inline-block; border: none; float: none; background: none; border:0px; border- height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> </p>
 <br/>
 <br/>
 
@@ -41,6 +43,7 @@
 	<li>Javascript code highlighter - <b>Prism by Lea Verou, Golmote & others</b> | License not specified - <a href="http://prismjs.com" target="_BLANK">Prism website</a> </li>
 	<li>OpenSource Fonts from - <b>Google fonts by Google LLC</b> (actual font authors vary) |  <a href="http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web" target="_BLANK">SIL Open Font License</a> OR <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_BLANK">Apache License 2.0</a> | <a href="https://fonts.google.com/" target="_BLANK">Google fonts website</a> </li>
 	<li>Scrolling smoother - <b>ZenScroll by <a href="http://www.gaborlenard.com/" target="_blank">'Zengabor'</a></b> | <a href="https://zengabor.github.io/zenscroll/" target="_BLANK">GITHUB link</a> [Public domain]</li>
+	<li>Date-Time input - <b>Flatpickr by Gregory at <a href="https://flatpickr.js.org/" target="_blank">flatpickr</a></b> | <a href="https://github.com/flatpickr/flatpickr" target="_BLANK">GITHUB link</a> |  <a href="https://cs.wikipedia.org/wiki/Licence_MIT" target="_BLANK" >MIT License</a></li>
 </ul>
 
 <h3>Known KSSWF websites:</h3>

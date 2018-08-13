@@ -1,19 +1,33 @@
 <div class="text_area">
 
-<div id="txt"><br><?php 
+<?php 
+unset($_GET['er']);
 
+$hidden = false;
 $content_ = "";
 $er404r = "";
-if(!empty($_GET['w']))
+$ps = -1;
+if(isset($_GET['w']))
 	$content_ = $_GET['w'];
+if(isset($_GET['ps']))
+	$ps = $_GET['ps'];
 
 $getA = 0;
 if(!empty($_GET['a']))
 	$getA = $_GET['a'];
 
 if($content_ == "index" )
-$content_ = "home";
+	$content_ = "home";
 
+if(is_numeric($ps) && $ps >= 0)
+	$hidden = true;
+
+
+if(!$hidden)
+	echo "<div id='txt'><br>";
+else
+	echo "<div style='display: none;'>";
+	
 if(empty($_GET['er']))
 	if(empty($content_) && empty($_GET['c']))
 	{
@@ -40,10 +54,10 @@ if(empty($_GET['er']))
 	else
 	if(!empty($content_) || !empty($_GET['c']))
 	{
-		if(!empty($_GET['c']))
+		/*if(!empty($_GET['c']))
 		{
 			$content_ = "home";
-		}
+		}*/
 		
 		$content_ = str_replace(' ', '+', $content_);
 		$content_ = str_replace('+', '/', $content_);
@@ -84,18 +98,36 @@ if(empty($_GET['er']))
 				include("./pages/".$content_.".php");
 			
 			if(!isset($_SESSION["login_admin".md5($_SERVER['HTTP_HOST'].trim($_SERVER['PHP_SELF']))]))
-			include("./pages/".$content_.".php");
+				include("./pages/".$content_.".php");
+			
 		}else
 		{
 			$er404r = $content_;
 			include("./error/error.php");
 		}
 	}
-
 if(!empty($_GET['er']))
 	include("./error/error.php");
 
-
-
+	
 ?></div>
+<?php
+
+if($hidden)
+{
+	if(file_exists("./cache/PS/ps_$ps.php"))
+	{
+		echo file_get_contents("./cache/PS/ps_$ps.php");
+	}
+	else
+	if(isset($_GET['ps']))
+	{
+		$_GET['er'] = 404;
+		echo "<div id = 'txt'><br>";
+		include("./error/error.php");
+		echo "</div>";
+	}
+}
+
+?>
 </div>

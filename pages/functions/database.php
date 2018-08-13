@@ -16,7 +16,11 @@
 <!--p><span class="function">function</span> <b>socials</b> generates social share icons according to input. Returns false if failed.</p>
 <p><span class="string">string</span> <i>type</i> can be only "google", "facebook", "twitter", or "all".
 </p-->
+<b>this_ID - ID 9 is reserved for the Posting System.</b>
+
 <br/>
+
+
 
 <h3>Usage example</h3>
 <pre><code class="language-php">	

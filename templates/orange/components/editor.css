@@ -81,16 +81,6 @@
 .editor a:last-of-type > i,   		.editor a:last-of-type > svg	 		{color: #9a0000;}
 .editor a:last-of-type > i:hover,   .editor a:last-of-type > svg:hover		{color: red;}
 
-.h_admin 
-{
-	position: 	absolute;
-	display:	block;
-	z-index: 	2500;
-	top: 	4px;
-	right: 	5px;
-	width: 	72px;
-	height: 32px;
-}
 .editor_c
 {
 	z-index: 	99000; 

@@ -73,6 +73,69 @@
 	transition: 		opacity 500ms ease-in-out;
 }
 
+/*  ----- ConfirmBox -----  */
+
+.info .YesNo
+{
+	display: block;
+	position: absolute;
+	bottom: -35px;
+	width:  160px;
+	height: 32px;
+	right:   32px;
+	background: 		none;
+	background-color: 	#fff;
+	border: 			2px solid whitesmoke;
+	border-style: 		ridge;
+	border-top: none;
+}
+.info .YesNo a
+{
+	display: inline-block;
+	position: relative;
+	left: -1px;
+	top: 2px;
+	padding: 2px;
+	width: 50px;
+	height: 20px;
+	background: 		#d0d0d0;
+	padding-left:	 	8px;
+	margin-left: 		12px;
+	margin-top: 		0px;
+	color: 				black;
+	border: 			2px ridge #ababab;
+	font-size: 		16px;
+	font-weight: 	200;
+	letter-spacing: 1px;
+	font-family: 	monospace;
+}
+.info .YesNo a:hover
+{
+	border: 2px ridge #b5b5b5;
+	background: #949494;
+}
+.info .YesNo svg,
+.info .YesNo i
+{
+	display: inline-block;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: -4px;
+	left: auto;
+	right: 0px;
+	color: black;
+}
+.info .YesNo a:nth-of-type(1) svg,
+.info .YesNo a:nth-of-type(1) i
+{
+	color: #005400;
+}
+.info .YesNo a:nth-of-type(2) svg,
+.info .YesNo a:nth-of-type(2) i
+{
+	color: #8c0000;
+}
 
 /*admin login stuff*/
 

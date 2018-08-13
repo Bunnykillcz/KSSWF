@@ -4,7 +4,7 @@
 // INFORMATIONS
 //-------------------------------------------------------------------------------------------------- //
 // KyberSoft Simple Website Framework aka. KSSWF
-// Version: 0.4.82a
+// Version: 0.5.27a
 // Made by Nikola Nejedlý | KyberSoft (c) 2017-2018
 // Author: http://nejedniko.cz
 // Origin: https://github.com/Bunnykillcz/KSSWF
@@ -40,6 +40,7 @@ include("./func/icons.php");
 	$def_menu_symbol 	= icon("dropdown",0);
 	//defualt 'open in new tab' symbol (MENU)
 	$def_oint_symbol 	= icon("_new",0);
+	$default_timezone	= "Europe/Prague";
 
 //-------------------------------------------------------------------------------------------------- //
 include("initializers.php");

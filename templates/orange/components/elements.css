@@ -82,15 +82,16 @@ img{
 	position: 	absolute;
 	display:	block;
 	z-index: 	2500;
-	top: 	4px;
+	top: 	3px;
 	right: 	5px;
-	width: 	72px;
-	height: 32px;
+	width: 	64px;
+	height: 26px;
+	overflow-y: hidden;
 }
 .h_admin .button
 {
 	display: block;
-	height: 32px;
+	height: 20px;
 	width: auto;
 }
 .h_admin .button a

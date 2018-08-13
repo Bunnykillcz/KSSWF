@@ -5,7 +5,7 @@
 /*                 2018                 */
 /*--------------------------------------*/
 
-function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("blabla1024x800", "I'm a dufus", true, true) 
+function img($source, $alt, $css_class, $cache_this, $click_big, $width, $only_echo = false, $caching_addon = "") //img("blabla1024x800", "I'm a dufus", "class_img", true, true) 
 {
 	global $imageid;
 	global $this_w;
@@ -42,10 +42,13 @@ function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("
 		if (!file_exists('./cache/img/'.$page)) 
 			mkdir('./cache/img/'.$page, 0777, true);		
 		
-		if (file_exists('./cache/img/'.$page."/image".$id.".html")) 
+		if (file_exists('./cache/img/'.$page."/image".$id."$caching_addon.html")) 
 		{
-			include('./cache/img/'.$page."/image".$id.".html");	
 			$imageid = $id;
+			if(!$only_echo)
+				include('./cache/img/'.$page."/image".$id."$caching_addon.html");	
+			else
+				return file_get_contents('./cache/img/'.$page."/image".$id."$caching_addon.html");
 			return true;
 		}			
 	//--------------------
@@ -64,11 +67,11 @@ function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("
 	
 	if($cache_this)
 	{
-		$chk = mk_cache_img($source,$page."/image".$id.".".$format,$width);
+		$chk = mk_cache_img($source,$page."/image".$id."$caching_addon.".$format,$width);
 		if(!$chk)
 			return false;
 		
-		$src_i = "./cache/img/".$page."/image".$id.".".$format;
+		$src_i = "./cache/img/".$page."/image".$id."$caching_addon.".$format;
 	}
 	else
 		$src_i = $source;
@@ -83,11 +86,15 @@ function img($source, $alt, $css_class, $cache_this, $click_big, $width) //img("
 	
 	//echo "$imageid:$id:$source:$alt:$css_class:$cache_this:$click_big:$width";
 	
-	if(!file_exists('./cache/img/'.$page."/image".$id.".html"))
-		file_put_contents('./cache/img/'.$page."/image".$id.".html", $output_img);
-	include('./cache/img/'.$page."/image".$id.".html");	
+	if(!file_exists('./cache/img/'.$page."/image".$id."$caching_addon.html"))
+		file_put_contents('./cache/img/'.$page."/image".$id."$caching_addon.html", $output_img);
+	if(!$only_echo)
+	include('./cache/img/'.$page."/image".$id."$caching_addon.html");	
 	
-	return true;
+	if(!$only_echo)
+		return true;
+	else
+		return file_get_contents('./cache/img/'.$page."/image".$id."$caching_addon.html");
 }
 
 ?>

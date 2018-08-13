@@ -20,6 +20,7 @@ functions|lorem;Lorem(...)
 functions|encrypt_caesar;Encrypt_Caesar(...)
 functions|youtube;Youtube(...)
 functions|database;Database functions
+functions|post_system;Post System
 //ins_plug|ß;Plugins
 test;Testing page
 faq;FAQ

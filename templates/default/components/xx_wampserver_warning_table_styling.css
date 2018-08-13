@@ -2,39 +2,78 @@
 /* Nikola Nejedlý - 2018 */
 /*-----------------------*/
 
-
+.xdebug-error.xe-notice,
 .xdebug-error.xe-warning
 {
-	position: absolute;
+	position: relative;
 	display: block;
 	z-index: 9999999;
-	left: 100px;
-	top: 100px;
-	width: Calc( 100vw - 200px );
-	height: Calc( 100vh - 200px );
+	left: 0px;
+	top: 0px;
+	width: Calc( 100% );
+	height: auto;
 	border: 2px #333 solid;
-	background: #808080ed;
+	background: #ffffffed;
+	min-height: 200px;
 }
+.xdebug-error.xe-notice td,
+.xdebug-error.xe-warning td
+{
+	background: white;
+	border: 1px solid black;
+	font-size: 12px;
+	font-family: monospace;
+}
+
+.xdebug-error.xe-notice tr:hover,
+.xdebug-error.xe-warning tr:hover,
+.xdebug-error.xe-notice tr:hover > td,
+.xdebug-error.xe-warning tr:hover > td,
+.xdebug-error.xe-notice tr:hover > td:nth-of-type(1),
+.xdebug-error.xe-warning tr:hover > td:nth-of-type(1)
+{
+	background: black;
+	color: white;
+	border: 1px black solid;
+	font-family: monospace;
+	font-size: 11px;
+	margin: 0;
+}
+.xdebug-error.xe-notice tr:hover > td,
+.xdebug-error.xe-warning tr:hover > td
+{
+	text-align: left;
+	padding-left: 14px;
+	font-family: monospace;
+}
+.xdebug-error.xe-notice th,
 .xdebug-error.xe-warning th
 {
 	padding: 2px;
 	width: Calc( 100vw - 200px );
 	background: #a50000;
 	color: white;
+	font-size: 15px;
 }
+.xdebug-error.xe-notice th
+{
+	background: #8e2200;
+	text-align: right;
+}
+.xdebug-error.xe-notice span,
 .xdebug-error.xe-warning span
 {
 	display: none;	
 }
+.xdebug-error.xe-notice tbody::before,
 .xdebug-error.xe-warning tbody::before
 {
 	display: block;
-	content: "!";	
+	content: "!!!";	
 	position: absolute;
 	left: -26px;
 	top: -2px;
-	width: 20px;
-	height: 20px;
+	padding: 5px;
 	font-family: "Fira Sans", sans-serif;
 	background-color: black;
 	border: 2px solid #ff0a0a;
@@ -42,21 +81,13 @@
 	font-weight: bold;
 	font-size: 15px;
 }
-.xdebug-error.xe-warning tr:nth-of-type(2) th
+.xdebug-error.xe-notice tbody::before
 {
-	background: #0e0e0e;
-	padding-left: 20px;
-	color: white;
-	border: 1px solid black;
+	border: 2px solid #FF9800;
+	color: #FFEB3B;
+	content: "??";	
 }
-.xdebug-error.xe-warning tr:nth-of-type(3) th
-{
-	background: #964200;
-	padding-left: 10px;
-	text-align: left;
-	color: white;
-	border-left: 1px solid black;
-}
+.xdebug-error.xe-notice tr td,
 .xdebug-error.xe-warning tr td
 {
 	background: whitesmoke;
@@ -66,23 +97,63 @@
 	color: black;
 	border-left: 1px solid black;
 }
-.xdebug-error.xe-warning tr th:nth-of-type(1),
-.xdebug-error.xe-warning tr td:nth-of-type(1)
+.xdebug-error.xe-notice tr td:nth-of-type(1),
+.xdebug-error.xe-notice tr th:nth-of-type(1),
+.xdebug-error.xe-warning tr td:nth-of-type(1),
+.xdebug-error.xe-warning tr th:nth-of-type(1)
 {
-	width: 100px;
+	width: 24px;
+	border: none;
+	text-align: right;
+	padding-right: 6px;
+	font-family: monospace;
+	font-size: 11px;
+	border-left: 1px solid black;
 }
-.xdebug-error.xe-warning tr th:nth-of-type(2),
-.xdebug-error.xe-warning tr td:nth-of-type(2)
+.xdebug-error.xe-notice tr td:nth-of-type(2),
+.xdebug-error.xe-warning tr td:nth-of-type(2),
+.xdebug-error.xe-notice tr th:nth-of-type(2),
+.xdebug-error.xe-warning tr th:nth-of-type(2)
 {
 	width: 120px;
 }
-.xdebug-error.xe-warning tr th:nth-of-type(3),
-.xdebug-error.xe-warning tr td:nth-of-type(3)
+.xdebug-error.xe-notice tr td:nth-of-type(3),
+.xdebug-error.xe-warning tr td:nth-of-type(3),
+.xdebug-error.xe-notice tr th:nth-of-type(3),
+.xdebug-error.xe-warning tr th:nth-of-type(3)
 {
-	width: 150px;
+	width: 120px;
 }
-.xdebug-error.xe-warning tr th:nth-of-type(4),
-.xdebug-error.xe-warning tr td:nth-of-type(4)
+.xdebug-error.xe-notice tr td:nth-of-type(4),
+.xdebug-error.xe-warning tr td:nth-of-type(4),
+.xdebug-error.xe-notice tr th:nth-of-type(4),
+.xdebug-error.xe-warning tr th:nth-of-type(4)
 {
-	width: 200px;
+	min-width: 400;
+}
+.xdebug-error.xe-notice tr td:nth-of-type(5),
+.xdebug-error.xe-warning tr td:nth-of-type(5),
+.xdebug-error.xe-notice tr th:nth-of-type(5),
+.xdebug-error.xe-warning tr th:nth-of-type(5)
+{
+	width: 240px;
+}
+.xdebug-error.xe-notice tr:nth-of-type(2) th,
+.xdebug-error.xe-warning tr:nth-of-type(2) th
+{
+	background: #0e0e0e;
+	padding-left: 20px;
+	color: white;
+	font-size: 13px;
+	border-left: 1px solid black;
+}
+.xdebug-error.xe-notice tr:nth-of-type(3) th,
+.xdebug-error.xe-warning tr:nth-of-type(3) th
+{
+	background: #964200;
+	padding-left: 10px;
+	text-align: left;
+	font-size: 13px;
+	color: white;
+	border-left: 1px solid black;
 }

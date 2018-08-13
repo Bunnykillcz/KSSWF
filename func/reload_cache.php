@@ -17,6 +17,16 @@ function cache_clear()
 	file_put_contents("./cache/.htaccess",$c_htaccess);
 	
 }
+function cache_clear_only($path)
+{
+	$dir = "./cache/$path";
+	$di = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
+	$ri = new RecursiveIteratorIterator($di, RecursiveIteratorIterator::CHILD_FIRST);
+	foreach ( $ri as $file ) {
+		$file->isDir() ?  rmdir($file) : unlink($file);
+	}
+}
+
 
 if(!empty($_GET['c']))
 	if($_GET['c'] == "1")

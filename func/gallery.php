@@ -6,7 +6,7 @@
 /*--------------------------------------*/
 /* Upgraded to self-updating (02_08_18) */
 
-function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $release_frequency = null /* MINUTES */, $release_folder = null) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
+function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $release_frequency = null /* MINUTES */, $release_folder = null, $release_amount = 1) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
 {
 	global $gal_id;
 	global $actual_link;
@@ -22,7 +22,7 @@ function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $re
 	$amount = 0;	
 	$images = glob("$dir_root/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
 	$img_array = array(array());
-	
+		
 	//------------------------------------------------------------------------------------------------------------
 	//autorelease:
 	
@@ -81,17 +81,20 @@ function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $re
 			while($today[0] - $nextupdate >= $rel_sec)
 			{
 				$nextupdate += $rel_sec;
-				if(count($images_to_add) > 0)
+				for($i = 0; $i < $release_amount; $i++)
 				{
-					$xpld = explode("/",$images_to_add[0]);
-					$filename = $xpld[count($xpld)-1];
-					//echo $filename;
-					//rename($images_to_add[0], $dir_root."/".$filename);
-					if(file_exists("$images_to_add[0]"))
-					if (copy ($images_to_add[0],$dir_root."/".$filename)) 
+					if(count($images_to_add) > 0)
 					{
-						unlink($images_to_add[0]);
-						$images_to_add = glob("$rf/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
+						$xpld = explode("/",$images_to_add[0]);
+						$filename = $xpld[count($xpld)-1];
+						//echo $filename;
+						//rename($images_to_add[0], $dir_root."/".$filename);
+						if(file_exists("$images_to_add[0]"))
+							if (copy ($images_to_add[0],$dir_root."/".$filename)) 
+							{
+								unlink($images_to_add[0]);
+								$images_to_add = glob("$rf/*.{jpg,png,bmp,gif,jpeg,JPG,PNG,BMP,GIF,JPEG}", GLOB_BRACE);
+							}
 					}
 				}
 			}

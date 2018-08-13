@@ -24,6 +24,6 @@ function button($text, $url, $_new, $size_x, $size_y) // text = what's written o
 	$button .= "</div>";
 	$button .= "</div>";
 		
-	echo $button;
+	return $button;
 }
 ?>

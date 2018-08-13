@@ -11,3 +11,12 @@ function hide_element(selector, speed)
     });
 
 }
+
+function show_element(selector, speed) 
+{
+	$(document).ready(function(){
+		easing = "linear";
+		$(selector).show(speed,easing);
+    });
+
+}
