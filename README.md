@@ -1,16 +1,17 @@
-# KSSWF
+![Alt text](/img/logo.png)
+
 KyberSoft Simple Webpage Framework
-All the details necessary are included in index.php as a commentary
 
 ## Info
-This should be a very easy to use start for any of your websites. CSS knowledge is absolutelly necessary since it makes a "design template".
+This should be a very simple to use start for any of your websites. CSS knowledge is absolutelly necessary since it makes a "design template".
 
 ## License 
 **CC-BY-SA 4.0** 
 
 ## Author
-**Made by** Nikola Nejedlý, KyberSoft (c) 2017
-**url:** http://nejedniko.tk
+**Made by** Nikola Nejedlý, KyberSoft (c) 2017 - 2018
+
+**More about this project:** https://ksswf.nejedniko.cz
 
 
 ### Enjoy !
