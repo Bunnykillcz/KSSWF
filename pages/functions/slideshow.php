@@ -45,3 +45,10 @@
 <h2>Showtime!</h2>
 
 <p><?php slideshow(0,"gallery",true,true,15000,"fade"); ?></p>
+
+
+<h4>Dependencies</h4>
+<ul>
+	<li>none
+	</li>
+</ul>

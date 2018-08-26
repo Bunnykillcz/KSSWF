@@ -85,7 +85,7 @@
 }
 
 /* Caption text */
-.text {
+.slideshow-container .text {
 	display: block;
 	color: #f2f2f2;
 	font-size: 10px;

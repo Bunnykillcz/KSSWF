@@ -18,3 +18,9 @@
 socials("all");
 ?>
 
+
+<h4>Dependencies</h4>
+<ul>
+	<li>icon.php
+	</li>
+</ul>

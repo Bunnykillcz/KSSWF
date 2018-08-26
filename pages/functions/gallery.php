@@ -35,3 +35,11 @@
 	gallery("gallery", "", "random", true); 
 ?>
 
+
+<h4>Dependencies</h4>
+<ul>
+	<li>mk_cache_img.php
+	</li>
+	<li>reload_cache.php
+	</li>
+</ul>

@@ -6,7 +6,7 @@
 /*--------------------------------------*/
 /* Upgraded to self-updating (02_08_18) */
 
-function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $release_frequency = null /* MINUTES */, $release_folder = null, $release_amount = 1) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
+function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $release_frequency_s = null /* MINUTES */, $release_folder = null, $release_amount = 1) //the gallery folder directory --> default = ./img/......? ; g_title = "" - if empty, doesn't show, if filled, h3 ; order --> "abc" || "cba" || "random"
 {
 	global $gal_id;
 	global $actual_link;
@@ -26,24 +26,27 @@ function gallery($folder, $g_title = "", $order = "abc", $cache_all = false, $re
 	//------------------------------------------------------------------------------------------------------------
 	//autorelease:
 	
-	if($release_frequency != null && $release_folder != null)
+	if($release_frequency_s != null && $release_folder != null)
 	{
 		$conti = true;
+		$release_frequency = 0;
 		
-		if($release_frequency == "hour")
+		if($release_frequency_s == "hour")
 			(int)$release_frequency = 3600/60;
 		else
-		if($release_frequency == "day")
+		if($release_frequency_s == "day")
 			(int)$release_frequency = 86400/60;
 		else
-		if($release_frequency == "week")
+		if($release_frequency_s == "week")
 			(int)$release_frequency = 604800/60;
 		else
-		if($release_frequency == "month")
+		if($release_frequency_s == "month")
 			(int)$release_frequency = 2629743/60;
 		else
-		if($release_frequency == "year")
+		if($release_frequency_s == "year")
 			(int)$release_frequency = 31556926/60;
+		else
+			$release_frequency = $release_frequency_s;
 		
 		$rf = str_replace("\\","/", $root_link)."/img/".$release_folder;
 		

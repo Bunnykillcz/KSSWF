@@ -212,8 +212,8 @@ function ShowPosts($PS_ID = 9, $PS_NAME = "PostSystemTable", $limit_amount = 0, 
 	$add_protocol .= "<div class='PS_Date'>Date to show: </div><input type='datetime' name='Date' class='PS_DatepickD' value='$today_glob'><br/>";
 	$add_protocol .= "<div class='PS_Publish'>Publish at: </div><input type='datetime' name='DateP' class='PS_Datepick' value='$today_glob'><br/>";
 	$add_protocol .= "<div class='PS_Preview'>Preview image: </div><input type='file' name='Preview' class='PS_Preview' value=''><br/>";
-	$add_protocol .= "<textarea name='Text' class='PS_Text' placeholder='Text to post ... [html accepted]'></textarea><br/>";
-	$add_protocol .= "<textarea name='TextS' class='PS_Text_Short' maxlength='480' placeholder='Shortened text [use the same as above, but short ; html accepted ; limit: 240 characters]'></textarea><br/>";
+	$add_protocol .= "<textarea name='Text' class='PS_Text' placeholder='Text to post ... [html accepted; php accepted]'></textarea><br/>";
+	$add_protocol .= "<textarea name='TextS' class='PS_Text_Short' maxlength='480' placeholder='Shortened text [use the same as above, but short ; html only accepted ; limit: 240 characters]'></textarea><br/>";
 	$add_protocol .= "<input id='PS_OK' name='PS_submit' type='submit' value='SUBMIT'/>";
 	$add_protocol .= "</form>";
 	$add_protocol .= "</div>";
@@ -276,8 +276,13 @@ function ReadFullPost($read_id, $PS_ID = 9, $PS_NAME = "PostSystemTable", $datet
 	$output_post .= "<h1>$this_title</h1>";
 	$output_post .= "<div class='PS_FULL_Date'>$date_prefix".date($datetime_format,@$this_date)."</div>";
 	$output_post .= "<div class='PS_FULL_Author'>".icon("user")."$this_author</div>";
-	$output_post .= "<div class='PS_FULL_IMG'>".img($this_img, "", "", true, false, 480, true, "_ps_img-$this_id")."</div>";
-	$output_post .= "<div class='PS_FULL_Text'>$this_content</div><hr>";
+	if($this_img!="none" && $this_img!=null)
+		$output_post .= "<div class='PS_FULL_IMG'>".img($this_img, "", "", true, false, 480, true, "_ps_img-$this_id")."</div>";
+	$output_post .= "<div class='PS_FULL_Text'>";
+	
+	$output_post .= convert_php_headers($this_content,false);
+	
+	$output_post .= "</div><hr>";
 	$output_post .= "<div class='PS_FULL_Views'>$views_prefix$this_views</div>";
 	$output_post .= "<div class='PS_FULL_Likes'>$likes_prefix$this_likes</div><hr>";
 	$output_post .= "<div class='PS_FULL_Back'>".button($backtoprev,$this_url,false,100,36)."</div>";
@@ -319,7 +324,7 @@ function CheckPosting($PS_ID, $PS_NAME, $DTformat = "d-m-Y | H:i")
 		$likes 		= 0;
 		$ViewCount 	= 0;
 		$image 		= "none";
-		$text 		= $_POST['Text'];
+		$text 		= convert_php_headers($_POST['Text'],true);
 		$texts 		= $_POST['TextS'];
 		
 		if( isset($_FILES['Preview']) )

@@ -28,3 +28,10 @@
 	echo "<a href='".$after_link."?w=".$this_w."&test=1'>Test this and show me an infobox!</a>";
 	?> 
 </p>
+
+
+<h4>Dependencies</h4>
+<ul>
+	<li>icon.php
+	</li>
+</ul>

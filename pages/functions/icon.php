@@ -37,3 +37,10 @@ foreach($ic_callers_list as &$type){
 }
 ?>
 </table></p>
+
+
+<h4>Dependencies</h4>
+<ul>
+	<li>none
+	</li>
+</ul>

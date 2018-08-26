@@ -117,7 +117,7 @@ if($hidden)
 {
 	if(file_exists("./cache/PS/ps_$ps.php"))
 	{
-		echo file_get_contents("./cache/PS/ps_$ps.php");
+		include("./cache/PS/ps_$ps.php");
 	}
 	else
 	if(isset($_GET['ps']))

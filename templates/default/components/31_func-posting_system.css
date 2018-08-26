@@ -268,11 +268,12 @@
 	padding: 0;
 	display: block;
 	position: relative;
-	background: white;
 	width: 300px;
 	height: 200px;
 	float: right;
 	margin-top: -10px;
+	padding-left: 12px;
+	padding-bottom: 10px;
 }
 .PS_FULL .PS_FULL_IMG img
 {
@@ -283,7 +284,9 @@
 	width: inherit;
 	height: inherit;
 	object-fit: cover;
+	background: none;
 }
+
 
 .PS_FULL .PS_FULL_Views
 {

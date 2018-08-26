@@ -26,3 +26,11 @@ echo button("Link to index.php".icon("_new",0),"index.php",true,100,36);
 ?>
 </p>
 
+
+<h4>Dependencies</h4>
+<ul>
+	<li>None
+	</li>
+</ul>
+
+

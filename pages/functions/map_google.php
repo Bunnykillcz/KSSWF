@@ -22,3 +22,10 @@
 		map_google(2846, "AIzaSyBm-zVgKndR4Cl9UhaoS5Te56ejXv2aIDA","","Somewhere in CzechRepublic 01", 49.5798787, 14.5064755, 7, 800, 400, true);
 ?>
 </div>
+
+
+<h4>Dependencies</h4>
+<ul>
+	<li>none
+	</li>
+</ul>

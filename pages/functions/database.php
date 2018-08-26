@@ -35,3 +35,9 @@
 	img("./img/func/database_example.png", "", "", true, true, 480);
 ?>
 
+
+<h4>Dependencies</h4>
+<ul>
+	<li>None
+	</li>
+</ul>
