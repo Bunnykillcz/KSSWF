@@ -3,6 +3,7 @@ ErrorDocument 401 "/index.php?er=401"
 ErrorDocument 403 "/index.php?er=403"
 ErrorDocument 500 "/index.php?er=500"
 
+
 RedirectMatch ^/admin/$ /index.php?er=401
 RedirectMatch ^/addons/$ /index.php?er=403
 RedirectMatch ^/fonts/$ /index.php?er=403
